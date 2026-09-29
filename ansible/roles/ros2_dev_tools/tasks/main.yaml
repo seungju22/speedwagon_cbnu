@@ -1,0 +1,40 @@
+- name: Install apt packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - python3-colcon-mixin
+      - python3-flake8-docstrings
+      - python3-pip
+      - python3-pytest-cov
+      - python3-flake8-blind-except
+      - python3-flake8-builtins
+      - python3-flake8-class-newline
+      - python3-flake8-comprehensions
+      - python3-flake8-deprecated
+      - python3-flake8-import-order
+      - python3-flake8-quotes
+      - python3-pytest-repeat
+      - python3-pytest-rerunfailures
+      # ros-build-essential's contents, inlined: the metapackage is served only
+      # by the rolling packages.ros.org repo and is absent from snapshots.ros.org,
+      # so locked mode cannot resolve it. Inlining also lets apt_pins freeze the
+      # actual tools. (python3 is omitted: it is always present.)
+      - build-essential
+      - cmake
+      - git
+      - python3-setuptools
+      - python3-bloom # from ros-dev-tools
+      - python3-colcon-common-extensions # from ros-dev-tools
+      - python3-colcon-mixin # from ros-dev-tools
+      - python3-rosdep # from ros-dev-tools
+      - python3-vcs2l # formerly python3-vcstool
+      - wget # from ros-dev-tools
+    state: latest
+    allow_downgrade: "{{ use_locked_versions | default(false) | bool }}"
+    update_cache: true
+
+- name: Run 'sudo rosdep init'
+  become: true
+  ansible.builtin.command:
+    cmd: rosdep init
+    creates: /etc/ros/rosdep/sources.list.d/20-default.list

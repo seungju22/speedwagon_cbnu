@@ -1,0 +1,39 @@
+# dest is relative to data_dir and defaults to the repository name.
+- name: Download the model bundles from Hugging Face
+  ansible.builtin.command:
+    cmd: >-
+      hf download AutowareFoundation/{{ item.repo }}
+      --revision {{ item.revision }}
+      --local-dir "{{ data_dir }}/{{ item.dest | default(item.repo) }}"
+  environment:
+    PATH: "{{ ansible_facts.env.PIPX_BIN_DIR | default(ansible_facts.env.HOME ~ '/.local/bin', true) }}:{{ ansible_facts.env.PATH }}"
+    HF_TOKEN: "{{ lookup('env', 'HF_TOKEN') }}"
+  changed_when: false
+  loop_control:
+    label: "{{ item.repo }} {{ item.revision }}"
+  loop:
+    - { repo: yabloc_pose_initializer, revision: v1.0 }
+    - { repo: bevfusion, revision: v2.0 }
+    - { repo: camera_streampetr, revision: v1.0 }
+    - { repo: tensorrt_bevdet, revision: v1.0 }
+    - { repo: image_projection_based_fusion, revision: v5.0 }
+    - { repo: lidar_apollo_instance_segmentation, revision: v1.0 }
+    - { repo: lidar_centerpoint, revision: v4.1 }
+    - { repo: lidar_transfusion, revision: v2.1 }
+    # Also holds the whole_image_traffic_light_detector models.
+    - { repo: tensorrt_yolox, revision: v1.0 }
+    - { repo: traffic_light_classifier, revision: v4.0 }
+    # Each diffusion_planner version is a tag on one repository. Every tag holds the same
+    # filenames at the repository root, so the tags need separate directories or they
+    # overwrite each other.
+    - { repo: diffusion_planner, revision: v3.0, dest: diffusion_planner/v3.0 }
+    - { repo: diffusion_planner, revision: v3.1, dest: diffusion_planner/v3.1 }
+    - { repo: diffusion_planner, revision: v4.0, dest: diffusion_planner/v4.0 }
+    - { repo: diffusion_planner, revision: v5.0, dest: diffusion_planner/v5.0 }
+    # The local directory is vad, not tensorrt_vad: the node reads $(var data_path)/vad/v0.1.
+    - { repo: tensorrt_vad, revision: v0.1, dest: vad/v0.1 }
+    - { repo: traffic_light_fine_detector, revision: v3.0 }
+    - { repo: simpl_prediction, revision: v0.1 }
+    - { repo: ptv3, revision: v4.0 }
+    - { repo: lidar_frnet, revision: v2.0 }
+    - { repo: calibration_status_classifier, revision: v2.0 }

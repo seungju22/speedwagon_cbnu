@@ -1,0 +1,35 @@
+services:
+  autoware:
+    image: ghcr.io/autowarefoundation/autoware:universe-devel-cuda-jazzy
+    privileged: true
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - NVIDIA_VISIBLE_DEVICES=all
+      - HOST_UID=${HOST_UID:-1000}
+      - HOST_GID=${HOST_GID:-1000}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # create_host_path is off: Compose creates a missing source as root, which 'aw' cannot write.
+      - type: bind
+        source: ${HOME}/autoware_data/maps
+        target: /home/aw/autoware_data/maps
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${HOME}/autoware_data/ml_models
+        target: /home/aw/autoware_data/ml_models
+        bind:
+          create_host_path: false
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: bash
