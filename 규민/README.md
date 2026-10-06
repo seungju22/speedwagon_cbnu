@@ -1,8 +1,8 @@
-# 규민 — 충북대 캠퍼스 CARLA 시뮬레이션 맵
+# 충북대 캠퍼스 CARLA 시뮬레이션 맵
 
 담당: 맵, 인지 (저장소 루트 `역할` 파일 기준)
 
-## 1. 무엇을 만들었는가
+## 1. 설명
 
 충북대학교 캠퍼스 도로를 CARLA 0.9.15 에서 달릴 수 있는 OpenDRIVE 맵(`.xodr`)으로 만들고,
 셔틀 정류장 노선을 BasicAgent 로 주행 검증했다.
@@ -12,7 +12,7 @@
 - 규모: road 878 / junction 95 / spawn point 1243
 - 실제 위치와의 축척 오차: 0.07% (유사변환 스케일 1.000709, 보정점 90개, 잔차 RMS 3.7m)
 
-## 2. 어떻게 만들었는가 (OSM -> OpenDRIVE)
+## 2. 맵 구현 방법
 
 1. OpenStreetMap 캠퍼스 영역 다운로드 (`scripts/download_osm.sh`)
 2. 태그 보정 73건: 변환기가 버리는 `highway=service` 등을 `unclassified` 로 (`scripts/fix_tags.py`)
@@ -42,7 +42,7 @@
 
 숫자 출처: `docs/presentation_numbers_locked.md`
 
-## 4. 알려진 한계
+## 4. 필요 개선
 
 - 고도 미반영: 맵 전체 z=0. 실제 오르막(양성재 방향 등) 없음. 주행 결과는 평지 가정
 - 교통 규제 미반영: 변환 입력 OSM 에 회전 제한 relation 0개. 신호등 없음(캠퍼스 실제도 비신호)
@@ -51,7 +51,7 @@
 - 막다른 길 14곳에 회차 연결로가 생성되지 않음(변환기 동작, `docs/logs/s23_deadend_cause.md`)
 - 고원식 횡단보도·볼라드·게이트 등 현장 구조물은 OSM 에 거의 없어 맵에 없음(`docs/field_survey_*.md`)
 
-## 5. 재현 방법
+## 5. 환경
 
 환경: Ubuntu 22.04, CARLA 0.9.15 패키지, 파이썬 venv 에 `carla==0.9.15`
 
@@ -71,12 +71,3 @@
 7. 주행: `python tests/test_drive.py --route north` (north / south / middle / yangseong)
 
 주의: OSM 은 계속 편집되므로 오늘 다시 받으면 같은 맵이 나오지 않을 수 있다. 같은 입력이면 파이프라인 결과는 같다(재현성 확인 기록 `docs/logs/s18_D_reconvert.md`)
-
-## 6. 라이선스 고지
-
-- 원본 데이터: OpenStreetMap (© OpenStreetMap contributors)
-- 라이선스: ODbL 1.0 (Open Database License). `maps/` 의 xodr 는 OSM 에서 파생된 데이터다
-- 변환 도구: CARLA Osm2Odr (내장 SUMO netconvert)
-- CARLA 에셋(3D 모델·텍스처 등)은 포함하지 않는다
-- 일부 그림(`docs/figures/`)은 CARLA 0.9.15 화면 캡처다
-- 일부 그림의 지도 배경: © OpenStreetMap contributors (`docs/figures/22_route_realmap.png`, `docs/figures/23_library_entrances.png`)
