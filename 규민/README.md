@@ -24,6 +24,8 @@
 
 자세한 경위: `docs/how_the_map_was_made.md`
 
+`docs/` 아래 세션 보고서(`map_session*_report.md`)와 `docs/logs/` 는 작업 로그다. 당시 기록을 그대로 두었다.
+
 ## 3. 현재 검증 상태 (정류장별)
 
 조건: 빈 도로·맑음·평지(z=0), CARLA 0.9.15, BasicAgent, 동기 20Hz, 목표 20km/h.
