@@ -73,3 +73,12 @@
 7. 주행: `python tests/test_drive.py --route north` (north / south / middle / yangseong)
 
 주의: OSM 은 계속 편집되므로 오늘 다시 받으면 같은 맵이 나오지 않을 수 있다. 같은 입력이면 파이프라인 결과는 같다(재현성 확인 기록 `docs/logs/s18_D_reconvert.md`)
+
+## 데이터 출처
+
+지도 데이터는 OpenStreetMap에서 가져왔다.
+ODbL 1.0을 따르고, 여기 있는 xodr도 같은
+라이선스가 적용된다. 일부 그림의 지도 배경도
+OSM이다.
+
+© OpenStreetMap contributors
