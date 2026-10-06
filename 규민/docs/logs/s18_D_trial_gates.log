@@ -1,0 +1,38 @@
+[1] fix_tags 보정 82건, 못 찾음 [] -> cbnu_campus_fixed_tags73_trial_s18_gates.osm
+    추가 way 392632034: highway=service -> unclassified
+    추가 way 446440352: highway=service -> unclassified
+    추가 way 446440353: highway=service -> unclassified
+    추가 way 452870644: highway=service -> unclassified
+    추가 way 481475019: highway=service -> unclassified
+    추가 way 481943503: highway=service -> unclassified
+    추가 way 481943505: highway=service -> unclassified
+    추가 way 481945509: highway=service -> unclassified
+    추가 way 481945510: highway=service -> unclassified
+[2] classify {'internal': 447, 'boundary': 38, 'external': 664}, 포함 way 485 -> cbnu_internal_boundary_tags73_trial_s18_gates.osm
+    추가 way 452870644: internal
+    추가 way 392632034: boundary
+    추가 way 481945510: internal
+    추가 way 481943505: internal
+    추가 way 481475019: internal
+    추가 way 481943503: internal
+    추가 way 481945509: internal
+    추가 way 446440352: internal
+    추가 way 446440353: internal
+[3] smooth rc 0 Options: sw 1 ba 0 cross 1
+Options: sw 1 ba 0 cross 1
+Options: sw 1 ba 0 cross 1
+[iter 1] road 912 junction 98 문제구간 f<0.30: 88 f<0: 58
+  대상 way 22개, 필렛 적용 33개 (정렬 median 0.17m)
+[iter 2] road 912 junction 98 문제구간 f<0.30: 63 f<0: 44
+  대상 way 3개, 필렛 적용 5개 (정렬 median 0.17m)
+[iter 3] road 912 junction 98 문제구간 f<0.30: 60 f<0: 43
+  신규 대상 없음 -> 종료 (정렬 median 0.16m)
+필렛 38개, 변경 way 17개, 신규 노드 168개, 건너뜀 38건
+출력 OSM: /home/gyumin/campus_mobility_sim/map/data/processed/cbnu_internal_boundary_tags73_smooth_trial_s18_gates.osm
+로그: session18_trial_gates_changes.csv, session18_trial_gates_skipped.csv, session18_trial_gates_report.json
+ 
+[4] osm_to_xodr rc 0 Options: sw 1 ba 0 cross 1
+변환 완료: /home/gyumin/campus_mobility_sim/map/maps/cbnu_internal_only_localtm_tags73_smooth_trial_s18_gates.xodr
+출력크기: 2200263 bytes
+로그: /home/gyumin/campus_mobility_sim/map/logs/osm_to_xodr_20260928_231754.log
+ 

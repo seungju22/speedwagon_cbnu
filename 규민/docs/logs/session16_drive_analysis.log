@@ -1,0 +1,33 @@
+입력: drive_log_20260926_144047.csv, tick 3062
+궤적 길이: 774.6m, 시뮬 시간 153.10s
+평균 속도: 5.06m/s (18.2km/h)
+최고 속도: 6.47m/s (23.3km/h) t=50.40
+agent 목표 U턴 커넥터 tick: 0
+투영 U턴 커넥터 tick: 20 (겹침 투영, 참고)
+
+=== 최근접 계획 road 시퀀스(구간 통과 시각) ===
+r1247 road: t=0.05~31.55s, max|lat| 0.95m, max excess +0.18m, 투영 road [1247, 1915]
+r1914 conn junction1: t=31.60~32.45s, max|lat| 0.18m, max excess -0.60m, 투영 road [1247, 1914]
+r1356 road: t=32.50~39.60s, max|lat| 0.92m, max excess +0.06m, 투영 road [1356]
+r1917 conn junction107: t=39.65~40.15s, max|lat| 0.92m, max excess +0.11m, 투영 road [1916, 1917]
+r1355 road: t=40.20~51.15s, max|lat| 0.67m, max excess +0.13m, 투영 road [1355, 1449, 1916]
+r1446 conn junction42: t=51.20~53.05s, max|lat| 1.78m, max excess +1.00m, 투영 road [1446]
+r1172 road: t=53.10~76.40s, max|lat| 1.18m, max excess +0.71m, 투영 road [1172, 1429, 1445, 1446]
+r1428 conn junction10: t=76.45~79.30s, max|lat| 1.39m, max excess +0.60m, 투영 road [1428, 1429, 1431, 1432, 1434]
+r1240 road: t=79.35~108.55s, max|lat| 0.66m, max excess +0.08m, 투영 road [1240, 1432]
+r1695 conn junction60: t=108.60~111.45s, max|lat| 0.16m, max excess -0.62m, 투영 road [1240, 1695, 1696]
+r1239 road: t=111.50~121.45s, max|lat| 0.35m, max excess -0.43m, 투영 road [1239]
+r1426 conn junction84: t=121.50~124.95s, max|lat| 0.19m, max excess -0.59m, 투영 road [1422, 1424, 1426]
+r1238 road: t=125.00~131.75s, max|lat| 0.60m, max excess +0.00m, 투영 road [1238, 1426]
+r1564 conn junction36: t=131.80~134.45s, max|lat| 1.58m, max excess +0.80m, 투영 road [1558, 1559, 1561, 1564]
+r1278 road: t=134.50~153.10s, max|lat| 0.98m, max excess +0.48m, 투영 road [1278, 1559]
+시퀀스 = 계획 15 road: True (15개)
+
+=== 인도 침범 구간 ===
+sidewalk1: r[1247] t=0.05~1.10s 22tick max|lat| 0.0m excess -0.78m (왼쪽) at (217.9,-1087.1)
+sidewalk2: r[1356] t=39.15~39.20s 2tick max|lat| 0.56m excess +0.06m (오른쪽) at (307.3,-934.8)
+sidewalk3: r[1917] t=39.90~40.00s 3tick max|lat| 0.38m excess +0.11m (오른쪽) at (310.2,-932.4)
+sidewalk4: r[1172, 1355, 1446] t=51.10~54.00s 59tick max|lat| 1.78m excess +1.00m (오른쪽) at (357.6,-891.4)
+
+전 구간 max excess +1.00m r1446 t=52.55
+excess>0 tick: 228 / 3062

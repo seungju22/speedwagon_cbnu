@@ -1,0 +1,105 @@
+# 막다른 끝 회차 비교 — cbnu_internal_only_localtm_tags73_smooth.xodr
+
+## 회차 받음(정의된 junction, 커넥터 1개) 24
+j2 node2261340221 입력road r1120 153.0m 보도 O | way392532207 147.2m 노드13 끝노드 O 끝구간 54.0m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 4 | 원본노드 O 
+    태그 service=parking_aisle
+j27 node4397577797 입력road r1225 140.8m 보도 O | way442065828 130.6m 노드4 끝노드 O 끝구간 123.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j35 node4400580245 입력road r1278 138.0m 보도 O | way442361807 146.6m 노드9 끝노드 O 끝구간 22.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 3 | 원본노드 O 
+    태그 
+j37 node4400580282 입력road r1279 160.6m 보도 O | way442361821 168.6m 노드6 끝노드 O 끝구간 38.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 3 | 원본노드 O 
+    태그 service=parking_aisle
+j39 node4400580284 입력road r1280 82.7m 보도 O | way442361822 90.7m 노드4 끝노드 O 끝구간 69.5m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j41 node4402715664 입력road r1282 152.1m 보도 O | way442595017 160.2m 노드12 끝노드 O 끝구간 10.0m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j62 node4403762229 입력road r1304 73.4m 보도 O | way442708394 114.8m 노드6 끝노드 O 끝구간 47.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j64 node4403762237 입력road r1177 108.0m 보도 O | way442708397 116.0m 노드7 끝노드 O 끝구간 60.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j65 node4403762245 입력road r1306 294.9m 보도 O | way442708398 205.2m 노드7 끝노드 O 끝구간 42.4m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j66 node4403762236 입력road r1179 140.0m 보도 O | way442708400 148.7m 노드8 끝노드 O 끝구간 90.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 3 | 원본노드 O 
+    태그 service=parking_aisle
+j71 node4403762259 입력road r1184 75.9m 보도 O | way442708403 86.1m 노드5 끝노드 O 끝구간 16.8m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j72 node4403762262 입력road r1185 52.1m 보도 O | way442708404 58.6m 노드11 끝노드 O 끝구간 26.5m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j73 node4403762269 입력road r1315 83.0m 보도 O | way442708405 90.7m 노드4 끝노드 O 끝구간 39.5m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j80 node4403766749 입력road r1191 84.4m 보도 O | way442709224 94.8m 노드4 끝노드 O 끝구간 28.8m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j81 node4403766761 입력road r1321 199.4m 보도 O | way442709226 218.2m 노드18 끝노드 O 끝구간 41.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j87 node4437127634 입력road r1327 75.4m 보도 O | way446440351 83.9m 노드5 끝노드 O 끝구간 28.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 3 | 원본노드 O 
+    태그 service=parking_aisle
+j94 node4631208578 입력road r1205 183.6m 보도 O | way468616604 191.5m 노드7 끝노드 O 끝구간 38.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 lit=yes
+j96 node4631209789 입력road r1207 49.5m 보도 O | way468616610 80.9m 노드5 끝노드 O 끝구간 15.2m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 
+j100 node4655490788 입력road r1340 58.0m 보도 O | way471400834 68.8m 노드5 끝노드 O 끝구간 17.2m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O 
+    태그 service=parking_aisle
+j102 node4655491158 입력road r1212 34.7m 보도 O | way471400900 68.2m 노드6 끝노드 O 끝구간 15.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 
+j103 node4403762281 입력road r1345 91.9m 보도 O | way472252989 97.2m 노드6 끝노드 O 끝구간 24.6m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j106 node4658272907 입력road r1220 138.0m 보도 O | way481943504 395.0m 노드19 끝노드 O 끝구간 18.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 3 | 원본노드 O 
+    태그 service=parking_aisle
+j108 node4400580300 입력road r1294 157.7m 보도 O | way442361829 78.4m 노드6 끝노드 O 끝구간 8.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+j109 node4402717775 입력road r1378 221.1m 보도 O | way648686772 62.3m 노드5 끝노드 O 끝구간 9.1m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O 
+    태그 service=parking_aisle
+
+## 회차 못 받음(정의 없는 junction) 14
+j4 node3958352377 입력road r1121 2.5m 보도 O | way392632035 418.5m 노드31 끝노드 O 끝구간 9.1m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 3 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j15 node4397573124 입력road r1132 88.1m 보도 O | way442065041 100.1m 노드16 끝노드 O 끝구간 11.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j17 node4397573135 입력road r1133 20.1m 보도 O | way442065042 152.1m 노드6 끝노드 O 끝구간 27.8m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j26 node4397573198 입력road r1144 63.6m 보도 O | way442065062 72.3m 노드2 끝노드 O 끝구간 72.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j55 node4402717760 입력road r1166 33.8m 보도 O | way442595040 67.2m 노드12 끝노드 O 끝구간 10.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j56 node4658272859 입력road r1298 162.2m 보도 O | way442595852 180.2m 노드5 끝노드 O 끝구간 106.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 footway=sidewalk
+j75 node4403766708 입력road r1317 62.6m 보도 O | way442709216 157.5m 노드28 끝노드 O 끝구간 11.4m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j83 node4404203144 입력road r1323 77.9m 보도 O | way442761502 91.2m 노드5 끝노드 O 끝구간 7.9m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j89 node4492202733 입력road r1329 45.9m 보도 O | way452421704 134.6m 노드7 끝노드 O 끝구간 26.4m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j92 node4492202737 입력road r1332 136.3m 보도 O | way452421706 367.6m 노드5 끝노드 O 끝구간 4.7m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j97 node4631209792 입력road r1337 16.1m 보도 O | way468616610 80.9m 노드5 끝노드 O 끝구간 24.2m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 
+j98 node4655490507 입력road r1209 128.6m 보도 O | way471400786 148.9m 노드3 끝노드 O 끝구간 81.3m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 2 / 원본OSM 2 | 원본노드 O (노드 대응 0.0m)
+    태그 
+j99 node4655490541 입력road r1339 50.8m 보도 O | way471400793 56.7m 노드16 끝노드 O 끝구간 3.5m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O (노드 대응 0.0m)
+    태그 service=parking_aisle
+j104 node4784199633 입력road r1346 89.8m 보도 O | way472252990 101.9m 노드11 끝노드 O 끝구간 16.1m oneway - width - lanes - 고리 X | 차수 변환way 1 / 입력OSM highway 1 / 원본OSM 1 | 원본노드 O (노드 대응 0.0m)
+    태그 footway=sidewalk
+
+### 요약 회차 받음 (way 행 24)
+way 길이 중앙값 106.0 범위 58.6~395.0
+way 노드 수 중앙값 6.0 범위 4~19
+끝 구간 길이 중앙값 28.8 범위 8.7~123.3
+끝 노드가 way 끝: 24/24
+oneway=yes: 0, width 태그: 0, lanes 태그: 0, 고리 way: 0
+태그 구성: {'service=parking_aisle': 20, '': 3, 'lit=yes': 1}
+차수(변환way): {1: 24}
+차수(입력OSM highway 전체): {1: 8, 3: 5, 2: 11}
+차수(원본OSM highway 전체): {4: 1, 1: 7, 3: 5, 2: 11}
+입력 road 길이 중앙값 123.0 범위 34.7~294.9
+
+### 요약 회차 못 받음 (way 행 14)
+way 길이 중앙값 118.2 범위 56.7~418.5
+way 노드 수 중앙값 6.5 범위 2~31
+끝 구간 길이 중앙값 13.9 범위 3.5~106.7
+끝 노드가 way 끝: 14/14
+oneway=yes: 0, width 태그: 0, lanes 태그: 0, 고리 way: 0
+태그 구성: {'service=parking_aisle': 10, 'footway=sidewalk': 2, '': 2}
+차수(변환way): {1: 14}
+차수(입력OSM highway 전체): {3: 1, 2: 8, 1: 5}
+차수(원본OSM highway 전체): {2: 12, 1: 2}
+입력 road 길이 중앙값 63.1 범위 2.5~162.2

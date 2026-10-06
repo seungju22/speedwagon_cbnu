@@ -1,0 +1,57 @@
+== 도로 길이/곡률 ==
+road1593 len 9.89m junction 44 회전 -126.8° 최대곡률 30.1°/m 폭 3.35
+road1592 len 13.32m junction 44 회전 -97.5° 최대곡률 11.6°/m 폭 3.35
+road1590 len 15.41m junction 44 회전 +0.0° 최대곡률 0.0°/m 폭 3.35
+road1587 len 12.96m junction 44 회전 -82.3° 최대곡률 9.0°/m 폭 3.35
+road1612 len 76.13m junction 43 회전 -167.8° 최대곡률 52.6°/m 폭 3.35
+road1283 len 6.74m junction None 회전 -0.3° 최대곡률 0.2°/m 폭 3.35
+road1617 len 15.49m junction 43 회전 +0.1° 최대곡률 0.0°/m 폭 3.35
+road1616 len 21.80m junction 43 회전 +12.6° 최대곡률 12.9°/m 폭 3.35
+road1611 len 15.49m junction 43 회전 -0.1° 최대곡률 0.0°/m 폭 3.35
+road1374 len 81.70m junction None 회전 -0.4° 최대곡률 0.1°/m 폭 3.35
+road1284 len 31.81m junction None 회전 +6.3° 최대곡률 0.9°/m 폭 3.35
+  road1592 시작 (497.2,-797.1) 끝 (510.5,-800.2) next [1283]
+  road1590 시작 (511.7,-790.9) 끝 (499.1,-799.8) next [1242]
+  road1587 시작 (507.6,-801.8) 끝 (509.7,-788.2) next [1375]
+  road1612 시작 (517.8,-821.5) 끝 (532.7,-809.8) next [1288]
+  road1283 시작 (510.6,-800.3) 끝 (513.7,-806.2) next [1618, 1617, 1616]
+  road1617 시작 (513.7,-806.3) 끝 (520.8,-820.0) next [1284]
+
+== 급커브 출구 -> 다음 junction 입구 (중간 plain road 길이) ==
+middle r1592(j44 -97): 출구 뒤 plain road1283 6.7m, 다음 커넥터 r1617 입구까지 직선 6.8m
+south r1446(j42 +78): 출구 뒤 plain road1172 119.1m, 다음 커넥터 r1428 입구까지 직선 119.1m
+south/legacy r1428(j10 -68): 출구 뒤 plain road1240 149.5m, 다음 커넥터 r1695 입구까지 직선 149.4m
+legacy r1564(j36 -82): 출구 뒤 plain road1278 138.0m (그 뒤 junction 은 막다른 끝/종점 쪽)
+middle r1838(j48 -71): 출구 뒤 plain road1327 75.4m (그 뒤 junction 은 막다른 끝/종점 쪽)
+j44 커넥터 8개 [1586, 1587, 1588, 1589, 1590, 1591, 1592, 1593], 중심 (504.4,-794.4) 반경 (9.0,8.8)
+j43 커넥터 8개 [1611, 1612, 1613, 1614, 1615, 1616, 1617, 1618], 중심 (519.2,-804.2) 반경 (16.0,18.8)
+
+== t=80~88s 궤적 vs 계획 차선(1374,1592,1283,1617,1284) 중심선 ==
+t=80.00 (476.64,-811.66) 조회 road1374 s=56.5 | 최근접 계획 road1374 s=56.50 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=36
+t=80.50 (478.39,-810.41) 조회 road1374 s=58.7 | 최근접 계획 road1374 s=58.75 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=36
+t=81.00 (480.48,-808.92) 조회 road1374 s=61.2 | 최근접 계획 road1374 s=61.25 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=81.50 (482.87,-807.22) 조회 road1374 s=64.2 | 최근접 계획 road1374 s=64.25 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=82.00 (484.93,-805.76) 조회 road1374 s=66.7 | 최근접 계획 road1374 s=66.75 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=82.50 (486.68,-804.52) 조회 road1374 s=68.8 | 최근접 계획 road1374 s=68.75 lat -0.00m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=83.00 (488.77,-803.03) 조회 road1374 s=71.4 | 최근접 계획 road1374 s=71.50 lat -0.00m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=83.50 (491.17,-801.34) 조회 road1374 s=74.3 | 최근접 계획 road1374 s=74.25 lat -0.01m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=84.00 (493.20,-799.92) 조회 road1374 s=76.8 | 최근접 계획 road1374 s=76.75 lat -0.03m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=35
+t=84.50 (495.01,-798.69) 조회 road1374 s=79.0 | 최근접 계획 road1374 s=79.00 lat -0.07m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=34
+t=84.95 (497.04,-797.61) 조회 road1593 s=0.5 | 최근접 계획 road1374 s=81.25 lat -0.36m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=28
+t=85.00 (497.27,-797.49) 조회 road1593 s=0.8 | 최근접 계획 road1374 s=81.50 lat -0.40m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=28
+t=85.05 (497.50,-797.37) 조회 road1593 s=1.1 | 최근접 계획 road1592 s=0.00 lat -0.44m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=28
+t=85.50 (499.95,-796.55) 조회 road1592 s=2.5 | 최근접 계획 road1592 s=2.50 lat -0.96m (반폭 1.68) 차선안 | in_plan_lane= opposite=False yaw=14
+t=85.90 (501.97,-796.30) 조회 road1590 s=11.1 | 최근접 계획 road1592 s=4.25 lat -1.37m (반폭 1.68) 차선안 | in_plan_lane=True opposite=True yaw=7
+t=86.00 (502.47,-796.31) 조회 road1590 s=10.7 | 최근접 계획 road1592 s=4.75 lat -1.46m (반폭 1.68) 차선안 | in_plan_lane=True opposite=True yaw=3
+t=86.20 (503.48,-796.50) 조회 road1590 s=9.9 | 최근접 계획 road1592 s=5.75 lat -1.69m (반폭 1.68) 차선밖 | in_plan_lane=False opposite=True yaw=-7
+t=86.25 (503.75,-796.58) 조회 road1590 s=9.8 | 최근접 계획 road1592 s=6.00 lat -1.73m (반폭 1.68) 차선밖 | in_plan_lane= opposite=False yaw=-10
+t=86.50 (505.03,-797.03) 조회 road1587 s=4.8 | 최근접 계획 road1592 s=7.50 lat -1.85m (반폭 1.68) 차선밖 | in_plan_lane= opposite=False yaw=-18
+t=86.80 (506.20,-797.77) 조회 road1612 s=26.4 | 최근접 계획 road1592 s=9.00 lat -1.91m (반폭 1.68) 차선밖 | in_plan_lane=False opposite=True yaw=-30
+t=87.00 (506.92,-798.30) 조회 road1612 s=25.6 | 최근접 계획 road1592 s=9.75 lat -1.84m (반폭 1.68) 차선밖 | in_plan_lane=False opposite=True yaw=-34
+
+== 급커브 커넥터 평균 반경 (길이 / 회전 rad) ==
+r1446 len 13.91m 회전 +78.7° 평균반경 10.13m
+r1428 len 14.24m 회전 -68.5° 평균반경 11.92m
+r1564 len 12.96m 회전 -82.3° 평균반경 9.03m
+r1592 len 13.32m 회전 -97.5° 평균반경 7.83m
+r1838 len 8.27m 회전 -80.6° 평균반경 5.88m

@@ -1,0 +1,30 @@
+synchronous_mode=False
+--- 메모리 [소환 전] 11:38:35 ---
+Mem:            12Gi       7.9Gi       3.2Gi        89Mi       1.6Gi       4.5Gi
+Swap:          8.0Gi       810Mi       7.2Gi
+gtt_used: 1.53GiB
+[소환] tree SM_Acer_02 scale=1.0 actor_id=29 loc=(212.3,-1057.1,0.00) bbox_extent=(4.32,4.06,9.64) attr_scale=1.0
+[소환] tree SM_Ash_01 scale=1.0 actor_id=30 loc=(213.0,-1042.1,0.00) bbox_extent=(6.58,7.30,15.07) attr_scale=1.0
+[소환] tree SM_Acer_02 scale=2.0 actor_id=31 loc=(214.2,-1026.7,0.00) bbox_extent=(8.21,8.55,19.28) attr_scale=2.0
+--- 메모리 [tree 소환 5s 후] 11:38:40 ---
+Mem:            12Gi       7.9Gi       3.1Gi        89Mi       1.7Gi       4.4Gi
+Swap:          8.0Gi       810Mi       7.2Gi
+gtt_used: 1.53GiB
+[소환] building SM_House01 scale=1.0 actor_id=32 loc=(207.2,-989.3,0.00) bbox_extent=(3.68,6.80,6.32) attr_scale=1.0
+[소환] building SM_House02 scale=1.0 actor_id=33 loc=(239.6,-956.5,0.00) bbox_extent=(0.33,5.87,4.24) attr_scale=1.0
+--- 메모리 [building 소환 5s 후] 11:38:45 ---
+Mem:            12Gi       7.9Gi       3.1Gi        89Mi       1.7Gi       4.4Gi
+Swap:          8.0Gi       810Mi       7.2Gi
+gtt_used: 1.52GiB
+spectator: (227.0,-1068.2,35.0) pitch -35
+소환 5/5: [29, 30, 31, 32, 33]
+destroy 27 vehicle.audi.a2 True
+synchronous_mode=False
+static.prop.mesh 제거: 5개 [33, 32, 30, 29, 31]
+--- 메모리 [제거 5s 후] 11:41:27 ---
+Mem:            12Gi       7.9Gi       3.1Gi        94Mi       1.8Gi       4.5Gi
+Swap:          8.0Gi       780Mi       7.2Gi
+gtt_used: 1.52GiB
+sync False None
+actors Counter({'spectator': 1})
+vehicle/sensor/prop 0

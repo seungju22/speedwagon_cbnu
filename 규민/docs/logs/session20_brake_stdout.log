@@ -1,0 +1,16 @@
+map_sha256=bf835cdfad0cea65 (cbnu_internal_only_localtm_tags73_smooth.xodr)
+server_map_sha256=bf835cdfad0cea65 (파일과 일치)
+[동기모드] 전환 전: synchronous_mode=False fixed_delta_seconds=None
+[동기모드] 전환 후: synchronous_mode=True fixed_delta_seconds=0.05
+#0 r1172 s=5 brake: v0 5.584m/s 지연 -0.00s 최고 6.135 정지 1.00s 3.81m a_avg 5.58 a_brk 7.22 a_max 22.92 정지
+#1 r1172 s=5 brake: v0 5.584m/s 지연 -0.00s 최고 6.135 정지 1.00s 3.81m a_avg 5.58 a_brk 7.22 a_max 22.92 정지
+#2 r1172 s=40 brake: v0 5.842m/s 지연 0.25s 최고 6.231 정지 0.95s 3.80m a_avg 6.15 a_brk 7.33 a_max 22.14 정지
+#3 r1125 s=3 brake: v0 5.846m/s 지연 0.25s 최고 6.237 정지 0.95s 3.80m a_avg 6.15 a_brk 7.34 a_max 22.20 정지
+#4 r1355 s=3 brake: v0 5.842m/s 지연 0.25s 최고 6.233 정지 0.95s 3.80m a_avg 6.15 a_brk 7.33 a_max 22.43 정지
+#5 r1172 s=5 hand: v0 5.584m/s 지연 -0.00s 최고 5.951 정지 0.70s 2.61m a_avg 7.98 a_brk 9.16 a_max 20.08 정지
+#6 r1125 s=3 hand: v0 5.846m/s 지연 0.15s 최고 6.139 정지 0.70s 2.63m a_avg 8.35 a_brk 9.44 a_max 22.40 정지
+#7 r1355 s=3 hand: v0 5.842m/s 지연 0.15s 최고 6.135 정지 0.70s 2.63m a_avg 8.35 a_brk 9.44 a_max 22.33 정지
+[동기모드] 복귀: synchronous_mode=False fixed_delta_seconds=None
+로그: /home/gyumin/campus_mobility_sim/map/docs/logs/brake_test_20261002_012821.csv
+[brake] n=5 지연 0.150±0.137(최소 -0.000, 최대 0.250) 정지시간 0.970±0.027(최소 0.950, 최대 1.000) 정지거리 3.805±0.009(최소 3.797, 최대 3.815) a_avg 5.924±0.310(최소 5.584, 최대 6.153) a_brk 7.287±0.063(최소 7.218, 최대 7.337)
+[hand] n=3 지연 0.100±0.087(최소 -0.000, 최대 0.150) 정지시간 0.700±0.000(최소 0.700, 최대 0.700) 정지거리 2.620±0.013(최소 2.605, 최대 2.629) a_avg 8.225±0.214(최소 7.977, 최대 8.351) a_brk 9.346±0.165(최소 9.156, 최대 9.444)

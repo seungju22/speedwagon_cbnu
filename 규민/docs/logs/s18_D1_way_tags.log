@@ -1,0 +1,9 @@
+452870644 5 nodes {'highway': 'service', 'service': 'parking_aisle'} | 첫 4496854212 끝 4744097595
+392632034 5 nodes {'highway': 'service', 'service': 'parking_aisle'} | 첫 3958352335 끝 4496854212
+481945510 3 nodes {'highway': 'service', 'oneway': 'yes', 'service': 'parking_aisle'} | 첫 4658272907 끝 4658272908
+481943505 3 nodes {'highway': 'service', 'oneway': 'yes', 'service': 'parking_aisle'} | 첫 4658272908 끝 4658272910
+481475019 2 nodes {'highway': 'service', 'service': 'parking_aisle'} | 첫 4744097595 끝 4658272910
+481943503 3 nodes {'highway': 'service', 'oneway': 'yes', 'service': 'parking_aisle'} | 첫 4658272909 끝 4658272907
+481945509 3 nodes {'highway': 'service', 'oneway': 'yes', 'service': 'parking_aisle'} | 첫 4658272910 끝 4658272909
+446440352 2 nodes {'highway': 'service', 'service': 'parking_aisle'} | 첫 4437127634 끝 4437127635
+446440353 3 nodes {'highway': 'service', 'service': 'parking_aisle'} | 첫 4437127634 끝 4437127637

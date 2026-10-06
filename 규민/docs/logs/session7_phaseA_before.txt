@@ -1,0 +1,93 @@
+## time: 2026-09-19 22:59:03
+## pgrep -fa 'firefox|CarlaUE4|Isolated|Web Content|Privileged|WebExtensions'
+2742 /snap/firefox/8929/usr/lib/firefox/firefox
+2840 /snap/firefox/8929/usr/lib/firefox/crashhelper 2742 9 /tmp/ 11 20260915102548
+2964 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -ipcHandle 0 -signalPipe 1 -initialChannelId {72a74d15-4e62-4dd1-94e3-2b98d25037ca} -parentPid 2742 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 1 forkserver
+2973 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -parentBuildID 20260915102548 -prefsHandle 0:36890 -prefMapHandle 1:295812 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {e33f5760-7781-48a5-b8ca-4361e7c23058} -parentPid 2742 -crashHelperPid 2840 -crashHelper 5 -crashReporter 6 -appDir /snap/firefox/8929/usr/lib/firefox/browser 2 socket
+3015 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:37031 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {4a730d87-7619-45d9-8984-c8247b7305dc} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 3 tab
+3024 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -parentBuildID 20260915102548 -prefsHandle 0:37031 -prefMapHandle 1:295812 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {e761f47d-b44f-4cbb-8024-f4250633ade8} -parentPid 2742 -crashHelperPid 2840 -crashHelper 5 -crashReporter 6 -appDir /snap/firefox/8929/usr/lib/firefox/browser 4 rdd
+3153 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:37143 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {bb5bf582-f867-47cd-8d3b-8244074f9373} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 5 tab
+3249 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51124 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {4d3a9a33-f862-4fef-8cbc-430438cb5cde} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 6 tab
+3391 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -parentBuildID 20260915102548 -sandboxingKind 0 -prefsHandle 0:55304 -prefMapHandle 1:295812 -sandboxReporter 2 -chrootClient 3 -ipcHandle 4 -initialChannelId {05aaa828-a66b-4ad8-abb3-83db7acd0eac} -parentPid 2742 -crashHelperPid 2840 -crashHelper 5 -crashReporter 6 -appDir /snap/firefox/8929/usr/lib/firefox/browser 7 utility
+3401 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51467 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {7be7974b-bf22-4dcc-9a78-95b4360d2e07} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 8 tab
+3408 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51467 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {4868656a-ef1a-46c7-b1b1-184579e6febd} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 9 tab
+3515 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51467 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {ff2bed9c-6e3e-4e97-911b-04759da98141} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 10 tab
+3605 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51575 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {c903c78c-77f6-4700-a2eb-ed923dc72ab8} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 11 tab
+4098 /snap/firefox/8929/usr/lib/firefox/firefox -contentproc -isForBrowser -prefsHandle 0:51627 -prefMapHandle 1:295812 -jsInitHandle 2:162620 -parentBuildID 20260915102548 -sandboxReporter 3 -chrootClient 4 -ipcHandle 5 -initialChannelId {d54fde95-0ff0-4eaa-9afc-b17ee50debfe} -parentPid 2742 -crashHelperPid 2840 -crashHelper 6 -crashReporter 7 -greomni /snap/firefox/8929/usr/lib/firefox/omni.ja -appomni /snap/firefox/8929/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/8929/usr/lib/firefox/browser 12 tab
+4132 /bin/bash -c source /home/gm/.claude/shell-snapshots/snapshot-bash-1789825431764-akfqij.sh 2>/dev/null || true && shopt -u extglob 2>/dev/null || true && { \builtin unalias -- 'unsetenv'; \builtin unset -f -- 'unsetenv'; } >/dev/null 2>&1 || true && eval 'cd ~/campus_mobility_sim && mkdir -p map/docs/logs && F=map/docs/logs/session7_phaseA_before.txt && { echo "## time: $(date '"'"'+%F %T'"'"')" echo "## pgrep -fa '"'"'firefox|CarlaUE4|Isolated|Web Content|Privileged|WebExtensions'"'"'" pgrep -fa '"'"'firefox|CarlaUE4|Isolated|Web Content|Privileged|WebExtensions|RDD|Socket Process|Utility'"'"' || echo none echo "## comm list (firefox-related by comm)" ps -eo pid,rss,comm --sort=-rss | grep -Ei '"'"'firefox|Isolated|Web Content|Privileged|WebExt|RDD|Socket|Utility|GeckoMain|forkserver'"'"' || echo none echo "## free -h"; free -h echo "## swapon"; swapon --show echo "## meminfo"; grep -E '"'"'^(MemTotal|MemFree|MemAvailable|Buffers|Cached|SwapTotal|SwapFree|AnonPages|Shmem|Slab|SReclaimable|SUnreclaim|KReclaimable|PageTables|KernelStack|Mapped|Unevictable|Mlocked|Percpu|VmallocUsed|HugePages_Total)'"'"' /proc/meminfo echo "## gtt/vram"; for c in /sys/class/drm/card*/device; do for k in gtt vram; do [ -r $c/mem_info_${k}_used ] && echo "$c ${k}_used=$(cat $c/mem_info_${k}_used) total=$(cat $c/mem_info_${k}_total 2>/dev/null)"; done; done echo "## top10 by RSS with PSS (KiB)" for p in $(ps -eo pid --sort=-rss | sed 1d | head -25); do  r=$(awk '"'"'/^VmRSS/{print $2}'"'"' /proc/$p/status 2>/dev/null); s=$(awk '"'"'/^Pss:/{print $2}'"'"' /proc/$p/smaps_rollup 2>/dev/null); sw=$(awk '"'"'/^VmSwap/{print $2}'"'"' /proc/$p/status 2>/dev/null)  echo "$p rss=$r pss=${s:-NA} swap=${sw:-NA} $(cat /proc/$p/comm 2>/dev/null)"; done | sort -t= -k2 -nr | head -10 echo "## SHM"; df -h /dev/shm; ls -la /dev/shm | head; ipcs -m } > $F 2>&1; cat $F | cut -c1-110' < /dev/null && pwd -P >| /tmp/claude-9e6c-cwd
+## comm list (firefox-related by comm)
+   3401 663316 Isolated Web Co
+   2742 657736 firefox
+   3015 211544 Privileged Cont
+   3249 123912 Isolated Web Co
+   3153 113512 WebExtensions
+   3408 87304 Isolated Servic
+   3515 75088 Web Content
+   4098 74472 Web Content
+   3605 74392 Web Content
+   3024 47196 RDD Process
+   2973 38220 Socket Process
+   2964 34132 forkserver
+   3391 33712 Utility Process
+## free -h
+               total        used        free      shared  buff/cache   available
+Mem:            12Gi       2.6Gi       8.1Gi       9.0Mi       2.0Gi        10Gi
+Swap:          8.0Gi          0B       8.0Gi
+## swapon
+NAME      TYPE SIZE USED PRIO
+/swapfile file   8G   0B   -2
+## meminfo
+MemTotal:       13333716 kB
+MemFree:         8542764 kB
+MemAvailable:   10521440 kB
+Buffers:          139060 kB
+Cached:          1870988 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:       8388604 kB
+SwapFree:        8388604 kB
+AnonPages:       2087696 kB
+Mapped:           790168 kB
+Shmem:             10104 kB
+KReclaimable:      95808 kB
+Slab:             330044 kB
+SReclaimable:      95808 kB
+SUnreclaim:       234236 kB
+KernelStack:       17808 kB
+PageTables:        33924 kB
+VmallocUsed:       73840 kB
+Percpu:            18944 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+## gtt/vram
+/sys/class/drm/card1/device gtt_used=68743168 total=6826860544
+/sys/class/drm/card1/device vram_used=574107648 total=2147483648
+## top10 by RSS with PSS (KiB)
+3401 rss=663316 pss=554215 swap=0 Isolated Web Co
+2742 rss=657736 pss=522660 swap=0 firefox
+3319 rss=381080 pss=378580 swap=0 claude
+2171 rss=296256 pss=204690 swap=0 gnome-shell
+3015 rss=211544 pss=116131 swap=0 Privileged Cont
+1995 rss=124272 pss=76174 swap=0 Xorg
+3249 rss=123912 pss=38783 swap=0 Isolated Web Co
+3153 rss=113512 pss=39829 swap=0 WebExtensions
+2735 rss=102624 pss=66224 swap=0 snapd-desktop-i
+2403 rss=91892 pss=44233 swap=0 xdg-desktop-por
+## SHM
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           6.4G     0  6.4G   0% /dev/shm
+total 0
+drwxrwxrwt  2 root root   40  9월 20  2026 .
+drwxr-xr-x 21 root root 5040  9월 20  2026 ..
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 9          gm         600        524288     2          dest         
+0x00000000 18         gm         600        524288     2          dest         
+
+## firefox-family sum (contentproc+main)
+n=17 rss=2.14GiB pss=1.30GiB
+## uptime
+2026-09-19 22:43:08
+ 22:59:15 up 16 min,  1 user,  load average: 0.64, 0.30, 0.20

@@ -1,0 +1,4 @@
+plan poly pts 3281
+s13 TM: ticks 26815, 중심 반대차선 132tick, 그중 계획차선 안 132tick, 첫 등장(road,계획차선안)={(1434, True): '75.167'}, 새 판정 중단=None
+s14 agent: ticks 1046, 중심 반대차선 0tick, 그중 계획차선 안 0tick, 첫 등장(road,계획차선안)={}, 새 판정 중단=None
+s15 run1: ticks 1551, 중심 반대차선 7tick, 그중 계획차선 안 7tick, 첫 등장(road,계획차선안)={(1434, True): '77.25'}, 새 판정 중단=None

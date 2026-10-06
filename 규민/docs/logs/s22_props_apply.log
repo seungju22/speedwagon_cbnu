@@ -1,0 +1,15 @@
+server_map_sha256=bf835cdfad0cea65 (Carla/Maps/OpenDriveMap)
+루트 검사점 1927, 정차점 5
+[통과] 중앙도서관 구관 (N12) SM_Apartment01_1.SM_Apartment01_1 (623.6,-630.0) yaw35 발자국83x46 이동0m 차선여유 16.4m
+[통과] 중앙도서관 구관 (N12) SM_Acer_02.SM_Acer_02 (667.8,-598.8) yaw35 발자국9x9 이동0m 차선여유 56.8m
+[통과] 중앙도서관 구관 (N12) SM_Acer_02.SM_Acer_02 (582.6,-658.9) yaw35 발자국9x9 이동4m 차선여유 3.6m
+[제외] 자연과학대학 본관 (S1-1) SM_Block05.SM_Block05 (544.0,-546.3) yaw24 발자국122x25 도로·인도 위 점 (488.2,-570.3) (이동 20m 로도 실패: 도로·인도 위 점 (490.0,-562.0))
+[통과] 자연과학대학 본관 (S1-1) static.prop.bench01 (604.3,-519.9) yaw24 발자국2x1 이동0m 차선여유 17.4m
+[통과] 자연과학대학 본관 (S1-1) static.prop.bench01 (489.7,-574.1) yaw24 발자국2x1 이동6m 차선여유 3.9m
+[mem 소환 전] 23:28:07 ['12Gi', '7.8Gi', '3.3Gi', '98Mi', '1.6Gi', '4.6Gi'] swap ['8.0Gi', '886Mi'] gtt 1.46GiB
+[소환] id 25 static.prop.mesh /Game/Carla/Static/Building/SM_Apartment01_1.SM_Apartment01_1 loc (623.6,-630.0,0.00)
+[소환] id 26 static.prop.mesh /Game/Carla/Static/Vegetation/Trees/SM_Acer_02.SM_Acer_02 loc (667.8,-598.8,0.00)
+[소환] id 27 static.prop.mesh /Game/Carla/Static/Vegetation/Trees/SM_Acer_02.SM_Acer_02 loc (582.6,-658.9,0.00)
+[소환] id 28 static.prop.bench01  loc (604.3,-519.9,0.00)
+[소환] id 29 static.prop.bench01  loc (489.7,-574.1,0.00)
+[mem 소환 5s 후] 23:28:12 ['12Gi', '7.8Gi', '3.3Gi', '98Mi', '1.7Gi', '4.5Gi'] swap ['8.0Gi', '884Mi'] gtt 1.46GiB
