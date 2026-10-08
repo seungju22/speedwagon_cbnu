@@ -1,0 +1,7 @@
+map_sha256=5240ca8b883e42c0 (cbnu_campus_frozen_v2.xodr)
+생성 인자: vertex_distance=2.0, max_road_length=50.0, wall_height=0.0, additional_width=0.6, smooth_junctions=True, enable_mesh_visibility=True, enable_pedestrian_navigation=True
+서버 localhost:2000 버전 0.9.15
+맵 이름: Carla/Maps/OpenDriveMap
+서버 to_opendrive sha256=5240ca8b883e42c0 (파일과 일치)
+도로 917 / 교차로 112
+스폰 지점 1302

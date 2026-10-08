@@ -1,0 +1,33 @@
+[0] 안 B: 추가 way 8개 (제외 ['481950060'])
+[1] 입력 해시
+  일치 c383870eb4d1e196 (기대 c383870eb4d1e196) data/raw/cbnu_campus.osm
+  일치 bf835cdfad0cea65 (기대 bf835cdfad0cea65) maps/cbnu_internal_only_localtm_tags73_smooth.xodr
+  일치 dfcc5ff7b1a41532 (기대 dfcc5ff7b1a41532) data/processed/cbnu_campus_fixed_tags73.osm
+  일치 ce457630b2de089f (기대 ce457630b2de089f) data/processed/cbnu_internal_boundary_tags73.osm
+  일치 caa2c69b026ccc75 (기대 caa2c69b026ccc75) data/processed/cbnu_internal_boundary_tags73_smooth.osm
+[2] 추가 way
+  기존 보정 73건, 추가 8건, 겹침 0
+  way442595850 highway=service service=parking_aisle oneway=yes
+  way481945510 highway=service service=parking_aisle oneway=yes
+  way481943505 highway=service service=parking_aisle oneway=yes
+  way481475019 highway=service service=parking_aisle oneway=-
+  way452870644 highway=service service=parking_aisle oneway=-
+  way481945509 highway=service service=parking_aisle oneway=yes
+  way481943503 highway=service service=parking_aisle oneway=yes
+  way392632034 highway=service service=parking_aisle oneway=-
+[3] 분류(메모리 안, 파일 안 씀)
+  internal/boundary/external (447, 38, 664) (기대 (447, 38, 664))
+  way442595850: internal
+  way481945510: internal
+  way481943505: internal
+  way481475019: internal
+  way452870644: internal
+  way481945509: internal
+  way481943503: internal
+  way392632034: boundary
+[4] 출력 경로(없어야 함)
+  없음 data/processed/cbnu_campus_fixed_tags81_B.osm
+  없음 data/processed/cbnu_internal_boundary_tags81_B.osm
+  없음 data/processed/cbnu_internal_boundary_tags81_B_smooth.osm
+  없음 maps/cbnu_internal_only_localtm_tags81_B_smooth.xodr
+점검 결과: 문제 0건

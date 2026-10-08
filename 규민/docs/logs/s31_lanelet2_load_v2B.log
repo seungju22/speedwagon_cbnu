@@ -1,0 +1,8 @@
+## s29_v2B.osm
+load 오류 0
+lanelet 1433 {'road': 909, 'walkway': 524}, point 157767, linestring 2342, regulatory 0
+차량 통행 가능 lanelet 909
+routing graph checkValidity 문제 0
+정문 lanelet 54602(거리 0.00m)에서 도달 가능 2/909 (차선 변경 포함)
+  차선 변경 없이 2/909
+point z 값 종류 [0.0]

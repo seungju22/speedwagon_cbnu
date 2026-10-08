@@ -1,0 +1,14 @@
+[월드] map=Carla/Maps/OpenDriveMap sha16=5240ca8b883e42c0
+[설정] 원래 WorldSettings(synchronous_mode=False,no_rendering_mode=False,fixed_delta_seconds=4.89218e-310,substepping=True,max_substep_delta_time=0.01,max_substeps=10,max_culling_distance=0,deterministic_ragdolls=True)
+[정리 전] 남은 차량·소품·센서 [(29, 'vehicle.audi.a2')]
+[메모리] 동기 전환 후 23:30:33 {'avail_mi': 4616, 'swap_mi': 787, 'gtt_mi': 1477}
+[스크린샷] s38_props_before.png frame=116104 cam=Transform(Location(x=308.107544, y=-940.793945, z=14.000000), Rotation(pitch=-22.000000, yaw=63.975979, roll=0.000000))
+[FPS] before_render_on {'ticks': 100, 'sec': 0.43, 'ms_per_tick': 4.3, 'fps': 232.3}
+[메모리] before_render_on 23:30:37 {'avail_mi': 4618, 'swap_mi': 787, 'gtt_mi': 1477}
+[FPS] before_render_off {'ticks': 100, 'sec': 0.064, 'ms_per_tick': 0.64, 'fps': 1572.6}
+[메모리] before_render_off 23:30:40 {'avail_mi': 4620, 'swap_mi': 787, 'gtt_mi': 1477}
+[소환] House01_x1 {'kind': 'building', 'blueprint': 'static.prop.mesh', 'mesh_path': '/Game/Carla/Static/Building/SM_House01.SM_House01', 'scale': 1.0, 'spawn': '성공', 'actor_id': 32, 'attr_scale': '1.0', 'bbox_extent_m': [0.354, 7.718, 6.323], 'bbox_size_m': [0.707, 15.436, 12.646], 'bbox_center_offset_m': [0.0, -0.001, 6.323], 's_center': 8.0, 'offset_from_lane_center_m': 15.08, 'check_points': 256, 'points_on_any_lane': 0, 'min_dist_to_driving_edge_m': 42.03, 'nearest_driving_road': 1338, 'footprint_half_m': [8.0, 8.0], 'footprint_from': '대체(최소 반폭 8.0m)', 'overlap_ok': True}
+[소환] House01_x2 {'kind': 'building', 'blueprint': 'static.prop.mesh', 'mesh_path': '/Game/Carla/Static/Building/SM_House01.SM_House01', 'scale': 2.0, 'spawn': '성공', 'actor_id': 33, 'attr_scale': '2.0', 'bbox_extent_m': [0.707, 15.436, 12.646], 'bbox_size_m': [1.415, 30.872, 25.293], 'bbox_center_offset_m': [0.0, -0.001, 6.323], 's_center': 30.0, 'offset_from_lane_center_m': 22.51, 'check_points': 496, 'points_on_any_lane': 0, 'min_dist_to_driving_edge_m': 34.603, 'nearest_driving_road': 1338, 'footprint_half_m': [8.0, 15.44], 'footprint_from': '대체(최소 반폭 8.0m)', 'overlap_ok': True}
+[소환] House02_x1 {'kind': 'building', 'blueprint': 'static.prop.mesh', 'mesh_path': '/Game/Carla/Static/Building/SM_House02.SM_House02', 'scale': 1.0, 'spawn': '성공', 'actor_id': 34, 'attr_scale': '1.0', 'bbox_extent_m': [0.606, 5.843, 4.238], 'bbox_size_m': [1.213, 11.687, 8.476], 'bbox_center_offset_m': [0.008, -0.137, 4.231], 's_center': 51.99, 'offset_from_lane_center_m': 15.21, 'check_points': 289, 'points_on_any_lane': 0, 'min_dist_to_driving_edge_m': 22.056, 'nearest_driving_road': 1202, 'footprint_half_m': [8.0, 8.0], 'footprint_from': '대체(최소 반폭 8.0m)', 'overlap_ok': True}
+[정리] 남은 차량·소품·센서 [] 설정 WorldSettings(synchronous_mode=False,no_rendering_mode=False,fixed_delta_seconds=4.89218e-310,substepping=True,max_substep_delta_time=0.01,max_substeps=10,max_culling_distance=0,deterministic_ragdolls=True)
+[메모리] 정리 후 {'avail_mi': 4595, 'swap_mi': 787, 'gtt_mi': 1477}

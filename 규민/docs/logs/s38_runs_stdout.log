@@ -1,0 +1,13 @@
+[s38_v2_back_run1] 23:21:34 시작 server PID=4892 avail=2175Mi swap=1577Mi
+[s38_v2_back_run1] spawn point 개수: 1302
+[s38_v2_back_run1] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s38_v2_back_run1] 서버 맵 road 917 / junction 112
+[s38_v2_back_run1] 23:21:40 로드 직후 avail=2353Mi swap=826Mi
+[s38_v2_back_run1] 23:23:40 주행 전 avail=4760Mi swap=824Mi
+[s38_v2_back_run1] 23:24:22 주행 rc=0 주행 후 avail=4760Mi swap=822Mi
+[s38_v2_back_run2] 23:24:52 시작 server PID=4892 avail=4728Mi swap=822Mi
+[s38_v2_back_run2] 23:24:52 주행 전 avail=4728Mi swap=822Mi
+[s38_v2_back_run2] 23:25:36 주행 rc=0 주행 후 avail=4670Mi swap=822Mi
+[s38_v2_back_run3] 23:25:37 시작 server PID=4892 avail=4673Mi swap=822Mi
+[s38_v2_back_run3] 23:25:37 주행 전 avail=4673Mi swap=822Mi
+[s38_v2_back_run3] 23:26:18 주행 rc=0 주행 후 avail=4680Mi swap=821Mi

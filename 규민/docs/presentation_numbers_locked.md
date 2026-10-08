@@ -126,3 +126,38 @@
 - "평균 반경 9m 가 통과 경계": 옛 판정 기준값. 세션20 에서 7.82m·5.73m 도 통과
 - "유턴 연결로는 전부 같은 틀": 확인 범위는 junction 30여 개
 - 세션18 중문 실패 지속 시간 0.30s / 0.35s: 정의 차이. 말할 필요가 있으면 "7 tick" 으로
+
+# v2 동결 숫자 카드 (세션40, 2026-10-09 append. 위 1~8절은 frozen_v1 값 그대로)
+
+형식은 위와 같다: 항목 / 값 / 출처 파일(map/docs/ 기준)
+맵 파일: map/maps/cbnu_campus_frozen_v2.xodr (= cbnu_internal_only_localtm_tags81_B_smooth_turnfix.xodr), sha256 앞 16자 5240ca8b883e42c0 / map_frozen_v2.md
+주행 조건: 위와 같다(빈 도로·맑음·z=0, CARLA 0.9.15, BasicAgent, 동기 20Hz, 목표 20km/h)
+
+## v2-1. 지도 규모
+- road 수 / 917 / map_session32_report.md 10·109행
+- junction 수 / 112 / map_session32_report.md 10·109행
+- spawn point / 1302 / map_session32_report.md 110행
+- 고도 / 0(elevation 917개 모두 0) / map_session40_report.md 2절(세션40 계수)
+
+## v2-2. 정류장 노선 (세션33 개정 기준: 시간은 대기 제외)
+- 북문 거리 / 시간 / 622.4m / 123.2s / map_session33_report.md 88행
+- 남문 거리 / 시간 / 726.8m / 143.9s / map_session33_report.md 90행
+- 중문 거리 / 시간 / 689.9m / 대기 제외 137.1s(원값 142.1s) / map_session33_report.md 92행
+- 양성재 거리 / 시간 / 633.8~634.0m / 125.5~125.7s(3회) / map_session33_report.md 66~68행
+- 후문 거리 / 시간 / 1363.9~1364.0m / 276.0·281.4·275.5s(3회, 281.4 는 정지 근접 5s 포함) / map_session38_report.md 64~65행
+  - 후문 정의: 종점 r1151 s=23.1 = 후문B 추정 게이트(392632034 위) 최근접. r1391 노선 전용 설정(감속 8.9km/h·간격 1m·겨냥 1.0m) 포함
+- 충돌 / 0(5 노선) / map_session33_report.md 88~92·66~68행, map_session38_report.md 44~46행
+- 단서 / 4 노선은 test_drive.py 2935c016f9315b70 으로 재주행 전 / map_frozen_v2.md "검증된 결과"
+
+## v2-3. 연결성
+- 정문 왕복 / 4/917 (0.4%) / map_session32_report.md 16행
+- 정문에서 도달 / 913/917 / map_session32_report.md 19·63행
+- 주 순환망 복귀 / 903 / map_session31_report.md 121행
+- 회차 없는 막다른 끝 / 0 (v1 13) / map_session31_report.md 116행
+- 후문 게이트 추정점까지 경로 / 약 1,368m (33 road) / map_session32_report.md 63행
+- road id 이관(v1 -> v2 형상 일치) / 866/878 (98.6%) / map_session31_report.md 96행
+
+## v2-4. 회전 반경 (판정 아님, 목록 기준값)
+- Autoware sample_vehicle 뒤축 최소 반경 / 3.312m (2.79/tan 0.70) / map_session39_report.md 1절
+- 그보다 작은 차선 중심 반경 구간 수 북 / 남 / 중 / 양 / 후 / 1 / 0 / 5 / 0 / 4 / logs/s39_turn_radius.log
+- r1391 끝 구간 최소 반경 / 3.114m (s=17.67) / logs/s39_turn_radius.log, map_session40_report.md 6-a

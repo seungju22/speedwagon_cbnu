@@ -3,6 +3,7 @@
 # 왜 래퍼인가: fix_tags.py / classify_internal.py 는 출력 경로가 코드에 고정돼 그대로 실행하면 tags73 OSM 을 덮어쓰고,
 #   fix_tags.write_log 는 map/logs/fixed_way_ids.txt 를 덮어쓴다(s18_D_reconvert.md). 그래서 함수만 import 해 새 경로로 쓴다.
 #   smooth_osm_curves.py 는 --log-prefix 를 안 주면 session11_smoothing_*.csv 를 덮어쓴다 -> 반드시 새 접두어.
+# 세션28: 392632034 추가(9개), --variant A|B 추가. 세션27 check 로그(s27_reconvert_check.log)는 8개 시절 값
 # 모드
 #   check            읽기전용. 입력 해시, 추가 way 존재·태그, 기존 73 과 중복, 분류(메모리 안) 결과, 출력 파일 미존재 확인.
 #                    세션27 에 실행한 것은 이 모드뿐
@@ -33,7 +34,10 @@ EXPECT = {RAW: "c383870eb4d1e196", FROZEN: "bf835cdfad0cea65",
 ADD_WAYS = ["481950060",                                   # 정문 출구
             "442595850",                                   # 박물관 서쪽 차고지 고리(A7)
             "481945510", "481943505", "481475019",          # 후문 연결 6
-            "452870644", "481945509", "481943503"]
+            "452870644", "481945509", "481943503",
+            "392632034"]                                   # 세션28 추가: 후문B 게이트 진입로(s28_gate_review.md)
+# 세션28 A/B 비교(reconversion_plan.md 7절): A안 = ADD_WAYS 전부, B안 = 정문 출구만 제외
+VARIANT_EXCLUDE = {"A": [], "B": ["481950060"]}
 EXPECT_CLASS = (447, 38, 664)   # 태그 보정은 분류를 안 바꾼다(highway 태그 있는 way 집합 불변, s18 확인)
 
 
@@ -57,16 +61,22 @@ def check_inputs():
     return bad
 
 
-def check(tag):
+def variant_ways(variant):
+    return [w for w in ADD_WAYS if w not in VARIANT_EXCLUDE[variant]]
+
+
+def check(tag, variant="A"):
+    add = variant_ways(variant)
+    print(f"[0] 안 {variant}: 추가 way {len(add)}개 (제외 {VARIANT_EXCLUDE[variant] or '없음'})")
     print("[1] 입력 해시")
     bad = check_inputs()
     print("[2] 추가 way")
     tree = fix_tags.load(RAW)
     ways = {w.get("id"): w for w in tree.getroot().findall("way")}
-    dup = set(ADD_WAYS) & set(fix_tags.TARGET_WAY_IDS)
-    print(f"  기존 보정 {len(fix_tags.TARGET_WAY_IDS)}건, 추가 {len(ADD_WAYS)}건, 겹침 {sorted(dup) or 0}")
+    dup = set(add) & set(fix_tags.TARGET_WAY_IDS)
+    print(f"  기존 보정 {len(fix_tags.TARGET_WAY_IDS)}건, 추가 {len(add)}건, 겹침 {sorted(dup) or 0}")
     bad += bool(dup)
-    for wid in ADD_WAYS:
+    for wid in add:
         w = ways.get(wid)
         if w is None:
             print(f"  없음 way{wid}")
@@ -81,7 +91,7 @@ def check(tag):
     cnt = tuple(sum(1 for v in cls.values() if v == k) for k in ("internal", "boundary", "external"))
     print(f"  internal/boundary/external {cnt} (기대 {EXPECT_CLASS})")
     bad += cnt != EXPECT_CLASS
-    for wid in ADD_WAYS:
+    for wid in add:
         print(f"  way{wid}: {cls.get(wid)}")
         bad += cls.get(wid) not in ("internal", "boundary")
     print("[4] 출력 경로(없어야 함)")
@@ -92,11 +102,11 @@ def check(tag):
     return bad
 
 
-def run(tag, base):
-    if check(tag):
+def run(tag, base, variant="A"):
+    if check(tag, variant):
         sys.exit("점검 실패: 실행하지 않음")
     fixed, internal, smooth, xodr = paths(tag)
-    targets = list(fix_tags.TARGET_WAY_IDS) + ([] if base else ADD_WAYS)
+    targets = list(fix_tags.TARGET_WAY_IDS) + ([] if base else variant_ways(variant))
     tree = fix_tags.load(RAW)
     changes, nf = fix_tags.apply_fixes(tree, targets)
     if nf:
@@ -120,9 +130,13 @@ def run(tag, base):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["check", "run"])
-    ap.add_argument("--tag", default="tags81_v2", help="출력 파일명 꼬리(기본 tags81_v2 = 73+8)")
+    ap.add_argument("--variant", choices=["A", "B"], default="A",
+                    help="세션28 A/B 안. A = 추가 9 전부, B = 정문 출구 481950060 제외 8")
+    ap.add_argument("--tag", default=None,
+                    help="출력 파일명 꼬리. 기본: A -> tags82_A, B -> tags81_B (73 + 추가 수)")
     ap.add_argument("--base", action="store_true", help="추가 way 없이 73건 그대로(재현성 기준선)")
     a = ap.parse_args()
+    tag = a.tag or f"tags{73 + len(variant_ways(a.variant))}_{a.variant}"
     if a.mode == "check":
-        sys.exit(1 if check(a.tag) else 0)
-    run(a.tag, a.base)
+        sys.exit(1 if check(tag, a.variant) else 0)
+    run(tag, a.base, a.variant)

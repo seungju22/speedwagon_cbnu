@@ -1,0 +1,16 @@
+map_sha256=bf835cdfad0cea65 (cbnu_internal_only_localtm_tags73_smooth.xodr)
+로드 대상: /home/gyumin/campus_mobility_sim/map/maps/cbnu_internal_only_localtm_tags73_smooth.xodr
+서버 버전: 0.9.15
+xodr 파일 크기: 2125011 bytes (cbnu_internal_only_localtm_tags73_smooth.xodr)
+적용 OpendriveGenerationParameters (* = 인자로 변경):
+  vertex_distance=2.0
+  max_road_length=50.0
+* wall_height=0.0
+  additional_width=0.6
+  smooth_junctions=True
+  enable_mesh_visibility=True
+  enable_pedestrian_navigation=True
+맵 이름: Carla/Maps/OpenDriveMap
+spawn point 개수: 1243
+보낸 문자열 sha256=bf835cdfad0cea65, 서버 to_opendrive sha256=bf835cdfad0cea65 (일치), 길이 2125011 / 2125011
+서버 맵 road 878 / junction 95
