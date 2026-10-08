@@ -35,6 +35,15 @@ START = (1278, -1, 0.0)             # logs/s38_v2_back_run1.log "spawn: ... road
 STOPS = [("main_gate", "정문", "start", None), ("lib_north", "도서관 북문", "north", None),
          ("lib_south", "도서관 남문", "south", None), ("middle_gate", "중문", "middle", None),
          ("yangseong", "양성재", "yangseong", None), ("back_gate", "후문", "back", None)]
+# 2026-10-09: note 는 정류장 위치를 한 줄 평서문으로 적는다(보고서 이름 뺌). 예전 문구는 test_drive.py ROUTES_V2 의 stop
+NOTES = {
+    "main_gate": "정문 바로 밖 공도 교차점으로, 모든 노선이 여기서 출발한다",
+    "lib_north": "도서관 구관 북동쪽 면 앞 도로로, 면 중점에서 46.1m 떨어져 있다",
+    "lib_south": "자연대와 도서관 사이 도로로, 도서관 남서쪽 면 중점에서 약 57.5m 떨어져 있다",
+    "middle_gate": "중문 앞 도로로, road1327 막다른 끝 5.7m 전이고 문까지 약 40~80m 다",
+    "yangseong": "양성재(서문) 앞 도로로, 건물 외곽선에서 45.7m 떨어져 있다",
+    "back_gate": "OSM way 392632034 위 후문B 추정 게이트로, 기준점(36.624844, 127.462860)에서 1.65m 떨어져 있다",
+}
 
 
 def inverse(frame, x, y, lat=36.63, lon=127.46):
@@ -60,22 +69,22 @@ def main():
     frame = Frame(text)
     rings = load_polygon_rings(POLY)
     routes = td.ROUTES_V2
-    lines = ["# 정류장·차고지 (세션40, map/scripts/s40_stops.py 생성). 기존 노선 정의에서 모음. 새로 정한 값 없음",
-             f"# 맵: maps/cbnu_campus_frozen_v2.xodr sha256 앞 16자 {sha}",
-             "# 좌표: road/s/lane = OpenDRIVE(lane -1 = 진행 방향 오른쪽 주행 차선), 위경도 = WGS84(xodr 머리말 투영·offset 역산, s22_buildings.Frame)",
-             "# stop_zone_length_m 는 아직 정하지 않음(빈 값)",
-             "# 데이터 출처: OpenStreetMap, (c) OpenStreetMap contributors, ODbL 1.0. 좌표는 OSM 파생 지도·OSM 노드에서 계산한 값이다",
+    lines = ["# 정류장과 차고지 후보. map/scripts/s40_stops.py 가 기존 노선 정의에서 모아 만들었다. 새로 정한 값은 없다",
+             f"# 맵은 maps/cbnu_campus_frozen_v2.xodr 이다(sha256 앞 16자 {sha})",
+             "# road/s/lane 은 OpenDRIVE 좌표다. lane -1 은 진행 방향 오른쪽 주행 차선이다",
+             "# 위경도는 WGS84 다. xodr 머리말의 투영과 offset 으로 역산했다(s22_buildings.Frame)",
+             "# stop_zone_length_m 는 아직 정하지 않아 비워 두었다",
+             "# 데이터 출처는 OpenStreetMap 이다. (c) OpenStreetMap contributors, ODbL 1.0",
+             "# 좌표는 OSM 파생 지도와 OSM 노드에서 계산했다",
              f"map_sha256_16: {sha}", "stops:"]
     for key, name, route, _ in STOPS:
         if route == "start":
             rid, lane, s = START
             src = "test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발) + logs/s38_v2_back_run1.log spawn 줄 s=0.00"
-            desc = "노선 출발점(정문 밖 공도 교차점, frozen_v1 r1247 과 좌표 차 0, map_session32_report.md 0-4)"
         else:
             r = routes[route]
             rid, lane, s = r["roads"][-1], -1, r["end_s"]
             src = f"test_drive.py ROUTES_V2['{route}'] 마지막 road·end_s"
-            desc = r.get("stop", "")
         wp = cmap.get_waypoint_xodr(rid, lane, s)
         loc = wp.transform.location
         glat, glon = inverse(frame, loc.x, loc.y)
@@ -89,7 +98,7 @@ def main():
                   f"    latlon_roundtrip_m: {rt:.3f}",
                   f"    inside_campus_boundary: {'true' if inside else 'false'}",
                   "    stop_zone_length_m:",
-                  f"    note: \"{desc}\"", f"    source: \"{src}\""]
+                  f"    note: \"{NOTES[key]}\"", f"    source: \"{src}\""]
         print(f"{key} r{rid} s={s} lane {lane} ({glat:.7f},{glon:.7f}) 왕복차 {rt:.3f}m 경계안 {inside}")
     # 차고지
     nodes, way = {}, None
@@ -103,11 +112,11 @@ def main():
     lines += ["depot_candidates:  # 고르지 않음",
               "  - id: museum_bus_depot", "    name: 박물관 버스 차고지",
               f"    lat: {lat:.7f}", f"    lon: {lon:.7f}",
-              f"    note: \"OSM way 442595850(service=parking_aisle, 고리) 노드 {len(pts)}개 평균. 진입 j4 답사점 36.627598, 127.454728(logs/s23_field_survey.log 97행)\"",
+              f"    note: \"박물관 버스 차고지 주차 통로 고리(OSM way 442595850) 노드 {len(pts)}개의 평균 위치이고, 진입 답사점은 36.627598, 127.454728 이다\"",
               "    source: \"logs/s24_reconv_list.md 49~52·185행, field_survey_2026-10-04.md '박물관 서쪽' 절, stops_status_2026-09-29.md 297·300행\"",
               "  - id: n14_parking", "    name: N14 주차장",
               "    lat:", "    lon:",
-              "    note: \"좌표 기록 없음(비워 둠). 근거 문서는 위치를 '건물을 ㄷ자로 감싼 형태' 로만 적었다\"",
+              "    note: \"N14 주차장은 건물을 ㄷ자로 감싼 형태로만 기록돼 있어 좌표를 비워 두었다\"",
               "    source: \"field_survey_2026-10-04.md 'N14 주차장' 절, stops_status_2026-09-29.md 294·300행\""]
     print(f"museum_bus_depot way 442595850 노드 {len(pts)} 평균 ({lat:.7f},{lon:.7f}) / n14_parking 빈 값")
     OUT.write_text("\n".join(lines) + "\n")

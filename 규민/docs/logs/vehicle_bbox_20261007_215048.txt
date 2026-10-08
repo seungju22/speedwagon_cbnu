@@ -1,3 +1,0 @@
-extent_x(half_length)=1.8527
-extent_y(half_width)=0.8943
-extent_z(half_height)=0.7745

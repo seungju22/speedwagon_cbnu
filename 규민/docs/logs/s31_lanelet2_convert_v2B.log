@@ -1,9 +1,0 @@
-frozen_v1 sha bf835cdfad0cea65 / 입력 v2B_copy.xodr sha 5240ca8b883e42c0 2219959B
-설정 autoware=False use_local_coordinates=False proj_string_cr=EPSG:3857
-[1단계 odr->CR] 15.8s, lanelet 1433, intersection 72, traffic_sign 0, traffic_light 0
-[2단계 CR->Lanelet2] 3.3s
-합계 19.1s, 출력 s29_v2B.osm 22145887B, CommonRoad 중간 18528085B
-최대 RSS 890MiB
-logging 경고·오류 건수 0
-python warnings 917
-frozen_v1 sha bf835cdfad0cea65
