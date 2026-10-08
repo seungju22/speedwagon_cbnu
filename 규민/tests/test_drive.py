@@ -175,12 +175,99 @@ ROUTES = {
                   stop="시험용(회차 r1565 통과 후 r1151 s=30)"),
 }
 ROUTE_NAME = "legacy"
+# 맵세션32: v2 후보(tags81_B_smooth_turnfix, sha 5240ca8b883e42c0) 노선. 위 ROUTES 를 대응표
+# logs/s28_road_id_map_B.csv 로 번역(형상 비용 0, next() 끊김 0, 출발·종점 좌표 차 0m: logs/s32_route_endpoints.log).
+# junction 번호는 junction name 으로 번역. end_s·arrive_min_s·sharp 각도·stop 은 v1 그대로.
+# back(후문, 첫 주행): 정문 r1278 -> 추정 게이트(36.624844, 127.462860) 최근접 r1151 s=23.1 의 최단 경로 33 road.
+#   앞 15 road 가 south 와 같다. 경로 합 1368.2m(logs/s32_backgate_reach.log). sharp 는 south 와 같은 두 커넥터
+#   (나머지 커넥터 끝점 회전각 최대 51.3° < 60°)
+ROUTES_V2 = {
+    "north": dict(roads=[1278, 1969, 1393, 1972, 1392, 1485, 1410, 1712, 1411, 1629, 1412, 1728,
+                         1413, 1663, 1414, 1678, 1415],
+                  end_s=78.0, arrive_min_s=77.0,
+                  connectors={1969: 1, 1972: 109, 1485: 43, 1712: 59, 1629: 45, 1728: 60,
+                              1663: 48, 1678: 52},
+                  sharp={}, stop=ROUTES["north"]["stop"]),
+    "south": dict(roads=[1278, 1969, 1393, 1972, 1392, 1484, 1202, 1466, 1271, 1734, 1270,
+                         1464, 1269, 1601, 1268],
+                  end_s=47.0, arrive_min_s=46.0,
+                  connectors={1969: 1, 1972: 109, 1484: 43, 1466: 11, 1734: 61, 1464: 85,
+                              1601: 37},
+                  sharp={1484: 78.4, 1466: -68.1}, stop=ROUTES["south"]["stop"]),
+    "middle": dict(roads=[1278, 1969, 1393, 1972, 1392, 1485, 1410, 1712, 1411, 1630, 1314,
+                          1655, 1315, 1644, 1316, 1635, 1317, 1877, 1360],
+                   end_s=70.0, arrive_min_s=69.0,
+                   connectors={1969: 1, 1972: 109, 1485: 43, 1712: 59, 1630: 45, 1655: 44,
+                               1644: 46, 1635: 47, 1877: 49},
+                   sharp={1630: -97.2, 1877: -71.4}, stop=ROUTES["middle"]["stop"]),
+    "yangseong": dict(roads=[1278, 1969, 1393, 1972, 1392, 1484, 1202, 1465, 1157, 1738, 1156,
+                             1765, 1155, 1772, 1154, 1865, 1153],
+                      end_s=22.0, arrive_min_s=21.0,
+                      connectors={1969: 1, 1972: 109, 1484: 43, 1465: 11, 1738: 10, 1765: 9,
+                                  1772: 8, 1865: 7},
+                      sharp={1484: 78.4}, stop=ROUTES["yangseong"]["stop"]),
+    "back": dict(roads=[1278, 1969, 1393, 1972, 1392, 1484, 1202, 1466, 1271, 1734, 1270,
+                        1464, 1269, 1601, 1268, 1457, 1250, 1828, 1249, 1619, 1254, 1609,
+                        1253, 1822, 1252, 1860, 1251, 1948, 1391, 1952, 1248, 1896, 1151],
+                 end_s=23.1, arrive_min_s=22.1,
+                 connectors={1969: 1, 1972: 109, 1484: 43, 1466: 11, 1734: 61, 1464: 85,
+                             1601: 37, 1457: 107, 1828: 78, 1619: 41, 1609: 39, 1822: 86,
+                             1860: 83, 1948: 108, 1952: 106, 1896: 3},
+                 sharp={1484: 78.4, 1466: -68.1},
+                 # 세션35: 노선 전용 감속(인자 없이 항상 적용). r1391 차선 중심 최소 반경 2.483m(s=9.00, s34_curvature.py)에서
+                 # 횡가속도 2.5m/s^2(세션23 회차 r1565 통과값: 8km/h, R2min 1.94m -> 2.55m/s^2) -> sqrt(2.5*2.483)=2.49m/s
+                 # =8.97km/h, 0.1 단위 내림 8.9km/h. 4 노선 road 와 교집합 없음(시작 시 검사)
+                 slow={1391: 8.9},
+                 # 세션36: 목표점 계측 road(이 road 위 tick 마다 target_log_<ts>.csv). aim = road 위에서만 쓸 겨냥 거리 기본값(m)
+                 trace=[1948, 1391, 1952], aim={1391: 1.0},
+                 # 세션38: 노선 전용 계획점 간격(m). s36_spacing_model.py 와 같은 배치(기본 첫 점부터 간격씩, 끝 0.3m 전까지)
+                 # 예측 0.601m(간격 1m + b 1.0) 가 이 점 배치 기준. 등분 중앙점(18점)이면 같은 모형 0.398m
+                 spacing={1391: 1.0},
+                 stop="후문B 추정 게이트(392632034 위, 36.624844, 127.462860 최근접 1.65m)"),
+}
+FROZEN_V1_SHA16 = "bf835cdfad0cea65"
+MAP_ROUTES = {FROZEN_V1_SHA16: ROUTES, "5240ca8b883e42c0": ROUTES_V2}
+ACTIVE_ROUTES = ROUTES              # __main__ 에서 --xodr 해시로 고른다
+ROUTE_SLOW = {}                     # 세션35: 노선 전용 감속 {road: km/h}. select_route 가 채운다
+ROUTE_TRACE = set()                 # 세션36: 목표점 계측 road
+ROUTE_AIM = {}                      # 세션36: 노선 전용 겨냥 거리 기본값 {road: base_min_distance m}
+ROUTE_SPACING = {}                  # 세션38: 노선 전용 계획점 간격 {road: m}
 
 
 def select_route(name):
     global ROUTE_NAME, ROUTE_ROADS, LAST_ROAD_END_S, ARRIVE_MIN_S, CONNECTOR_JUNCTION, \
-        SHARP_CONNECTORS
-    r = ROUTES[name]
+        SHARP_CONNECTORS, ROUTE_SLOW, ROUTE_TRACE, ROUTE_AIM, ROUTE_SPACING
+    r = ACTIVE_ROUTES[name]
+    ROUTE_SLOW = dict(r.get("slow", {}))
+    ROUTE_TRACE = set(r.get("trace", []))
+    ROUTE_AIM = dict(r.get("aim", {}))
+    ROUTE_SPACING = dict(r.get("spacing", {}))
+    if ROUTE_SPACING:
+        # 세션38: 계획점 간격 변경 대상도 4 노선 경로와 겹치면 중단
+        others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
+                               if k in ("north", "south", "middle", "yangseong")))
+        inter = sorted(set(ROUTE_SPACING) & others)
+        print(f"  노선 전용 계획점 간격 {ROUTE_SPACING}, 4 노선 경로와 교집합 {inter}")
+        if inter:
+            raise SystemExit("노선 전용 계획점 간격 대상이 4 노선 경로에 있음 - 중단")
+    if ROUTE_AIM:
+        # 세션36: 겨냥 거리 하향 대상도 4 노선 경로와 겹치면 중단
+        others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
+                               if k in ("north", "south", "middle", "yangseong")))
+        inter = sorted(set(ROUTE_AIM) & others)
+        print(f"  노선 전용 겨냥 거리 {ROUTE_AIM}, 4 노선 경로와 교집합 {inter}")
+        if inter:
+            raise SystemExit("노선 전용 겨냥 거리 대상이 4 노선 경로에 있음 - 중단")
+    if ROUTE_TRACE:
+        print(f"  목표점 계측 road {sorted(ROUTE_TRACE)}")
+    if ROUTE_SLOW:
+        # 세션35: 감속 대상이 다른 정차 노선 경로에 있으면 중단(다른 노선 동작이 바뀌면 안 된다)
+        others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
+                               if k in ("north", "south", "middle", "yangseong")))
+        inter = sorted(set(ROUTE_SLOW) & others)
+        print(f"  노선 전용 감속 {ROUTE_SLOW}, 4 노선 경로와 교집합 {inter}")
+        if inter:
+            raise SystemExit("노선 전용 감속 대상이 4 노선 경로에 있음 - 중단")
     ROUTE_NAME = name
     ROUTE_ROADS = list(r["roads"])
     LAST_ROAD_END_S = r["end_s"]
@@ -265,6 +352,15 @@ def plan_samples(lengths, min_s_on_first=None, conn_spacing=None):
         spacing = conn_spacing if (conn_spacing and rid in CONNECTOR_JUNCTION) \
             else PLAN_SPACING_M
         n = max(1, math.ceil(length / spacing))
+        if rid in ROUTE_SPACING:
+            # 세션38: 기본 배치의 첫 점에서 시작해 간격씩, 끝 0.3m 전까지(s36_spacing_model.py 와 같다)
+            s = 0.5 * length / n
+            while s < length - 0.3:
+                if not (rid == ROUTE_ROADS[0] and min_s_on_first is not None
+                        and s <= min_s_on_first):
+                    out.append((rid, s))
+                s += ROUTE_SPACING[rid]
+            continue
         for i in range(n):
             s = (i + 0.5) * length / n
             if rid == ROUTE_ROADS[0] and min_s_on_first is not None \
@@ -344,6 +440,9 @@ def dry_plan(conn_spacing=None):
     # 기본 계획 파일(세션11~14 기준)은 덮어쓰지 않도록 이름 분리
     # 세션18: legacy 외 루트는 drive_plan_dry_<route>[_conn<M>].csv
     tag = "" if ROUTE_NAME == "legacy" else f"_{ROUTE_NAME}"
+    # 세션32: frozen_v1 이 아닌 맵은 맵 해시 앞 8자를 붙여 v1 CSV 를 덮어쓰지 않는다
+    if file_sha16() != FROZEN_V1_SHA16:
+        tag += f"_map{file_sha16()[:8]}"
     path = LOG_DIR / (f"drive_plan_dry{tag}.csv" if not conn_spacing
                       else f"drive_plan_dry{tag}_conn{conn_spacing:g}.csv")
     write_plan_csv(rows, path)
@@ -931,6 +1030,15 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     log_writer.writeheader()
     log_file.flush()
     print(f"궤적 로그(tick마다 기록): {log_path}")
+    # 세션36: 목표점 계측(ROUTE_TRACE road 위에서만). 기존 drive_log 열은 그대로 두려고 별도 파일
+    trace_file = trace_writer = None
+    if ROUTE_TRACE and controller == "agent":
+        trace_path = LOG_DIR / f"target_log_{ts}.csv"
+        trace_file = open(trace_path, "w", newline="")
+        trace_writer = csv.writer(trace_file)
+        trace_writer.writerow(["t", "x", "y", "road_id", "s", "speed_mps", "min_distance_m", "base_min_distance_m",
+                               "target_road", "target_s", "target_x", "target_y", "target_dist_m", "steer"])
+        print(f"목표점 로그: {trace_path}")
 
     vehicle = None
     collision_sensor = None
@@ -979,6 +1087,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
         wall0 = time.monotonic()
         tick_checked = False
         done_warned = False
+        aim_default = None          # 세션36: LocalPlanner 원래 base_min_distance(첫 사용 때 읽음)
         last_road = None
         plan_idx = -1               # 계획에서 마지막으로 매칭된 road 위치
         stop_run = {}               # 중단 조건별 (연속 tick, 시작 t)
@@ -1223,17 +1332,21 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
 
             # agent: 다음 tick 에 쓸 제어 계산·적용 (tm 은 서버측 autopilot)
             if agent is not None:
-                if sharp_speed:
-                    near = road_id in slow_roads
-                    if not near:
+                if sharp_speed or ROUTE_SLOW:
+                    # 세션35: --sharp-speed 대상과 노선 전용 감속(ROUTE_SLOW)을 한 표로. sharp_speed 만 있을 때 동작은 전과 같다
+                    targets = {r: sharp_speed for r in slow_roads} if sharp_speed else {}
+                    targets.update(ROUTE_SLOW)
+                    hit = targets.get(road_id)
+                    if hit is None:
                         for w, _ in lp.get_plan():
                             dist = loc.distance(w.transform.location)
-                            if w.road_id in slow_roads and dist <= SLOW_AHEAD_M:
-                                near = True
+                            if w.road_id in targets and dist <= SLOW_AHEAD_M:
+                                hit = targets[w.road_id]
                                 break
                             if dist > 3 * SLOW_AHEAD_M:
                                 break
-                    want = sharp_speed if near else DESIRED_SPEED_KMH
+                    near = hit is not None
+                    want = hit if near else DESIRED_SPEED_KMH
                     if want != set_speed:
                         print(f"[{'감속' if near else '복귀'}] t={t_now:.2f}s road{road_id} "
                               f"{set_speed:g}->{want:g}km/h speed={speed * 3.6:.1f}km/h")
@@ -1243,7 +1356,27 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
                     print(f"[계획 소진] t={t_now:.2f}s 완주 전에 계획 웨이포인트가 모두 "
                           "소진됨(이후 제동, 정체 조건으로 판정)")
                     done_warned = True
-                vehicle.apply_control(agent.run_step())
+                if ROUTE_AIM:
+                    # 세션36: 겨냥 거리 기본값을 대상 road 위에서만 바꾸고 벗어나면 원래 값(LocalPlanner 기본 3.0)으로.
+                    # LocalPlanner 에 setter 가 없어 opt_dict 와 같은 이름의 속성 _base_min_distance 를 직접 쓴다
+                    if aim_default is None:
+                        aim_default = lp._base_min_distance
+                    want_aim = ROUTE_AIM.get(road_id, aim_default)
+                    if want_aim != lp._base_min_distance:
+                        print(f"[겨냥] t={t_now:.2f}s road{road_id} base_min_distance "
+                              f"{lp._base_min_distance:g}->{want_aim:g}m")
+                        lp._base_min_distance = want_aim
+                ctl = agent.run_step()
+                vehicle.apply_control(ctl)
+                if trace_writer is not None and road_id in ROUTE_TRACE:
+                    tw = lp.target_waypoint
+                    tl = tw.transform.location if tw is not None else None
+                    trace_writer.writerow([round(t_now, 3), round(loc.x, 3), round(loc.y, 3), road_id,
+                                           round(s_val, 3) if s_val is not None else "", round(speed, 3),
+                                           round(lp._min_distance, 3), lp._base_min_distance,
+                                           tw.road_id if tw else "", round(tw.s, 3) if tw else "",
+                                           round(tl.x, 3) if tl else "", round(tl.y, 3) if tl else "",
+                                           round(loc.distance(tl), 3) if tl else "", round(ctl.steer, 4)])
 
         print("\n=== 요약 ===")
         print(f"route: {ROUTE_NAME} (종점 road{ROUTE_ROADS[-1]} s={LAST_ROAD_END_S})")
@@ -1287,6 +1420,8 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     finally:
         try:
             log_file.close()
+            if trace_file is not None:
+                trace_file.close()
             print(f"궤적 로그: {log_path}")
 
             # 정리 순서: 센서(차량에 부착) 먼저 stop->destroy, 그 다음 vehicle.
@@ -1339,7 +1474,9 @@ if __name__ == "__main__":
                     help="spectator 가 매 tick 차량 뒤 8m·위 4m 에서 추종(기본 on, 결과 불변)")
     ap.add_argument("--route", choices=["north", "south", "middle", "yangseong", "back", "legacy", "uturn"],
                     default="legacy",
-                    help="정차 루트(세션18). legacy=세션5~17 경로(기본), back=재변환 전 미구현")
+                    help="정차 루트(세션18). legacy=세션5~17 경로(기본), back=v2 맵에서만(세션32)")
+    ap.add_argument("--xodr", type=Path, default=None,
+                    help="맵 xodr(세션32). 기본 frozen_v1. 해시로 노선 표를 고른다(MAP_ROUTES)")
     ap.add_argument("--strict", action="store_true",
                     help="세션14~18 판정 규칙 그대로(기본: 세션19 종료/기록 분리 판정)")
     ap.add_argument("--measure-stop", action="store_true",
@@ -1347,9 +1484,18 @@ if __name__ == "__main__":
                          "(세션20, 기본 꺼짐 = 판정 순간 종료)")
     args = ap.parse_args()
     STRICT = args.strict
+    if args.xodr is not None:
+        XODR_PATH = args.xodr.resolve()
     # 세션19: 두 맵 병행 대비. 로그 첫 줄에 맵 파일 sha256 앞 16자
     print(f"map_sha256={file_sha16()} ({XODR_PATH.name})")
-    if args.route == "back":
+    if file_sha16() not in MAP_ROUTES:
+        print(f"노선 표 없는 맵(sha {file_sha16()}). 알려진 맵: {sorted(MAP_ROUTES)}. 실행하지 않고 종료")
+        sys.exit(2)
+    ACTIVE_ROUTES = MAP_ROUTES[file_sha16()]
+    if args.route not in ACTIVE_ROUTES and not args.restore_async:
+        print(f"route={args.route}: 이 맵 노선 표에 없음({sorted(ACTIVE_ROUTES)}). 실행하지 않고 종료")
+        sys.exit(2)
+    if args.route == "back" and ACTIVE_ROUTES is ROUTES:
         print("route=back: 재변환필요 - 후문 way 가 xodr 에 없음(road1333 고립, "
               "map/docs/map_session18_report.md). 실행하지 않고 종료")
         sys.exit(2)

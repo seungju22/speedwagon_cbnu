@@ -1,0 +1,11 @@
+[s36T_v2_back_run1] 21:59:03 시작 firefox=0 carla=0 avail=11657Mi swap=984Mi
+[s36T_v2_back_run1] nohup sh PID=22104
+[s36T_v2_back_run1] 21:59:08 포트 열림 6s, server PID=22114
+[s36T_v2_back_run1] 21:59:20 get_world 응답(시도 2회) avail=3015Mi swap=2740Mi
+[s36T_v2_back_run1] spawn point 개수: 1302
+[s36T_v2_back_run1] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s36T_v2_back_run1] 서버 맵 road 917 / junction 112
+[s36T_v2_back_run1] 21:59:27 로드 직후 avail=1238Mi swap=1562Mi
+[s36T_v2_back_run1] 22:01:27 2분 후 avail=4255Mi swap=1449Mi
+[s36T_v2_back_run1] 22:02:03 주행 rc=0 주행 후 avail=4234Mi swap=1447Mi
+[s36T_v2_back_run1] 22:02:05 종료 carla 프로세스=0 주행 중 서버 error 줄=0 Signal11=1

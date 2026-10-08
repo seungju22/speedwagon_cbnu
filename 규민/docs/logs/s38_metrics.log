@@ -1,0 +1,22 @@
+s38_v2_back_run1.log: 결과=완주 시간=276.0s 궤적=1364.0m 충돌=0 [] r1391통과=예
+  r1391 차선 중심 대비 횡 이탈 최대 +0.63m 왼쪽(t=0 가장자리 쪽) (t_lat=-1.05, s=17.05, t=250.55) 조향 -0.145, 차 왼쪽 끝 t=-0.15
+목표점 로그: /home/gyumin/campus_mobility_sim/map/docs/logs/target_log_20261008_232341.csv
+[겨냥] t=242.55s road1391 base_min_distance 3->1m
+[겨냥] t=251.10s road1953 base_min_distance 1->3m
+완주: t=276.0s 종점까지 0.95m
+s38_v2_back_run2.log: 결과=완주 (정지 근접 판정, 세션21) 시간=281.4s 궤적=1363.9m 충돌=0 [] r1391통과=예
+  r1391 차선 중심 대비 횡 이탈 최대 +0.63m 왼쪽(t=0 가장자리 쪽) (t_lat=-1.05, s=17.05, t=250.8) 조향 -0.144, 차 왼쪽 끝 t=-0.15
+목표점 로그: /home/gyumin/campus_mobility_sim/map/docs/logs/target_log_20261008_232453.csv
+[겨냥] t=242.80s road1391 base_min_distance 3->1m
+[겨냥] t=251.35s road1953 base_min_distance 1->3m
+완주: t=281.4s 종점까지 1.06m
+s38_v2_back_run3.log: 결과=완주 시간=275.5s 궤적=1364.0m 충돌=0 [] r1391통과=예
+  r1391 차선 중심 대비 횡 이탈 최대 +0.62m 왼쪽(t=0 가장자리 쪽) (t_lat=-1.05, s=17.05, t=250.15) 조향 -0.158, 차 왼쪽 끝 t=-0.16
+목표점 로그: /home/gyumin/campus_mobility_sim/map/docs/logs/target_log_20261008_232538.csv
+[겨냥] t=242.15s road1391 base_min_distance 3->1m
+[겨냥] t=250.70s road1953 base_min_distance 1->3m
+완주: t=275.5s 종점까지 0.98m
+s38_v2_back_run1.log: 최대 이탈 +0.626m (s=17.05) 예측 대비 +0.025m, r1391 171tick 속도 8.25~8.70km/h 조향 -0.580~-0.007, r1952 전환 차 s=15.198 t=249.5
+s38_v2_back_run2.log: 최대 이탈 +0.626m (s=17.05) 예측 대비 +0.025m, r1391 171tick 속도 8.25~8.72km/h 조향 -0.580~-0.008, r1952 전환 차 s=15.199 t=249.75
+s38_v2_back_run3.log: 최대 이탈 +0.624m (s=17.05) 예측 대비 +0.023m, r1391 171tick 속도 8.25~8.70km/h 조향 -0.580~-0.007, r1952 전환 차 s=15.21 t=249.1
+n=3 평균 0.626 최소 0.624 최대 0.626 m, 예측 0.601m, 차(평균-예측) +0.025m, 범위 0.002m

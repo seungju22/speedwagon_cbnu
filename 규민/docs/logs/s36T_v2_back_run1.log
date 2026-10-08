@@ -1,0 +1,556 @@
+map_sha256=5240ca8b883e42c0 (cbnu_internal_only_localtm_tags81_B_smooth_turnfix.xodr)
+  목표점 계측 road [1391, 1948, 1952]
+  노선 전용 감속 {1391: 8.9}, 4 노선 경로와 교집합 []
+route=back: 33 road [1278, 1969, 1393, 1972, 1392, 1484, 1202, 1466, 1271, 1734, 1270, 1464, 1269, 1601, 1268, 1457, 1250, 1828, 1249, 1619, 1254, 1609, 1253, 1822, 1252, 1860, 1251, 1948, 1391, 1952, 1248, 1896, 1151]
+  종점 road1151 lane-1 s=23.1 (완주 s>=22.1 이고 종점 5m 이내) - 후문B 추정 게이트(392632034 위, 36.624844, 127.462860 최근접 1.65m)
+  커넥터 {1969: 1, 1972: 109, 1484: 43, 1466: 11, 1734: 61, 1464: 85, 1601: 37, 1457: 107, 1828: 78, 1619: 41, 1609: 39, 1822: 86, 1860: 83, 1948: 108, 1952: 106, 1896: 3}, 급회전 {1484: 78.4, 1466: -68.1}
+controller=agent, 동기모드=켬 0.05s
+conn_spacing=4.0m(전 구간), sharp_speed=없음
+follow=on(뒤 8m, 위 4m, 매 tick)
+맵: Carla/Maps/OpenDriveMap, spawn point 1302개
+server_map_sha256=5240ca8b883e42c0 (파일과 일치)
+spawn: Location(x=217.845581, y=-1087.414185, z=0.500000) road1278 lane-1 s=0.00
+계획 CSV: /home/gyumin/campus_mobility_sim/map/docs/logs/drive_plan_20261007_220128.csv
+계획 웨이포인트 총 358개
+road   kind  n  s범위          최대간격(m)
+1278   road  39 1.96~151.01  4.38
+1969   conn  2  1.07~3.22  2.93
+1393   road  10 1.85~35.20  4.0
+1972   conn  1  1.48~1.48  2.07
+1392   road  15 1.87~54.20  4.13
+1484   conn  4  1.74~12.17  3.33
+1202   road  30 1.98~117.07  3.97
+1466   conn  4  1.78~12.46  4.3
+1271   road  38 1.97~147.53  4.09
+1734   conn  4  1.89~13.23  3.86
+1270   road  13 1.95~48.68  4.06
+1464   conn  5  1.74~15.69  3.7
+1269   road  9  1.91~32.45  3.82
+1601   conn  4  1.93~13.48  3.85
+1268   road  33 1.98~128.54  3.96
+1457   conn  4  2.00~13.98  3.98
+1250   road  14 1.87~50.58  3.87
+1828   conn  4  1.91~13.39  3.83
+1249   road  7  1.76~22.93  3.68
+1619   conn  4  1.94~13.59  3.92
+1254   road  5  1.92~17.27  3.86
+1609   conn  4  1.94~13.56  3.95
+1253   road  10 1.96~37.24  4.03
+1822   conn  4  1.73~12.10  3.7
+1252   road  8  1.75~26.28  3.53
+1860   conn  7  1.84~23.88  3.67
+1251   road  35 1.96~135.39  3.93
+1948   conn  2  1.71~5.13  3.59
+1391   road  5  1.79~16.08  4.04
+1952   conn  3  1.39~6.94  3.93
+1248   road  21 1.91~78.37  4.19
+1896   conn  4  1.94~13.57  3.9
+1151   road  6  1.93~21.18  3.86
+커넥터 안쪽 점: 60개 / 점 없는 커넥터: 없음
+전체 최대 간격 4.38m, 평균 3.83m
+인접 road 연결 확인: 32쌍 모두 next() 로 이어짐
+판정: record(세션19, 종료/기록 분리)
+궤적 로그(tick마다 기록): /home/gyumin/campus_mobility_sim/map/docs/logs/drive_log_20261007_220128.csv
+목표점 로그: /home/gyumin/campus_mobility_sim/map/docs/logs/target_log_20261007_220128.csv
+차량 스폰: actor_id=25
+bounding box: half_length=1.853m half_width=0.894m half_height=0.775m -> /home/gyumin/campus_mobility_sim/map/docs/logs/vehicle_bbox_20261007_220128.txt
+충돌 센서 부착: actor_id=26 -> /home/gyumin/campus_mobility_sim/map/docs/logs/collision_events_20261007_220128.csv
+BasicAgent set_global_plan 358점, target_speed=20.0km/h, dt=0.05
+[동기모드] 전환 전: synchronous_mode=False fixed_delta_seconds=None
+[동기모드] 전환 후: synchronous_mode=True fixed_delta_seconds=0.05
+[전이] t=   0.05s road1278 일반 speed= 0.00m/s limit=30km/h
+t=   0.1s (  217.85,-1087.41) speed= 0.00m/s road1278 s=   0.0 on_road=True
+t=   1.1s (  217.86,-1087.17) speed= 1.50m/s road1278 s=   0.2 on_road=True
+t=   2.1s (  217.99,-1084.54) speed= 3.75m/s road1278 s=   2.9 on_road=True
+t=   3.1s (  218.22,-1079.78) speed= 5.30m/s road1278 s=   7.6 on_road=True
+t=   4.1s (  218.49,-1074.24) speed= 4.68m/s road1278 s=  13.2 on_road=True
+t=   5.1s (  218.72,-1069.53) speed= 5.28m/s road1278 s=  17.9 on_road=True
+t=   6.1s (  218.99,-1063.93) speed= 4.41m/s road1278 s=  23.5 on_road=True
+t=   7.1s (  219.22,-1059.24) speed= 5.31m/s road1278 s=  28.2 on_road=True
+t=   8.1s (  219.49,-1053.70) speed= 4.86m/s road1278 s=  33.8 on_road=True
+t=   9.1s (  219.72,-1048.93) speed= 5.29m/s road1278 s=  38.5 on_road=True
+[tick 대조] fixed_delta=0.05 delta_seconds=0.0500 시뮬경과/프레임=0.0500s 벽시계 151.6 tick/s (프레임 200)
+t=  10.1s (  220.01,-1043.35) speed= 4.81m/s road1278 s=  44.1 on_road=True
+t=  11.1s (  220.29,-1038.68) speed= 5.28m/s road1278 s=  48.8 on_road=True
+t=  12.1s (  220.70,-1033.23) speed= 4.33m/s road1278 s=  54.3 on_road=True
+t=  13.1s (  221.11,-1028.54) speed= 5.30m/s road1278 s=  58.9 on_road=True
+t=  14.1s (  221.66,-1023.13) speed= 4.13m/s road1278 s=  64.4 on_road=True
+t=  15.1s (  222.16,-1018.37) speed= 5.35m/s road1278 s=  69.1 on_road=True
+t=  16.1s (  222.83,-1013.05) speed= 4.07m/s road1278 s=  74.5 on_road=True
+t=  17.1s (  223.83,-1008.36) speed= 5.29m/s road1278 s=  79.2 on_road=True
+t=  18.1s (  225.49,-1003.32) speed= 4.13m/s road1278 s=  84.2 on_road=True
+t=  19.1s (  227.34, -998.79) speed= 5.66m/s road1278 s=  89.1 on_road=True
+t=  20.1s (  230.01, -994.30) speed= 4.27m/s road1278 s=  94.2 on_road=True
+t=  21.1s (  233.33, -990.47) speed= 6.21m/s road1278 s=  99.0 on_road=True
+t=  22.1s (  237.03, -987.01) speed= 4.33m/s road1278 s= 104.0 on_road=True
+t=  23.1s (  240.99, -983.64) speed= 6.38m/s road1278 s= 109.2 on_road=True
+t=  24.1s (  244.83, -980.48) speed= 4.42m/s road1278 s= 114.2 on_road=True
+t=  25.1s (  248.94, -977.17) speed= 6.28m/s road1278 s= 119.5 on_road=True
+t=  26.1s (  252.72, -974.13) speed= 4.49m/s road1278 s= 124.3 on_road=True
+t=  27.1s (  256.92, -970.79) speed= 6.19m/s road1278 s= 129.7 on_road=True
+t=  28.1s (  260.72, -967.79) speed= 4.63m/s road1278 s= 134.5 on_road=True
+t=  29.1s (  265.03, -964.45) speed= 5.97m/s road1278 s= 139.9 on_road=True
+t=  30.1s (  268.71, -961.63) speed= 4.52m/s road1278 s= 144.6 on_road=True
+t=  31.1s (  272.96, -958.35) speed= 6.17m/s road1278 s= 149.9 on_road=True
+[전이] t=  31.50s road1970 커넥터 speed= 4.81m/s limit=30km/h
+[계획 이탈] t=31.50s road1970 는 계획의 현재/다음 road 가 아님(비치명, 계속 주행)
+[전이] t=  31.60s road1278 일반 speed= 4.22m/s limit=30km/h
+[전이] t=  31.65s road1969 커넥터 speed= 4.10m/s limit=30km/h
+t=  32.1s (  276.67, -955.32) speed= 4.61m/s road1969 s=   1.8 on_road=True
+[전이] t=  32.55s road1393 일반 speed= 5.34m/s limit=30km/h
+t=  33.1s (  280.88, -951.86) speed= 5.99m/s road1393 s=   3.0 on_road=True
+t=  34.1s (  284.59, -948.95) speed= 4.70m/s road1393 s=   7.7 on_road=True
+t=  35.1s (  289.10, -945.91) speed= 5.73m/s road1393 s=  12.9 on_road=True
+t=  36.1s (  293.10, -943.48) speed= 4.84m/s road1393 s=  17.5 on_road=True
+t=  37.1s (  297.91, -940.70) speed= 5.56m/s road1393 s=  23.1 on_road=True
+t=  38.1s (  301.96, -938.41) speed= 4.93m/s road1393 s=  27.8 on_road=True
+t=  39.1s (  306.68, -935.33) speed= 5.78m/s road1393 s=  33.4 on_road=True
+[전이] t=  39.65s road1972 커넥터 speed= 4.34m/s limit=30km/h
+t=  40.1s (  310.31, -932.25) speed= 4.79m/s road1972 s=   2.6 on_road=True
+[전이] t=  40.20s road1971 커넥터 speed= 5.08m/s limit=30km/h
+[전이] t=  40.40s road1392 일반 speed= 5.20m/s limit=30km/h
+t=  41.1s (  314.64, -928.85) speed= 5.53m/s road1392 s=   4.3 on_road=True
+t=  42.1s (  318.37, -926.03) speed= 4.97m/s road1392 s=   9.0 on_road=True
+t=  43.1s (  322.90, -922.69) speed= 5.40m/s road1392 s=  14.6 on_road=True
+t=  44.1s (  326.62, -919.97) speed= 5.04m/s road1392 s=  19.2 on_road=True
+t=  45.1s (  331.10, -916.70) speed= 5.22m/s road1392 s=  24.8 on_road=True
+t=  46.1s (  334.82, -914.00) speed= 5.13m/s road1392 s=  29.4 on_road=True
+t=  47.1s (  339.37, -910.69) speed= 5.37m/s road1392 s=  35.0 on_road=True
+t=  48.1s (  343.11, -907.98) speed= 5.02m/s road1392 s=  39.6 on_road=True
+t=  49.1s (  347.65, -904.70) speed= 5.23m/s road1392 s=  45.2 on_road=True
+t=  50.1s (  351.40, -901.97) speed= 5.14m/s road1392 s=  49.8 on_road=True
+[전이] t=  51.00s road1487 커넥터 speed= 5.10m/s limit=30km/h
+t=  51.1s (  355.57, -898.38) speed= 4.98m/s road1487 s=   0.0 on_road=True
+[전이] t=  51.20s road1392 일반 speed= 4.69m/s limit=30km/h
+[전이] t=  51.25s road1484 커넥터 speed= 4.39m/s limit=30km/h
+t=  52.1s (  357.53, -894.33) speed= 5.19m/s road1484 s=   5.4 on_road=False
+t=  53.1s (  357.14, -888.87) speed= 5.03m/s road1484 s=  13.4 on_road=True
+[전이] t=  53.15s road1202 일반 speed= 5.09m/s limit=30km/h
+[전이] t=  53.20s road1483 커넥터 speed= 5.12m/s limit=30km/h
+[전이] t=  53.45s road1202 일반 speed= 4.34m/s limit=30km/h
+t=  54.1s (  355.79, -884.30) speed= 5.23m/s road1202 s=   4.3 on_road=True
+t=  55.1s (  353.79, -879.12) speed= 5.13m/s road1202 s=   9.8 on_road=True
+t=  56.1s (  351.96, -874.82) speed= 5.23m/s road1202 s=  14.5 on_road=True
+t=  57.1s (  349.74, -869.79) speed= 4.60m/s road1202 s=  20.0 on_road=True
+t=  58.1s (  347.81, -865.52) speed= 5.34m/s road1202 s=  24.7 on_road=True
+t=  59.1s (  345.55, -860.54) speed= 4.26m/s road1202 s=  30.1 on_road=True
+--- 메모리 측정(주행중(차량1대+BasicAgent, 동기 20Hz)) ---
+total        used        free      shared  buff/cache   available
+Mem:            12Gi       8.4Gi       3.9Gi        10Mi       484Mi       4.1Gi
+Swap:          8.0Gi       1.4Gi       6.6Gi
+gtt_used: 1592233984 bytes (1.48GiB)
+t=  60.1s (  343.59, -856.25) speed= 5.33m/s road1202 s=  34.9 on_road=True
+t=  61.1s (  341.32, -851.31) speed= 4.17m/s road1202 s=  40.3 on_road=True
+t=  62.1s (  339.31, -846.94) speed= 5.37m/s road1202 s=  45.1 on_road=True
+t=  63.1s (  337.01, -841.93) speed= 4.40m/s road1202 s=  50.6 on_road=True
+t=  64.1s (  335.02, -837.59) speed= 5.37m/s road1202 s=  55.4 on_road=True
+t=  65.1s (  332.72, -832.59) speed= 4.23m/s road1202 s=  60.9 on_road=True
+t=  66.1s (  330.74, -828.30) speed= 5.37m/s road1202 s=  65.6 on_road=True
+t=  67.1s (  328.46, -823.35) speed= 4.20m/s road1202 s=  71.1 on_road=True
+t=  68.1s (  326.45, -818.97) speed= 5.32m/s road1202 s=  75.9 on_road=True
+t=  69.1s (  324.16, -814.01) speed= 4.34m/s road1202 s=  81.3 on_road=True
+t=  70.1s (  322.13, -809.59) speed= 5.29m/s road1202 s=  86.2 on_road=True
+t=  71.1s (  319.80, -804.52) speed= 4.43m/s road1202 s=  91.8 on_road=True
+t=  72.1s (  317.84, -800.27) speed= 5.36m/s road1202 s=  96.5 on_road=True
+t=  73.1s (  315.53, -795.24) speed= 4.54m/s road1202 s= 102.0 on_road=True
+t=  74.1s (  313.53, -790.89) speed= 5.38m/s road1202 s= 106.8 on_road=True
+t=  75.1s (  311.23, -785.87) speed= 4.65m/s road1202 s= 112.3 on_road=True
+t=  76.1s (  309.47, -781.43) speed= 5.22m/s road1202 s= 117.1 on_road=True
+[전이] t=  76.35s road1467 커넥터 speed= 6.23m/s limit=30km/h
+[전이] t=  77.05s road1472 커넥터 speed= 4.26m/s limit=30km/h
+t=  77.1s (  309.07, -776.11) speed= 4.26m/s road1472 s=  12.9 on_road=True
+[전이] t=  77.85s road1469 커넥터 speed= 5.44m/s limit=30km/h
+t=  78.1s (  310.32, -771.46) speed= 5.34m/s road1469 s=   6.0 on_road=True
+[전이] t=  78.45s road1466 커넥터 speed= 6.37m/s limit=30km/h
+[전이] t=  78.85s road1470 커넥터 speed= 5.16m/s limit=30km/h
+t=  79.1s (  313.23, -766.77) speed= 4.53m/s road1470 s=   7.2 on_road=True
+[전이] t=  79.50s road1271 일반 speed= 4.60m/s limit=30km/h
+t=  80.1s (  316.18, -763.06) speed= 5.28m/s road1271 s=   3.5 on_road=True
+t=  81.1s (  319.76, -759.00) speed= 4.17m/s road1271 s=   8.9 on_road=True
+t=  82.1s (  323.01, -755.50) speed= 5.25m/s road1271 s=  13.7 on_road=True
+t=  83.1s (  326.70, -751.60) speed= 4.12m/s road1271 s=  19.1 on_road=True
+t=  84.1s (  330.04, -748.09) speed= 5.27m/s road1271 s=  23.9 on_road=True
+t=  85.1s (  333.71, -744.25) speed= 4.09m/s road1271 s=  29.2 on_road=True
+t=  86.1s (  337.11, -740.72) speed= 5.36m/s road1271 s=  34.2 on_road=True
+t=  87.1s (  340.87, -736.89) speed= 4.09m/s road1271 s=  39.5 on_road=True
+t=  88.1s (  344.36, -733.45) speed= 5.67m/s road1271 s=  44.4 on_road=True
+t=  89.1s (  348.14, -729.85) speed= 4.13m/s road1271 s=  49.6 on_road=True
+t=  90.1s (  351.77, -726.51) speed= 6.01m/s road1271 s=  54.5 on_road=True
+t=  91.1s (  355.57, -723.04) speed= 4.32m/s road1271 s=  59.6 on_road=True
+t=  92.1s (  359.42, -719.57) speed= 6.35m/s road1271 s=  64.8 on_road=True
+t=  93.1s (  363.13, -716.22) speed= 4.43m/s road1271 s=  69.8 on_road=True
+t=  94.1s (  367.07, -712.69) speed= 6.25m/s road1271 s=  75.1 on_road=True
+t=  95.1s (  370.63, -709.48) speed= 4.35m/s road1271 s=  79.9 on_road=True
+t=  96.1s (  374.49, -706.02) speed= 6.26m/s road1271 s=  85.1 on_road=True
+t=  97.1s (  378.27, -702.63) speed= 4.32m/s road1271 s=  90.1 on_road=True
+t=  98.1s (  382.13, -699.16) speed= 6.26m/s road1271 s=  95.3 on_road=True
+t=  99.1s (  385.84, -695.83) speed= 4.40m/s road1271 s= 100.3 on_road=True
+t= 100.1s (  389.77, -692.30) speed= 6.23m/s road1271 s= 105.6 on_road=True
+t= 101.1s (  393.43, -689.02) speed= 4.53m/s road1271 s= 110.5 on_road=True
+t= 102.1s (  397.38, -685.37) speed= 6.16m/s road1271 s= 115.9 on_road=True
+t= 103.1s (  400.70, -681.92) speed= 4.61m/s road1271 s= 120.8 on_road=True
+t= 104.1s (  404.36, -677.92) speed= 5.98m/s road1271 s= 126.4 on_road=True
+t= 105.1s (  407.61, -674.51) speed= 4.69m/s road1271 s= 131.0 on_road=True
+t= 106.1s (  411.44, -670.60) speed= 5.81m/s road1271 s= 136.4 on_road=True
+t= 107.1s (  414.75, -667.27) speed= 4.83m/s road1271 s= 141.1 on_road=True
+t= 108.1s (  418.60, -663.44) speed= 6.27m/s road1271 s= 146.5 on_road=True
+[전이] t= 108.65s road1735 커넥터 speed= 4.33m/s limit=30km/h
+[전이] t= 108.85s road1734 커넥터 speed= 4.16m/s limit=30km/h
+t= 109.1s (  422.06, -659.99) speed= 4.50m/s road1734 s=   1.9 on_road=True
+t= 110.1s (  425.78, -656.13) speed= 6.28m/s road1734 s=   7.3 on_road=True
+t= 111.1s (  429.01, -652.57) speed= 4.49m/s road1734 s=  12.1 on_road=True
+[전이] t= 111.65s road1270 일반 speed= 5.29m/s limit=30km/h
+t= 112.1s (  432.53, -648.55) speed= 6.17m/s road1270 s=   2.4 on_road=True
+t= 113.1s (  435.68, -644.92) speed= 4.62m/s road1270 s=   7.3 on_road=True
+t= 114.1s (  439.20, -640.82) speed= 5.91m/s road1270 s=  12.7 on_road=True
+t= 115.1s (  442.28, -637.25) speed= 4.72m/s road1270 s=  17.4 on_road=True
+t= 116.1s (  446.01, -633.23) speed= 5.73m/s road1270 s=  22.9 on_road=True
+t= 117.1s (  449.37, -630.01) speed= 4.80m/s road1270 s=  27.4 on_road=True
+t= 118.1s (  453.58, -626.54) speed= 5.50m/s road1270 s=  32.7 on_road=True
+t= 119.1s (  457.38, -623.79) speed= 5.04m/s road1270 s=  37.2 on_road=True
+t= 120.1s (  461.99, -620.66) speed= 5.25m/s road1270 s=  42.8 on_road=True
+t= 121.1s (  465.84, -618.12) speed= 5.12m/s road1270 s=  47.4 on_road=True
+[전이] t= 121.65s road1464 커넥터 speed= 6.23m/s limit=30km/h
+t= 122.1s (  470.49, -615.22) speed= 5.12m/s road1464 s=   2.3 on_road=True
+t= 123.1s (  474.58, -612.84) speed= 5.16m/s road1464 s=   6.9 on_road=True
+[전이] t= 123.20s road1460 커넥터 speed= 5.26m/s limit=30km/h
+[전이] t= 123.25s road1462 커넥터 speed= 5.19m/s limit=30km/h
+[전이] t= 123.35s road1464 커넥터 speed= 5.45m/s limit=30km/h
+t= 124.1s (  479.42, -610.21) speed= 4.94m/s road1464 s=  12.4 on_road=True
+t= 125.1s (  483.57, -608.09) speed= 5.20m/s road1464 s=  17.0 on_road=True
+[전이] t= 125.15s road1269 일반 speed= 5.25m/s limit=30km/h
+t= 126.1s (  488.49, -605.55) speed= 4.40m/s road1269 s=   5.1 on_road=True
+t= 127.1s (  492.57, -603.45) speed= 5.24m/s road1269 s=   9.7 on_road=True
+t= 128.1s (  497.49, -600.93) speed= 4.44m/s road1269 s=  15.2 on_road=True
+t= 129.1s (  501.65, -598.80) speed= 5.30m/s road1269 s=  19.9 on_road=True
+t= 130.1s (  506.52, -596.31) speed= 4.24m/s road1269 s=  25.4 on_road=True
+t= 131.1s (  510.71, -594.17) speed= 5.31m/s road1269 s=  30.1 on_road=True
+[전이] t= 131.85s road1601 커넥터 speed= 5.09m/s limit=30km/h
+t= 132.1s (  515.54, -591.70) speed= 4.16m/s road1601 s=   1.2 on_road=True
+t= 133.1s (  519.80, -589.52) speed= 5.32m/s road1601 s=   5.9 on_road=True
+t= 134.1s (  524.56, -587.09) speed= 4.05m/s road1601 s=  11.3 on_road=True
+[전이] t= 134.90s road1596 커넥터 speed= 5.28m/s limit=30km/h
+[전이] t= 134.95s road1268 일반 speed= 5.32m/s limit=30km/h
+t= 135.1s (  528.79, -584.93) speed= 5.32m/s road1268 s=   0.6 on_road=True
+t= 136.1s (  533.54, -582.50) speed= 4.18m/s road1268 s=   6.0 on_road=True
+t= 137.1s (  537.96, -580.23) speed= 5.27m/s road1268 s=  10.9 on_road=True
+t= 138.1s (  542.85, -577.73) speed= 4.26m/s road1268 s=  16.4 on_road=True
+t= 139.1s (  547.15, -575.54) speed= 5.32m/s road1268 s=  21.3 on_road=True
+t= 140.1s (  552.04, -573.04) speed= 4.31m/s road1268 s=  26.7 on_road=True
+t= 141.1s (  556.36, -570.83) speed= 5.34m/s road1268 s=  31.6 on_road=True
+t= 142.1s (  561.38, -568.26) speed= 5.16m/s road1268 s=  37.2 on_road=True
+t= 143.1s (  565.48, -566.16) speed= 5.30m/s road1268 s=  41.8 on_road=True
+t= 144.1s (  570.47, -563.61) speed= 5.01m/s road1268 s=  47.4 on_road=True
+t= 145.1s (  574.66, -561.46) speed= 5.43m/s road1268 s=  52.2 on_road=True
+t= 146.1s (  579.66, -558.90) speed= 5.12m/s road1268 s=  57.8 on_road=True
+t= 147.1s (  583.87, -556.75) speed= 5.42m/s road1268 s=  62.5 on_road=True
+t= 148.1s (  588.86, -554.20) speed= 5.14m/s road1268 s=  68.1 on_road=True
+t= 149.1s (  593.06, -552.05) speed= 5.39m/s road1268 s=  72.8 on_road=True
+t= 150.1s (  598.05, -549.50) speed= 5.07m/s road1268 s=  78.4 on_road=True
+t= 151.1s (  602.21, -547.37) speed= 5.40m/s road1268 s=  83.1 on_road=True
+t= 152.1s (  607.22, -544.81) speed= 5.25m/s road1268 s=  88.7 on_road=True
+t= 153.1s (  611.33, -542.71) speed= 5.12m/s road1268 s=  93.3 on_road=True
+t= 154.1s (  616.36, -540.16) speed= 5.26m/s road1268 s=  99.0 on_road=True
+t= 155.1s (  620.44, -538.06) speed= 5.11m/s road1268 s= 103.6 on_road=True
+t= 156.1s (  625.29, -535.42) speed= 5.09m/s road1268 s= 109.2 on_road=True
+t= 157.1s (  629.36, -533.14) speed= 5.30m/s road1268 s= 113.8 on_road=True
+t= 158.1s (  634.19, -530.40) speed= 5.09m/s road1268 s= 119.4 on_road=True
+t= 159.1s (  638.23, -528.08) speed= 5.37m/s road1268 s= 124.1 on_road=True
+t= 160.1s (  643.04, -525.31) speed= 5.00m/s road1268 s= 129.6 on_road=True
+[전이] t= 160.15s road1458 커넥터 speed= 4.32m/s limit=30km/h
+[전이] t= 160.20s road1268 일반 speed= 4.17m/s limit=30km/h
+[전이] t= 160.30s road1456 커넥터 speed= 4.12m/s limit=30km/h
+[전이] t= 160.40s road1457 커넥터 speed= 4.22m/s limit=30km/h
+[전이] t= 160.50s road1456 커넥터 speed= 4.37m/s limit=30km/h
+[전이] t= 160.75s road1457 커넥터 speed= 4.90m/s limit=30km/h
+t= 161.1s (  647.05, -522.92) speed= 5.36m/s road1457 s=   3.8 on_road=True
+[전이] t= 161.55s road1452 커넥터 speed= 6.29m/s limit=30km/h
+[전이] t= 161.60s road1457 커넥터 speed= 6.19m/s limit=30km/h
+t= 162.1s (  651.67, -519.97) speed= 5.14m/s road1457 s=   9.3 on_road=True
+[전이] t= 162.10s road1455 커넥터 speed= 5.21m/s limit=30km/h
+[전이] t= 162.15s road1457 커넥터 speed= 5.19m/s limit=30km/h
+[전이] t= 162.55s road1454 커넥터 speed= 5.41m/s limit=30km/h
+t= 163.1s (  655.78, -517.16) speed= 4.71m/s road1454 s=   7.1 on_road=True
+[전이] t= 163.40s road1250 일반 speed= 5.16m/s limit=30km/h
+[전이] t= 163.45s road1453 커넥터 speed= 5.16m/s limit=30km/h
+[전이] t= 163.50s road1250 일반 speed= 5.18m/s limit=30km/h
+t= 164.1s (  660.23, -513.99) speed= 5.73m/s road1250 s=   3.9 on_road=True
+t= 165.1s (  664.03, -511.26) speed= 4.83m/s road1250 s=   8.6 on_road=True
+t= 166.1s (  668.53, -508.01) speed= 5.56m/s road1250 s=  14.1 on_road=True
+t= 167.1s (  672.29, -505.29) speed= 4.93m/s road1250 s=  18.8 on_road=True
+t= 168.1s (  676.79, -502.02) speed= 5.35m/s road1250 s=  24.3 on_road=True
+t= 169.1s (  680.50, -499.33) speed= 5.01m/s road1250 s=  28.9 on_road=True
+t= 170.1s (  685.01, -496.05) speed= 5.22m/s road1250 s=  34.5 on_road=True
+t= 171.1s (  688.76, -493.33) speed= 5.14m/s road1250 s=  39.1 on_road=True
+t= 172.1s (  693.28, -490.05) speed= 5.05m/s road1250 s=  44.7 on_road=True
+t= 173.1s (  696.99, -487.36) speed= 5.18m/s road1250 s=  49.3 on_road=True
+[전이] t= 173.65s road1828 커넥터 speed= 6.22m/s limit=30km/h
+[전이] t= 173.70s road1827 커넥터 speed= 6.17m/s limit=30km/h
+[전이] t= 173.90s road1828 커넥터 speed= 5.47m/s limit=30km/h
+t= 174.1s (  701.50, -484.06) speed= 5.03m/s road1828 s=   2.4 on_road=True
+t= 175.1s (  705.29, -481.33) speed= 5.19m/s road1828 s=   7.1 on_road=True
+t= 176.1s (  709.77, -478.08) speed= 5.05m/s road1828 s=  12.6 on_road=True
+[전이] t= 176.70s road1249 일반 speed= 4.69m/s limit=30km/h
+t= 177.1s (  713.51, -475.37) speed= 5.30m/s road1249 s=   1.9 on_road=True
+t= 178.1s (  718.09, -472.03) speed= 5.09m/s road1249 s=   7.6 on_road=True
+t= 179.1s (  721.81, -469.30) speed= 5.18m/s road1249 s=  12.2 on_road=True
+t= 180.1s (  726.27, -465.97) speed= 4.81m/s road1249 s=  17.8 on_road=True
+t= 181.1s (  729.97, -463.19) speed= 5.18m/s road1249 s=  22.4 on_road=True
+[전이] t= 181.45s road1619 커넥터 speed= 6.29m/s limit=30km/h
+t= 182.1s (  734.36, -459.89) speed= 4.43m/s road1619 s=   3.3 on_road=True
+t= 183.1s (  738.13, -457.11) speed= 5.26m/s road1619 s=   7.9 on_road=True
+t= 184.1s (  742.59, -453.90) speed= 4.26m/s road1619 s=  13.4 on_road=True
+[전이] t= 184.25s road1614 커넥터 speed= 4.17m/s limit=30km/h
+[전이] t= 184.55s road1254 일반 speed= 4.72m/s limit=30km/h
+t= 185.1s (  746.42, -451.16) speed= 5.23m/s road1254 s=   2.6 on_road=True
+t= 186.1s (  750.80, -448.00) speed= 4.09m/s road1254 s=   8.0 on_road=True
+t= 187.1s (  754.62, -445.16) speed= 5.29m/s road1254 s=  12.7 on_road=True
+t= 188.1s (  758.84, -441.88) speed= 4.07m/s road1254 s=  18.1 on_road=True
+[전이] t= 188.10s road1611 커넥터 speed= 4.08m/s limit=30km/h
+[전이] t= 188.20s road1254 일반 speed= 4.21m/s limit=30km/h
+[전이] t= 188.30s road1609 커넥터 speed= 4.39m/s limit=30km/h
+t= 189.1s (  762.63, -438.92) speed= 5.29m/s road1609 s=   3.8 on_road=True
+t= 190.1s (  766.88, -435.74) speed= 4.15m/s road1609 s=   9.1 on_road=True
+[전이] t= 191.05s road1605 커넥터 speed= 5.71m/s limit=30km/h
+t= 191.1s (  770.86, -432.82) speed= 5.71m/s road1605 s=  11.4 on_road=True
+[전이] t= 191.30s road1253 일반 speed= 6.21m/s limit=30km/h
+t= 192.1s (  775.14, -429.74) speed= 4.16m/s road1253 s=   3.7 on_road=True
+t= 193.1s (  779.21, -426.82) speed= 6.02m/s road1253 s=   8.7 on_road=True
+t= 194.1s (  783.41, -423.85) speed= 4.20m/s road1253 s=  13.9 on_road=True
+t= 195.1s (  787.61, -421.02) speed= 6.19m/s road1253 s=  18.9 on_road=True
+t= 196.1s (  791.79, -418.13) speed= 4.35m/s road1253 s=  24.0 on_road=True
+t= 197.1s (  795.60, -414.65) speed= 6.32m/s road1253 s=  29.4 on_road=True
+t= 198.1s (  798.90, -410.99) speed= 4.40m/s road1253 s=  34.8 on_road=True
+[전이] t= 198.95s road1821 커넥터 speed= 6.23m/s limit=30km/h
+t= 199.1s (  802.31, -407.00) speed= 6.19m/s road1821 s=   0.8 on_road=True
+[전이] t= 199.10s road1822 커넥터 speed= 6.05m/s limit=30km/h
+t= 200.1s (  805.66, -403.47) speed= 4.56m/s road1822 s=   5.6 on_road=True
+[전이] t= 200.20s road1819 커넥터 speed= 4.87m/s limit=30km/h
+[전이] t= 200.30s road1816 커넥터 speed= 5.08m/s limit=30km/h
+[전이] t= 200.45s road1822 커넥터 speed= 5.29m/s limit=30km/h
+t= 201.1s (  809.75, -399.84) speed= 6.48m/s road1822 s=  10.8 on_road=True
+[전이] t= 201.50s road1817 커넥터 speed= 5.02m/s limit=30km/h
+[전이] t= 201.75s road1252 일반 speed= 4.06m/s limit=30km/h
+t= 202.1s (  813.61, -396.78) speed= 4.55m/s road1252 s=   1.9 on_road=True
+t= 203.1s (  817.96, -393.55) speed= 6.13m/s road1252 s=   7.3 on_road=True
+t= 204.1s (  821.83, -390.73) speed= 4.60m/s road1252 s=  12.0 on_road=True
+t= 205.1s (  826.24, -387.55) speed= 5.96m/s road1252 s=  17.5 on_road=True
+t= 206.1s (  830.11, -384.77) speed= 4.73m/s road1252 s=  22.2 on_road=True
+t= 207.1s (  834.52, -381.61) speed= 6.19m/s road1252 s=  27.7 on_road=True
+[전이] t= 207.15s road1861 커넥터 speed= 5.89m/s limit=30km/h
+[전이] t= 207.20s road1860 커넥터 speed= 5.76m/s limit=30km/h
+t= 208.1s (  838.52, -378.75) speed= 4.63m/s road1860 s=   4.5 on_road=True
+t= 209.1s (  842.95, -375.56) speed= 6.01m/s road1860 s=  10.0 on_road=True
+t= 210.1s (  846.78, -372.79) speed= 4.70m/s road1860 s=  14.7 on_road=True
+t= 211.1s (  851.24, -369.57) speed= 5.89m/s road1860 s=  20.2 on_road=True
+t= 212.1s (  855.04, -366.81) speed= 4.79m/s road1860 s=  24.9 on_road=True
+[전이] t= 212.20s road1856 커넥터 speed= 5.10m/s limit=30km/h
+[전이] t= 212.25s road1251 일반 speed= 5.23m/s limit=30km/h
+t= 213.1s (  859.49, -363.60) speed= 6.13m/s road1251 s=   4.7 on_road=True
+t= 214.1s (  863.41, -360.77) speed= 4.70m/s road1251 s=   9.5 on_road=True
+t= 215.1s (  867.87, -357.55) speed= 5.87m/s road1251 s=  15.0 on_road=True
+t= 216.1s (  871.70, -354.80) speed= 4.82m/s road1251 s=  19.8 on_road=True
+t= 217.1s (  876.18, -351.59) speed= 5.59m/s road1251 s=  25.3 on_road=True
+t= 218.1s (  879.94, -348.90) speed= 4.90m/s road1251 s=  29.9 on_road=True
+t= 219.1s (  884.48, -345.65) speed= 5.50m/s road1251 s=  35.5 on_road=True
+t= 220.1s (  888.23, -342.96) speed= 4.99m/s road1251 s=  40.1 on_road=True
+t= 221.1s (  892.84, -339.66) speed= 5.93m/s road1251 s=  45.8 on_road=True
+t= 222.1s (  896.61, -336.92) speed= 4.78m/s road1251 s=  50.4 on_road=True
+t= 223.1s (  901.07, -333.62) speed= 5.82m/s road1251 s=  56.0 on_road=True
+t= 224.1s (  904.81, -330.81) speed= 4.82m/s road1251 s=  60.6 on_road=True
+t= 225.1s (  909.25, -327.48) speed= 5.61m/s road1251 s=  66.2 on_road=True
+t= 226.1s (  912.94, -324.69) speed= 4.91m/s road1251 s=  70.8 on_road=True
+t= 227.1s (  917.37, -321.35) speed= 5.45m/s road1251 s=  76.4 on_road=True
+t= 228.1s (  921.06, -318.56) speed= 5.04m/s road1251 s=  81.0 on_road=True
+t= 229.1s (  925.53, -315.18) speed= 5.68m/s road1251 s=  86.6 on_road=True
+t= 230.1s (  929.29, -312.35) speed= 4.95m/s road1251 s=  91.3 on_road=True
+t= 231.1s (  933.71, -309.01) speed= 6.03m/s road1251 s=  96.8 on_road=True
+t= 232.1s (  937.52, -306.13) speed= 4.73m/s road1251 s= 101.7 on_road=True
+t= 233.1s (  941.95, -302.79) speed= 6.08m/s road1251 s= 107.2 on_road=True
+t= 234.1s (  945.73, -299.93) speed= 4.73m/s road1251 s= 111.9 on_road=True
+t= 235.1s (  950.14, -296.59) speed= 5.77m/s road1251 s= 117.5 on_road=True
+t= 236.1s (  953.85, -293.79) speed= 4.80m/s road1251 s= 122.1 on_road=True
+t= 237.1s (  958.25, -290.46) speed= 5.56m/s road1251 s= 127.6 on_road=True
+[감속] t=237.60s road1251 20->8.9km/h speed=14.8km/h
+t= 238.1s (  961.60, -287.91) speed= 2.65m/s road1251 s= 131.9 on_road=True
+t= 239.1s (  963.43, -286.52) speed= 2.40m/s road1251 s= 134.2 on_road=True
+[전이] t= 240.05s road1949 커넥터 speed= 2.37m/s limit=30km/h
+t= 240.1s (  965.19, -284.96) speed= 2.37m/s road1949 s=   0.0 on_road=True
+[전이] t= 240.30s road1251 일반 speed= 2.34m/s limit=30km/h
+[전이] t= 240.45s road1948 커넥터 speed= 2.35m/s limit=30km/h
+t= 241.1s (  966.68, -283.18) speed= 2.34m/s road1948 s=   1.4 on_road=True
+t= 242.1s (  968.03, -281.26) speed= 2.35m/s road1948 s=   5.2 on_road=True
+[전이] t= 242.80s road1391 일반 speed= 2.30m/s limit=30km/h
+t= 243.1s (  969.55, -279.48) speed= 2.40m/s road1391 s=   0.6 on_road=True
+t= 244.1s (  971.15, -277.75) speed= 2.36m/s road1391 s=   2.4 on_road=True
+t= 245.1s (  972.84, -276.13) speed= 2.35m/s road1391 s=   4.5 on_road=True
+t= 246.1s (  974.63, -274.62) speed= 2.35m/s road1391 s=   6.8 on_road=True
+t= 247.1s (  976.47, -273.17) speed= 2.36m/s road1391 s=   9.3 on_road=True
+t= 248.1s (  978.40, -271.82) speed= 2.35m/s road1391 s=  11.4 on_road=True
+t= 249.1s (  980.46, -270.78) speed= 2.32m/s road1391 s=  13.7 on_road=True
+[충돌] frame=32507 other=static.unknown tags= impulse=517.92 (이후 충돌은 CSV만 기록)
+
+=== 요약 ===
+route: back (종점 road1151 s=23.1)
+결과: 실패 - 충돌 1tick/0.00s 연속 (road1391 s=15.2)
+주행 시간(시뮬): 249.8s
+계획 이탈 기록: t=31.50s road1970 는 계획의 현재/다음 road 가 아님(비치명, 계속 주행)
+
+=== 계획 vs 실제 road 시퀀스 ===
+ 0 계획 1278  실제 1278 
+ 1 계획 1969  실제 1970   <-- 불일치
+ 2 계획 1393  실제 1278   <-- 불일치
+ 3 계획 1972  실제 1969   <-- 불일치
+ 4 계획 1392  실제 1393   <-- 불일치
+ 5 계획 1484  실제 1972   <-- 불일치
+ 6 계획 1202  실제 1971   <-- 불일치
+ 7 계획 1466  실제 1392   <-- 불일치
+ 8 계획 1271  실제 1487   <-- 불일치
+ 9 계획 1734  실제 1392   <-- 불일치
+10 계획 1270  실제 1484   <-- 불일치
+11 계획 1464  실제 1202   <-- 불일치
+12 계획 1269  실제 1483   <-- 불일치
+13 계획 1601  실제 1202   <-- 불일치
+14 계획 1268  실제 1467   <-- 불일치
+15 계획 1457  실제 1472   <-- 불일치
+16 계획 1250  실제 1469   <-- 불일치
+17 계획 1828  실제 1466   <-- 불일치
+18 계획 1249  실제 1470   <-- 불일치
+19 계획 1619  실제 1271   <-- 불일치
+20 계획 1254  실제 1735   <-- 불일치
+21 계획 1609  실제 1734   <-- 불일치
+22 계획 1253  실제 1270   <-- 불일치
+23 계획 1822  실제 1464   <-- 불일치
+24 계획 1252  실제 1460   <-- 불일치
+25 계획 1860  실제 1462   <-- 불일치
+26 계획 1251  실제 1464   <-- 불일치
+27 계획 1948  실제 1269   <-- 불일치
+28 계획 1391  실제 1601   <-- 불일치
+29 계획 1952  실제 1596   <-- 불일치
+30 계획 1248  실제 1268   <-- 불일치
+31 계획 1896  실제 1458   <-- 불일치
+32 계획 1151  실제 1268   <-- 불일치
+33 계획 -     실제 1456   <-- 불일치
+34 계획 -     실제 1457   <-- 불일치
+35 계획 -     실제 1456   <-- 불일치
+36 계획 -     실제 1457   <-- 불일치
+37 계획 -     실제 1452   <-- 불일치
+38 계획 -     실제 1457   <-- 불일치
+39 계획 -     실제 1455   <-- 불일치
+40 계획 -     실제 1457   <-- 불일치
+41 계획 -     실제 1454   <-- 불일치
+42 계획 -     실제 1250   <-- 불일치
+43 계획 -     실제 1453   <-- 불일치
+44 계획 -     실제 1250   <-- 불일치
+45 계획 -     실제 1828   <-- 불일치
+46 계획 -     실제 1827   <-- 불일치
+47 계획 -     실제 1828   <-- 불일치
+48 계획 -     실제 1249   <-- 불일치
+49 계획 -     실제 1619   <-- 불일치
+50 계획 -     실제 1614   <-- 불일치
+51 계획 -     실제 1254   <-- 불일치
+52 계획 -     실제 1611   <-- 불일치
+53 계획 -     실제 1254   <-- 불일치
+54 계획 -     실제 1609   <-- 불일치
+55 계획 -     실제 1605   <-- 불일치
+56 계획 -     실제 1253   <-- 불일치
+57 계획 -     실제 1821   <-- 불일치
+58 계획 -     실제 1822   <-- 불일치
+59 계획 -     실제 1819   <-- 불일치
+60 계획 -     실제 1816   <-- 불일치
+61 계획 -     실제 1822   <-- 불일치
+62 계획 -     실제 1817   <-- 불일치
+63 계획 -     실제 1252   <-- 불일치
+64 계획 -     실제 1861   <-- 불일치
+65 계획 -     실제 1860   <-- 불일치
+66 계획 -     실제 1856   <-- 불일치
+67 계획 -     실제 1251   <-- 불일치
+68 계획 -     실제 1949   <-- 불일치
+69 계획 -     실제 1251   <-- 불일치
+70 계획 -     실제 1948   <-- 불일치
+71 계획 -     실제 1391   <-- 불일치
+첫 불일치 위치: 1번째 (계획 1969 / 실제 1970)
+junction 통과(커넥터 road 를 실제로 밟았는지):
+junction1   (r1969): 통과
+junction109 (r1972): 통과
+junction43  (r1484): 통과
+junction11  (r1466): 통과
+junction61  (r1734): 통과
+junction85  (r1464): 통과
+junction37  (r1601): 통과
+junction107 (r1457): 통과
+junction78  (r1828): 통과
+junction41  (r1619): 통과
+junction39  (r1609): 통과
+junction86  (r1822): 통과
+junction83  (r1860): 통과
+junction108 (r1948): 통과
+junction106 (r1952): 미통과
+junction3   (r1896): 미통과
+junction2(출발 전), junction35(종점 밖)는 통과 대상 아님
+
+=== 급회전 커넥터 이탈량 (정의: sharp_offset docstring) ===
+r1484 (+78.4°): tick 37, 최대|lat| 1.65m, 최대 차체초과 +0.96m(안쪽, s=9.8), on_road False 10tick, 충돌 0건
+r1466 (-68.1°): tick 56, 최대|lat| 1.44m, 최대 차체초과 +0.65m(안쪽, s=6.5), on_road False 0tick, 충돌 0건
+r1484 진입: t=51.25s speed=4.39m/s(15.8km/h)
+r1466 진입: t=78.45s speed=6.37m/s(22.9km/h)
+
+=== 차체 판정 road 별 (tick 수, 최대 차선밖 꼭짓점) ===
+road1278: 인도 23tick, 차선밖꼭짓점 최대 1/4 (1개 이상 25tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.17m, 메시밖 0tick
+road1393: 인도 1tick, 차선밖꼭짓점 최대 1/4 (1개 이상 1tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1972: 인도 4tick, 차선밖꼭짓점 최대 1/4 (1개 이상 4tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1392: 인도 1tick, 차선밖꼭짓점 최대 1/4 (1개 이상 1tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1487: 인도 2tick, 차선밖꼭짓점 최대 1/4 (1개 이상 2tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1484: 인도 38tick, 차선밖꼭짓점 최대 2/4 (1개 이상 38tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 2tick
+road1202: 인도 14tick, 차선밖꼭짓점 최대 1/4 (1개 이상 14tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1483: 인도 5tick, 차선밖꼭짓점 최대 1/4 (1개 이상 5tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1467: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.00m, 메시밖 0tick
+road1472: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 16tick, (계획 차선 안 16tick), 꼭짓점 침범깊이 최대 3.00m, 메시밖 0tick
+road1469: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 3tick, (계획 차선 안 3tick), 꼭짓점 침범깊이 최대 2.52m, 메시밖 0tick
+road1466: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.21m, 메시밖 0tick
+road1470: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.93m, 메시밖 0tick
+road1464: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.97m, 메시밖 0tick
+road1460: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.88m, 메시밖 0tick
+road1462: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.06m, 메시밖 0tick
+road1269: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.56m, 메시밖 0tick
+road1601: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.92m, 메시밖 0tick
+road1596: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.72m, 메시밖 0tick
+road1268: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.73m, 메시밖 0tick
+road1458: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.70m, 메시밖 0tick
+road1456: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.72m, 메시밖 0tick
+road1457: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.08m, 메시밖 0tick
+road1452: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.97m, 메시밖 0tick
+road1455: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.96m, 메시밖 0tick
+road1454: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.23m, 메시밖 0tick
+road1250: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.56m, 메시밖 0tick
+road1453: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 2.24m, 메시밖 0tick
+road1828: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.22m, 메시밖 0tick
+road1822: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.75m, 메시밖 0tick
+road1819: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.25m, 메시밖 0tick
+road1816: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.28m, 메시밖 0tick
+road1860: 인도 0tick, 차선밖꼭짓점 최대 0/4 (1개 이상 0tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 1.70m, 메시밖 0tick
+road1948: 인도 13tick, 차선밖꼭짓점 최대 1/4 (1개 이상 14tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+road1391: 인도 0tick, 차선밖꼭짓점 최대 1/4 (1개 이상 16tick), 반대차선(중심) 0tick, (계획 차선 안 0tick), 꼭짓점 침범깊이 최대 0.00m, 메시밖 0tick
+(목록에 없는 road 는 전부 0)
+
+=== 차선 이탈 구간 (차체 기준, 계획 중심선 기준, 세션19) ===
+t=19.95~20.95s road1278 -중앙선 쪽 최대 lat -0.95m 차체초과 0.17m 중심초과 0.00m 21tick, 진입 15.1km/h, road 평균R 173.65 R2min 10.28
+t=39.50~39.65s road1393 +인도 쪽 최대 lat +0.92m 차체초과 0.14m 중심초과 0.00m 4tick, 진입 17.9km/h, road 평균R 209.60 R2min 13.11
+t=51.25~53.70s road1484 +인도 쪽 최대 lat +1.75m 차체초과 0.97m 중심초과 0.07m 50tick, 진입 15.8km/h, road 평균R 10.12 R2min 7.40
+t=76.45~79.15s road1466 -중앙선 쪽 최대 lat -1.44m 차체초과 0.66m 중심초과 0.00m 55tick, 진입 21.8km/h, road 평균R 11.90 R2min 6.48
+t=241.20~241.95s road1948 +인도 쪽 최대 lat +0.92m 차체초과 0.14m 중심초과 0.00m 16tick, 진입 8.5km/h, road 평균R 10.95 R2min 5.25
+t=249.30~249.75s road1391 -중앙선 쪽 최대 lat -1.02m 차체초과 0.24m 중심초과 0.00m 10tick, 진입 8.6km/h, road 평균R 11.51 R2min 3.22
+합계 6구간 (중앙선 쪽 3, 인도 쪽 3), 최대 차체초과 0.97m
+충돌 누적 1건
+판정: record
+follow=on
+
+=== 실패 직전 10초 road 전이 (t_end=249.75s) ===
+t= 240.05s road1949  커넥터 speed= 2.37m/s (965.2,-285.0)
+t= 240.30s road1251  일반  speed= 2.34m/s (965.6,-284.6)
+t= 240.45s road1948  커넥터 speed= 2.35m/s (965.9,-284.3)
+t= 242.80s road1391  일반  speed= 2.30m/s (969.2,-279.9)
+궤적 로그: /home/gyumin/campus_mobility_sim/map/docs/logs/drive_log_20261007_220128.csv
+충돌 센서(actor_id=26) 제거함
+실패/예외로 차량(actor_id=25) 제거함
+[동기모드] 복귀: synchronous_mode=False fixed_delta_seconds=None

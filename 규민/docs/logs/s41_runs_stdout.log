@@ -1,0 +1,17 @@
+[s41_load] 00:25:26 시작 server PID=9383 avail=2876Mi swap=2485Mi
+[s41_load] 00:25:33 로더 rc=0 직후 avail=2650Mi swap=1053Mi
+[s41_load] map_sha256=5240ca8b883e42c0 (cbnu_campus_frozen_v2.xodr)
+[s41_load] 생성 인자: vertex_distance=2.0, max_road_length=50.0, wall_height=0.0, additional_width=0.6, smooth_junctions=True, enable_mesh_visibility=True, enable_pedestrian_navigation=True
+[s41_load] 서버 localhost:2000 버전 0.9.15
+[s41_load] 맵 이름: Carla/Maps/OpenDriveMap
+[s41_load] 서버 to_opendrive sha256=5240ca8b883e42c0 (파일과 일치)
+[s41_load] 도로 917 / 교차로 112
+[s41_load] 스폰 지점 1302
+[s41_north] 00:27:40 시작 server PID=9383 avail=5171Mi swap=1049Mi
+[s41_north] 00:27:59 주행 rc=0 주행 후 avail=5162Mi swap=1049Mi
+[s41_south] 00:27:59 시작 server PID=9383 avail=5163Mi swap=1049Mi
+[s41_south] 00:28:21 주행 rc=0 주행 후 avail=5170Mi swap=1049Mi
+[s41_middle] 00:28:22 시작 server PID=9383 avail=5171Mi swap=1049Mi
+[s41_middle] 00:28:42 주행 rc=0 주행 후 avail=5164Mi swap=1049Mi
+[s41_yangseong] 00:28:42 시작 server PID=9383 avail=5164Mi swap=1049Mi
+[s41_yangseong] 00:29:01 주행 rc=0 주행 후 avail=5162Mi swap=1049Mi

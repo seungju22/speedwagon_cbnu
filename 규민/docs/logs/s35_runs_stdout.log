@@ -1,0 +1,44 @@
+[s35_v2_back_run1] 21:30:15 시작 firefox=0 carla=0 avail=11701Mi swap=924Mi
+[s35_v2_back_run1] nohup sh PID=18076
+[s35_v2_back_run1] 21:30:20 포트 열림 6s, server PID=18086
+[s35_v2_back_run1] 21:30:33 get_world 응답(시도 3회) avail=2915Mi swap=2638Mi
+[s35_v2_back_run1] spawn point 개수: 1302
+[s35_v2_back_run1] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s35_v2_back_run1] 서버 맵 road 917 / junction 112
+[s35_v2_back_run1] 21:30:43 로드 직후 avail=1443Mi swap=1635Mi
+[s35_v2_back_run1] 21:32:43 2분 후 avail=4262Mi swap=1509Mi
+[s35_v2_back_run1] 21:33:18 주행 rc=0 주행 후 avail=4237Mi swap=1508Mi
+[s35_v2_back_run1] 21:33:20 종료 carla 프로세스=0 주행 중 서버 error 줄=0 Signal11=1
+[s35_v2_back_run2] 21:33:40 시작 firefox=0 carla=0 avail=11746Mi swap=997Mi
+[s35_v2_back_run2] nohup sh PID=18699
+[s35_v2_back_run2] 21:33:45 포트 열림 6s, server PID=18709
+[s35_v2_back_run2] 21:33:59 get_world 응답(시도 3회) avail=3263Mi swap=2946Mi
+[s35_v2_back_run2] spawn point 개수: 1302
+[s35_v2_back_run2] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s35_v2_back_run2] 서버 맵 road 917 / junction 112
+[s35_v2_back_run2] 21:34:09 로드 직후 avail=1675Mi swap=1757Mi
+[s35_v2_back_run2] 21:36:09 2분 후 avail=4236Mi swap=1504Mi
+[s35_v2_back_run2] 21:36:47 주행 rc=0 주행 후 avail=4222Mi swap=1503Mi
+[s35_v2_back_run2] 21:36:48 종료 carla 프로세스=0 주행 중 서버 error 줄=0 Signal11=1
+[s35_v2_back_run3] 21:38:03 시작 firefox=0 carla=0 avail=11724Mi swap=1014Mi
+[s35_v2_back_run3] nohup sh PID=19350
+[s35_v2_back_run3] 21:38:08 포트 열림 6s, server PID=19360
+[s35_v2_back_run3] 21:38:21 get_world 응답(시도 3회) avail=3228Mi swap=2931Mi
+[s35_v2_back_run3] spawn point 개수: 1302
+[s35_v2_back_run3] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s35_v2_back_run3] 서버 맵 road 917 / junction 112
+[s35_v2_back_run3] 21:38:38 로드 직후 avail=2574Mi swap=2517Mi
+[s35_v2_back_run3] 21:40:38 2분 후 avail=4293Mi swap=1606Mi
+[s35_v2_back_run3] 21:41:17 주행 rc=0 주행 후 avail=4282Mi swap=1596Mi
+[s35_v2_back_run3] 21:41:19 종료 carla 프로세스=0 주행 중 서버 error 줄=0 Signal11=1
+[s35D_v2_back_run1] 21:48:22 시작 firefox=0 carla=0 avail=11579Mi swap=901Mi
+[s35D_v2_back_run1] nohup sh PID=20302
+[s35D_v2_back_run1] 21:48:27 포트 열림 6s, server PID=20312
+[s35D_v2_back_run1] 21:48:39 get_world 응답(시도 3회) avail=2860Mi swap=2697Mi
+[s35D_v2_back_run1] spawn point 개수: 1302
+[s35D_v2_back_run1] 보낸 문자열 sha256=5240ca8b883e42c0, 서버 to_opendrive sha256=5240ca8b883e42c0 (일치), 길이 2219959 / 2219959
+[s35D_v2_back_run1] 서버 맵 road 917 / junction 112
+[s35D_v2_back_run1] 21:48:47 로드 직후 avail=1485Mi swap=1645Mi
+[s35D_v2_back_run1] 21:50:47 2분 후 avail=4196Mi swap=1477Mi
+[s35D_v2_back_run1] 21:51:25 주행 rc=0 주행 후 avail=4180Mi swap=1474Mi
+[s35D_v2_back_run1] 21:51:27 종료 carla 프로세스=0 주행 중 서버 error 줄=0 Signal11=1

@@ -1,0 +1,104 @@
+# 정류장·차고지 (세션40, map/scripts/s40_stops.py 생성). 기존 노선 정의에서 모음. 새로 정한 값 없음
+# 맵: maps/cbnu_campus_frozen_v2.xodr sha256 앞 16자 5240ca8b883e42c0
+# 좌표: road/s/lane = OpenDRIVE(lane -1 = 진행 방향 오른쪽 주행 차선), 위경도 = WGS84(xodr 머리말 투영·offset 역산, s22_buildings.Frame)
+# stop_zone_length_m 는 아직 정하지 않음(빈 값)
+# 데이터 출처: OpenStreetMap, (c) OpenStreetMap contributors, ODbL 1.0. 좌표는 OSM 파생 지도·OSM 노드에서 계산한 값이다
+map_sha256_16: 5240ca8b883e42c0
+stops:
+  - id: main_gate
+    name: 정문
+    route: all
+    road_id: 1278
+    s: 0.0
+    lane_id: -1
+    carla_xyz: [217.846, -1087.414, 0.000]
+    lat: 36.6326490
+    lon: 127.4529988
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: false
+    stop_zone_length_m:
+    note: "노선 출발점(정문 밖 공도 교차점, frozen_v1 r1247 과 좌표 차 0, map_session32_report.md 0-4)"
+    source: "test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발) + logs/s38_v2_back_run1.log spawn 줄 s=0.00"
+  - id: lib_north
+    name: 도서관 북문
+    route: north
+    road_id: 1415
+    s: 78.0
+    lane_id: -1
+    carla_xyz: [657.257, -683.675, 0.000]
+    lat: 36.6290107
+    lon: 127.4579117
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "도서관 북문(구관 북동 면 중점 46.1m)"
+    source: "test_drive.py ROUTES_V2['north'] 마지막 road·end_s"
+  - id: lib_south
+    name: 도서관 남문
+    route: south
+    road_id: 1268
+    s: 47.0
+    lane_id: -1
+    carla_xyz: [570.069, -563.810, 0.000]
+    lat: 36.6279306
+    lon: 127.4569369
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "도서관 남문(자연대-도서관 사이, 남서 면 중점 약 57.5m)"
+    source: "test_drive.py ROUTES_V2['south'] 마지막 road·end_s"
+  - id: middle_gate
+    name: 중문
+    route: middle
+    road_id: 1360
+    s: 70.0
+    lane_id: -1
+    carla_xyz: [666.435, -982.306, 0.000]
+    lat: 36.6317018
+    lon: 127.4580144
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "중문 앞(road1327 막다른 끝 5.7m 전, 문까지 약 40~80m)"
+    source: "test_drive.py ROUTES_V2['middle'] 마지막 road·end_s"
+  - id: yangseong
+    name: 양성재
+    route: yangseong
+    road_id: 1153
+    s: 22.0
+    lane_id: -1
+    carla_xyz: [214.552, -549.608, 0.000]
+    lat: 36.6278026
+    lon: 127.4529621
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "양성재(서문) 앞(건물 외곽선 45.7m)"
+    source: "test_drive.py ROUTES_V2['yangseong'] 마지막 road·end_s"
+  - id: back_gate
+    name: 후문
+    route: back
+    road_id: 1151
+    s: 23.1
+    lane_id: -1
+    carla_xyz: [1099.473, -219.708, 0.000]
+    lat: 36.6248296
+    lon: 127.4628555
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "후문B 추정 게이트(392632034 위, 36.624844, 127.462860 최근접 1.65m)"
+    source: "test_drive.py ROUTES_V2['back'] 마지막 road·end_s"
+depot_candidates:  # 고르지 않음
+  - id: museum_bus_depot
+    name: 박물관 버스 차고지
+    lat: 36.6276833
+    lon: 127.4550105
+    note: "OSM way 442595850(service=parking_aisle, 고리) 노드 8개 평균. 진입 j4 답사점 36.627598, 127.454728(logs/s23_field_survey.log 97행)"
+    source: "logs/s24_reconv_list.md 49~52·185행, field_survey_2026-10-04.md '박물관 서쪽' 절, stops_status_2026-09-29.md 297·300행"
+  - id: n14_parking
+    name: N14 주차장
+    lat:
+    lon:
+    note: "좌표 기록 없음(비워 둠). 근거 문서는 위치를 '건물을 ㄷ자로 감싼 형태' 로만 적었다"
+    source: "field_survey_2026-10-04.md 'N14 주차장' 절, stops_status_2026-09-29.md 294·300행"

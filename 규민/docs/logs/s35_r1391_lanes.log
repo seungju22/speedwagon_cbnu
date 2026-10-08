@@ -1,0 +1,7 @@
+r1391 laneOffset 레코드 0 laneSection 1
+ laneSection s= 0 singleSide= None
+   left : 요소 없음
+   center id 0 type none width [] border []
+   right id -1 type driving width [('0', '3.35', '0', '0', '0')] border []
+   right id -2 type sidewalk width [('0', '2.80', '0', '0', '0')] border []
+v2 전체 left 차선 있는 laneSection 수: 0
