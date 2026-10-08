@@ -1,8 +1,0 @@
-main_gate r1278 s=0.0 lane -1 (36.6326490,127.4529988) 왕복차 0.000m 경계안 False
-lib_north r1415 s=78.0 lane -1 (36.6290107,127.4579117) 왕복차 0.000m 경계안 True
-lib_south r1268 s=47.0 lane -1 (36.6279306,127.4569369) 왕복차 0.000m 경계안 True
-middle_gate r1360 s=70.0 lane -1 (36.6317018,127.4580144) 왕복차 0.000m 경계안 True
-yangseong r1153 s=22.0 lane -1 (36.6278026,127.4529621) 왕복차 0.000m 경계안 True
-back_gate r1151 s=23.1 lane -1 (36.6248296,127.4628555) 왕복차 0.000m 경계안 True
-museum_bus_depot way 442595850 노드 8 평균 (36.6276833,127.4550105) / n14_parking 빈 값
--> /home/gyumin/campus_mobility_sim/map/data/stops_v2.yaml

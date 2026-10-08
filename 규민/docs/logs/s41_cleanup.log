@@ -1,4 +1,0 @@
-조회1 [(31, 'vehicle.audi.a2')]
-destroy 31 vehicle.audi.a2 True
-조회2 []
-WorldSettings(synchronous_mode=False,no_rendering_mode=False,fixed_delta_seconds=6.59151e-310,substepping=True,max_substep_delta_time=0.01,max_substeps=10,max_culling_distance=0,deterministic_ragdolls=True)

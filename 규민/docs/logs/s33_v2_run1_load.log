@@ -1,2 +1,0 @@
-terminate called after throwing an instance of 'carla::client::TimeoutException'
-  what():  time-out of 30000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000

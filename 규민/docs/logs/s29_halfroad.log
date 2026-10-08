@@ -1,5 +1,0 @@
-차량 lanelet 872, 보행 lanelet 498
-차량 lanelet 두 개가 왼쪽 경계를 같은 선으로 공유(맞은편 쌍) 0
-차량-보행 lanelet 이 경계 선 공유 498
-왼쪽 경계가 다른 차량 lanelet 왼쪽 경계 위 0.05m 안(같은 자리, 다른 선) 인 lanelet 수(쌍이면 2씩) 704
-routing graph 왼쪽 이웃(lefts, 같은 방향 차선 변경) 있는 차량 lanelet 0, adjacentLeft(통행 불가 이웃 포함) 0

@@ -7,7 +7,7 @@
 #   (README·ATTRIBUTION·NOTICE 는 세션29c 부터 작업 폴더에 원본이 있다)
 #
 # 대상
-#   map/docs/    -> 규민/docs/      (docs/figures/ATTRIBUTION.md 포함)
+#   map/docs/    -> 규민/docs/      (DOCS 에 적은 파일만. 2026-10-09: 세션 보고서·logs 는 보내지 않는다)
 #   map/scripts/ -> 규민/scripts/
 #   map/tests/   -> 규민/tests/
 #   map/maps/    -> 규민/maps/      (MAPS 에 적은 파일만: 동결본 + NOTICE.md)
@@ -32,6 +32,9 @@ MAPS=(cbnu_internal_only_localtm_tags73_smooth.xodr cbnu_campus_frozen_v2.xodr N
 ROOT=/home/gyumin/campus_mobility_sim
 DATA=(stops_v2.yaml)
 TOPDOCS=(handoff_1_README.md)
+# 2026-10-09(사용자 지시): map/docs/ 는 인계 파일만 이름으로 보낸다. 세션 보고서·logs 282개를 저장소에서 내렸다
+#   목록은 handoff_1_README.md 가 가리키는 문서와 그림 고지
+DOCS=(map_frozen_v1.md presentation_numbers_locked.md figures/ATTRIBUTION.md)
 
 MODE=--dry-run
 case "${1:-}" in
@@ -45,8 +48,9 @@ esac
 
 # 토큰이 문서에 섞여 들어가지 않았는지 먼저 본다(세션 중 PAT 붙여넣기 전례). 걸리면 멈춘다
 # 세션41: 검사 범위 = 보내는 모든 경로(MAPS·DATA·TOPDOCS 포함)
-SCAN=("$SRC/docs" "$SRC/scripts" "$SRC/tests" "$SRC/README.md")
+SCAN=("$SRC/scripts" "$SRC/tests" "$SRC/README.md")
 for m in "${MAPS[@]}"; do SCAN+=("$SRC/maps/$m"); done
+for d in "${DOCS[@]}"; do SCAN+=("$SRC/docs/$d"); done
 for d in "${DATA[@]}"; do SCAN+=("$SRC/data/$d"); done
 for h in "${TOPDOCS[@]}"; do SCAN+=("$ROOT/docs/$h"); done
 if grep -rIlE 'ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}' "${SCAN[@]}" 2>/dev/null; then
@@ -57,8 +61,11 @@ fi
 EXCL=(--exclude=__pycache__/ --exclude='*.pyc' --exclude='*.bak*' --exclude='*.tar.gz' --exclude='*.webm' --max-size=100m)
 
 echo "== 모드: ${MODE:-실제 복사}"
-echo "== docs"
-rsync -a $MODE --itemize-changes "${EXCL[@]}" "$SRC/docs/" "$DST/docs/"
+echo "== docs (DOCS 목록만)"
+for d in "${DOCS[@]}"; do
+  [ -f "$SRC/docs/$d" ] || { echo "docs 파일 없음: $d" >&2; exit 1; }
+  rsync -a $MODE --itemize-changes --max-size=100m "$SRC/docs/$d" "$DST/docs/$d"
+done
 echo "== scripts"
 rsync -a $MODE --itemize-changes "${EXCL[@]}" "$SRC/scripts/" "$DST/scripts/"
 echo "== tests"

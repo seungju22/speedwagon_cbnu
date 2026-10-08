@@ -1,7 +1,0 @@
-xodr cbnu_internal_only_localtm_tags81_B_smooth_turnfix.xodr: road 917 / 정의된 junction 112
-정의 없는 junction(회차 없는 막다른 끝) 0: []
-successor 없는 일반 road(일방통행 막다른 끝 후보) 2: [1366, 1379]
-기존 회차 연결로(틀, connection 1개·paramPoly3·길이 9.89240086) 37개
-  들어오는 차선 끝 기준 상대 앞(m): 최소 0.0009 최대 0.0011
-  들어오는 차선 끝 기준 상대 왼(m): 최소 -1.6751 최대 -1.6749
-  들어오는 차선 끝 기준 상대 방위(rad): 최소 0.4636 최대 0.4636
