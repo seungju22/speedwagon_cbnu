@@ -5,7 +5,7 @@
 ## 1. 설명
 
 충북대학교 캠퍼스 도로를 CARLA 0.9.15 에서 달릴 수 있는 OpenDRIVE 맵(`.xodr`)으로 만들고,
-셔틀 정류장 노선을 BasicAgent 로 주행 검증했다.
+셔틀 정류장 노선을 BasicAgent 로 주행 검증.
 
 - 맵 파일: `maps/cbnu_internal_only_localtm_tags73_smooth.xodr` (frozen_v1)
 - sha256 앞 16자: `bf835cdfad0cea65`
@@ -24,7 +24,7 @@
 
 자세한 경위: `docs/how_the_map_was_made.md`
 
-`docs/` 아래 세션 보고서(`map_session*_report.md`)와 `docs/logs/` 는 작업 로그다. 당시 기록을 그대로 두었다.
+`docs/` 아래 세션 보고서(`map_session*_report.md`)와 `docs/logs/` 는 작업 로그다. 당시 기록.
 
 ## 3. 현재 검증 상태 (정류장별)
 
@@ -57,12 +57,6 @@
 
 환경: Ubuntu 22.04, CARLA 0.9.15 패키지, 파이썬 venv 에 `carla==0.9.15`
 
-**주의: 스크립트에 /home/gyumin 절대 경로가 하드코딩돼 있어 다른 환경에서는 경로 수정이 필요하다.**
-(일부 문서·로그에는 이전 환경의 /home/gm 경로도 남아 있다. 기록이라 고치지 않았다)
-
-원래 작업 폴더 구조는 `map/{data,docs,maps,scripts,tests}` 이고, 이 폴더의 `docs/ scripts/ tests/ maps/` 가 그 일부다.
-원본 OSM(`data/raw`)과 중간 산출물은 올리지 않았다(`scripts/download_osm.sh` 로 다시 받는다)
-
 순서
 1. `scripts/download_osm.sh` -> `data/raw/cbnu_campus.osm`
 2. `python scripts/fix_tags.py`
@@ -71,8 +65,6 @@
 5. `python scripts/osm_to_xodr.py --input <평활화 OSM> --output <xodr>`
 6. CARLA 서버 실행 후 `python tests/test_load_map_878.py --wall-height 0`
 7. 주행: `python tests/test_drive.py --route north` (north / south / middle / yangseong)
-
-주의: OSM 은 계속 편집되므로 오늘 다시 받으면 같은 맵이 나오지 않을 수 있다. 같은 입력이면 파이프라인 결과는 같다(재현성 확인 기록 `docs/logs/s18_D_reconvert.md`)
 
 ## 데이터 출처
 
