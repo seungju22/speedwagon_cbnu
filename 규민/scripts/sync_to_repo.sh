@@ -7,7 +7,7 @@
 #   (README·ATTRIBUTION·NOTICE 는 세션29c 부터 작업 폴더에 원본이 있다)
 #
 # 대상
-#   map/docs/    -> 규민/docs/      (DOCS 에 적은 파일만. 2026-10-09: 세션 보고서·logs 는 보내지 않는다)
+#   map/docs/    -> 규민/docs/      (DOCS 에 적은 파일만. 2026-10-09 2차부터 비어 있다)
 #   map/scripts/ -> 규민/scripts/
 #   map/tests/   -> 규민/tests/
 #   map/maps/    -> 규민/maps/      (MAPS 에 적은 파일만: 동결본 + NOTICE.md)
@@ -33,8 +33,8 @@ ROOT=/home/gyumin/campus_mobility_sim
 DATA=(stops_v2.yaml)
 TOPDOCS=(handoff_1_README.md)
 # 2026-10-09(사용자 지시): map/docs/ 는 인계 파일만 이름으로 보낸다. 세션 보고서·logs 282개를 저장소에서 내렸다
-#   목록은 handoff_1_README.md 가 가리키는 문서와 그림 고지
-DOCS=(map_frozen_v1.md presentation_numbers_locked.md figures/ATTRIBUTION.md)
+# 2026-10-09 2차: 규민/docs 는 handoff_1_README.md(TOPDOCS)만 남긴다. map/docs/ 에서 보낼 파일은 없다
+DOCS=()
 
 MODE=--dry-run
 case "${1:-}" in

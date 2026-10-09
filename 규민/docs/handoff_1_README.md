@@ -49,7 +49,7 @@ map_sha256=5240ca8b883e42c0 (cbnu_campus_frozen_v2.xodr)
 
 생성 인자 7개는 로더 코드에 값으로 적었다. vertex_distance 2.0, max_road_length 50.0, wall_height 0.0, additional_width 0.6, smooth_junctions True, enable_mesh_visibility True, enable_pedestrian_navigation True. wall_height 말고는 CARLA 0.9.15 기본값과 같다.
 
-벽 높이는 0 이어야 한다. 예전 명령에서도 `--wall-height 0` 을 빼지 않는다. 이 지도는 양방향 도로를 단방향 반쪽 도로 둘로 나눈 구조라, 기본값(벽 1m)이면 중앙선 위에 벽이 선다(map_frozen_v1.md "로드 파라미터").
+벽 높이는 0 이어야 한다. 예전 명령에서도 `--wall-height 0` 을 빼지 않는다. 이 지도는 양방향 도로를 단방향 반쪽 도로 둘로 나눈 구조라, 기본값(벽 1m)이면 중앙선 위에 벽이 선다.
 
 월드를 다시 불러오면(generate_opendrive_world, load_world) 그 전에 띄운 차와 소품은 사라진다.
 
@@ -71,7 +71,7 @@ CARLA GNSS 센서 값(= `transform_to_geolocation`)은 실제 위경도와 약 7
 - `road_id`, `s`(road 시작에서 m), `lane_id`(-1 = 진행 방향 오른쪽 주행 차선). CARLA 에서 `world.get_map().get_waypoint_xodr(road_id, lane_id, s)` 로 위치를 얻는다
 - `carla_xyz`: 위 waypoint 의 CARLA 좌표(m)
 - `lat`, `lon`: WGS84. xodr 머리말 투영과 offset 으로 역산했다. `carla.Map.transform_to_geolocation` 값과 다르고, 그 함수는 쓰지 않는다
-- `inside_campus_boundary`: 정문만 false 다. 노선 출발점이 캠퍼스 경계 밖 약 24m 의 공도 교차점이다(presentation_numbers_locked.md 2절)
+- `inside_campus_boundary`: 정문만 false 다. 노선 출발점이 캠퍼스 경계 밖 약 24m 의 공도 교차점이다
 - `stop_zone_length_m`: 아직 비어 있다
 
 `depot_candidates` 에는 박물관 버스 차고지(좌표 있음)와 N14 주차장(좌표 기록 없음, 빈 값)이 있다. 둘 중 하나로 정하지 않았다.
@@ -105,4 +105,4 @@ xodr 파일을 고치지 않는다. 맵 파일 이름도 바꾸지 않는다. �
 ## 7. 변경 규칙
 
 도로망은 새 버전 파일과 새 해시로만 바뀐다. 바뀌면 팀에 공지한다.
-지금 기준은 frozen_v2 `5240ca8b883e42c0` 이다. 이전 판은 frozen_v1 `bf835cdfad0cea65`(map_frozen_v1.md)다.
+지금 기준은 frozen_v2 `5240ca8b883e42c0` 이다. 이전 판은 frozen_v1 `bf835cdfad0cea65` 다.
