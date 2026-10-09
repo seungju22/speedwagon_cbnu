@@ -20,7 +20,7 @@ stops:
     inside_campus_boundary: false
     stop_zone_length_m:
     note: "정문 바로 밖 공도 교차점으로, 모든 노선이 여기서 출발한다"
-    source: "test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발) + logs/s38_v2_back_run1.log spawn 줄 s=0.00"
+    source: "tests/test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발)"
   - id: lib_north
     name: 도서관 북문
     route: north
@@ -34,7 +34,7 @@ stops:
     inside_campus_boundary: true
     stop_zone_length_m:
     note: "도서관 구관 북동쪽 면 앞 도로로, 면 중점에서 46.1m 떨어져 있다"
-    source: "test_drive.py ROUTES_V2['north'] 마지막 road·end_s"
+    source: "tests/test_drive.py ROUTES_V2['north'] 마지막 road·end_s"
   - id: lib_south
     name: 도서관 남문
     route: south
@@ -48,7 +48,7 @@ stops:
     inside_campus_boundary: true
     stop_zone_length_m:
     note: "자연대와 도서관 사이 도로로, 도서관 남서쪽 면 중점에서 약 57.5m 떨어져 있다"
-    source: "test_drive.py ROUTES_V2['south'] 마지막 road·end_s"
+    source: "tests/test_drive.py ROUTES_V2['south'] 마지막 road·end_s"
   - id: middle_gate
     name: 중문
     route: middle
@@ -62,7 +62,7 @@ stops:
     inside_campus_boundary: true
     stop_zone_length_m:
     note: "중문 앞 도로로, road1327 막다른 끝 5.7m 전이고 문까지 약 40~80m 다"
-    source: "test_drive.py ROUTES_V2['middle'] 마지막 road·end_s"
+    source: "tests/test_drive.py ROUTES_V2['middle'] 마지막 road·end_s"
   - id: yangseong
     name: 양성재
     route: yangseong
@@ -76,7 +76,7 @@ stops:
     inside_campus_boundary: true
     stop_zone_length_m:
     note: "양성재(서문) 앞 도로로, 건물 외곽선에서 45.7m 떨어져 있다"
-    source: "test_drive.py ROUTES_V2['yangseong'] 마지막 road·end_s"
+    source: "tests/test_drive.py ROUTES_V2['yangseong'] 마지막 road·end_s"
   - id: back_gate
     name: 후문
     route: back
@@ -90,17 +90,17 @@ stops:
     inside_campus_boundary: true
     stop_zone_length_m:
     note: "OSM way 392632034 위 후문B 추정 게이트로, 기준점(36.624844, 127.462860)에서 1.65m 떨어져 있다"
-    source: "test_drive.py ROUTES_V2['back'] 마지막 road·end_s"
+    source: "tests/test_drive.py ROUTES_V2['back'] 마지막 road·end_s"
 depot_candidates:  # 고르지 않음
   - id: museum_bus_depot
     name: 박물관 버스 차고지
     lat: 36.6276833
     lon: 127.4550105
     note: "박물관 버스 차고지 주차 통로 고리(OSM way 442595850) 노드 8개의 평균 위치이고, 진입 답사점은 36.627598, 127.454728 이다"
-    source: "logs/s24_reconv_list.md 49~52·185행, field_survey_2026-10-04.md '박물관 서쪽' 절, stops_status_2026-09-29.md 297·300행"
+    source: "OSM way 442595850"
   - id: n14_parking
     name: N14 주차장
     lat:
     lon:
     note: "N14 주차장은 건물을 ㄷ자로 감싼 형태로만 기록돼 있어 좌표를 비워 두었다"
-    source: "field_survey_2026-10-04.md 'N14 주차장' 절, stops_status_2026-09-29.md 294·300행"
+    source: ""

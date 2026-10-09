@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/tmp/claude-1000/-home-gm/4399b1b1-b98a-446e-894a-059be0c1b6ec/scratchpad/route_check_s16.py", line 11, in <module>
-    import carla
-ModuleNotFoundError: No module named 'carla'

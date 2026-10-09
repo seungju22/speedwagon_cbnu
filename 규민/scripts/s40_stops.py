@@ -80,11 +80,11 @@ def main():
     for key, name, route, _ in STOPS:
         if route == "start":
             rid, lane, s = START
-            src = "test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발) + logs/s38_v2_back_run1.log spawn 줄 s=0.00"
+            src = "tests/test_drive.py ROUTES_V2 첫 road(모든 노선 공통 출발)"
         else:
             r = routes[route]
             rid, lane, s = r["roads"][-1], -1, r["end_s"]
-            src = f"test_drive.py ROUTES_V2['{route}'] 마지막 road·end_s"
+            src = f"tests/test_drive.py ROUTES_V2['{route}'] 마지막 road·end_s"
         wp = cmap.get_waypoint_xodr(rid, lane, s)
         loc = wp.transform.location
         glat, glon = inverse(frame, loc.x, loc.y)
@@ -113,11 +113,11 @@ def main():
               "  - id: museum_bus_depot", "    name: 박물관 버스 차고지",
               f"    lat: {lat:.7f}", f"    lon: {lon:.7f}",
               f"    note: \"박물관 버스 차고지 주차 통로 고리(OSM way 442595850) 노드 {len(pts)}개의 평균 위치이고, 진입 답사점은 36.627598, 127.454728 이다\"",
-              "    source: \"logs/s24_reconv_list.md 49~52·185행, field_survey_2026-10-04.md '박물관 서쪽' 절, stops_status_2026-09-29.md 297·300행\"",
+              "    source: \"OSM way 442595850\"",
               "  - id: n14_parking", "    name: N14 주차장",
               "    lat:", "    lon:",
               "    note: \"N14 주차장은 건물을 ㄷ자로 감싼 형태로만 기록돼 있어 좌표를 비워 두었다\"",
-              "    source: \"field_survey_2026-10-04.md 'N14 주차장' 절, stops_status_2026-09-29.md 294·300행\""]
+              "    source: \"\""]
     print(f"museum_bus_depot way 442595850 노드 {len(pts)} 평균 ({lat:.7f},{lon:.7f}) / n14_parking 빈 값")
     OUT.write_text("\n".join(lines) + "\n")
     print(f"-> {OUT}")
