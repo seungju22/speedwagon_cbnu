@@ -130,7 +130,7 @@ jobs:
       # tarballs under a key that future main runs would restore from.
       - name: 💾 Restore BuildKit cache mounts
         id: cache-restore
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: cache-mounts
           key: ${{ env.CACHE_KEY_PREFIX }}${{ github.sha }}
@@ -140,7 +140,7 @@ jobs:
       - name: 💾 Arm post-step save of BuildKit cache mounts (main)
         if: env.IS_MAIN_PUSH == 'true'
         id: cache-save
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: cache-mounts
           key: ${{ env.CACHE_KEY_PREFIX }}${{ github.sha }}
