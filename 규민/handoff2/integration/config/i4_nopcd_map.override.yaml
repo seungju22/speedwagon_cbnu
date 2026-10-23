@@ -1,0 +1,9 @@
+# I4 3단계: 점군 지도(pointcloud_map.pcd)를 뺀 Town01 사본을 마운트한다.
+# 브리지는 map_path 의 마지막 폴더 이름으로 CARLA 맵을 고르므로 폴더 이름은 Town01 로 둔다.
+# 원본 ~/autoware_data/maps/Town01 은 건드리지 않는다.
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/integration/maps/nopcd/Town01:/home/aw/maps_nopcd/Town01:ro
+      # 진단 그래프: 점군 지도 토픽 검사를 뺀 사본(정답 측위용 사본 위에 덮는다, i3 오버레이보다 뒤에 둔다)
+      - ${HOME}/campus_mobility_sim/integration/config/diag_autoware-carla_gt_nopcd.yaml:/opt/autoware/autoware_launch/share/autoware_launch/config/system/diagnostics/autoware-carla.yaml:ro

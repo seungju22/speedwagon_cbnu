@@ -1,0 +1,5 @@
+services:
+  planning-simulator:
+    image: ghcr.io/autowarefoundation/autoware:universe-humble-1.9.0
+    environment:
+      - "CYCLONEDDS_URI=<CycloneDDS><Domain><Discovery><MaxAutoParticipantIndex>1000</MaxAutoParticipantIndex></Discovery></Domain></CycloneDDS>"

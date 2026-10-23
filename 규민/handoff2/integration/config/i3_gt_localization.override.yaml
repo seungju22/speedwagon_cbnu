@@ -1,0 +1,14 @@
+# I3 정답 측위 시험용 compose 오버레이
+# localization:=false 로 띄우면 ndt_scan_matcher, ekf_localizer,
+# localization_error_monitor 가 없어서 진단 그래프의
+# /autoware/localization 이 시간초과로 막히고 자율 전환이 안 된다.
+# e2e_simulator.launch.xml 이 진단 그래프 경로를 value= 로 고정해
+# 런치 인자로는 못 바꾼다. 그래서 설치본 자리에 사본을 덮어 마운트한다.
+# 같은 폴더에 마운트하므로 사본 안의 $(dirname) 포함 경로는 그대로 맞는다.
+# 원본 사본: integration/config/diag_autoware-carla_orig.yaml
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/integration/config/diag_autoware-carla_gt.yaml:/opt/autoware/autoware_launch/share/autoware_launch/config/system/diagnostics/autoware-carla.yaml:ro
+      # 정답 측위 노드(i3_gt_localizer.py)를 컨테이너에서 /home/aw/i3_tools 로 읽는다
+      - ${HOME}/campus_mobility_sim/integration/docs/tools:/home/aw/i3_tools:ro

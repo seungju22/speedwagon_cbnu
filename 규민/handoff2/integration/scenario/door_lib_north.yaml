@@ -1,0 +1,23 @@
+# 세션58 3-나 문 구역 장면: 북문 정차 뒤 하차 -> 문 구역 5초 -> 전방 통로 들어오기 -> 탑승
+platform: lib_north
+seed: 0
+steps:
+  - wait_ego_stopped 1.0
+  - wait 1.0
+  - spawn off1 door_out        # 하차: 문 앞에 생성
+  - walk off1 dz_center 1.0    # 문 구역을 지나
+  - walk off1 walk_back 1.2    # 인도로 걸어 나감
+  - destroy off1               # 떠난 사람(뒤 탑승자가 같은 자리에 생기므로)
+  - spawn st1 dz_center        # 문 구역에 서 있기
+  - wait 5.0
+  - walk st1 walk_fwd 1.2
+  - destroy st1
+  - spawn cr1 corr_side        # 전방 통로로 들어오기
+  - walk cr1 corr_center 1.2
+  - wait 3.0
+  - walk cr1 corr_side 1.2
+  - destroy cr1
+  - spawn on1 walk_back        # 탑승: 인도에서 문 앞까지 와서 지우기
+  - walk on1 door_out 1.2
+  - destroy on1
+  - wait 2.0

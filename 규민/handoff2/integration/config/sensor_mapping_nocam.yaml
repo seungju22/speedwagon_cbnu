@@ -1,0 +1,84 @@
+# 세션59(2026-10-14): LiDAR 를 브리지 기본(sensor_mapping.yaml)으로 되돌림 64ch, 30만 점, 100m(이전 32ch·10만·50m 는 .bak_s59, 가벼운 LiDAR). 버림 0.45 는 브리지가 못 바꿔 그대로
+# I1 (2026-10-10) 카메라 없는 경량 센서 설정
+# 원본: 컨테이너 안 /opt/autoware/autoware_carla_interface/share/
+#   autoware_carla_interface/config/sensor_mapping_light_weight.yaml
+#   (autoware_carla_interface 0.52.0, 이미지 universe-humble-1.9.0)
+# 바꾼 것
+#   CAM_FRONT 항목과 enabled_sensors 의 카메라 줄을 뺐다
+#   LiDAR 값 (기본 -> 이 파일)
+#     channels           64     -> 32
+#     points_per_second  300000 -> 100000
+#     range              100    -> 50 (m)
+#   나머지(IMU, GNSS, 주기, fov, frame) 는 원본 그대로
+# 컨테이너 사본: ~/autoware_data/maps/i1_config/sensor_mapping_nocam.yaml
+#   = /home/aw/autoware_data/maps/i1_config/sensor_mapping_nocam.yaml
+
+default_sensor_kit_name: carla_sensor_kit_description
+
+sensor_mappings:
+  # LiDAR sensor
+  velodyne_top_base_link:
+    carla_type: sensor.lidar.ray_cast
+    id: top
+    ros_config:
+      frame_id: velodyne_top
+      topic_base: /sensing/lidar/top
+      topic_suffix: /pointcloud_before_sync
+      frequency_hz: 10
+      qos_profile: best_effort
+    parameters:
+      range: 100
+      channels: 64
+      points_per_second: 300000
+      upper_fov: 10.0
+      lower_fov: -30.0
+      rotation_frequency: 20
+      noise_stddev: 0.0
+
+  # IMU sensor
+  tamagawa/imu_link:
+    carla_type: sensor.other.imu
+    id: imu
+    ros_config:
+      frame_id: tamagawa/imu_link
+      topic: /sensing/imu/tamagawa/imu_raw
+      frequency_hz: 50
+      qos_profile: reliable
+    parameters:
+      noise_accel_stddev_x: 0.0
+      noise_accel_stddev_y: 0.0
+      noise_accel_stddev_z: 0.0
+      noise_gyro_stddev_x: 0.0
+      noise_gyro_stddev_y: 0.0
+      noise_gyro_stddev_z: 0.0
+
+  # GNSS sensor
+  gnss_link:
+    carla_type: sensor.other.gnss
+    id: gnss
+    ros_config:
+      frame_id: map
+      topic: /sensing/gnss/pose_with_covariance
+      frequency_hz: 2
+      qos_profile: reliable
+    parameters:
+      noise_alt_stddev: 0.0
+      noise_lat_stddev: 0.0
+      noise_lon_stddev: 0.0
+      noise_alt_bias: 0.0
+      noise_lat_bias: 0.0
+      noise_lon_bias: 0.0
+    covariance:
+      position_variance: 0.01
+      orientation_variance: 1.0
+
+normalization:
+  strip_suffixes:
+    - _base_link
+    - _link
+    - /camera_link
+
+enabled_sensors:
+  - velodyne_top_base_link
+  - tamagawa/imu_link
+  - gnss_link

@@ -1,0 +1,5 @@
+# I4: 컨테이너 안 감시·비교 스크립트 출력을 integration/logs 에 바로 쓰려고 마운트한다(읽기·쓰기).
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/integration/logs:/home/aw/i4_logs
