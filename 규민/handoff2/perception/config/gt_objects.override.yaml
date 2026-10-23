@@ -1,0 +1,12 @@
+# 정답 객체 시험용 compose 오버레이 (integration/config/i3_gt_localization.override.yaml 과 같은 방식)
+# perception/ 을 컨테이너 /home/aw/gt_perception 으로(읽기 전용),
+# perception/logs 를 /home/aw/gt_logs 로(읽기·쓰기) 마운트한다.
+# 런치 인자 use_empty_dynamic_object_publisher:=true 와 같이 쓴다.
+# 그러면 detection·tracking·prediction(클러스터링 포함)이 뜨지 않고
+# empty_objects_publisher 만 /perception/object_recognition/objects 로 빈 목록을 낸다.
+# 그 노드는 기동 뒤 끄고 gt_objects.py 가 같은 토픽을 낸다.
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/perception:/home/aw/gt_perception:ro
+      - ${HOME}/campus_mobility_sim/perception/logs:/home/aw/gt_logs

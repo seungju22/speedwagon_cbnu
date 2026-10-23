@@ -1,0 +1,57 @@
+# 노선 파일 2판(세션58, 2026-10-13): 1판(pilot_route_r1.yaml a9ca2108)에서 platforms 참조만 바꿈. 노선·목표·구간 값은 1판과 같다
+# 시범 노선(맵세션56b, 2026-10-13): 정문(이쪽) 출발 -> 중문(건너편) 통과 -> 도서관 북문 정차 -> 양성재(이쪽) 종점
+# 좌표는 지도 좌표계(xodr 평면 = Autoware map). 승강장 값은 map/data/shuttle_platforms_v31.yaml 의 id 로 찾는다
+# 미션 노드: 한 운행 안에서 '요청 없는 정류장 지나가기'(중문)와 '요청 있는 정류장 서기'(북문)를 같이 보인다
+#   - 요청 없음: 통과 정류장의 via 를 Autoware 경유점으로 넣고 지나간다
+#   - 요청 있음: 그 정류장의 goal 을 목표로 주고 선다(통과 정류장도 정차 가능한 승강장이다)
+# 구간 road 열은 참고다. 실제 경로는 Autoware(Lanelet2) 가 다시 계산한다. 같은지 s56b_candidates.py 로 확인했다
+# goal 의 문 위치·정차 여유·문 구역·전방 통로는 가정값이다(shuttle_platforms_v31.yaml assumptions, 사용자 결정 2)
+# 고른 이유: 최종 시연 노선이 정문 -> 후문이라, 이 노선 뒤에 양성재 -> 후문을 붙이면 최종 노선이 된다(사용자 결정, 세션56c)
+# 자세한 것: map/docs/shuttle_route_file.md '시범 노선', map/docs/map_session56b_report.md
+id: pilot
+platforms_file: map/data/shuttle_platforms_v31_r1.yaml  # 2판: 노선 파일 1판으로 고정한 승강장 파일(원래 이름 파일은 계속 바뀔 수 있다)
+platforms_sha256_16: 075b224c73008c38  # 위 파일. 그 머리의 lanelet2_sha256_16 은 83edb775 로 적혀 있지만 28a57711 에서 11곳 값이 같다(맵세션56b 3절)
+xodr_sha256_16: 214507afc87c2523
+lanelet2_sha256_16: 28a57711094effaf  # 세션55 nB(83edb775 에서 r1318·r1188 뺌). 이 노선 세 구간 레인렛은 83edb775 와 같다
+status: ready  # 세 구간 모두 I6-2 도착, 차체 검사 0점(28a57711)
+stops:
+  - {platform: main_gate_in, name: 정문(이쪽), action: stop, role: start, goal: {"x": 262.42, "y": 966.437, "yaw_deg": -37.87, "qz": -0.324461, "qw": 0.945899}}
+  - {platform: middle_gate_s, name: 중문(건너편), action: pass, via: {"x": 619.435, "y": 906.185, "yaw_deg": -86.89}, goal_if_requested: {"x": 619.358, "y": 907.515, "yaw_deg": -86.47, "qz": -0.684987, "qw": 0.728555}}  # 경유점 = 표지 점 차선 중심
+  - {platform: lib_north, name: 도서관 북문, action: stop, goal: {"x": 656.162, "y": 684.456, "yaw_deg": -35.52, "qz": -0.304989, "qw": 0.952356}}
+  - {platform: yangseong_se, name: 양성재(이쪽), action: stop, role: end, goal: {"x": 213.999, "y": 550.838, "yaw_deg": -65.84, "qz": -0.54348, "qw": 0.839422}}
+segments:
+  - from: main_gate_in
+    to: middle_gate_s
+    xodr_length_m: 497.7
+    lanelet_length_m: 496.6
+    roads: [1278, 1969, 1393, 1972, 1392, 1485, 1410, 1712, 1411, 1630, 1314, 1655, 1315, 1644, 1316, 1635, 1317, 1876, 1320]
+    i62: {"pair": "p_main_middle", "tag": "i62r03", "arrived": true, "time_s": 139.0, "stop_lon_m": -0.443, "stop_lat_m": -0.001, "lat_max_m": 0.489, "lat_max_at": "r1317 s8.4", "wheel_out_ticks": 0, "same_roads": true}
+    i61: {"tag": "i6r3", "arrived": true, "time_s": 137.8, "note": "보정 목록에 r1317 있던 지도. 옆 1.342 r1317, 바퀴 13틱. I6-2 에서 풀림"}
+    body_check: 0점
+  - from: middle_gate_s
+    to: lib_north
+    xodr_length_m: 267.6
+    lanelet_length_m: 269.9
+    roads: [1320, 2041, 1321, 1670, 1322, 1673, 1415]
+    i62: {"pair": "p_middle_north", "tag": "i62r17", "arrived": true, "time_s": 81.1, "lat_max_m": 0.357, "lat_max_at": "r1670", "wheel_out_ticks": 0, "same_roads": true}
+    body_check: 0점
+  - from: lib_north
+    to: yangseong_se
+    xodr_length_m: 1339.7
+    lanelet_length_m: 1348.2
+    roads: [1415, 3006, 3004, 3008, 1312, 1699, 1195, 1691, 1194, 2045, 1321, 1670, 1322, 1672, 1276, 1661, 1275, 1723, 1201, 1714, 1203, 1729, 1408, 1469, 1157, 1738, 1156, 1765, 1155, 1772, 1154, 1865, 1153]
+    i62: {"pair": "p_north_yang", "tag": "i62r09", "arrived": true, "time_s": 356.7, "stop_lon_m": -0.453, "stop_lat_m": -0.022, "lat_max_m": 0.435, "lat_max_at": "r1415 s155.0", "wheel_out_ticks": 0, "same_roads": true}
+    loop_note: '북문을 떠나 동쪽 고리(r1415 끝 -> r1312 -> r1194, 582.1m)를 돌아 r1321~r1322(112.0m)를 2구간과 같은 방향으로 한 번 더 지난다. p_north_* 쌍 모두 같은 출발'
+    body_check: 0점
+total_xodr_length_m: 2105.1  # 구간 값을 반올림 전에 더함(반올림한 구간 합은 2105.0)
+total_lanelet_length_m: 2114.7
+i62_time_sum_s: 576.8  # 세션56c 고침(56b 값 577.8 은 덧셈 틀림: 139.0+81.1+356.7=576.8). 구간마다 따로 소환해 잰 값의 합. 정차·승하차 시간 빼고
+checks_28a57711:
+  via_all: true  # shortestPathWithVia(정문, [중문, 북문], 양성재) road 열 == 세 구간 이은 것
+  via_run1: true  # 실제 운행 1번 목표: 정문 -(중문 경유)-> 북문 == 1+2구간
+  via_run2: true  # 중문을 정차·북문을 통과로 바꿔도(중문 -(북문 경유)-> 양성재) == 2+3구간
+  body_check_full_route: '0점(s53_footprint, logs/s53_footprint_s56b_candidates_28a57711.log)'
+  intermediate_same_platform: true  # 중문 건너편으로 들어와 건너편에서, 북문 이쪽으로 들어와 이쪽에서 나간다
+i62_goal_note: 'I6-2 목표는 뒷축 = 표지 점이었다. 이 파일 goal 은 문 기준이라 1.345m 뒤. 정지 앞뒤 -0.45m(덜 감)는 29쌍 모두 같았다'
+i62_map_note: 'I6-2 는 83edb775 로 달렸다. 28a57711 은 r1318·r1188 만 뺐고 이 세 구간 레인렛은 바이트까지 같다(세션55 3절)'
+# 다른 후보·최종 확장안(정문 -> 중문 -> 북문 -> 양성재 -> 후문)은 이 파일에 두지 않는다: map/docs/shuttle_route_file.md '다른 후보'

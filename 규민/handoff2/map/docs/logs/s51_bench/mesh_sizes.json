@@ -1,0 +1,129 @@
+{
+ "meshes": {
+  "House01": {
+   "path": "/Game/Carla/Static/Building/SM_House01.SM_House01",
+   "ok": true,
+   "scale_measured": 1.0,
+   "hits": 24354,
+   "size_x": 9.625,
+   "size_y": 12.041,
+   "size_z": 12.57,
+   "center_x": 0.0034999999999998366,
+   "center_y": -0.01849999999999996,
+   "center_z": 6.361000000000001,
+   "min_z": 0.076,
+   "b1_confirmed": true
+  },
+  "House02": {
+   "path": "/Game/Carla/Static/Building/SM_House02.SM_House02",
+   "ok": true,
+   "scale_measured": 1.0,
+   "hits": 16098,
+   "size_x": 7.816,
+   "size_y": 8.754,
+   "size_z": 8.38,
+   "center_x": 0.008999999999999897,
+   "center_y": -0.14400000000000013,
+   "center_z": 4.278,
+   "min_z": 0.088,
+   "b1_confirmed": true
+  },
+  "Apartment03": {
+   "path": "/Game/Carla/Static/Building/Apartment03/SM_Apartment03_v01_merged.SM_Apartment03_v01_merged",
+   "ok": true,
+   "scale_measured": 1.0,
+   "hits": 82002,
+   "size_x": 19.026,
+   "size_y": 23.064,
+   "size_z": 32.253,
+   "center_x": -7.954,
+   "center_y": 5.998000000000001,
+   "center_z": 16.1295,
+   "min_z": 0.003,
+   "b1_confirmed": true
+  },
+  "busstop": {
+   "path": null,
+   "ok": true,
+   "scale_measured": 1.0,
+   "hits": 6084,
+   "size_x": 3.598,
+   "size_y": 1.884,
+   "size_z": 2.659,
+   "center_x": 0.23499999999999988,
+   "center_y": 0.175,
+   "center_z": 1.4095,
+   "min_z": 0.08,
+   "b1_confirmed": true
+  },
+  "GroundCube": {
+   "path": "/Game/Carla/Static/Ground/GroundCube.GroundCube",
+   "ok": true,
+   "scale_measured": 10.0,
+   "hits": 32394,
+   "size_x": 1.0,
+   "size_y": 1.0,
+   "size_z": 0.989,
+   "center_x": 0.0,
+   "center_y": 0.0,
+   "center_z": 0.005500000000000005,
+   "min_z": -0.489,
+   "b1_confirmed": true
+  },
+  "Cube": {
+   "path": "/Engine/BasicShapes/Cube.Cube",
+   "ok": true,
+   "scale_measured": 10.0,
+   "hits": 32394,
+   "size_x": 1.0,
+   "size_y": 1.0,
+   "size_z": 0.989,
+   "center_x": 0.0,
+   "center_y": 0.0,
+   "center_z": 0.005500000000000005,
+   "min_z": -0.489,
+   "b1_confirmed": false
+  },
+  "SideWalkCube": {
+   "path": "/Game/Carla/Static/SideWalk/SideWalkCube.SideWalkCube",
+   "ok": true,
+   "scale_measured": 10.0,
+   "hits": 32394,
+   "size_x": 1.0,
+   "size_y": 1.0,
+   "size_z": 0.989,
+   "center_x": 0.0,
+   "center_y": 0.0,
+   "center_z": 0.005500000000000005,
+   "min_z": -0.489,
+   "b1_confirmed": false
+  },
+  "Plane": {
+   "path": "/Engine/BasicShapes/Plane.Plane",
+   "ok": true,
+   "scale_measured": 10.0,
+   "hits": 18864,
+   "size_x": 0.997,
+   "size_y": 1.0,
+   "size_z": 0.0,
+   "center_x": 0.0005000000000000004,
+   "center_y": 0.0,
+   "center_z": 0.0,
+   "min_z": 0.0,
+   "b1_confirmed": false
+  }
+ },
+ "empty": {
+  "x": 547.0033282279968,
+  "y": -670.8301279202103,
+  "clear_m": 40.9
+ },
+ "method": "semantic LiDAR 위1+옆4, object_idx=actor id, yaw 0, 피벗 기준 메시 좌표/scale",
+ "cube": "GroundCube",
+ "ground_candidates": [
+  "Plane",
+  "GroundCube",
+  "SideWalkCube"
+ ],
+ "ground_choice": "Plane"
+}
