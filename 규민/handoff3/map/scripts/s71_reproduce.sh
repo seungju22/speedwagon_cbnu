@@ -114,5 +114,5 @@ cmpf map/data/buildings_layout_v3.csv ac9bd41d4ef7561f9d3f601a04dd5919729f06cb7f
 $PY map/scripts/s66_b2_tier2.py > map/logs/s71_s66t2.log 2>&1; echo "exit $?"
 cmpf map/data/buildings_layout_tier2_s66.csv 4cb019764ada3fe4047df3919327c9713e80cea016821482b980b9bfda9884af buildings_layout_tier2_s66
 $PY map/scripts/s66_trees.py > map/logs/s71_s66tr.log 2>&1; echo "exit $?"
-cmpf map/data/trees_layout_s66.csv 5830123559afc4fab9c045ed00350114ae0c2ae7912b2d1943c276bcd8a62052 trees_layout_s66
+cmpf map/data/trees_layout_s66.csv 0c60976b39f60111ed2e0484183178f181b607f90e57c0a1ba45c43271f8c140 trees_layout_s66
 echo "== 끝 $(date +%T) 같음 $NS 다름 $ND"

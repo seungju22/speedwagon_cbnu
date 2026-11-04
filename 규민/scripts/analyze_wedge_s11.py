@@ -246,7 +246,7 @@ def main():
     road_elems = {r.get("id"): r for r in root.iter("road")}
     L = []
     P = L.append
-    P("# 맵세션11 Phase A 쐐기 원리 검증 (읽기전용, 자동생성)")
+    P("# 09/24 Phase A 쐐기 원리 검증 (읽기전용, 자동생성)")
     P("")
     P(f"- xodr: {XODR_PATH.name}, road {len(roads)}개, 샘플 간격 {STEP}m")
     P("- 판정식: f=1-kappa*t (t=기준선 횡거리, 좌+). f<=0 접힘. 안쪽=kappa*t>0")
@@ -292,7 +292,7 @@ def main():
           f"음 {sum(1 for r in seg if r['kappa'] < -1e-6)}개, "
           f"안쪽 판정 샘플 {sum(1 for r in seg if r['inside'])}/{len(seg)}, "
           f"직접 접힘 검출 {sum(1 for r in seg if r['fold_direct'])}개")
-        P(f"  - heading-diff 기준 최소반경(세션9 비교용) "
+        P(f"  - heading-diff 기준 최소반경(09/22 비교용) "
           f"{min(1/abs(r['kappa_hd']) for r in seg if abs(r['kappa_hd'])>1e-9):.2f}m")
     P("")
 
@@ -368,7 +368,7 @@ def main():
       "물리적으로는 한 쌍의 반대쪽 인도가 각각 자기 안쪽 커브에서 접히는 것이라 중복 없음")
     P("")
     # 09/22 급커브 6곳 대조(경로 15 road 위 rate>=6deg/m 구간): 인도 위치 표기
-    P("## 세션9 급커브 6곳 대조")
+    P("## 09/22 급커브 6곳 대조")
     s9 = [("1247", 79.5, 81.0), ("1247", 93.5, 95.5), ("1356", 11.5, 12.0),
           ("1564", 1.0, 9.0), ("1428", 0.0, 5.0), ("1446", 2.0, 8.5)]
     for rid, lo, hi in s9:

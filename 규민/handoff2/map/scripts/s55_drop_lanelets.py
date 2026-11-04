@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션55 2번(안 나): Lanelet2 지도 사본에서 지정한 xodr road 의 lanelet 만 뺀다(xodr 은 그대로, 되돌리려면 원본 폴더를 쓰면 된다)
+# 10/12 2번(안 나): Lanelet2 지도 사본에서 지정한 xodr road 의 lanelet 만 뺀다(xodr 은 그대로, 되돌리려면 원본 폴더를 쓰면 된다)
 # - l1_build_lanelet2.py 출력 폴더를 읽어 새 폴더에 쓴다. 원본 폴더는 안 건드림
 # - 빼는 것: xodr_road 가 목록에 든 lanelet relation, 그 relation 의 left/right way(이 지도는 lanelet 마다 way 2개를 따로 씀),
 #   그 way 들에만 쓰인 node. 다른 lanelet 이 같이 쓰는 끝점 node 는 남긴다

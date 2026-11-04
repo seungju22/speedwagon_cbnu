@@ -218,10 +218,10 @@ def main():
     ax.set_ylabel("남북 (m, ENU north) - 위쪽=진북")
     ax.grid(True, linewidth=0.3, alpha=0.4)
     ax.set_title(
-        "맵세션5 확정 종점(10) — cbnu_internal_only_localtm_tags73.xodr\n"
+        "09/19 확정 종점(10) — cbnu_internal_only_localtm_tags73.xodr\n"
         f"빨강=정문-확정종점 경로({CONFIRMED_LENGTH_M}m, road14개, "
         f"junction{len(CONFIRMED_JUNCTIONS)}개 경유)\n"
-        "종점=출입구 최근접(건물 중심점 기준 폐기, 세션5 변경)"
+        "종점=출입구 최근접(건물 중심점 기준 폐기, 09/19 변경)"
     )
     ax.legend(loc="upper right", fontsize=8)
     ax.annotate("N", xy=(0.95, 0.90), xytext=(0.95, 0.80),

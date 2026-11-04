@@ -2,7 +2,7 @@
  "xodr_sha16": "214507afc87c2523",
  "lanelet2_sha16": "28a57711094effaf",
  "v32a_sha16": "4719e5e5a4f4588b",
- "platforms_sha16": "075b224c73008c38",
+ "platforms_sha16": "af7a6e12669e5640",
  "rules": {
   "d_step": 0.25,
   "d_max": 30.0,
@@ -493,7 +493,7 @@
    ],
    "stoppable": false,
    "status": "없음",
-   "reason": "원래 승강장이 정차 불가(문 구역 없음, 사용자 결정 1). 대체 정차점도 두지 않음"
+   "reason": "원래 승강장이 정차 불가(문 구역 없음, 결정 1). 대체 정차점도 두지 않음"
   },
   {
    "id": "lib_south_nw",

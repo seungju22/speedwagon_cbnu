@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # 10/06: 옛 xodr road id -> 새 xodr road id 형상 대응표 (읽기전용, 서버 없음).
-# 09/28 D 의 id_map_s18.py 는 scratchpad 에만 있어 사라졌다. 같은 목적으로 다시 만든다.
+# 09/28 D 의 id_map_s18.py 는 임시 폴더 에만 있어 사라졌다. 같은 목적으로 다시 만든다.
 # 비교 기준(같은 road 의 정의): 참조선 시작점(planView 첫 geometry x,y), 시작 방위 hdg, 길이.
 #   비용 = 시작점 거리(m) + 방위 차(rad) + 길이 차(m). 비용 < THRESH 를 "형상 일치" 로 본다(09/28 과 같은 0.05)
 # 검증: frozen_v1 -> 09/28 시험 맵으로 돌려 s18_D_road_id_map.csv 와 같은지 대조(--check-s18)
@@ -79,10 +79,10 @@ def check_s18():
     same_ok = sum(1 for r in ok if ref[r[0]][0] == r[1])
     ref_ok = {k for k, v in ref.items() if v[1] < THRESH}
     mine_ok = {r[0] for r in ok}
-    print(f"세션18 대응표 대조: 일치 판정 집합 같음={ref_ok == mine_ok} (세션18 {len(ref_ok)} / 이번 {len(mine_ok)}), "
+    print(f"09/28 대응표 대조: 일치 판정 집합 같음={ref_ok == mine_ok} (09/28 {len(ref_ok)} / 이번 {len(mine_ok)}), "
           f"일치 road 중 새 id 같음 {same_ok}/{len(ok)}")
     diff = [(r[0], r[1], ref[r[0]][0]) for r in rows if ref[r[0]][0] != r[1]]
-    print(f"새 id 가 세션18 과 다른 road {len(diff)}: {diff[:20]}")
+    print(f"새 id 가 09/28 과 다른 road {len(diff)}: {diff[:20]}")
 
 
 if __name__ == "__main__":

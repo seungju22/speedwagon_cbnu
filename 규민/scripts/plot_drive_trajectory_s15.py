@@ -48,7 +48,7 @@ def main(csv_name):
     ax.plot([p[0] for p in last], [p[1] for p in last], color="tab:red", lw=4.0, alpha=0.45,
             zorder=3, label="계획 경로(15 road)")
     ax.plot([p[0] for p in traj], [p[1] for p in traj], color="tab:blue", lw=1.2, zorder=4,
-            label=f"세션15 완주 궤적({rows[-1]['t']}s)")
+            label=f"09/25 완주 궤적({rows[-1]['t']}s)")
     if sw:
         ax.scatter([p[0] for p in sw], [p[1] for p in sw], s=6, c="orange", zorder=5,
                    label=f"인도 침범 tick({len(sw)})")
@@ -68,7 +68,7 @@ def main(csv_name):
     ax.set_xlabel("동서 (m, ENU east)")
     ax.set_ylabel("남북 (m, ENU north) - 위쪽=진북")
     ax.grid(True, linewidth=0.3, alpha=0.4)
-    ax.set_title("맵세션15 완주 궤적(11) — cbnu_internal_only_localtm_tags73_smooth.xodr\n"
+    ax.set_title("09/25 완주 궤적(11) — cbnu_internal_only_localtm_tags73_smooth.xodr\n"
                  "BasicAgent 20km/h, 동기 20Hz, wall_height 0, conn_spacing 4m\n"
                  f"축척·범위 = 10_overlay_confirmed.png, 로그 {csv_name}")
     ax.legend(loc="upper right", fontsize=8)

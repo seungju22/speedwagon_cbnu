@@ -24,11 +24,11 @@ hdr = ("# 충북대 캠퍼스 맵 v3 정류장과 차고지 후보다\n"
 body = hdr + src[len(hdr_old):]
 body = body.replace("map_sha256_16: a17ab012e04c664f", f"map_sha256_16: {sha16}")
 REP = [
-    ('note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤(사용자 질문 1 답)"',
+    ('note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤(현장 질문 1 답)"',
      'note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤이다"'),
     ('source: "map/scripts/s43_verify.py [D], OSM 정문 노드 6394475285 ~ 사거리 노드 3958352394 들어오는 경로 가운데"',
      'source: "map/scripts/s43_verify.py, OSM 정문 노드 6394475285 와 사거리 노드 3958352394 사이 들어오는 경로의 가운데"'),
-    ('note: "세션46 사용자 결정(후보 1): 막다른 끝 대신 j49 앞 관통 도로로 옮김. 문 위치는 추정(보고서 map_session46_report.md 1절, 추정점 2개)"',
+    ('note: "10/09 결정(후보 1): 막다른 끝 대신 j49 앞 관통 도로로 옮김. 문 위치는 추정(기록 map_session46_report.md 1절, 추정점 2개)"',
      'note: "중문 길이 갈라지는 교차로 앞 관통 도로다. 예전 막다른 끝 정류장은 previous_end_stop 에 남겼다. OSM 에 문 지물이 없어 문까지 거리는 추정이다"'),
     ('source: "map/scripts/s46_middle_choice.py 후보 1, s46_stops.py"',
      'source: "map/scripts/s46_middle_choice.py, s46_stops.py, OSM way 442595034"'),
@@ -39,10 +39,10 @@ REP = [
     ('note: "중문 길(446440351)이 갈라지는 j49 앞 관통 도로(way 442595034), 미술관(N16-2) 북동쪽 7m"',
      'note: "중문 길(way 446440351)이 갈라지는 교차로 앞 관통 도로(way 442595034)이고, 미술관(N16-2) 북동쪽 7m 다"'),
     ('note: "같은 길 반대쪽 차로"', 'note: "같은 길 반대쪽 차로다"'),
-    ('    previous_end_stop:  # 세션44까지의 중문 정류장(막다른 끝 5.7m 앞, 승강장 하나). 정문 -> 중문 회귀 비교용(test_drive.py middle 노선 종점)',
+    ('    previous_end_stop:  # 10/09까지의 중문 정류장(막다른 끝 5.7m 앞, 승강장 하나). 정문 -> 중문 회귀 비교용(test_drive.py middle 노선 종점)',
      '    previous_end_stop:  # 예전 중문 정류장(막다른 끝 5.7m 앞). test_drive.py middle 노선 종점이고 회귀 비교에 쓴다'),
-    ('    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리', '    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리'),
-    ('    platforms:  # 세션46 승강장. side 이쪽 = 위 road_id·s 와 같은 자리', '    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리'),
+    ('    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리', '    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리'),
+    ('    platforms:  # 10/09 중문 승강장. side 이쪽 = 위 road_id·s 와 같은 자리', '    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리'),
 ]
 for a, b in REP:
     n = body.count(a)

@@ -168,7 +168,7 @@ def draw_background(ax, building_polys, footway_lines, plain_lines):
 
 def main():
     xmin, xmax, ymin, ymax = old_axis_bounds()
-    print(f"세션3 축척·범위 재사용: x[{xmin:.1f},{xmax:.1f}] y[{ymin:.1f},{ymax:.1f}]")
+    print(f"09/17 축척·범위 재사용: x[{xmin:.1f},{xmax:.1f}] y[{ymin:.1f},{ymax:.1f}]")
 
     roads, junctions, osm_nodes, R, s, t, ref_lat, ref_lon = fit_transform_for(NEW_XODR)
     j_xy = junction_xodr_locations(roads, junctions)
@@ -307,7 +307,7 @@ def main():
     ax.set_ylabel("남북 (m, ENU north) - 위쪽=진북")
     ax.grid(True, linewidth=0.3, alpha=0.4)
     ax.set_title(
-        "맵세션5 육안재확인용(07) — 73건 태그보정판 + OSM 배경\n"
+        "09/19 육안재확인용(07) — 73건 태그보정판 + OSM 배경\n"
         f"빨강=정문-종점A 경로({PATH_LENGTH_M}m) / 종점A·B·C·도서관건물 구분표시\n"
         "동문·남문은 OSM에 게이트 지물 없어 미표시"
     )

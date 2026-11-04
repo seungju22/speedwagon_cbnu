@@ -16,7 +16,7 @@
 
 ## 시뮬레이터 LiDAR (2026-10-14 바꿈)
 
-- 센서 파일 `C/integration/config/sensor_mapping_nocam.yaml`(컨테이너는 `~/autoware_data/maps/i1_config/` 사본, sha256 b7189e92)의 LiDAR 를
+- 센서 파일 `C/integration/config/sensor_mapping_nocam.yaml`(컨테이너는 `~/autoware_data/maps/i1_config/` 사본, sha256 1184f7d7)의 LiDAR 를
   브리지 기본(1.9.0 이미지 sensor_mapping.yaml)과 같게 바꿨음: 64채널, 초당 30만 점, 범위 100m, 회전 20Hz, 상하 +10~-30도, 장착은 센서 킷 그대로. 카메라는 계속 뺌.
 - 이전 값(I1 부터 10/14 까지)은 32채널, 초당 10만 점, 50m 였음(.bak_s59, 0f85dcb0). 10/14 부터 '가벼운 LiDAR' 라고 부름.
 - 바꾼 근거(10/14 성능 시험 s59p_ref, p_middle_north, 레이어 732 켬): 실시간 0.998배(같음), 주행 중 최소 avail 2,445MiB(10/14 2,771~2,865),

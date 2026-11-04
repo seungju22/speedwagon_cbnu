@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # 10/07 Phase 4: s27_turnfix.py write 왕복 검증 (재변환 없음, 서버 없음).
-# 1 frozen_v1 을 scratchpad 로 복사(파일명에 _test_). frozen_v1 은 읽기만
+# 1 frozen_v1 을 임시 폴더 로 복사(파일명에 _test_). frozen_v1 은 읽기만
 # 2 복사본에서 기존 회차 연결로(틀 24개 = connection 1개 junction 의 paramPoly3·9.89m 커넥터)를 제거
 #    write 는 같은 파일 안의 틀을 복제하므로 24개를 한 번에 다 지우면 틀이 0 이 되어 동작하지 않는다.
 #    그래서 두 번 나눈다: 1회차 짝수 번째 12개 제거(홀수 12개가 틀), 2회차 홀수 번째 12개 제거
@@ -8,8 +8,8 @@
 # 3 s27_turnfix.write 를 제거본에 실행 -> 복원본, s27_turnfix.verify
 # 4 복원된 것과 원래 것 비교: 개수, 연결(들어옴·나감·laneLink·contactPoint·인도 차선), 기하(시작점·방위·길이·
 #    paramPoly3 계수·곡률·차선 중심 표본점), carla.Map 로드 가능 여부
-# 5 테스트 파일 삭제는 이 스크립트 끝에서 한다(_test_ 파일만, scratchpad 안만)
-# 사용: python s28_turnfix_roundtrip.py <scratchpad 디렉터리>
+# 5 테스트 파일 삭제는 이 스크립트 끝에서 한다(_test_ 파일만, 임시 폴더 안만)
+# 사용: python s28_turnfix_roundtrip.py <임시 폴더>
 import hashlib
 import json
 import math

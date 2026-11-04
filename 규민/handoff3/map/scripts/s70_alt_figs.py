@@ -106,7 +106,7 @@ def main():
                        Patch(fc=GRID, label="차로(xodr)"), Patch(fc="#cfc6b8", label="건물 상자·정육면체"),
                        Patch(fc=INK2, label="정류장 시설"), Patch(fc="none", ec=INK2, hatch="////", label="횡단보도(v32a)")],
               loc="center", frameon=False, fontsize=9)
-    fig.suptitle("승강장별 원래·대체 정차 구역(세션70, 지도 좌표를 진행 방향 기준으로 돌림, 칸 28 x 18m)", fontsize=11, color=INK)
+    fig.suptitle("승강장별 원래·대체 정차 구역(10/25, 지도 좌표를 진행 방향 기준으로 돌림, 칸 28 x 18m)", fontsize=11, color=INK)
     fig.tight_layout()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(OUT, dpi=130)

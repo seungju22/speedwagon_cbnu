@@ -1,5 +1,5 @@
-# v3 후보 정류장 초안(세션46). stops_v3_draft_s45.yaml 에서 중문만 바꿨다(사용자 결정 후보 1, 양쪽 승강장). 옛 중문은 previous_end_stop
-# 양방향 길 위 정류장은 건너편에도 승강장을 둔다(세션44 분석). 북문은 막다른 끝이라 하나다
+# v3 후보 정류장 초안(10/09). stops_v3_draft_s45.yaml 에서 중문만 바꿨다(결정 후보 1, 양쪽 승강장). 옛 중문은 previous_end_stop
+# 양방향 길 위 정류장은 건너편에도 승강장을 둔다(10/09 분석). 북문은 막다른 끝이라 하나다
 # 맵은 maps/cbnu_campus_v3_candidate_s46.xodr 이다(v3 후보, 동결 아님)
 # 정류장과 차고지 후보. map/scripts/s40_stops.py 가 기존 노선 정의에서 모아 만들었다. 새로 정한 값은 없다
 # road/s/lane 은 OpenDRIVE 좌표다. lane -1 은 진행 방향 오른쪽 주행 차선이다
@@ -21,9 +21,9 @@ stops:
     latlon_roundtrip_m: 0.000
     inside_campus_boundary: true
     stop_zone_length_m:
-    note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤(사용자 질문 1 답)"
+    note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤(현장 질문 1 답)"
     source: "map/scripts/s43_verify.py [D], OSM 정문 노드 6394475285 ~ 사거리 노드 3958352394 들어오는 경로 가운데"
-    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1278
         s: 138.0
@@ -62,7 +62,7 @@ stops:
     stop_zone_length_m:
     note: "도서관 구관 북동쪽 면 앞 도로로, 면 중점에서 46.1m 떨어져 있다"
     source: "tests/test_drive.py ROUTES_V2['north'] 마지막 road·end_s"
-    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1415
         s: 78.0
@@ -89,7 +89,7 @@ stops:
     stop_zone_length_m:
     note: "자연대와 도서관 사이 도로로, 도서관 남서쪽 면 중점에서 약 57.5m 떨어져 있다"
     source: "tests/test_drive.py ROUTES_V2['south'] 마지막 road·end_s"
-    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1268
         s: 47.0
@@ -126,9 +126,9 @@ stops:
     latlon_roundtrip_m: 0.000
     inside_campus_boundary: true
     stop_zone_length_m:
-    note: "세션46 사용자 결정(후보 1): 막다른 끝 대신 j49 앞 관통 도로로 옮김. 문 위치는 추정(보고서 map_session46_report.md 1절, 추정점 2개)"
+    note: "10/09 결정(후보 1): 막다른 끝 대신 j49 앞 관통 도로로 옮김. 문 위치는 추정(기록 map_session46_report.md 1절, 추정점 2개)"
     source: "map/scripts/s46_middle_choice.py 후보 1, s46_stops.py"
-    platforms:  # 세션46 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 중문 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1191
         s: 31.9
@@ -153,7 +153,7 @@ stops:
         latlon_roundtrip_m: 0.000
         inside_campus_boundary: true
         note: "같은 길 반대쪽 차로"
-    previous_end_stop:  # 세션44까지의 중문 정류장(막다른 끝 5.7m 앞, 승강장 하나). 정문 -> 중문 회귀 비교용(test_drive.py middle 노선 종점)
+    previous_end_stop:  # 10/09까지의 중문 정류장(막다른 끝 5.7m 앞, 승강장 하나). 정문 -> 중문 회귀 비교용(test_drive.py middle 노선 종점)
       road_id: 1360
       s: 70.0
       lane_id: -1
@@ -175,7 +175,7 @@ stops:
     stop_zone_length_m:
     note: "양성재(서문) 앞 도로로, 건물 외곽선에서 45.7m 떨어져 있다"
     source: "tests/test_drive.py ROUTES_V2['yangseong'] 마지막 road·end_s"
-    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1153
         s: 22.0
@@ -214,7 +214,7 @@ stops:
     stop_zone_length_m:
     note: "OSM way 392632034 위 후문B 추정 게이트로, 기준점(36.624844, 127.462860)에서 1.65m 떨어져 있다"
     source: "tests/test_drive.py ROUTES_V2['back'] 마지막 road·end_s"
-    platforms:  # 세션45 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
+    platforms:  # 10/09 승강장. side 이쪽 = 위 road_id·s 와 같은 자리
       - side: 이쪽
         road_id: 1151
         s: 23.1

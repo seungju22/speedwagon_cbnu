@@ -170,13 +170,13 @@ def main():
     onroad = {wid: f for lst in by_type.values() for wid, f, _ in lst}
 
     # ---- Phase 2 목록 ----
-    print("\n## P2. 세션4 제외 8 + s23 재변환 9 대조")
+    print("\n## P2. 09/18 제외 8 + s23 재변환 9 대조")
     allw = list(dict.fromkeys(EXCL8 + RECONV9))
     print(f"합집합 {len(allw)} (중복 ID {len(EXCL8) + len(RECONV9) - len(allw)})")
     for wid in allw:
         w = ways[wid]
         a, b = nodes[w["nds"][0]], nodes[w["nds"][-1]]
-        grp = "세션4제외8" if wid in EXCL8 else "s23재변환9"
+        grp = "09/18제외8" if wid in EXCL8 else "s23재변환9"
         print(f"way {wid} [{grp}] {tags_s(w['tags'])} | {way_len(nodes, w):.1f}m | 안쪽 {inside_frac(nodes, w, rings) * 100:.0f}%"
               f" | 시작 {fmt(a)} 끝 {fmt(b)} | {conv_status(wid)} | 맵겹침 {onroad.get(wid, 0):.2f}")
 

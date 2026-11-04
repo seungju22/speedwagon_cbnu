@@ -17,7 +17,7 @@ SRC = BASE / "maps/cbnu_campus_v3_candidate_s45.xodr"
 OUT = BASE / "maps/cbnu_campus_v3_candidate_s46.xodr"
 LOG = BASE / "docs/logs/s46_build_v3.log"
 KINKS = [1190, 1220, 1317, 1320, 1367, 1415, 1825, 1871, 1879]
-SKIP = {1879: "회차 연결로(j88 중문 막다른 끝). 지시 '회차 형상 수정 금지'"}
+SKIP = {1879: "회차 연결로(j88 중문 막다른 끝). '회차 형상 수정 금지'"}
 OFF = -1.675          # lane -1 중심 = 기준선 오른쪽 1.675m(이 맵 lanes: laneOffset 없음, 폭 3.35)
 DL_MAX = 0.099
 MAXW = 4

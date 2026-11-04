@@ -140,7 +140,7 @@ def run_trial(world, cmap, bp, k, road, s0, mode, writer, spectator, hold=0.0):
 
 def main():
     import argparse
-    ap = argparse.ArgumentParser(description="제동 정지 시험(세션20)")
+    ap = argparse.ArgumentParser(description="제동 정지 시험(10/02)")
     ap.add_argument("--hold", type=float, default=0.0,
                     help="20km/h 첫 도달 뒤 정속 유지 시간 s(기본 0 = 도달 즉시 제동)")
     hold = ap.parse_args().hold

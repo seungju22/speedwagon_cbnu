@@ -24,7 +24,7 @@ for m, c in CF.items():
                   car=[rate(c, "car", d) for d in (20, 25, 30)], far=v["dist90"], false=v["false_per_tick"], roi=v["false_roi_per_tick"],
                   face95=v["car_face_err"]["abs_p95"], face_mean=v["car_face_err"]["mean"], door=(dz["hit_msgs"], dz["ped_msgs"]),
                   corr=(R[c]["in_corridor"]["hit_msgs"], R[c]["in_corridor"]["ped_msgs"]), ptime=v["ptime_ms"]["med"])
-L = ["# 세션70 1단계 최소 점 3·4·5 (54.5만, 건물 점 지움, 복셀 0.3, bag s69d55·s69p55)", "",
+L = ["# 10/25 1단계 최소 점 3·4·5 (54.5만, 건물 점 지움, 복셀 0.3, bag s69d55·s69p55)", "",
      "| 최소 점 | 보행자 10·13·15·20m | 콘 10·13·15m | 차 20·25·30m | 90% 거리 보행자/차/콘 m | 거짓/틱 | 차 앞 차로 안 거짓/틱 | 차 면 오차 평균·절대 95% m | 문 구역 | 통로 | 처리 중앙 ms |",
      "|---|---|---|---|---|---|---|---|---|---|---|"]
 pct = lambda xs: "·".join(f"{x * 100:.0f}" for x in xs) + "%"
@@ -44,7 +44,7 @@ L += ["", "## 판정(최소 점 4)"] + [f"- {n}: {'통과' if g else '못 넘음
 L.append(f"- 결과: {'기본 4 로 바꿈' if ok else '기본 5 그대로'}")
 if a.s69:
     S = json.load(open(a.s69))["configs"]; SD = json.load(open(a.s69door))["topics"] if a.s69door else {}
-    L.append("\n## 세션69 같은 조합과 비교(처리 시간 칸 뺌)")
+    L.append("\n## 10/25 같은 조합과 비교(처리 시간 칸 뺌)")
     for m in (3, 5):
         c = CF[m]
         x = {k: v for k, v in D[c].items() if k != "ptime_ms"}; y = {k: v for k, v in S[c.replace(a.suffix, "")].items() if k != "ptime_ms"}

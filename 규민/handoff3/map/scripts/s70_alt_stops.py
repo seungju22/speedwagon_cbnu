@@ -143,7 +143,7 @@ def main():
         sz0, _ = zone(wr0, prefer)
         rec = dict(id=pid, name=p["name"], side=p["side"], incoming_pairs=inc, stoppable=p.get("stoppable", True))
         if p.get("stoppable", True) is False:
-            rec.update(status="없음", reason="원래 승강장이 정차 불가(문 구역 없음, 사용자 결정 1). 대체 정차점도 두지 않음")
+            rec.update(status="없음", reason="원래 승강장이 정차 불가(문 구역 없음, 결정 1). 대체 정차점도 두지 않음")
             res.append(rec)
             P(f"{pid}: 없음(원래 정차 불가)")
             continue

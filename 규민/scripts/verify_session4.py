@@ -136,7 +136,7 @@ def main():
     new_roads, new_junctions = load(NEW_XODR)
 
     lines = []
-    lines.append("# 맵세션4 Phase C-5 검증 (자동생성, 읽기전용)")
+    lines.append("# 09/18 Phase C-5 검증 (자동생성, 읽기전용)")
     lines.append("")
     lines.append("## 1. road / junction 개수")
     lines.append(f"- 기존(19건판): road {len(old_roads)} / junction {len(old_junctions)}")

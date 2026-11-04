@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# 캠퍼스 장식 레이어 배치 (B3 초안, 맵세션49, 세션50 결정 반영). xodr·stops·test_drive.py 는 읽기만 한다
+# 캠퍼스 장식 레이어 배치 (B3 초안, 10/10, 10/11 결정 반영). xodr·stops·test_drive.py 는 읽기만 한다
 # 레이어: buildings, busstop, ground, trees, parked, props. buildings(가/나/다)·busstop·ground 구현, 나머지는 빈 레이어
-# 세션50 결정: 건물 표현 기본값 나(가·다는 --repr 옵션). 도서관 남문(이쪽) 정류장 시설은 뺀다(BUSSTOP_SKIP)
-# 세션52: 정류장 시설 180도(열린 면이 차도 쪽, BUS_YAW_OFF), --repr 가·다 에서 경로 침범 동은 나(GA_TO_NA)
+# 10/11 결정: 건물 표현 기본값 나(가·다는 --repr 옵션). 도서관 남문(이쪽) 정류장 시설은 뺀다(BUSSTOP_SKIP)
+# 10/11: 정류장 시설 180도(열린 면이 차도 쪽, BUS_YAW_OFF), --repr 가·다 에서 경로 침범 동은 나(GA_TO_NA)
 #   ground(지면 판)는 기본 끔(--layers 에 넣어야 켜짐). 켜면 차도 이탈이 낙하로 안 보이므로 이탈 판정은 차선 중심 옆 벗어남으로 한다
 #   --mesh-sizes: layers_bench.py 가 잰 메시 실제 크기(JSON)로 MESHES·CUBE·BUS·GROUND 값을 바꾼다(가 의 폭 정사각형 가정이 풀림)
 # 데이터 흐름
@@ -48,7 +48,7 @@ MARGIN = 0.5            # 차선 가장자리 여유. 근거: fusorosa 폭 3.944
                         # (B2 깎기 여유 0.5m 와 같은 값. r1391 추종 이탈 0.626m 같은 급커브 구간은 이 여유로 못 덮는다)
 LANE_STEP = 0.5         # 차선 표본 간격(m)
 
-# 가: 패키지 건물 메시. 크기는 세션38(B1) API bbox(2*extent) 값. x 축은 화면과 안 맞아 믿지 않는다 -> 폭 미측정
+# 가: 패키지 건물 메시. 크기는 10/08(B1) API bbox(2*extent) 값. x 축은 화면과 안 맞아 믿지 않는다 -> 폭 미측정
 #   length = bbox y, height = bbox z, pivot 오프셋 = bbox 중심(x, y). 피벗 높이는 바닥(z 오프셋 = 높이/2 로 확인)
 MESHES = {
     "House01": dict(path="/Game/Carla/Static/Building/SM_House01.SM_House01", length=15.436, height=12.646, off=(0.0, -0.001)),
@@ -58,26 +58,26 @@ MESHES = {
 }
 # 나: 정육면체 메시. B1 bbox 0.222x1.397x1.000(축 불신), 화면상 약 1m -> 한 변 1.0m 는 가정(미측정). 피벗은 중심(B1 오프셋 0,0,0)
 CUBE = dict(path="/Game/Carla/Static/Ground/GroundCube.GroundCube", side=1.0)
-BUS_GAP = MARGIN + 0.3  # 정류장 시설 가까운 변 ~ 차선 가장자리. 여유 0.5m 에 딱 맞추면 곡선·부동소수로 0.487~0.5m 가 되어(세션49 첫 dry-run) 0.3m 더함
+BUS_GAP = MARGIN + 0.3  # 정류장 시설 가까운 변 ~ 차선 가장자리. 여유 0.5m 에 딱 맞추면 곡선·부동소수로 0.487~0.5m 가 되어(10/10 첫 dry-run) 0.3m 더함
 # busstop: B1 API bbox 2.024(x) x 3.809(y) x 2.739(z), 중심 오프셋 (0.367, 0.177). 축 불신이라 바닥은 오프셋만큼 넓힌 사각형
 BUS = dict(bp="static.prop.busstop", along=3.809 + 2 * 0.177, depth=2.024 + 2 * 0.367)
-# 세션51 LiDAR: 긴 축은 메시 x(3.598m), 깊이 y(1.884m), 피벗->중심 (0.235, 0.175). 그래서 yaw = 차로 방향 + BUS_YAW_OFF
-#   (세션49 의 '차로 - 90' 은 긴 축을 차로에 직각으로 세웠다. 세션51 정문 B 화면으로 확인). 열린 면 방향은 화면으로 따로 본다
-# 세션52 사용자 결정: 180. 세션51 retest_busstop_*_B(인도에서 차로를 봄)에 뒷유리 없이 기둥·의자가 보여 열린 면이 인도 쪽이었다.
+# 10/11 LiDAR: 긴 축은 메시 x(3.598m), 깊이 y(1.884m), 피벗->중심 (0.235, 0.175). 그래서 yaw = 차로 방향 + BUS_YAW_OFF
+#   (10/10 의 '차로 - 90' 은 긴 축을 차로에 직각으로 세웠다. 10/11 정문 B 화면으로 확인). 열린 면 방향은 화면으로 따로 본다
+# 10/11 결정: 180. 10/11 retest_busstop_*_B(인도에서 차로를 봄)에 뒷유리 없이 기둥·의자가 보여 열린 면이 인도 쪽이었다.
 #   180 돌려 열린 면이 차도를 보게. 바닥 사각형은 대칭이라 침범 검사 결과는 같고, 피벗 오프셋은 myaw 로 같이 돈다. 화면 확인은 통합 S4
 BUS_YAW_OFF = 180.0
 BUS_OFF = (0.0, 0.0)    # 피벗->바닥 중심(메시 좌표). --mesh-sizes 로 채움
-# 정류장 시설을 놓지 않는 승강장(세션50 사용자 결정). 승강장 자체(stops_v3.yaml)는 그대로
+# 정류장 시설을 놓지 않는 승강장(10/11 결정). 승강장 자체(stops_v3.yaml)는 그대로
 BUSSTOP_SKIP = {
-    "도서관 남문(이쪽)": "±20m 안에 자리 없음(원래 자리 + 앞뒤 2m 간격 20곳 모두 걸림). 원래 자리는 경로 밖 차로 r1369 와 1.379m2 겹침(세션49 dry-run)",
+    "도서관 남문(이쪽)": "±20m 안에 자리 없음(원래 자리 + 앞뒤 2m 간격 20곳 모두 걸림). 원래 자리는 경로 밖 차로 r1369 와 1.379m2 겹침(10/10 dry-run)",
 }
-# 가 메시가 경로 차로에 걸리는 동(세션51 잰 메시 크기 dry-run, s51_bench/dry_가·다_measured.log). --repr 가·다 에서 이 동은 나(상자)로 바꾼다
+# 가 메시가 경로 차로에 걸리는 동(10/11 잰 메시 크기 dry-run, s51_bench/dry_가·다_measured.log). --repr 가·다 에서 이 동은 나(상자)로 바꾼다
 #   way765358663(r1316·r1644, 가만 해당. 다에서는 원래 나), 미술관 N16-2(r1320·r2041), 명덕관 S17-2(r1363·r1881)
 #   이 목록 밖이라도 가 메시가 경로 차로에 걸리면 같이 나로 바꾼다(--mesh-sizes 없이 정사각형 가정일 때 등)
-GA_TO_NA = {"765358663": "세션51 실측 가 경로 침범", "446440342": "세션51 실측 가·다 경로 침범(미술관)",
-            "442760314": "세션51 실측 가·다 경로 침범(명덕관)"}
+GA_TO_NA = {"765358663": "10/11 실측 가 경로 침범", "446440342": "10/11 실측 가·다 경로 침범(미술관)",
+            "442760314": "10/11 실측 가·다 경로 침범(명덕관)"}
 # ground: 캠퍼스 전체를 덮는 평면 메시 하나(기본 끔). 윗면을 도로면(z 0) 보다 GROUND_DROP 아래에 둔다(깜빡임 방지 0.1~0.2m)
-#   메시 후보(세션50 파일 대조, 서버 소환은 세션51 layers_bench.py 에서 확인):
+#   메시 후보(10/11 파일 대조, 서버 소환은 10/11 layers_bench.py 에서 확인):
 #   GroundCube = B1 소환 확인 경로. uexp 경계 50x50x50cm 반폭 = 1m 정육면체·중심 피벗 [파일 바이트, 서버 미확인]
 #   Plane      = /Engine/BasicShapes/Plane, 경계 50x50x0cm 반폭 = 1m 판·중심 피벗, 충돌 BoxElems [파일, B1 밖]
 #   SideWalkCube = 경계 1m 정육면체·중심 피벗, 충돌 ConvexElems [파일, B1 밖]
@@ -89,7 +89,7 @@ GROUND_MESHES = {
     "Plane": dict(path="/Engine/BasicShapes/Plane.Plane", side=1.0, thick=0.0),
     "SideWalkCube": dict(path="/Game/Carla/Static/SideWalk/SideWalkCube.SideWalkCube", side=1.0, thick=1.0),
 }
-GROUND = "GroundCube"   # 기본은 B1 에서 소환 확인된 경로. 세션51 측정 뒤 --mesh-sizes 의 ground 로 바꿀 수 있음
+GROUND = "GroundCube"   # 기본은 B1 에서 소환 확인된 경로. 10/11 측정 뒤 --mesh-sizes 의 ground 로 바꿀 수 있음
 # 다: 정류장(승강장)에서 보이는 동 = 상자까지 수평 거리 이 값 이하, 또는 이름 있는 큰 동(바닥 이 값 이상)
 VISIBLE_M = 50.0
 BIG_M2 = 2000.0
@@ -314,7 +314,7 @@ def load_mesh_sizes(path):
     used = []
     for name, m in ms.items():
         if name in MESHES:
-            # 바닥 z 는 LiDAR 가 밑변을 덜 맞혀 0.003~0.088m 로 나왔다(세션51). 윗면이 API 높이와 같으므로 0.1m 미만은 0 으로 본다
+            # 바닥 z 는 LiDAR 가 밑변을 덜 맞혀 0.003~0.088m 로 나왔다(10/11). 윗면이 API 높이와 같으므로 0.1m 미만은 0 으로 본다
             MESHES[name].update(length=m["size_y"], width=m["size_x"], height=m["min_z"] + m["size_z"],   # = 윗면 z(바닥 0 기준)
                                 off=(m["center_x"], m["center_y"]), zmin=0.0 if abs(m["min_z"]) < 0.1 else m["min_z"])
             used.append(name)
@@ -328,7 +328,7 @@ def load_mesh_sizes(path):
     cube = d.get("cube")
     if cube in ms:
         m = ms[cube]
-        side = max(m["size_x"], m["size_y"], m["size_z"])         # z 는 밑변 덜 맞혀 0.989(세션51), x·y 1.000 -> 가장 긴 축
+        side = max(m["size_x"], m["size_y"], m["size_z"])         # z 는 밑변 덜 맞혀 0.989(10/11), x·y 1.000 -> 가장 긴 축
         CUBE.update(path=m["path"], side=side, zc=round(m["min_z"] + side / 2, 3) if abs(m["min_z"] + side / 2) > 0.02 else 0.0)
         used.append(f"cube:{cube}")
     if d.get("ground_choice") in GROUND_MESHES:
@@ -585,9 +585,9 @@ def main():
     ap = argparse.ArgumentParser(description="캠퍼스 장식 레이어 배치(B3 초안)")
     ap.add_argument("--layers", default="buildings,busstop", help=f"쉼표 목록 {LAYERS}")
     ap.add_argument("--repr", choices=["가", "나", "다"], default="나",
-                    help="건물 표현(기본 나, 세션50 결정). 다 는 메시 실제 크기를 잰 뒤 다시 비교")
+                    help="건물 표현(기본 나, 10/11 결정). 다 는 메시 실제 크기를 잰 뒤 다시 비교")
     ap.add_argument("--mesh-sizes", type=Path, default=None, help="layers_bench.py 가 잰 메시 크기 JSON")
-    ap.add_argument("--tag", default=None, help="--dry-run 출력 이름(기본: 레이어·표현에서 만듦. 세션49 파일을 덮지 않게 줄 것)")
+    ap.add_argument("--tag", default=None, help="--dry-run 출력 이름(기본: 레이어·표현에서 만듦. 10/10 파일을 덮지 않게 줄 것)")
     ap.add_argument("--ground-mesh", choices=sorted(GROUND_MESHES), default=None, help=f"ground 레이어 메시(기본 {GROUND})")
     ap.add_argument("--seed", type=int, default=SEED, help="무작위 배치 레이어용(이번 구현 레이어는 쓰지 않음)")
     ap.add_argument("--xodr", type=Path, default=XODR_V3)
@@ -685,7 +685,7 @@ def main():
         print(f"  busstop {n}")
 
     if args.dry_run:
-        # 세션49 이름(campus_layers_dry_<repr>) 은 buildings,busstop 일 때만. 다른 조합은 레이어 이름을 붙여 덮어쓰지 않게
+        # 10/10 이름(campus_layers_dry_<repr>) 은 buildings,busstop 일 때만. 다른 조합은 레이어 이름을 붙여 덮어쓰지 않게
         tag = args.tag or (args.repr if args.layers == ["buildings", "busstop"] else
                            "-".join(([args.repr] if "buildings" in args.layers else []) + [l for l in args.layers if l != "buildings"]))
         out = LOGS / f"campus_layers_dry_{tag}.json"

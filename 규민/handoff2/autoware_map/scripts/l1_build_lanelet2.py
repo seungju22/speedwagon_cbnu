@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # L1/A1: xodr -> Autoware 용 Lanelet2 지도(lanelet2_map.osm + map_projector_info.yaml). 서버 없이 carla.Map(오프라인)으로 만든다.
-# 왜 crdesigner(세션29~31) 대신 이것인가: 세션30·31 에서 crdesigner 출력은 원인 A(laneOffset 커넥터 끝점 교체)·
-#   원인 B(경계 뒤집혀 읽힘)·r1917 이음매(1.1m) 로 끊김 31~33 이 남았다. 세션31 10-2 의 "대안"(점 공유를 연결 관계와
+# 왜 crdesigner(10/07) 대신 이것인가: 10/07 에서 crdesigner 출력은 원인 A(laneOffset 커넥터 끝점 교체)·
+#   원인 B(경계 뒤집혀 읽힘)·r1917 이음매(1.1m) 로 끊김 31~33 이 남았다. 10/07 10-2 의 "대안"(점 공유를 연결 관계와
 #   위치로 직접 정함)을 CARLA 가 실제로 쓰는 차선 기하로 구현한 것이다. 같은 입력을 crdesigner 로도 돌려 대조한다(l1_crd_baseline.py).
 # 흐름
 #   1 carla.Map(name, xodr 문자열).get_topology() = (차선 시작 wp, 다음 차선 시작 wp) 쌍 = 차선 연결 간선. Driving 차선만 나온다
@@ -25,7 +25,7 @@ from l1_align_sim import flips      # 같은 폴더. lanelet2 로더 align 판�
 
 STEP = 1.0           # 중심선 표본 간격 m
 UTURN_DEG = 150.0
-TAPER = 5.0          # 끝점 이동을 안쪽으로 나눠 주는 길이 m    # 세션39 s39_turn_radius.py 와 같은 회차 정의(방위 변화)
+TAPER = 5.0          # 끝점 이동을 안쪽으로 나눠 주는 길이 m    # 10/08 s39_turn_radius.py 와 같은 회차 정의(방위 변화)
 DEG_PER_M = 1.0 / 111319.49   # lat/lon 은 Local 투영에서 쓰이지 않는다(local_x/local_y 가 덮어씀). 참고용 근사값
 
 

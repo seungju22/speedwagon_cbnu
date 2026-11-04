@@ -136,7 +136,7 @@ def old_axis_bounds():
 
 def main():
     xmin, xmax, ymin, ymax = old_axis_bounds()
-    print(f"세션3 축척·범위 재사용: x[{xmin:.1f},{xmax:.1f}] y[{ymin:.1f},{ymax:.1f}]")
+    print(f"09/17 축척·범위 재사용: x[{xmin:.1f},{xmax:.1f}] y[{ymin:.1f},{ymax:.1f}]")
 
     roads, junctions, osm_nodes, R, s, t, ref_lat, ref_lon = fit_transform_for(NEW_XODR)
 
@@ -261,7 +261,7 @@ def main():
     ax.set_title(
         "cbnu_internal_only_localtm_tags73.xodr 도로망(73건 태그보정) + OSM 배경\n"
         f"빨강=정문-도서관 경로({PATH_LENGTH_M}m, road 15개, junction 9개 경유)\n"
-        "축척·범위는 세션3 04_overlay.png(19건판)와 동일"
+        "축척·범위는 09/17 04_overlay.png(19건판)와 동일"
     )
     ax.legend(loc="upper right", fontsize=8)
 

@@ -32,7 +32,7 @@ def header_proj(xodr_text):
     p = dict(kv.lstrip("+").split("=", 1) for kv in proj.split() if "=" in kv)
     o = re.search(r'<offset x="([-\d.]+)" y="([-\d.]+)"', xodr_text)
     if "lat_0" not in p or "lon_0" not in p:
-        raise SystemExit(f"투영식에 lat_0/lon_0 없음: {proj} (세션3 문제와 같은 상태, 중단)")
+        raise SystemExit(f"투영식에 lat_0/lon_0 없음: {proj} (09/17 문제와 같은 상태, 중단)")
     return proj, float(p["lat_0"]), float(p["lon_0"]), float(o.group(1)), float(o.group(2))
 
 

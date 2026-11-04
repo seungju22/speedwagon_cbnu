@@ -419,7 +419,7 @@ def main():
         OUT["mem_scene_cleared"] = guard("장면 지운 뒤")
 
         OUT["lidar_attr"] = dict(LIDAR, z_m=LIDAR_Z, upper_fov="10.0(기본)", lower_fov="-30.0(기본)",
-                                 source="sensor_mapping.yaml 못 찾음 -> 지시문 기본값", mount="vehicle.audi.a2 원점 위")
+                                 source="sensor_mapping.yaml 못 찾음 -> 작업 메모 기본값", mount="vehicle.audi.a2 원점 위")
         OUT["lidar"] = {}
         for n, (bp, h, kind) in bps.items():
             OUT["lidar"][n] = [lidar_solo(world, cmap, bp, h, d) for d in (10.0, 20.0)]

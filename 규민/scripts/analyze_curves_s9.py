@@ -186,7 +186,7 @@ def main():
     junctions = parse_junctions(root)
 
     lines = []
-    lines.append("# 맵세션9 Phase A 급커브 가설 검증 (읽기전용, 자동생성)")
+    lines.append("# 09/22 Phase A 급커브 가설 검증 (읽기전용, 자동생성)")
     lines.append("")
 
     # --- A-1 ---

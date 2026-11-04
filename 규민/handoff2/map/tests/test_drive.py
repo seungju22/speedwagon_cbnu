@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# 맵세션6 Phase C. 878road판(cbnu_internal_only_localtm_tags73.xodr, 서버에 이미
+# 09/19 Phase C. 878road판(cbnu_internal_only_localtm_tags73.xodr, 서버에 이미
 # 로드됨 - 재로드 안 함) 위에서 TM set_path 로 확정경로(15 road, 781.22m)를
 # 유도하며 20km/h 로 주행한다.
 #
-# 세션5 대비 변경(세션6, 사용자 승인 2026-09-19):
+# 09/19 대비 변경(09/19, 2026-09-19):
 #  - 경로 유도: TM set_path (권고 수준 - 갈림길 분기 선택만 유도). 계획 경로는
 #    get_waypoint_xodr 로 만든 웨이포인트(약 4m 간격, 커넥터 안쪽 포함).
 #  - 속도: tm.set_desired_speed(vehicle, 20) (km/h)
@@ -11,7 +11,7 @@
 #    대조. 실패 시 마지막 10초 road 전이 출력.
 #  - CSV 저장 버그 수정: 예외로 끊겨도 그때까지의 데이터가 남는다.
 #
-# 세션9 추가(사용자 승인 2026-09-22, 물리접촉 vs TM제동 판별용):
+# 09/22 추가(2026-09-22, 물리접촉 vs TM제동 판별용):
 #  - 궤적 CSV에 제어값(throttle/brake/steer/hand_brake/reverse)과 차체 자세각
 #    (pitch/roll/vehicle_yaw) 컬럼 추가. 기존 14개 컬럼은 이름·순서 불변.
 #  - 차량 bounding_box.extent 를 스폰 직후 1회 별도 파일에 기록(횡편차 계산의
@@ -25,12 +25,12 @@
 #    기록해 메인 CSV와 frame으로 맞춘다. semantic_tags는 원시 숫자로 저장하고
 #    이름은 분석 단계에서 공식 태그표로 붙인다.
 #
-# 세션13 추가(사용자 승인 2026-09-24, TM -> BasicAgent 전환):
-#  - --controller agent|tm (기본 agent). tm 은 세션10~13 재현용으로 동작 불변
+# 09/24 추가(2026-09-24, TM -> BasicAgent 전환):
+#  - --controller agent|tm (기본 agent). tm 은 09/22~09/24 재현용으로 동작 불변
 #    (비동기 wait_for_tick, TM set_path). agent 는 BasicAgent.set_global_plan 에
 #    get_waypoint_xodr 로 확정한 계획 웨이포인트를 넣어 커넥터를 직접 지정한다.
 #    TM set_path 는 갈림길에서 경로점과 가까운 쪽을 고르는 휴리스틱이라 U턴
-#    커넥터(r1915/r1449/r1429/r1697)로 빠질 수 있었다(세션13 j60 이탈).
+#    커넥터(r1915/r1449/r1429/r1697)로 빠질 수 있었다(09/24 j60 이탈).
 #  - agent 모드는 동기 모드 20Hz(fixed_delta_seconds=0.05). BasicAgent PID 는
 #    dt 0.05초를 가정한다. 비동기(약 251Hz)면 적분·미분 항이 약 12배 틀어지고
 #    프레임 간격이 실행마다 달라 재현성도 없다. 종료 시 finally 에서 반드시
@@ -42,24 +42,24 @@
 #    근거: https://carla.readthedocs.io/en/0.9.15/adv_agents/
 #          https://carla.readthedocs.io/en/0.9.15/adv_synchrony_timestep/
 #
-# 세션14 추가(사용자 승인 2026-09-24):
-#  - 판정 기준 변경. 세션5~14 의 "도로 이탈 3tick(차 중심이 Driving 차선 밖)" 중단
-#    조건을 폐지. 세션14 r1446 에서 중심은 인도였으나 왼쪽 모서리는 주행 차선 위였고
+# 09/24 추가(2026-09-24):
+#  - 판정 기준 변경. 09/19~09/24 의 "도로 이탈 3tick(차 중심이 Driving 차선 밖)" 중단
+#    조건을 폐지. 09/24 r1446 에서 중심은 인도였으나 왼쪽 모서리는 주행 차선 위였고
 #    반대 차선·메시 밖도 아니었다(인도를 문 상태). 차선 이탈은 측정 지표이지 중단
 #    사유가 아니다. 기록만: 인도 침범, 차선 이탈, 꼭짓점의 반대 차선 침범 깊이.
 #    중단(3tick 이상+0.3s 이상 지속): 차체 전체 주행 차선 밖(바닥 4꼭짓점 모두),
-#    반대 차선 침범(차 **중심**이 계획 밖 road 의 진행방향 135° 넘게 다른 Driving 차선 위,
-#    사용자 결정: 코너 뒤 모서리 0.19m 같은 흔한 침범은 지표, U턴 진입은 중심 기준으로도
+#    반대 차선 침범(차 중심이 계획 밖 road 의 진행방향 135° 넘게 다른 Driving 차선 위,
+#    결정: 코너 뒤 모서리 0.19m 같은 흔한 침범은 지표, U턴 진입은 중심 기준으로도
 #    잡힘), 메시 밖(중심에 lane 없음 또는 z 가 노면보다 0.5m 넘게 낮음).
 #    on_road 열은 기존 정의(중심) 그대로 기록만.
 #  - --conn-spacing M: 커넥터 계획 점 간격(기본 없음=전 구간 4m). BasicAgent
 #    LocalPlanner 는 직선거리 < 3.0+0.5v(m/s) 인 점을 버리고 남은 첫 점을 목표로
-#    삼는다. 점이 성기면 목표가 커넥터 끝으로 건너뛰어 코너를 자른다(세션14 r1446).
+#    삼는다. 점이 성기면 목표가 커넥터 끝으로 건너뛰어 코너를 자른다(09/24 r1446).
 #  - --sharp-speed K: 60° 이상 커넥터가 15m 안이거나 그 위일 때 목표 속도 K km/h.
 #  - CSV 7열 추가(기존 28열 불변). 상세 map/docs/map_session14_design_density_speed.md
 #
 # 실행: python map/tests/test_drive.py                  (서버 필요, agent)
-#       python map/tests/test_drive.py --controller tm  (서버 필요, 세션10~13 재현)
+#       python map/tests/test_drive.py --controller tm  (서버 필요, 09/22~09/24 재현)
 #       python map/tests/test_drive.py --restore-async  (서버 동기 모드 수동 해제)
 #       python map/tests/test_drive.py --dry-plan       (서버 불필요, 계획 표본만 계산)
 #       python map/tests/test_drive.py --conn-spacing 1.0 [--sharp-speed 10]  (agent 전용)
@@ -83,7 +83,7 @@ PORT = 2000
 TM_PORT = 8000
 TIMEOUT = 20.0
 
-# ---- 경로 (세션6 정정: junction36 커넥터 r1564 포함 15 road) ----
+# ---- 경로 (09/19 정정: junction36 커넥터 r1564 포함 15 road) ----
 ROUTE_ROADS = [1247, 1914, 1356, 1917, 1355, 1446, 1172, 1428, 1240,
                1695, 1239, 1426, 1238, 1564, 1278]
 LAST_ROAD_END_S = 100.38            # road1278 위 확정 종점 s
@@ -95,19 +95,19 @@ CONNECTOR_JUNCTION = {1914: 1, 1917: 107, 1446: 42, 1428: 10,
 
 # ---- 속도 / 실패 조건 ----
 DESIRED_SPEED_KMH = 20.0
-DRIVE_SECONDS = 400.0               # 실패조건 5: 시뮬 시간 초과(세션19 240->400, 폭주 방지용. 후문 목표 300s 의 약 1.3배)
+DRIVE_SECONDS = 400.0               # 실패조건 5: 시뮬 시간 초과(09/30 240->400, 폭주 방지용. 후문 목표 300s 의 약 1.3배)
 RUNAWAY_SPEED_MPS = 15.0            # 실패조건 3: 초과 시 직접 destroy
 STUCK_SPEED_MPS = 0.5               # 실패조건 4: 이 미만이
 STUCK_SECONDS = 5.0                 #            이 시간 이상 지속
 OFFROAD_TICKS = 3                   # 실패조건 2: 연속 tick 수 and
 OFFROAD_MIN_SECONDS = 0.3           #            최소 지속 시간(고fps 오탐 방지)
 ARRIVE_DIST_M = 5.0
-# 세션21: 정지 근접 완주(record 판정만). 정체 정의(STUCK_SPEED_MPS 미만 STUCK_SECONDS 지속)를 그대로 써서
+# 10/02: 정지 근접 완주(record 판정만). 정체 정의(STUCK_SPEED_MPS 미만 STUCK_SECONDS 지속)를 그대로 써서
 # "섰다" 를 정하고, 그 순간 정차점 이 거리 안이면 정체 실패 대신 완주. 정체 선언보다 먼저 본다.
-# 근거: 세션20 양성재 재실행이 정차점 1.06m 앞(s=20.98, 완주 조건 s>=21 에 0.02m 모자람)에 서서 정체 실패로 기록됨.
-# 2.0m = 기존 완주 임계 1.0m + 여유 1.0m. --strict 는 적용 안 함(세션14~18 규칙 그대로)
+# 근거: 10/02 양성재 재실행이 정차점 1.06m 앞(s=20.98, 완주 조건 s>=21 에 0.02m 모자람)에 서서 정체 실패로 기록됨.
+# 2.0m = 기존 완주 임계 1.0m + 여유 1.0m. --strict 는 적용 안 함(09/24~09/28 규칙 그대로)
 ARRIVE_STOP_DIST_M = 2.0
-# 세션19 판정 재설계(기본). --strict 는 세션14~18 규칙 그대로. 종료와 기록을 나눈다.
+# 09/30 판정 재설계(기본). --strict 는 09/24~09/28 규칙 그대로. 종료와 기록을 나눈다.
 # 종료: 충돌 / 정체 / 시간 초과 / 폭주 / 액터 소멸 / 메시 밖(낙하) / 경로 완전 이탈 / 깊은 반대 차선 침범
 # 기록: 차선 이탈 구간(수, 최대 이탈량·방향, 그 road 평균R·R2min, 진입 속도)
 # 거리 기준은 계획 경로 중심선(위치 조회 road_id 아님, 커넥터 겹침 오배정 방지 s18 B-3)
@@ -117,22 +117,22 @@ DEEP_OPP_SECONDS = 1.0              #   지속 시간(근거: r1592 실패 0.23m
 LOST_M = 3.35                       # 경로 완전 이탈: 계획 중심선에서 차선폭 1개 넘게
 LOST_TICKS = 40                     #   연속 tick 수 and
 LOST_SECONDS = 2.0                  #   지속 시간
-STRICT = False                      # --strict 이면 True (세션14~18 판정)
+STRICT = False                      # --strict 이면 True (09/24~09/28 판정)
 COLLISIONS = [0]                    # 충돌 콜백이 올리는 누적 건수(메인 루프가 읽음)
 ARRIVE_MIN_S = 95.0
 FAILURE_WINDOW_S = 10.0
 MEM_RECORD_AT_S = 60.0
 SPEED_PRINT_EVERY_S = 1.0
 
-# ---- 세션13: BasicAgent / 동기 모드 / 급회전 이탈량 ----
+# ---- 09/24: BasicAgent / 동기 모드 / 급회전 이탈량 ----
 AGENTS_PATH = Path.home() / "carla" / "CARLA_0.9.15" / "PythonAPI" / "carla"
 FIXED_DELTA_S = 0.05                # 20Hz. BasicAgent PID dt 기본값과 같게
 TICK_CHECK_AT_S = 10.0              # 이 시각에 tick 간격 1회 대조
 SHARP_CONNECTORS = {1446: 78.6, 1428: -68.5, 1564: -82.2}  # 회전각(CARLA yaw, +=오른쪽)
-# 맵세션18: --route. 정문(road1247) 출발 정차 루트. 위 전역값이 legacy(세션5~17 경로)이고
+# 09/28: --route. 정문(road1247) 출발 정차 루트. 위 전역값이 legacy(09/19~09/26 경로)이고
 # select_route() 가 전역을 통째로 바꾼다(함수 본문은 전역 참조라 불변).
-# 도로 체인은 경유 road 사이를 lane-1 next() 로 이은 것(scratchpad chain_s18.py, legacy 로 방법 검증).
-# 새 루트 완주는 정차점 1m 앞(end_s - 1.0)부터. legacy 는 세션15~17 기준값 비교를 위해 95.0 유지.
+# 도로 체인은 경유 road 사이를 lane-1 next() 로 이은 것(임시 폴더 chain_s18.py, legacy 로 방법 검증).
+# 새 루트 완주는 정차점 1m 앞(end_s - 1.0)부터. legacy 는 09/25~09/26 기준값 비교를 위해 95.0 유지.
 ROUTES = {
     "legacy": dict(roads=list(ROUTE_ROADS), end_s=LAST_ROAD_END_S, arrive_min_s=ARRIVE_MIN_S,
                    connectors=dict(CONNECTOR_JUNCTION), sharp=dict(SHARP_CONNECTORS),
@@ -157,7 +157,7 @@ ROUTES = {
                                1606: 45, 1597: 46, 1838: 48},
                    sharp={1592: -97.2, 1838: -71.4},
                    stop="중문 앞(road1327 막다른 끝 5.7m 전, 문까지 약 40~80m)"),
-    # 세션20: 양성재(서문). 정차점 세션19 확정(s19_scope.log). 앞 7 road 는 south 와 같고 j10 에서
+    # 10/02: 양성재(서문). 정차점 09/30 확정(s19_scope.log). 앞 7 road 는 south 와 같고 j10 에서
     # south 는 r1428 좌회전, 양성재는 r1427 직진. 통과형(r1123 끝 j5 에서 그대로 진행, 회차 없음)
     "yangseong": dict(roads=[1247, 1914, 1356, 1917, 1355, 1446, 1172, 1427, 1127, 1699, 1126,
                              1726, 1125, 1733, 1124, 1826, 1123],
@@ -166,7 +166,7 @@ ROUTES = {
                                   1733: 7, 1826: 6},
                       sharp={1446: 78.4},
                       stop="양성재(서문) 앞(건물 외곽선 45.7m)"),
-    # 세션23: 막다른 끝 회차 커넥터 통과 시험. legacy 15 road(세션5~17 반복 주행) + r1278 나머지 38m(직선)
+    # 10/03: 막다른 끝 회차 커넥터 통과 시험. legacy 15 road(09/19~09/26 반복 주행) + r1278 나머지 38m(직선)
     # + j35 회차 r1565(9.89m, -126.8°, 기존 24개와 같은 틀) + 출구 r1151(직선). 정차점이 아니라 시험용
     "uturn": dict(roads=list(ROUTE_ROADS) + [1565, 1151],
                   end_s=30.0, arrive_min_s=29.0,
@@ -175,7 +175,7 @@ ROUTES = {
                   stop="시험용(회차 r1565 통과 후 r1151 s=30)"),
 }
 ROUTE_NAME = "legacy"
-# 맵세션32: v2 후보(tags81_B_smooth_turnfix, sha 5240ca8b883e42c0) 노선. 위 ROUTES 를 대응표
+# 10/07: v2 후보(tags81_B_smooth_turnfix, sha 5240ca8b883e42c0) 노선. 위 ROUTES 를 대응표
 # logs/s28_road_id_map_B.csv 로 번역(형상 비용 0, next() 끊김 0, 출발·종점 좌표 차 0m: logs/s32_route_endpoints.log).
 # junction 번호는 junction name 으로 번역. end_s·arrive_min_s·sharp 각도·stop 은 v1 그대로.
 # back(후문, 첫 주행): 정문 r1278 -> 추정 게이트(36.624844, 127.462860) 최근접 r1151 s=23.1 의 최단 경로 33 road.
@@ -214,21 +214,21 @@ ROUTES_V2 = {
                              1601: 37, 1457: 107, 1828: 78, 1619: 41, 1609: 39, 1822: 86,
                              1860: 83, 1948: 108, 1952: 106, 1896: 3},
                  sharp={1484: 78.4, 1466: -68.1},
-                 # 세션35: 노선 전용 감속(인자 없이 항상 적용). r1391 차선 중심 최소 반경 2.483m(s=9.00, s34_curvature.py)에서
-                 # 횡가속도 2.5m/s^2(세션23 회차 r1565 통과값: 8km/h, R2min 1.94m -> 2.55m/s^2) -> sqrt(2.5*2.483)=2.49m/s
+                 # 10/07: 노선 전용 감속(인자 없이 항상 적용). r1391 차선 중심 최소 반경 2.483m(s=9.00, s34_curvature.py)에서
+                 # 횡가속도 2.5m/s^2(10/03 회차 r1565 통과값: 8km/h, R2min 1.94m -> 2.55m/s^2) -> sqrt(2.5*2.483)=2.49m/s
                  # =8.97km/h, 0.1 단위 내림 8.9km/h. 4 노선 road 와 교집합 없음(시작 시 검사)
                  slow={1391: 8.9},
-                 # 세션36: 목표점 계측 road(이 road 위 tick 마다 target_log_<ts>.csv). aim = road 위에서만 쓸 겨냥 거리 기본값(m)
+                 # 10/07: 목표점 계측 road(이 road 위 tick 마다 target_log_<ts>.csv). aim = road 위에서만 쓸 겨냥 거리 기본값(m)
                  trace=[1948, 1391, 1952], aim={1391: 1.0},
-                 # 세션38: 노선 전용 계획점 간격(m). s36_spacing_model.py 와 같은 배치(기본 첫 점부터 간격씩, 끝 0.3m 전까지)
+                 # 10/08: 노선 전용 계획점 간격(m). s36_spacing_model.py 와 같은 배치(기본 첫 점부터 간격씩, 끝 0.3m 전까지)
                  # 예측 0.601m(간격 1m + b 1.0) 가 이 점 배치 기준. 등분 중앙점(18점)이면 같은 모형 0.398m
                  spacing={1391: 1.0},
                  stop="후문B 추정 게이트(392632034 위, 36.624844, 127.462860 최근접 1.65m)"),
 }
-# 맵세션44: v3 후보(cbnu_campus_v3_candidate_s43.xodr, sha dae3f058ed86f907) 노선. ROUTES_V2 그대로 + 정문행 5쌍.
+# 10/09: v3 후보(cbnu_campus_v3_candidate_s43.xodr, sha dae3f058ed86f907) 노선. ROUTES_V2 그대로 + 정문행 5쌍.
 # 정문행은 다른 정류장 -> 정문(r1278 s=138.0, stops_v3_draft.yaml). 경로는 s44_offline.py [R](stop_path 최단 경로,
-# 세션43 [D] 와 같음). sharp 는 연결로 시작·끝 방위 차 60도 이상. 출발 road 는 각 정류장 road(스폰은 기존 방식)
-# 세션45: start_s = 출발 정류장 s(stops_v3_draft.yaml). 첫 road 에 스폰 지점이 없을 때만 쓴다(main 의 스폰 부분)
+# 10/09 [D] 와 같음). sharp 는 연결로 시작·끝 방위 차 60도 이상. 출발 road 는 각 정류장 road(스폰은 기존 방식)
+# 10/09: start_s = 출발 정류장 s(stops_v3_draft.yaml). 첫 road 에 스폰 지점이 없을 때만 쓴다(main 의 스폰 부분)
 ROUTES_V3 = dict(ROUTES_V2)
 ROUTES_V3.update({
     "north2main": dict(roads=[1415, 1703, 1409, 1676, 1276, 1661, 1275, 1722, 1274, 1628, 1273, 1705,
@@ -271,7 +271,7 @@ ROUTES_V3.update({
                       sharp={1418: -126.5, 1468: 68.0, 1482: -78.4, 1417: -126.5},
                       stop="후문 -> 정문(r1278 s=138.0)", start_s=23.1),
 })
-# 맵세션46: s46 후보 30쌍 노선(map/scripts/s46_routes.py 가 만든 블록). 출발은 항상 승강장(start_s, spawn_at_start)
+# 10/09: s46 후보 30쌍 노선(map/scripts/s46_routes.py 가 만든 블록). 출발은 항상 승강장(start_s, spawn_at_start)
 # 경로 = 양쪽 승강장 조합 중 회차 수 최소·같으면 짧은 것. r1391 을 지나면 back 노선 r1391 전용 설정을 같이 붙임
 ROUTES_PAIRS_S46 = {
     "p_main_north": dict(roads=[1278, 1969, 1393, 1972, 1392, 1485, 1410, 1712, 1411, 1629, 1412, 1728, 1413, 1663, 1414, 1678, 1415],
@@ -430,19 +430,19 @@ ROUTES_PAIRS_S46 = {
                  sharp={1469: -109.4},
                  stop="후문(건너편 r1279 s=73.0) -> 양성재(이쪽 r1153 s=22.0), 회차 없음"),
 }
-# 맵세션46: v3 후보 s46(cbnu_campus_v3_candidate_s46.xodr). 기존 5노선(ROUTES_V2, r1278 s=0 출발) 그대로 + 30쌍.
+# 10/09: v3 후보 s46(cbnu_campus_v3_candidate_s46.xodr). 기존 5노선(ROUTES_V2, r1278 s=0 출발) 그대로 + 30쌍.
 # 정문 -> 중문 회귀 비교용 옛 끝점 노선은 "middle"(종점 r1360 s=70), 새 중문 자리는 "p_main_middle"
 ROUTES_V3S46 = dict(ROUTES_V2)
 ROUTES_V3S46.update(ROUTES_PAIRS_S46)
 FROZEN_V1_SHA16 = "bf835cdfad0cea65"
 MAP_ROUTES = {FROZEN_V1_SHA16: ROUTES, "5240ca8b883e42c0": ROUTES_V2, "dae3f058ed86f907": ROUTES_V3,
               "a17ab012e04c664f": ROUTES_V3S46,
-              "214507afc87c2523": ROUTES_V3S46}   # 맵세션57: v3.1(s54) road id 같음
+              "214507afc87c2523": ROUTES_V3S46}   # 10/13: v3.1(s54) road id 같음
 ACTIVE_ROUTES = ROUTES              # __main__ 에서 --xodr 해시로 고른다
-ROUTE_SLOW = {}                     # 세션35: 노선 전용 감속 {road: km/h}. select_route 가 채운다
-ROUTE_TRACE = set()                 # 세션36: 목표점 계측 road
-ROUTE_AIM = {}                      # 세션36: 노선 전용 겨냥 거리 기본값 {road: base_min_distance m}
-ROUTE_SPACING = {}                  # 세션38: 노선 전용 계획점 간격 {road: m}
+ROUTE_SLOW = {}                     # 10/07: 노선 전용 감속 {road: km/h}. select_route 가 채운다
+ROUTE_TRACE = set()                 # 10/07: 목표점 계측 road
+ROUTE_AIM = {}                      # 10/07: 노선 전용 겨냥 거리 기본값 {road: base_min_distance m}
+ROUTE_SPACING = {}                  # 10/08: 노선 전용 계획점 간격 {road: m}
 
 
 def select_route(name):
@@ -454,7 +454,7 @@ def select_route(name):
     ROUTE_AIM = dict(r.get("aim", {}))
     ROUTE_SPACING = dict(r.get("spacing", {}))
     if ROUTE_SPACING:
-        # 세션38: 계획점 간격 변경 대상도 4 노선 경로와 겹치면 중단
+        # 10/08: 계획점 간격 변경 대상도 4 노선 경로와 겹치면 중단
         others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
                                if k in ("north", "south", "middle", "yangseong")))
         inter = sorted(set(ROUTE_SPACING) & others)
@@ -462,7 +462,7 @@ def select_route(name):
         if inter:
             raise SystemExit("노선 전용 계획점 간격 대상이 4 노선 경로에 있음 - 중단")
     if ROUTE_AIM:
-        # 세션36: 겨냥 거리 하향 대상도 4 노선 경로와 겹치면 중단
+        # 10/07: 겨냥 거리 하향 대상도 4 노선 경로와 겹치면 중단
         others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
                                if k in ("north", "south", "middle", "yangseong")))
         inter = sorted(set(ROUTE_AIM) & others)
@@ -472,7 +472,7 @@ def select_route(name):
     if ROUTE_TRACE:
         print(f"  목표점 계측 road {sorted(ROUTE_TRACE)}")
     if ROUTE_SLOW:
-        # 세션35: 감속 대상이 다른 정차 노선 경로에 있으면 중단(다른 노선 동작이 바뀌면 안 된다)
+        # 10/07: 감속 대상이 다른 정차 노선 경로에 있으면 중단(다른 노선 동작이 바뀌면 안 된다)
         others = set().union(*(set(v["roads"]) for k, v in ACTIVE_ROUTES.items()
                                if k in ("north", "south", "middle", "yangseong")))
         inter = sorted(set(ROUTE_SLOW) & others)
@@ -491,28 +491,28 @@ def select_route(name):
     print(f"  커넥터 {CONNECTOR_JUNCTION}, 급회전 {SHARP_CONNECTORS or '없음'}")
 SHARP_SAMPLE_M = 0.25               # 커넥터 차선 중심선 표본 간격
 SHARP_NEAR_M = 3.0                  # 차 중심이 중심선에서 이 거리 안일 때만 측정
-# 세션14: 중단 판정(연속 OFFROAD_TICKS tick 이상 + OFFROAD_MIN_SECONDS 이상 지속)
+# 09/24: 중단 판정(연속 OFFROAD_TICKS tick 이상 + OFFROAD_MIN_SECONDS 이상 지속)
 OPPOSITE_DEG = 135.0                # 차 진행방향과 이보다 크게 다른 차선 = 반대 방향
 MESH_Z_DROP_M = 0.5                 # 투영 노면 z 보다 이만큼 낮으면 메시 밖(낙하)
 # 메시 판정용 lane 종류. LaneType.Any(-2) 는 project_to_road=False 에서 Driving 위인데도
-# None 을 돌려줘(세션14 r1446 s=3.7 실측) 쓰지 않고 종류별로 조회한다
+# None 을 돌려줘(09/24 r1446 s=3.7 실측) 쓰지 않고 종류별로 조회한다
 MESH_LANE_TYPES = ("Driving", "Sidewalk", "Shoulder", "Border", "Parking", "Biking")
 SLOW_TURN_DEG = 60.0                # --sharp-speed 적용 커넥터 기준 회전각
 SLOW_AHEAD_M = 15.0                 # 대상 커넥터 계획점이 이 직선거리 안이면 감속
-# 세션15: --follow. spectator 를 매 tick 차량 뒤·위로 옮긴다(관찰용 카메라).
+# 09/25: --follow. spectator 를 매 tick 차량 뒤·위로 옮긴다(관찰용 카메라).
 # 제어·기록에 관여하지 않고, 동기 모드는 스텝이 FIXED_DELTA_S 로 고정이라 주행 결과가
 # follow 유무와 무관하다(벽시계 시간만 늘어남). 차량 pitch/roll 은 빼 인도 턱에서 안 흔들리게.
 FOLLOW_BACK_M = 8.0
 FOLLOW_UP_M = 4.0
 FOLLOW_PITCH_DEG = -math.degrees(math.atan2(FOLLOW_UP_M, FOLLOW_BACK_M))  # 약 -26.6°
-# 세션20: --measure-stop. 완주 판정 뒤 바로 끝내지 않고 같은 제동(brake=1.0, hand_brake)을 유지한 채
-# 속도가 STOP_SPEED_MPS 미만이 될 때까지 tick 을 더 돌려 실제 정지 위치를 잰다(기본 꺼짐 = 세션19 와 동일).
+# 10/02: --measure-stop. 완주 판정 뒤 바로 끝내지 않고 같은 제동(brake=1.0, hand_brake)을 유지한 채
+# 속도가 STOP_SPEED_MPS 미만이 될 때까지 tick 을 더 돌려 실제 정지 위치를 잰다(기본 꺼짐 = 09/30 와 동일).
 # 판정 뒤 tick 도 같은 CSV 에 이어 쓴다(37열 불변, 판정 열은 빈칸).
 STOP_SPEED_MPS = 0.1
 STOP_SETTLE_MAX_S = 15.0
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# 맵세션11: 곡선 평활화(smooth_osm_curves.py) 재변환판. road id 878개 전부 동일하게 유지됨
+# 09/24: 곡선 평활화(smooth_osm_curves.py) 재변환판. road id 878개 전부 동일하게 유지됨
 # (verify_smoothing.py 대응표), 경로 15 road id 와 종점 s=100.38(road1278 길이 불변)도 그대로.
 # 대조군(평활화 전) xodr: cbnu_internal_only_localtm_tags73.xodr
 XODR_PATH = BASE_DIR / "maps" / "cbnu_internal_only_localtm_tags73_smooth.xodr"
@@ -524,14 +524,14 @@ LOG_FIELDS = ["t", "frame", "x", "y", "z", "speed_mps", "speed_limit_kmh",
               "on_road", "in_plan",
               "throttle", "brake", "steer", "hand_brake", "reverse",
               "pitch", "roll", "vehicle_yaw",
-              # 세션13 추가(tm 모드는 agent_* 빈칸)
+              # 09/24 추가(tm 모드는 agent_* 빈칸)
               "agent_target_road", "agent_target_s",
               "sharp_conn", "sharp_s", "lat_off_m", "body_excess_m",
-              # 세션14 추가(판정 분리·밀도/속도 분석)
+              # 09/24 추가(판정 분리·밀도/속도 분석)
               "n_corner_offlane", "sidewalk", "opposite_lane", "opposite_depth_m",
               "mesh_out",
               "target_dist_m", "min_dist_m", "set_speed_kmh",
-              # 세션15 추가(반대 차선 판정 보완, opposite_lane=True 일 때만 값)
+              # 09/25 추가(반대 차선 판정 보완, opposite_lane=True 일 때만 값)
               "in_plan_lane"]
 PLAN_FIELDS = ["idx", "road_id", "kind", "s", "x", "y", "z", "gap_to_prev_m"]
 COLLISION_FIELDS = ["frame", "sim_timestamp", "t_rel",
@@ -544,7 +544,7 @@ COLLISION_FIELDS = ["frame", "sim_timestamp", "t_rel",
 # ---------------- 계획 표본 (서버 불필요) ----------------
 
 def file_sha16(path=None):
-    """맵 파일 sha256 앞 16자(세션19, 로그 첫 줄용)."""
+    """맵 파일 sha256 앞 16자(09/30, 로그 첫 줄용)."""
     return hashlib.sha256((path or XODR_PATH).read_bytes()).hexdigest()[:16]
 
 
@@ -556,7 +556,7 @@ def read_road_lengths():
 def plan_samples(lengths, min_s_on_first=None, conn_spacing=None):
     """(road_id, s) 목록. 각 road 를 n등분한 구간의 중앙점 -> 구간 경계를
     피해 인접 road 와 중복점이 생기지 않고, 짧은 커넥터도 최소 1점 포함.
-    conn_spacing 이 있으면 커넥터 road 만 그 간격(세션14)."""
+    conn_spacing 이 있으면 커넥터 road 만 그 간격(09/24)."""
     out = []
     for rid in ROUTE_ROADS:
         length = LAST_ROAD_END_S if rid == ROUTE_ROADS[-1] else lengths[rid]
@@ -564,7 +564,7 @@ def plan_samples(lengths, min_s_on_first=None, conn_spacing=None):
             else PLAN_SPACING_M
         n = max(1, math.ceil(length / spacing))
         if rid in ROUTE_SPACING:
-            # 세션38: 기본 배치의 첫 점에서 시작해 간격씩, 끝 0.3m 전까지(s36_spacing_model.py 와 같다)
+            # 10/08: 기본 배치의 첫 점에서 시작해 간격씩, 끝 0.3m 전까지(s36_spacing_model.py 와 같다)
             s = 0.5 * length / n
             while s < length - 0.3:
                 if not (rid == ROUTE_ROADS[0] and min_s_on_first is not None
@@ -648,10 +648,10 @@ def dry_plan(conn_spacing=None):
                      "kind": "conn" if rid in CONNECTOR_JUNCTION else "road",
                      "s": round(s, 3), "x": round(x, 3), "y": round(-y, 3),
                      "z": 0.0})
-    # 기본 계획 파일(세션11~14 기준)은 덮어쓰지 않도록 이름 분리
-    # 세션18: legacy 외 루트는 drive_plan_dry_<route>[_conn<M>].csv
+    # 기본 계획 파일(09/24 기준)은 덮어쓰지 않도록 이름 분리
+    # 09/28: legacy 외 루트는 drive_plan_dry_<route>[_conn<M>].csv
     tag = "" if ROUTE_NAME == "legacy" else f"_{ROUTE_NAME}"
-    # 세션32: frozen_v1 이 아닌 맵은 맵 해시 앞 8자를 붙여 v1 CSV 를 덮어쓰지 않는다
+    # 10/07: frozen_v1 이 아닌 맵은 맵 해시 앞 8자를 붙여 v1 CSV 를 덮어쓰지 않는다
     if file_sha16() != FROZEN_V1_SHA16:
         tag += f"_map{file_sha16()[:8]}"
     path = LOG_DIR / (f"drive_plan_dry{tag}.csv" if not conn_spacing
@@ -725,12 +725,12 @@ def is_on_road(carla_map, location):
 
 
 def classify_body(carla_map, vehicle, tf, plan_set):
-    """세션14 판정. 차 중심과 bbox 바닥 4꼭짓점을 지도에 질의한다.
+    """09/24 판정. 차 중심과 bbox 바닥 4꼭짓점을 지도에 질의한다.
     n_corner_offlane = Driving 차선 위가 아닌 바닥 꼭짓점 수(0~4, 4 = 차체 전체 차선 밖)
     sidewalk      = 중심 또는 꼭짓점 하나라도 Sidewalk lane 위(기록만)
     반대 차선 = 계획 밖 road 의 Driving 차선이고 진행방향이 차 진행방향과 OPPOSITE_DEG 넘게
                 다름(쌍둥이 half-road·반대 방향 커넥터)
-    opposite_lane    = 차 **중심**이 반대 차선 위(기록). 중단은 in_plan_lane 이 False 일 때만(세션15)
+    opposite_lane    = 차 중심이 반대 차선 위(기록). 중단은 in_plan_lane 이 False 일 때만(09/25)
     opposite_depth_m = 반대 차선 위 꼭짓점의 침범 깊이 최댓값(기록만, 0 = 없음). 깊이는 그
                        차선의 왼쪽 경계(쌍둥이와 공유하는 기준선 쪽)에서 잰 거리
                        = 차선폭/2 + 그 차선 중심에서의 횡거리(+오른쪽), 0~차선폭으로 자름.
@@ -800,7 +800,7 @@ def setup_collision_sensor(world, vehicle, path):
     writer.writeheader()
     log_file.flush()
 
-    printed = []  # 첫 충돌 1건만 화면 출력(세션10: print 폭주 후 SIGABRT 재발 방지)
+    printed = []  # 첫 충돌 1건만 화면 출력(09/22: print 폭주 후 SIGABRT 재발 방지)
 
     def on_collision(event):
         imp = event.normal_impulse
@@ -886,10 +886,10 @@ def compare_with_plan(transitions):
     return actual
 
 
-# ---------------- 세션13: 동기 모드 / BasicAgent / 급회전 이탈량 ----------------
+# ---------------- 09/24: 동기 모드 / BasicAgent / 급회전 이탈량 ----------------
 
 def wants_sync(controller):
-    """agent 만 동기 모드. tm 은 세션10~13 과 같은 비동기 그대로."""
+    """agent 만 동기 모드. tm 은 09/22~09/24 과 같은 비동기 그대로."""
     return controller == "agent"
 
 
@@ -963,8 +963,8 @@ def make_agent(vehicle, carla_map, plan):
 
 def sharp_polylines(carla_map, roads=None):
     """road 별 차선(lane -1) 중심선 표본: (s, x, y, 오른쪽단위벡터, 차선폭).
-    기본은 급회전 커넥터, 세션15 부터 계획 15 road 전체에도 쓴다.
-    세션18: 기본값을 정의 시점이 아니라 호출 시점 SHARP_CONNECTORS 로(--route 반영)."""
+    기본은 급회전 커넥터, 09/25 부터 계획 15 road 전체에도 쓴다.
+    09/28: 기본값을 정의 시점이 아니라 호출 시점 SHARP_CONNECTORS 로(--route 반영)."""
     if roads is None:
         roads = SHARP_CONNECTORS
     lengths = read_road_lengths()
@@ -991,9 +991,9 @@ def _lateral(pts, x, y):
 
 
 def in_plan_lane(polys, loc):
-    """세션15 반대 차선 판정 보완. loc 가 계획 road 어느 하나의 차선(lane -1) 안이면 True.
+    """09/25 반대 차선 판정 보완. loc 가 계획 road 어느 하나의 차선(lane -1) 안이면 True.
     = 가장 가까운 중심선 표본까지 거리 <= 그 표본 차선폭/2 (표본 간격 SHARP_SAMPLE_M).
-    junction 안에서 계획 커넥터와 반대 방향 커넥터의 차선 영역이 겹치면(세션15 r1428/r1434)
+    junction 안에서 계획 커넥터와 반대 방향 커넥터의 차선 영역이 겹치면(09/25 r1428/r1434)
     get_waypoint 는 한쪽만 돌려준다. 차 중심이 자기 계획 차선 안이면 반대 차선으로 치지 않는다."""
     for pts in polys.values():
         for _, px, py, _, _, w in pts:
@@ -1049,7 +1049,7 @@ def summarize_sharp(stats, collision_path):
 
 
 def plan_track(flat, loc):
-    """세션19. 계획 경로 중심선(0.25m 표본) 기준 위치. 반환 (road, lat, 거리, 차선폭).
+    """09/30. 계획 경로 중심선(0.25m 표본) 기준 위치. 반환 (road, lat, 거리, 차선폭).
     lat + = 진행방향 오른쪽(인도 쪽), - = 왼쪽(중앙선·반대 방향 쪽)."""
     best, bi = 1e18, 0
     for k, (_, p) in enumerate(flat):
@@ -1064,7 +1064,7 @@ _LENGTHS = {}
 
 
 def road_radius(carla_map, rid):
-    """평균R = 길이/|끝점 회전|, R2min = 2m 창 최소 반경(세션11·s18 A2 정의, 0.5m 간격, 양끝 1m 제외)."""
+    """평균R = 길이/|끝점 회전|, R2min = 2m 창 최소 반경(09/24·s18 A2 정의, 0.5m 간격, 양끝 1m 제외)."""
     wps = carla_map.get_waypoint_xodr
     a = wps(rid, LANE_ID, 0.001)
     # 길이는 xodr 에서 읽는다(서버 맵과 같은 파일인지는 첫 줄·server_map 해시로 확인)
@@ -1087,8 +1087,8 @@ def road_radius(carla_map, rid):
 
 
 def summarize_departures(segs, radius):
-    """세션19 기록: 차선 이탈 구간(차체 기준). 방향 + = 인도 쪽, - = 중앙선 쪽."""
-    print("\n=== 차선 이탈 구간 (차체 기준, 계획 중심선 기준, 세션19) ===")
+    """09/30 기록: 차선 이탈 구간(차체 기준). 방향 + = 인도 쪽, - = 중앙선 쪽."""
+    print("\n=== 차선 이탈 구간 (차체 기준, 계획 중심선 기준, 09/30) ===")
     if not segs:
         print("없음")
         return
@@ -1104,7 +1104,7 @@ def summarize_departures(segs, radius):
 
 
 def summarize_body(body_stats):
-    """세션14 판정 열의 road 별 요약(기록만 조건 포함)."""
+    """09/24 판정 열의 road 별 요약(기록만 조건 포함)."""
     print("\n=== 차체 판정 road 별 (tick 수, 최대 차선밖 꼭짓점) ===")
     if not body_stats:
         print("기록 없음")
@@ -1130,7 +1130,7 @@ def follow_transform(tf):
 
 def settle_and_measure(world, vehicle, end_tf, t_judge, judge_loc, log_writer, log_file, t0,
                        spectator):
-    """세션20 --measure-stop. 완주 판정 직후 호출(제동은 이미 적용, 1 tick 진행된 상태).
+    """10/02 --measure-stop. 완주 판정 직후 호출(제동은 이미 적용, 1 tick 진행된 상태).
     반환 dict: 정지까지 시간·거리, 최종 위치의 정차점 대비 오차.
     오차 부호: 종방향 + = 정차점을 지나침(진행방향 앞), 횡방향 + = 오른쪽(인도 쪽)."""
     fwd, right = end_tf.get_forward_vector(), end_tf.get_right_vector()
@@ -1190,7 +1190,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     world = client.get_world()
     carla_map = world.get_map()
     print(f"맵: {carla_map.name}, spawn point {len(carla_map.get_spawn_points())}개")
-    # 세션19: 서버에 실제로 올라간 맵(to_opendrive)의 해시. 첫 줄의 파일 해시와 대조
+    # 09/30: 서버에 실제로 올라간 맵(to_opendrive)의 해시. 첫 줄의 파일 해시와 대조
     srv16 = hashlib.sha256(carla_map.to_opendrive().encode("utf-8")).hexdigest()[:16]
     print(f"server_map_sha256={srv16} "
           f"({'파일과 일치' if srv16 == file_sha16() else '파일과 불일치 - 다른 맵이 로드됨'})")
@@ -1200,12 +1200,12 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
         print(f"기존 차량 액터 제거: {removed}")
 
     spawn = find_plain_road_spawn_on_path(carla_map, (221.40, -1086.84), ROUTE_ROADS)
-    # 세션45: 첫 road 에 스폰 지점이 없으면(세션44 north2main·back2main 은 3번째 road 에 스폰돼 뒤 계획점으로 돌다 실패)
+    # 10/09: 첫 road 에 스폰 지점이 없으면(10/09 north2main·back2main 은 3번째 road 에 스폰돼 뒤 계획점으로 돌다 실패)
     # 노선 start_s(출발 정류장) waypoint 에 바로 놓는다(높이 +0.5m, 스폰 지점 z 와 같게). start_s 없는 노선은 기존 그대로
     start_s = ACTIVE_ROUTES[ROUTE_NAME].get("start_s")
     first_has = spawn is not None and \
         carla_map.get_waypoint(spawn.location, project_to_road=True).road_id == ROUTE_ROADS[0]
-    # 세션46: spawn_at_start 노선(30쌍)은 스폰 지점 유무와 관계없이 항상 승강장에서 출발
+    # 10/09: spawn_at_start 노선(30쌍)은 스폰 지점 유무와 관계없이 항상 승강장에서 출발
     if start_s is not None and (not first_has or ACTIVE_ROUTES[ROUTE_NAME].get("spawn_at_start")):
         tf = carla_map.get_waypoint_xodr(ROUTE_ROADS[0], LANE_ID, start_s).transform
         spawn = carla.Transform(carla.Location(tf.location.x, tf.location.y, tf.location.z + 0.5), tf.rotation)
@@ -1236,8 +1236,8 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     plan_polys = sharp_polylines(carla_map, ROUTE_ROADS)
     plan_flat = [(rid, p) for rid, pts in plan_polys.items() for p in pts]
     route_radius = {} if STRICT else {r: road_radius(carla_map, r) for r in ROUTE_ROADS}
-    dep_segs = []                   # 세션19 차선 이탈 구간 기록
-    print(f"판정: {'strict(세션14~18 규칙)' if STRICT else 'record(세션19, 종료/기록 분리)'}")
+    dep_segs = []                   # 09/30 차선 이탈 구간 기록
+    print(f"판정: {'strict(09/24~09/28 규칙)' if STRICT else 'record(09/30, 종료/기록 분리)'}")
     sharp_stats = {}
     body_stats = {}
     slow_roads = {r for r, a in SHARP_CONNECTORS.items() if abs(a) >= SLOW_TURN_DEG}
@@ -1251,7 +1251,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     log_writer.writeheader()
     log_file.flush()
     print(f"궤적 로그(tick마다 기록): {log_path}")
-    # 세션36: 목표점 계측(ROUTE_TRACE road 위에서만). 기존 drive_log 열은 그대로 두려고 별도 파일
+    # 10/07: 목표점 계측(ROUTE_TRACE road 위에서만). 기존 drive_log 열은 그대로 두려고 별도 파일
     trace_file = trace_writer = None
     if ROUTE_TRACE and controller == "agent":
         trace_path = LOG_DIR / f"target_log_{ts}.csv"
@@ -1267,14 +1267,14 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
     transitions = []
     fail_reason = None
     arrived = False
-    arrive_kind = None              # 세션21: "정차점 통과" | "정지 근접"
+    arrive_kind = None              # 10/02: "정차점 통과" | "정지 근접"
     diverged_note = None
     t_now = 0.0
     collision_path = None
     original_settings = None        # 동기 모드 전환 시에만 채워짐
     agent = None
     tm = None
-    stop_meas = None                # 세션20 --measure-stop 결과
+    stop_meas = None                # 10/02 --measure-stop 결과
     try:
         bp = world.get_blueprint_library().find("vehicle.audi.a2")
         vehicle = world.spawn_actor(bp, spawn)
@@ -1308,7 +1308,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
         wall0 = time.monotonic()
         tick_checked = False
         done_warned = False
-        aim_default = None          # 세션36: LocalPlanner 원래 base_min_distance(첫 사용 때 읽음)
+        aim_default = None          # 10/07: LocalPlanner 원래 base_min_distance(첫 사용 때 읽음)
         last_road = None
         plan_idx = -1               # 계획에서 마지막으로 매칭된 road 위치
         stop_run = {}               # 중단 조건별 (연속 tick, 시작 t)
@@ -1451,7 +1451,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
                 tick_checked = True
 
             # 완주: 마지막 road 위 s>=ARRIVE_MIN_S 이고 종점 5m 이내(legacy: road1278 s>=95)
-            # 세션21: OR 정지 근접(정체 조건 충족 순간 정차점 ARRIVE_STOP_DIST_M 이내). 아래 정체 판정보다 먼저 본다
+            # 10/02: OR 정지 근접(정체 조건 충족 순간 정차점 ARRIVE_STOP_DIST_M 이내). 아래 정체 판정보다 먼저 본다
             pass_end = road_id == ROUTE_ROADS[-1] and s_val >= ARRIVE_MIN_S \
                 and loc.distance(end_loc) <= ARRIVE_DIST_M
             stop_near = (not STRICT and speed < STUCK_SPEED_MPS and stuck_t0 is not None
@@ -1494,7 +1494,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
                 break
 
             if STRICT:
-                # 실패조건 2(세션14 변경): 차체 전체 차선 밖 / 반대 차선 / 메시 밖 이
+                # 실패조건 2(09/24 변경): 차체 전체 차선 밖 / 반대 차선 / 메시 밖 이
                 # 연속 OFFROAD_TICKS tick 이상 + OFFROAD_MIN_SECONDS 이상. 인도·차선 이탈은 기록만
                 conds = {"차체 전체 주행 차선 밖": (body["n_corner_offlane"] == 4,
                                                     OFFROAD_TICKS, OFFROAD_MIN_SECONDS),
@@ -1503,7 +1503,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
                                                   OFFROAD_TICKS, OFFROAD_MIN_SECONDS),
                          "메시 밖": (body["mesh_out"], OFFROAD_TICKS, OFFROAD_MIN_SECONDS)}
             else:
-                # 세션19: 계획 중심선 기준. 기록(차선 이탈 구간)은 종료와 별개로 쌓는다
+                # 09/30: 계획 중심선 기준. 기록(차선 이탈 구간)은 종료와 별개로 쌓는다
                 p_road, p_lat, p_dist, p_w = plan_track(plan_flat, loc)
                 body_over = abs(p_lat) + half_w - p_w / 2.0
                 if body_over > 0:
@@ -1554,7 +1554,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
             # agent: 다음 tick 에 쓸 제어 계산·적용 (tm 은 서버측 autopilot)
             if agent is not None:
                 if sharp_speed or ROUTE_SLOW:
-                    # 세션35: --sharp-speed 대상과 노선 전용 감속(ROUTE_SLOW)을 한 표로. sharp_speed 만 있을 때 동작은 전과 같다
+                    # 10/07: --sharp-speed 대상과 노선 전용 감속(ROUTE_SLOW)을 한 표로. sharp_speed 만 있을 때 동작은 전과 같다
                     targets = {r: sharp_speed for r in slow_roads} if sharp_speed else {}
                     targets.update(ROUTE_SLOW)
                     hit = targets.get(road_id)
@@ -1578,7 +1578,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
                           "소진됨(이후 제동, 정체 조건으로 판정)")
                     done_warned = True
                 if ROUTE_AIM:
-                    # 세션36: 겨냥 거리 기본값을 대상 road 위에서만 바꾸고 벗어나면 원래 값(LocalPlanner 기본 3.0)으로.
+                    # 10/07: 겨냥 거리 기본값을 대상 road 위에서만 바꾸고 벗어나면 원래 값(LocalPlanner 기본 3.0)으로.
                     # LocalPlanner 에 setter 가 없어 opt_dict 와 같은 이름의 속성 _base_min_distance 를 직접 쓴다
                     if aim_default is None:
                         aim_default = lp._base_min_distance
@@ -1602,7 +1602,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
         print("\n=== 요약 ===")
         print(f"route: {ROUTE_NAME} (종점 road{ROUTE_ROADS[-1]} s={LAST_ROAD_END_S})")
         print(f"결과: {'완주' if arrived else '실패 - ' + str(fail_reason)}"
-              f"{' (정지 근접 판정, 세션21)' if arrive_kind == '정지 근접' else ''}")
+              f"{' (정지 근접 판정, 10/02)' if arrive_kind == '정지 근접' else ''}")
         print(f"주행 시간(시뮬): {t_now:.1f}s")
         if diverged_note:
             print(f"계획 이탈 기록: {diverged_note}")
@@ -1618,7 +1618,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
         print(f"follow={'on' if follow else 'off'}")
         if stop_meas:
             m = stop_meas
-            print("\n=== 실제 정지 위치 (세션20 --measure-stop) ===")
+            print("\n=== 실제 정지 위치 (10/02 --measure-stop) ===")
             print(f"판정 시점: t={m['t_judge']:.2f}s 위치({m['x']:.2f},{m['y']:.2f}) "
                   f"속도 {m['v_judge']:.2f}m/s({m['v_judge'] * 3.6:.1f}km/h) "
                   f"정차점까지 {m['d_judge']:.2f}m (종방향 {m['lon_judge']:+.2f}m)")
@@ -1646,7 +1646,7 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
             print(f"궤적 로그: {log_path}")
 
             # 정리 순서: 센서(차량에 부착) 먼저 stop->destroy, 그 다음 vehicle.
-            # 세션5처럼 서버가 액터를 먼저 제거했을 경우에 대비해 각각 try/except.
+            # 09/19처럼 서버가 액터를 먼저 제거했을 경우에 대비해 각각 try/except.
             if collision_sensor is not None:
                 try:
                     collision_sensor.stop()
@@ -1680,9 +1680,9 @@ def main(controller="agent", conn_spacing=None, sharp_speed=None, follow=True,
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="확정 경로 주행 시험(세션13: agent 기본)")
+    ap = argparse.ArgumentParser(description="확정 경로 주행 시험(09/24: agent 기본)")
     ap.add_argument("--controller", choices=["agent", "tm"], default="agent",
-                    help="agent=BasicAgent+동기 20Hz(기본), tm=TM set_path+비동기(세션10~13 재현)")
+                    help="agent=BasicAgent+동기 20Hz(기본), tm=TM set_path+비동기(09/22~09/24 재현)")
     g = ap.add_mutually_exclusive_group()
     g.add_argument("--dry-plan", action="store_true", help="서버 없이 계획 표본만 계산")
     g.add_argument("--restore-async", action="store_true",
@@ -1697,20 +1697,20 @@ if __name__ == "__main__":
                                         "north2main", "south2main", "middle2main", "yangseong2main",
                                         "back2main"] + sorted(ROUTES_PAIRS_S46),
                     default="legacy",
-                    help="정차 루트(세션18). legacy=세션5~17 경로(기본), back=v2 맵에서만(세션32), "
-                         "*2main=v3 후보 s43 맵에서만(세션44), p_*=v3 후보 s46 맵에서만(세션46)")
+                    help="정차 루트(09/28). legacy=09/19~09/26 경로(기본), back=v2 맵에서만(10/07), "
+                         "*2main=v3 후보 s43 맵에서만(10/09), p_*=v3 후보 s46 맵에서만(10/09)")
     ap.add_argument("--xodr", type=Path, default=None,
-                    help="맵 xodr(세션32). 기본 frozen_v1. 해시로 노선 표를 고른다(MAP_ROUTES)")
+                    help="맵 xodr(10/07). 기본 frozen_v1. 해시로 노선 표를 고른다(MAP_ROUTES)")
     ap.add_argument("--strict", action="store_true",
-                    help="세션14~18 판정 규칙 그대로(기본: 세션19 종료/기록 분리 판정)")
+                    help="09/24~09/28 판정 규칙 그대로(기본: 09/30 종료/기록 분리 판정)")
     ap.add_argument("--measure-stop", action="store_true",
                     help="완주 판정 뒤 제동 유지하며 완전 정지까지 돌려 실제 정지 위치 오차 기록"
-                         "(세션20, 기본 꺼짐 = 판정 순간 종료)")
+                         "(10/02, 기본 꺼짐 = 판정 순간 종료)")
     args = ap.parse_args()
     STRICT = args.strict
     if args.xodr is not None:
         XODR_PATH = args.xodr.resolve()
-    # 세션19: 두 맵 병행 대비. 로그 첫 줄에 맵 파일 sha256 앞 16자
+    # 09/30: 두 맵 병행 대비. 로그 첫 줄에 맵 파일 sha256 앞 16자
     print(f"map_sha256={file_sha16()} ({XODR_PATH.name})")
     if file_sha16() not in MAP_ROUTES:
         print(f"노선 표 없는 맵(sha {file_sha16()}). 알려진 맵: {sorted(MAP_ROUTES)}. 실행하지 않고 종료")
@@ -1728,7 +1728,7 @@ if __name__ == "__main__":
     if args.sharp_speed and not SHARP_CONNECTORS:
         print(f"경고: route={args.route} 에는 급회전 커넥터가 없어 --sharp-speed 대상 없음")
     if args.controller == "tm" and (args.conn_spacing or args.sharp_speed):
-        ap.error("--conn-spacing/--sharp-speed 는 agent 전용(tm 은 세션10~13 재현용)")
+        ap.error("--conn-spacing/--sharp-speed 는 agent 전용(tm 은 09/22~09/24 재현용)")
     if args.conn_spacing is not None and args.conn_spacing <= 0:
         ap.error("--conn-spacing 은 0보다 커야 함")
     if args.dry_plan:

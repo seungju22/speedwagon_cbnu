@@ -308,7 +308,7 @@ def main():
         prev = (rd, forward)
         prev_exit_h = exit_h
     L.append(f"경로상 junction: {sorted(seen_j, key=int)} "
-             f"(지시서 9개와 일치: {seen_j == ROUTE_JUNCTIONS})")
+             f"(작업 메모 9개와 일치: {seen_j == ROUTE_JUNCTIONS})")
     r1917 = roads["1917"]
     L.append(f"road1917: junction={r1917['junction']} len={r1917['length']:.2f} "
              f"in_route={1917 in ROUTE}")

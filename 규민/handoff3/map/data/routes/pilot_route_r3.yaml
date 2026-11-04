@@ -1,5 +1,5 @@
-# 노선 파일 3판(2026-10-25): 2판(pilot_route_r2.yaml 06a0cfb159c5c5d9)에서 platforms 참조를 승강장 2판으로, 정류장마다 alt_goal(대체 정차점 뒷축 목표)을 더함. 노선·목표·구간 값은 2판과 같음
-# 노선 파일 2판(2026-10-13): 1판(pilot_route_r1.yaml a9ca2108)에서 platforms 참조만 바꿈. 노선·목표·구간 값은 1판과 같다
+# 노선 파일 3판(2026-10-25): 2판(pilot_route_r2.yaml 5dbc53b4bf5185df)에서 platforms 참조를 승강장 2판으로, 정류장마다 alt_goal(대체 정차점 뒷축 목표)을 더함. 노선·목표·구간 값은 2판과 같음
+# 노선 파일 2판(2026-10-13): 1판(pilot_route_r1.yaml 71e0035d)에서 platforms 참조만 바꿈. 노선·목표·구간 값은 1판과 같다
 # 시범 노선(2026-10-13): 정문(이쪽) 출발 -> 중문(건너편) 통과 -> 도서관 북문 정차 -> 양성재(이쪽) 종점
 # 좌표는 지도 좌표계(xodr 평면 = Autoware map). 승강장 값은 map/data/shuttle_platforms_v31.yaml 의 id 로 찾는다
 # 미션 노드: 한 운행 안에서 '요청 없는 정류장 지나가기'(중문)와 '요청 있는 정류장 서기'(북문)를 같이 보인다
@@ -11,7 +11,7 @@
 # 자세한 것: map/docs/shuttle_route_file.md '시범 노선', map/docs/map_session56b_report.md
 id: pilot
 platforms_file: map/data/shuttle_platforms_v31_r2.yaml  # 3판: 대체 정차점(alt_stop)이 든 승강장 2판
-platforms_sha256_16: 143e5c7259c7ce2c  # 위 파일. 1판 본문(정차점·구역)은 바이트 같음
+platforms_sha256_16: ecb5b9154dbe6928  # 위 파일. 1판 본문(정차점·구역)은 바이트 같음
 xodr_sha256_16: 214507afc87c2523
 lanelet2_sha256_16: 28a57711094effaf  # 10/12 nB(83edb775 에서 r1318·r1188 뺌). 이 노선 세 구간 레인렛은 83edb775 와 같다
 status: ready  # 세 구간 모두 I6-2 도착, 차체 검사 0점(28a57711)

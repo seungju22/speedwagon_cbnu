@@ -24,16 +24,16 @@ frozen_v1·v2·v3 와 그 문서는 그대로 둠. v3 결과는 계속 v3 기준
   - 파일 머리의 map_sha256_16 은 v3 값(a17ab012) 그대로임
 - 레이어 데이터
   - map/data/buildings_layout_v3.csv ac9bd41d4ef7561f9d3f601a04dd5919729f06cb7f3f3203e9fb1829d5cf3158, 19,487
-  - map/scripts/place_campus_layers.py 8b067484ad98c62c801e03ce55dcf985dbda0981c02497f2d0d04f05296c1645, 41,254
+  - map/scripts/place_campus_layers.py 6f9ac6ad248b98f3060e59bf4bf7a31ad782761a317f18892d1f78066c3d40ce, 41,254
   - 배치 결과(dry, 표현 나): map/docs/logs/campus_layers_dry_나_s54_v31_actors.csv
     dcf93ea8e4103baacadda0fd59a544d0ed68ed9e70e752fd32f80d4299852fdb, 100,445
-    / campus_layers_dry_나_s54_v31.json 18287ed60591578d7e1ee5178aa9816432099724b01ed9f388cdaaf3ec9e9975, 233,009
+    / campus_layers_dry_나_s54_v31.json d8dfbc2121aa8269ea9181204129989aa4a5c7d332589f8ab421a8fa4d4bd92b, 233,009
     (건물 721·정류장 10, 침범 0. I6 주행은 Plane 포함 732 소환)
 - 노선: map/tests/test_drive.py ROUTES_V3S46(5노선 + 30쌍). v3.1 에서 road id 그대로라 같은 표를 씀
 
 ## Autoware 지도 만든 법
-- 동결 xodr -> autoware_map/scripts/l1_build_lanelet2.py(2251fe0f) --chord-fix map/build_v31_s54/s54_chord_list_no1317_1825.json(d20cafc7)
-  -> 빌더 출력 83edb7755588184f(lanelet 704) -> map/scripts/s55_drop_lanelets.py(5dc2e15b) 1318 1188 -> 28a57711(lanelet 702)
+- 동결 xodr -> autoware_map/scripts/l1_build_lanelet2.py(4bc71808) --chord-fix map/build_v31_s54/s54_chord_list_no1317_1825.json(d20cafc7)
+  -> 빌더 출력 83edb7755588184f(lanelet 704) -> map/scripts/s55_drop_lanelets.py(c289e3d8) 1318 1188 -> 28a57711(lanelet 702)
 - 한 번에 다시 만들고 해시 맞추기: bash map/scripts/s57_make_v31_lanelet2.sh <새 폴더> (10/13 확인: 83edb775·28a57711·a6fb6af3 모두 같음)
 - 빌더에 제외 규칙을 넣지 않은 까닭: 빌더 안에서 레인렛을 빼면 끝점 공유 평균을 다시 해 이웃 레인렛 끝점이 바뀜.
   그러면 30쌍을 다시 봐야 함. 그래서 빌더 출력에서 두 road 의 레인렛 블록 줄만 지움(남은 줄 바이트 그대로, 추가 0줄)
@@ -104,12 +104,12 @@ frozen_v1·v2·v3 와 그 문서는 그대로 둠. v3 결과는 계속 v3 기준
 ## 노선 파일 (1판, 10/13)
 - 도로망(v3.1)과 따로 판을 올림. 1판 = 10/12~10/13 결과. 바이트 복사본을 판 이름으로 고정했음(cp -p --no-clobber, cmp 같음)
   - map/data/shuttle_platforms_v31_r1.yaml = shuttle_platforms_v31.yaml(56b 고친 판)
-    075b224c73008c38955d59467a2d4dee5d7e11ea69bd9711ac3c7c6aa3ed380e, 17,393
+    af7a6e12669e5640450bddf20ce5cc889515826f58a04ccc6adff163e7d92555, 17,393
   - map/data/routes/pilot_route_r1.yaml = pilot_route.yaml(56c 고친 판)
-    a9ca2108c49a45bc86dbdf3d4a0b2fb0c3885f1fb233a3fda92dd7abd6a249fa, 5,369
+    71e0035d6c75c68794bd3b2a6ccd4801b55cb212f0326cf3b76958c78ae64587, 5,369
   - 설명 문서(묶음 밖, 참고): map/docs/shuttle_route_file.md a717ae9ab2e1bb43(56c 고친 판)
 - 원래 이름 파일(shuttle_platforms_v31.yaml, pilot_route.yaml)은 맵 터미널이 계속 고칠 수 있음. 2판을 낼 때 _r2 로 복사함
-- 2판(10/14): map/data/routes/pilot_route_r2.yaml 06a0cfb159c5c5d9. 1판에서 platforms 참조만 shuttle_platforms_v31_r1.yaml(075b224c) 로 고정하고 해시를 적음. 승강장 파일은 1판 그대로
+- 2판(10/14): map/data/routes/pilot_route_r2.yaml 5dbc53b4bf5185df. 1판에서 platforms 참조만 shuttle_platforms_v31_r1.yaml(af7a6e12) 로 고정하고 해시를 적음. 승강장 파일은 1판 그대로
 - 내용
   - 승강장 11곳(lib_south_se 는 정차 불가: 문 구역 없음). 뒷축 목표, 문 위치·정차 여유·문 구역·전방 통로는 가정값
   - 시범 노선: 정문(이쪽) -> 중문(건너편, 통과) -> 도서관 북문(정차) -> 양성재(이쪽). xodr 2105.1m, status ready

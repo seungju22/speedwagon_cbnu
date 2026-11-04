@@ -129,7 +129,7 @@ def main():
     logs = BASE / "docs" / "logs"
     L = []
     P = L.append
-    P("# 맵세션11 Phase C-3 평활화 재변환 검증 (자동생성, 읽기전용)")
+    P("# 09/24 Phase C-3 평활화 재변환 검증 (자동생성, 읽기전용)")
     P("")
     P(f"- 원본 OSM: {a.osm_orig.name} / 사본 OSM: {a.osm_smooth.name}")
     P(f"- 대조군 xodr: {a.xodr_old.name} / 신규 xodr: {a.xodr_new.name}")

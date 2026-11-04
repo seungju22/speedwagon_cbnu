@@ -29,7 +29,7 @@ def block(pid):
     x, r31, r32 = a["alt"], RC["v31"][pid], RC["v32a"][pid]
     inc = r31["incoming"]
     ok = sum(1 for v in inc.values() if v["found"] and v["prefix_of_original"])
-    out = ["    alt_stop:  # 세션70 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김",
+    out = ["    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김",
            f"      shift_back_m: {x['shift_back_m']}  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값",
            f"      door_pose: {j(x['door_pose'])}",
            f"      base_link_goal: {j(x['base_link_goal'])}",
@@ -51,12 +51,12 @@ for ln in P1.read_text().splitlines():
         cur = ln.split(": ", 1)[1].strip()
     lines.append(ln)
 lines += block(cur)
-head = [f"# 승강장 파일 2판(세션70, 2026-10-25): 1판(shuttle_platforms_v31_r1.yaml {h16(P1)}) 본문 그대로에 승강장마다 alt_stop(대체 정차점)만 더함",
+head = [f"# 승강장 파일 2판(2026-10-25): 1판(shuttle_platforms_v31_r1.yaml {h16(P1)}) 본문 그대로에 승강장마다 alt_stop(대체 정차점)만 더함",
         "# 대체 정차점 만든 것 map/scripts/s70_alt_stops.py -> s70_alt_route_check.py -> s70_write.py. 설명 map/docs/shuttle_route_file.md '대체 정차점'"]
 P2.write_text("\n".join(head + lines) + "\n")
 
 rl = R2.read_text().splitlines()
-out = [f"# 노선 파일 3판(세션70, 2026-10-25): 2판(pilot_route_r2.yaml {h16(R2)})에서 platforms 참조를 승강장 2판으로, 정류장마다 alt_goal(대체 정차점 뒷축 목표)을 더함. 노선·목표·구간 값은 2판과 같음"]
+out = [f"# 노선 파일 3판(2026-10-25): 2판(pilot_route_r2.yaml {h16(R2)})에서 platforms 참조를 승강장 2판으로, 정류장마다 alt_goal(대체 정차점 뒷축 목표)을 더함. 노선·목표·구간 값은 2판과 같음"]
 for ln in rl:
     if ln.startswith("platforms_file:"):
         ln = "platforms_file: map/data/shuttle_platforms_v31_r2.yaml  # 3판: 대체 정차점(alt_stop)이 든 승강장 2판"

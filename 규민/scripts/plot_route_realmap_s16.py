@@ -8,7 +8,7 @@
 # 비교 경로(원본 OSM, oneway 무시):
 #   car = highway 중 footway/path/steps/cycleway/corridor/construction/track/rest_area 제외
 #   all = highway 전체(보행로 포함)
-# 타일: https://tile.openstreetmap.org, 캐시 scratchpad. (c) OpenStreetMap contributors
+# 타일: https://tile.openstreetmap.org, 캐시 임시 폴더. (c) OpenStreetMap contributors
 import csv
 import math
 import sys
@@ -182,7 +182,7 @@ def main():
             label=f"원본 OSM 최단(보행로 포함) {nx_len(paths['all']):.0f}m")
     tx, ty = to_ax(traj_ll)
     ax.plot(tx, ty, color="#d62728", lw=4, alpha=0.85, zorder=3,
-            label=f"세션16 주행 궤적 {drive_len:.0f}m")
+            label=f"09/26 주행 궤적 {drive_len:.0f}m")
     ax.plot(tx[0], ty[0], marker="*", ms=20, color="#2ca02c", mec="k", zorder=7)
     ax.text(tx[0] + 12, ty[0], "정문(출발)", fontsize=11, weight="bold", zorder=7,
             bbox=dict(fc="white", ec="none", alpha=0.8))
@@ -205,7 +205,7 @@ def main():
     ax.set_ylim(hi[1] - oy, lo[1] - oy)
     ax.set_xticks([]), ax.set_yticks([])
     ax.legend(loc="upper right", fontsize=10, framealpha=0.9)
-    ax.set_title("맵세션16 완주 경로 — 실제 지도(OSM 표준 타일, 위=북)\n"
+    ax.set_title("09/26 완주 경로 — 실제 지도(OSM 표준 타일, 위=북)\n"
                  f"궤적 {DRIVE_LOG.name}, CARLA(x,-y)->로컬TM 역변환", fontsize=12)
     ax.text(0.995, 0.003, "© OpenStreetMap contributors", transform=ax.transAxes,
             ha="right", va="bottom", fontsize=8, bbox=dict(fc="white", ec="none", alpha=0.8))

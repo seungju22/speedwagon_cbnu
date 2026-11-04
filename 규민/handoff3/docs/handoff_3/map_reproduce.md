@@ -31,7 +31,7 @@ Osm2Odr 출력 xodr 에는 생성 시각이 두 곳(3행 주석, header 의 date
 | 6 정류장 | s48_stops.py | stops_v3_draft_s46.yaml | stops_v3.yaml | befb9fdd |
 | 6 건물 1순위 | s49_b2_v3.py | 원본 OSM, v2·v3, s25_buildings.csv, s40_b2_cut.csv | buildings_layout_v3.csv | ac9bd41d |
 | 6 건물 2순위 | s66_b2_tier2.py | 원본 OSM, v3.1, s25_buildings.csv, 1순위 | buildings_layout_tier2_s66.csv | 4cb01976 |
-| 6 나무 | s66_trees.py | 원본 OSM, v3.1, 건물 둘 | trees_layout_s66.csv | 58301235 |
+| 6 나무 | s66_trees.py | 원본 OSM, v3.1, 건물 둘 | trees_layout_s66.csv | 0c60976b |
 
 스크립트는 모두 map/scripts/(Lanelet2 빌더만 autoware_map/scripts/). 각 스크립트 머리 주석에 방법과 근거 세션이 있음.
 노선표(map/tests/test_drive.py)를 s53_geom·place_campus_layers 가 불러 씀.
@@ -58,7 +58,7 @@ Osm2Odr 출력 xodr 에는 생성 시각이 두 곳(3행 주석, header 의 date
 7. Lanelet2 보정 목록 14 road(map/build_v31_s54/s54_chord_list_no1317_1825.json, d20cafc7). 10/11 비교로 고름
 8. Autoware 지도에서 뺀 r1318·r1188(s57_make_v31_lanelet2.sh 인자). 결정(10/14)
 9. 횡단보도·방지턱 keep 칸(map/data/crossings_v3_candidates.csv, 2596f8a3). 로드뷰를 보고 적음. v32a 는 X30·X44 포함(10/23 결정), v32b 는 뺌. 크기(횡단보도 폭 4.0m, 방지턱 길이 3.6m·높이 0.10m)는 가정값
-10. 정류장 자리(stops_v3_draft_s46.yaml, 93438752). 중문 후보 1(답, s46_stops.py), 그 앞 s45 초안. 이번 재현은 s48 정리 단계부터만 다시 돌림
+10. 정류장 자리(stops_v3_draft_s46.yaml, b3398f20). 중문 후보 1(답, s46_stops.py), 그 앞 s45 초안. 이번 재현은 s48 정리 단계부터만 다시 돌림
 11. 건물 1순위 30동·2순위 11동 고르기(s25_buildings.csv 의 tier, 노선 거리 기준)와 깎기 기준(s40_b2_cut.csv), 층 높이 4.0m·층수 없으면 4층 가정
 12. 승강장·노선 파일(shuttle_platforms_v31_r1·r2, pilot_route_r1~r3). s56_shuttle.py·s56_write.py·s70_write.py 로 만들었고 문 위치·정차 여유·문 구역은 가정값. 1판은 56b·56c 에서 고친 판이라 이번 재현에 넣지 않았음
 13. 장식 레이어 배치 결과(campus_layers_dry_*). 배치 스크립트 dry-run 출력이라 CARLA 메시 크기(mesh_sizes.json, 서버에서 잼)에 따라 바뀜. 이번 재현에 넣지 않았음

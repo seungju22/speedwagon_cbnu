@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 10/06 작성: 10/9 재변환 래퍼. 09/28 D 의 trial_convert_s18.py(scratchpad, 소멸)와 같은 방식을 프로젝트 안에 남긴다.
+# 10/06 작성: 10/9 재변환 래퍼. 09/28 D 의 trial_convert_s18.py(임시 폴더, 소멸)와 같은 방식을 프로젝트 안에 남긴다.
 # 왜 래퍼인가: fix_tags.py / classify_internal.py 는 출력 경로가 코드에 고정돼 그대로 실행하면 tags73 OSM 을 덮어쓰고,
 #   fix_tags.write_log 는 map/logs/fixed_way_ids.txt 를 덮어쓴다(s18_D_reconvert.md). 그래서 함수만 import 해 새 경로로 쓴다.
 #   smooth_osm_curves.py 는 --log-prefix 를 안 주면 session11_smoothing_*.csv 를 덮어쓴다 -> 반드시 새 접두어.
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["check", "run"])
     ap.add_argument("--variant", choices=["A", "B"], default="A",
-                    help="세션28 A/B 안. A = 추가 9 전부, B = 정문 출구 481950060 제외 8")
+                    help="10/07 A/B 안. A = 추가 9 전부, B = 정문 출구 481950060 제외 8")
     ap.add_argument("--tag", default=None,
                     help="출력 파일명 꼬리. 기본: A -> tags82_A, B -> tags81_B (73 + 추가 수)")
     ap.add_argument("--base", action="store_true", help="추가 way 없이 73건 그대로(재현성 기준선)")

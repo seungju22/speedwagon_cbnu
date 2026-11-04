@@ -163,7 +163,7 @@ def main():
     csv_rows_1247 = dedupe_by_s(all_rows, 1247, bin_size=0.1)
 
     lines = []
-    lines.append("# 맵세션9 물리접촉 vs TM제동 스크리닝 (읽기전용, 자동생성)")
+    lines.append("# 09/22 물리접촉 vs TM제동 스크리닝 (읽기전용, 자동생성)")
     lines.append("")
     lines.append(f"- CSV: {CSV_PATH.name}, road1247 중복제거 표본 {len(csv_rows_1247)}개(0.1m bin)")
     lines.append(f"- CSV 헤더: {list(all_rows[0].keys())}")

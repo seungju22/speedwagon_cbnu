@@ -1,6 +1,6 @@
 # 11/02: sensor_mapping_nocam_pps545k.yaml 사본에 vehicle_config.wheelbase 만 더함(밴용, 브리지 sensor_kit_loader 가 base_link<->CARLA 차 원점 거리를 wheelbase/2 로 봄)
 #   sprinter: CARLA 차 원점 -> 뒷축 1.729m(10/09 실측) -> 2 x 1.729 = 3.458(실제 축거 3.662 아님). T2_2021 등은 내일 재고 고침
-# 2026-10-24: sensor_mapping_nocam.yaml(b7189e92) 사본에서 LiDAR points_per_second 만 300000 -> 545455(= 300000 / 0.55).
+# 2026-10-24: sensor_mapping_nocam.yaml(1184f7d7) 사본에서 LiDAR points_per_second 만 300000 -> 545455(= 300000 / 0.55).
 #   브리지 버림 0.45·회전 20Hz 는 그대로. 버림 뒤 점 밀도가 10/14 기준 센서(30만, 버림 0)와 같아짐. CARLA 0.9.15 는 버리는 광선을 안 쏘므로 쏘는 광선은 1.82배
 # 2026-10-14: LiDAR 를 브리지 기본(sensor_mapping.yaml)으로 되돌림 64ch, 30만 점, 100m(이전 32ch·10만·50m 는 .bak_s59, 가벼운 LiDAR). 버림 0.45 는 브리지가 못 바꿔 그대로
 # I1 (2026-10-10) 카메라 없는 경량 센서 설정

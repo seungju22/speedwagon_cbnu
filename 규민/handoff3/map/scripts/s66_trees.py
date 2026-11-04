@@ -52,8 +52,8 @@ TREE = "/Game/Carla/Static/Vegetation/Trees/{0}.{0}"
 BUSH = "/Game/Carla/Static/Vegetation/Bushes/{0}.{0}"
 # 이름 -> (경로, 수관 반폭 m(배율 1), 근거)
 MESH = {
-    "SM_Acer_02": (TREE.format("SM_Acer_02"), 4.32, "세션15 bbox extent 4.32·4.06"),
-    "SM_Ash_01": (TREE.format("SM_Ash_01"), 7.30, "세션15 bbox extent 6.58·7.30"),
+    "SM_Acer_02": (TREE.format("SM_Acer_02"), 4.32, "09/25 bbox extent 4.32·4.06"),
+    "SM_Ash_01": (TREE.format("SM_Ash_01"), 7.30, "09/25 bbox extent 6.58·7.30"),
     "SM_Cypress": (TREE.format("SM_Cypress"), 2.5, "가정(안 잼)"),
     "SM_Bush_M_v1": (BUSH.format("SM_Bush_M_v1"), 1.5, "가정(안 잼)"),
 }
@@ -206,7 +206,7 @@ def main():
     ax.set_xlim(zx0, zx1)
     ax.set_ylim(zy1, zy0)
     ax.set_aspect("equal")
-    ax.set_title(f"세션66 나무 {len(out)}그루(초록 원 = 수관), 연두 선 OSM wood, 분홍 점선 노선 {ZONE_M:g}m, 파랑 건물 상자", fontsize=9)
+    ax.set_title(f"10/23 나무 {len(out)}그루(초록 원 = 수관), 연두 선 OSM wood, 분홍 점선 노선 {ZONE_M:g}m, 파랑 건물 상자", fontsize=9)
     fig.tight_layout()
     fig.savefig(FIG, dpi=110)
     print(f"-> {OUT.relative_to(BASE)}, {FIG.relative_to(BASE)}")

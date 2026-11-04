@@ -62,7 +62,7 @@ def main():
         print(f"road{rid} lane{lid} s={s0:.1f}~{s1:.1f} yaw변화 {d:+.1f}도")
     print(f"경로 위 커넥터 밖 급굴곡: {len(on_plan)}개")
 
-    print("\n=== 세션7 road1247 s 구간별 속도(m/s) ===")
+    print("\n=== 09/19 road1247 s 구간별 속도(m/s) ===")
     bins = defaultdict(list)
     for r in drive:
         if r["road_id"] == "1247":

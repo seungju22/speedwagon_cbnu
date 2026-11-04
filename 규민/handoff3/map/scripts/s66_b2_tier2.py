@@ -169,7 +169,7 @@ def main():
         ax.plot(p["x"], p["y"], marker="^", color="#d55181", ms=7, ls="")
     ax.set_aspect("equal")
     ax.invert_yaxis()
-    ax.set_title(f"세션66 2순위 {len(draw)}동(파랑 상자, 주황 OSM 윤곽), 회색 선 1순위 상자, 초록 경로 차선 (v3.1 214507af)", fontsize=9)
+    ax.set_title(f"10/23 2순위 {len(draw)}동(파랑 상자, 주황 OSM 윤곽), 회색 선 1순위 상자, 초록 경로 차선 (v3.1 214507af)", fontsize=9)
     fig.tight_layout()
     fig.savefig(FIG, dpi=110)
     print(f"-> {OUT.relative_to(BASE)}, {FIG.relative_to(BASE)}")

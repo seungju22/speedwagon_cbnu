@@ -190,7 +190,7 @@ def path_len(lengths, p, end_s=None):
 
 
 def part_b(nodes, ways):
-    print("## B. 양성재 노선과 후문 노선 겹침 (세션18 시험 맵, 채택 안 된 산출물을 읽기만 함)")
+    print("## B. 양성재 노선과 후문 노선 겹침 (09/28 시험 맵, 채택 안 된 산출물을 읽기만 함)")
     idmap = {}
     with open(LOGS / "s18_D_road_id_map.csv") as fh:
         for r in csv.DictReader(fh):

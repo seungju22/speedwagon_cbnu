@@ -50,7 +50,7 @@ ap.add_argument("--lidar", default="-0.390,0.0,1.840", help="CARLA 차 원점 �
 ap.add_argument("--log", default="")
 ap.add_argument("--check", type=int, default=0)
 ap.add_argument("--topic", default="/perception/object_recognition/objects",
-               help="세션67: 내는 토픽. clustering 모드 회차에서는 비교용 /perception/gt/objects 로 바꿔 검출 토픽에 안 섞이게 함")
+               help="10/23: 내는 토픽. clustering 모드 회차에서는 비교용 /perception/gt/objects 로 바꿔 검출 토픽에 안 섞이게 함")
 a = ap.parse_args()
 
 UNKNOWN, CAR, TRUCK, BUS, MOTORCYCLE, BICYCLE, PEDESTRIAN = 0, 1, 2, 3, 5, 6, 7

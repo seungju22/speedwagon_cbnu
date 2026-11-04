@@ -48,7 +48,7 @@ r = r.replace(r.split("\n", 1)[0], "# 순환 노선 v3.3d 1판(2026-11-04). v3.3
 R = yaml.safe_load(r)
 R["id"] = "circulation_v33d"; R["platforms_file"] = "map/data/shuttle_platforms_v33d_r1.yaml"; R["platforms_sha256_16"] = h16(P1)
 R["lanelet2"] = "map/maps/v33d/lanelet2_map.osm"; R["lanelet2_sha256_16"] = new16; R["length_m"] = a.loop_len
-R["note"] = R["note"].replace("후문 안쪽 다음 후문 앞 유턴 레인렛으로 돌아 나옴(사용자 11/3: 공간\n  있음, 맞은편 차가 안 올 때 돌림 = 판단 쪽 몫)", "")
+R["note"] = R["note"].replace("후문 안쪽 다음 후문 앞 유턴 레인렛으로 돌아 나옴(11/03: 공간\n  있음, 맞은편 차가 안 올 때 돌림 = 판단 쪽 몫)", "")
 R["note"] = R["note"].split("후문 안쪽 다음")[0] + "후문 안쪽 다음 후문 앞 섬을 한 바퀴 돌아 나옴(11/04: 공간 있음, 스프린터 반경. 맞은편 차가 안 올 때 돌림 = 판단 쪽 몫)"
 sg = next(s for s in R["segments"] if s["frm"] == "back_gate_inner_se"); sg["roads"] = SEG3; sg["length_m"] = a.seg3_len; sg["uturn_back"] = "back_gate_island"   # via_uturn 키는 모서리 유턴(lib_north) 표시라 따로 씀
 hdr = "\n".join(l for l in r.split("\n") if l.startswith("#")) + "\n"

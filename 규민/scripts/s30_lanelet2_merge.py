@@ -321,7 +321,7 @@ def main():
     ap.add_argument("xodr")
     ap.add_argument("lanes")
     ap.add_argument("--cr", help="CommonRoad 중간 .cr.xml. 주면 road -> lanelet 대응을 CR 경유로(권장)")
-    ap.add_argument("--idmap", help="옛 -> 새 road id 대응표 csv(s27_id_map). 주면 ROUTES 를 번역(세션31, 재변환 맵용)")
+    ap.add_argument("--idmap", help="옛 -> 새 road id 대응표 csv(s27_id_map). 주면 ROUTES 를 번역(10/07, 재변환 맵용)")
     ap.add_argument("--tols", default="0.01,0.05,0.1,0.3,0.5,1.0")
     ap.add_argument("--modes", default="ends,all")
     a = ap.parse_args()

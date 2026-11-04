@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 10/23 새 판: place_campus_layers.py(동결 v3.1 묶음, 8b067484)는 안 고치고, 그 함수를 불러 레이어 둘을 더함
+# 10/23 새 판: place_campus_layers.py(동결 v3.1 묶음, 6f9ac6ad)는 안 고치고, 그 함수를 불러 레이어 둘을 더함
 #   buildings2: 건물 2순위 11동(data/buildings_layout_tier2_s66.csv, s66_b2_tier2.py). 표현 나(정육면체 덩어리)
 #   trees:      가로수·풀숲(data/trees_layout_s66.csv, s66_trees.py). static.prop.mesh 나무 메시, 바닥 = 수관 원
 # 레이어는 --layers 로 하나씩 켜고 끔. 기본값(buildings,busstop)·다른 인자는 원래 스크립트와 같고, 기본 출력도 같음(10/23 dry-run 비교)
@@ -54,16 +54,16 @@ def tree_actors(path, frame):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="캠퍼스 장식 레이어 배치(세션66 판: buildings2·trees 추가)")
+    ap = argparse.ArgumentParser(description="캠퍼스 장식 레이어 배치(10/23 판: buildings2·trees 추가)")
     ap.add_argument("--set", choices=sorted(SETS), default="v2", help="레이어 판(--layers 를 안 줄 때만). v1 732, v2 978")
-    ap.add_argument("--layers", default=None, help=f"쉼표 목록 {LAYERS}. 주면 --set 대신 이것(세션66 판 기본은 buildings,busstop)")
+    ap.add_argument("--layers", default=None, help=f"쉼표 목록 {LAYERS}. 주면 --set 대신 이것(10/23 판 기본은 buildings,busstop)")
     ap.add_argument("--repr", choices=["가", "나", "다"], default="나",
-                    help="건물 표현(기본 나, 세션50 결정). 다 는 메시 실제 크기를 잰 뒤 다시 비교")
+                    help="건물 표현(기본 나, 10/11 결정). 다 는 메시 실제 크기를 잰 뒤 다시 비교")
     ap.add_argument("--mesh-sizes", type=Path, default=None, help="layers_bench.py 가 잰 메시 크기 JSON")
-    ap.add_argument("--tag", default=None, help="--dry-run 출력 이름(기본: 레이어·표현에서 만듦. 세션49 파일을 덮지 않게 줄 것)")
+    ap.add_argument("--tag", default=None, help="--dry-run 출력 이름(기본: 레이어·표현에서 만듦. 10/10 파일을 덮지 않게 줄 것)")
     ap.add_argument("--ground-mesh", choices=sorted(pcl.GROUND_MESHES), default=None, help=f"ground 레이어 메시(기본 {pcl.GROUND})")
     ap.add_argument("--seed", type=int, default=pcl.SEED, help="무작위 배치 레이어용(이번 구현 레이어는 쓰지 않음)")
-    ap.add_argument("--xodr", type=Path, default=None, help="기본: --set 판이면 v3.1 동결본, --layers 를 주면 v3(세션66 판과 같음)")
+    ap.add_argument("--xodr", type=Path, default=None, help="기본: --set 판이면 v3.1 동결본, --layers 를 주면 v3(10/23 판과 같음)")
     ap.add_argument("--layout", type=Path, default=pcl.LAYOUT)
     ap.add_argument("--layout2", type=Path, default=LAYOUT2, help="buildings2 레이어 layout(2순위)")
     ap.add_argument("--trees-layout", type=Path, default=TREES, help="trees 레이어 목록")

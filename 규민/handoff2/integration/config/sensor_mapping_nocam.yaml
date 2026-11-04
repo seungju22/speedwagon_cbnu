@@ -1,4 +1,4 @@
-# 세션59(2026-10-14): LiDAR 를 브리지 기본(sensor_mapping.yaml)으로 되돌림 64ch, 30만 점, 100m(이전 32ch·10만·50m 는 .bak_s59, 가벼운 LiDAR). 버림 0.45 는 브리지가 못 바꿔 그대로
+# 2026-10-14: LiDAR 를 브리지 기본(sensor_mapping.yaml)으로 되돌림 64ch, 30만 점, 100m(이전 32ch·10만·50m 는 .bak_s59, 가벼운 LiDAR). 버림 0.45 는 브리지가 못 바꿔 그대로
 # I1 (2026-10-10) 카메라 없는 경량 센서 설정
 # 원본: 컨테이너 안 /opt/autoware/autoware_carla_interface/share/
 #   autoware_carla_interface/config/sensor_mapping_light_weight.yaml

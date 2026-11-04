@@ -323,7 +323,7 @@ def main():
     # ---------- 출력 ----------
     lines = []
     P = lines.append
-    P("# 중문·후문 연결 후보 조사 (맵세션7 추가, 읽기전용)\n")
+    P("# 중문·후문 연결 후보 조사 (09/19 추가, 읽기전용)\n")
     P("재변환 금지(road id 전면 재부여 -> test_drive.py 15-road 경로 무효) 조건 하의 조사·후보 선정만. 태그 보정·변환 없음.\n")
     P("- 판정 기준: 캠퍼스 폴리곤(relation 6705106) 기준 way 노드가 전부 안=안, 전부 밖=밖, 섞임=횡단")
     P(f"- 878 road 포함 판정: way 를 {SAMPLE:.0f}m 간격 표본화, xodr 도로 {TOL:.0f}m 이내 비율 80% 이상=포함 / 20% 이하=없음 / 사이=일부 (보정 잔차 최대 {max(res):.1f}m 라 근사)")
@@ -374,7 +374,7 @@ def main():
         lo = ro + e / (111000.0 * math.cos(math.radians(rl)))
         tagc = "종점 성분" if c == main_comp else "고립"
         P(f"- 성분 대표 {c}: road {size}개, 중심 약 ({la:.4f},{lo:.4f}) {tagc}")
-    P(f"- 병원 권역 고립 성분(세션3, 약 36.6238,127.4625 300m 이내): " + (f"road {hosp_comp[1]}개" if hosp_comp else "없음(878 road 에 병원 권역이 없거나 종점 성분에 포함)"))
+    P(f"- 병원 권역 고립 성분(09/17, 약 36.6238,127.4625 300m 이내): " + (f"road {hosp_comp[1]}개" if hosp_comp else "없음(878 road 에 병원 권역이 없거나 종점 성분에 포함)"))
     P("")
 
     def dump(title, key_prefix):
@@ -420,7 +420,7 @@ def main():
     P("|---|---|---|---|---|---|")
     for wid in sorted(cand, key=lambda w: (sorted(cand[w])[0], -info[w]["L"])):
         v = info[wid]
-        P(wrow(v, "/".join(sorted(cand[wid])) + (f" [세션4 {S4_CANDS[wid]}]" if wid in S4_CANDS else "")))
+        P(wrow(v, "/".join(sorted(cand[wid])) + (f" [09/18 {S4_CANDS[wid]}]" if wid in S4_CANDS else "")))
     P("")
     out = "\n".join(lines)
     OUT_MD.write_text(out + "\n")

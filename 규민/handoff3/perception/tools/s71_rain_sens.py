@@ -12,7 +12,7 @@ def zmax(rho, R):
         lo, hi = (m, hi) if f(m) > 0 else (lo, m)
     return lo
 def stop(kmh): v = kmh / 3.6; return v * 1.0 + v * v / 2.0
-print("rho 0.07 그대로(세션70):", " ".join("%.2f" % zmax(0.07, R) for R in (0, 9, 25)))
+print("rho 0.07 그대로(10/25):", " ".join("%.2f" % zmax(0.07, R) for R in (0, 9, 25)))
 for r in (0.22, 0.10, 0.07):
     rho = r / math.pi
     print("r %.2f rho %.4f: 맑음 %.1f 9mm/h %.1f 25mm/h %.1f" % ((r, rho) + tuple(zmax(rho, R) for R in (0, 9, 25))))

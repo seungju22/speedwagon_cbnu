@@ -1,7 +1,7 @@
 # 순환 노선 v3.3b 1판(2026-11-02). 만든 것 map/scripts/s73_loop.py -> s73_write.py
 id: circulation_v33b
 platforms_file: map/data/shuttle_platforms_v33b_r1.yaml
-platforms_sha256_16: 4bc24072f7203a63
+platforms_sha256_16: ee8e97b52347128c
 lanelet2: map/maps/v33b/lanelet2_map.osm
 lanelet2_sha256_16: bf0d421ef989efe8
 xodr_sha256_16: 214507afc87c2523

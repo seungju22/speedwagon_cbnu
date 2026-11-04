@@ -133,7 +133,7 @@ def main():
         ax.set_title(f"{r['name'][:14]}{tag}\n깎임 {r['cut_ratio']*100:.1f}%", fontsize=8)
     for ax in list(axes.flat)[n:]:
         ax.axis("off")
-    fig.suptitle("세션25 1순위 30동: 빨간 선 = OSM 폴리곤, 파랑 = 도로 전체 폭 +0.5m 를 깎은 뒤, 회색 = 도로(차선+인도)", fontsize=10)
+    fig.suptitle("10/04 1순위 30동: 빨간 선 = OSM 폴리곤, 파랑 = 도로 전체 폭 +0.5m 를 깎은 뒤, 회색 = 도로(차선+인도)", fontsize=10)
     fig.tight_layout()
     fig.savefig(FIG, dpi=110)
     print(f"-> {OUT}, {FIG}")

@@ -98,7 +98,7 @@ def destroy_props(world):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="세션15 소품 시험(static.prop.mesh)")
+    ap = argparse.ArgumentParser(description="09/25 소품 시험(static.prop.mesh)")
     ap.add_argument("--destroy", action="store_true", help="static.prop.mesh 전부 제거")
     args = ap.parse_args()
     client = carla.Client(HOST, PORT)

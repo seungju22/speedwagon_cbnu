@@ -1,12 +1,12 @@
-# 셔틀 승강장 정보 v3.1 후보(맵세션56, 2026-10-12). 만든 스크립트 map/scripts/s56_shuttle.py -> s56_write.py
+# 셔틀 승강장 정보 v3.1 후보(2026-10-12). 만든 스크립트 map/scripts/s56_shuttle.py -> s56_write.py
 # 좌표는 지도 좌표계다(xodr 평면 = Autoware map 좌표, 단위 m, 방향 = x 축에서 반시계 도). CARLA 좌표는 (x, -y, -yaw)
 # 승강장 자리는 stops_v3.yaml 의 platforms 11곳 그대로다(road/s/lane). 이 파일은 그 위에 셔틀용 값을 더한다
 # lanelet_id 는 참고용이다. Lanelet2 지도를 다시 만들면 바뀐다. 위치는 x·y 로 찾는다
 # 설명과 가정값 바꾸는 법: map/docs/shuttle_route_file.md
 xodr: cbnu_campus_v31_candidate_s54.xodr
 xodr_sha256_16: 214507afc87c2523
-lanelet2_sha256_16: 83edb7755588184f  # I6-2 지도(s54 + 보정 목록 1317·1825 뺌). 28a57711(세션55 nB)은 r1318·r1188 만 빠지고 그 둘은 승강장 다각형에서 29.0m 이상 떨어져(중문이 가장 가까움) 11곳 값이 같다
-# 가정값(사용자 결정 2, 2026-10-13 그대로 씀): 문 위치(vehicle.door), 문 구역(door_zone_*), 전방 통로 8.0m, 정차 여유 앞뒤 1.0m.
+lanelet2_sha256_16: 83edb7755588184f  # I6-2 지도(s54 + 보정 목록 1317·1825 뺌). 28a57711(10/12 nB)은 r1318·r1188 만 빠지고 그 둘은 승강장 다각형에서 29.0m 이상 떨어져(중문이 가장 가까움) 11곳 값이 같다
+# 가정값(결정 2, 2026-10-13 그대로 씀): 문 위치(vehicle.door), 문 구역(door_zone_*), 전방 통로 8.0m, 정차 여유 앞뒤 1.0m.
 #   실제 셔틀 치수가 아니다. 정해지면 s56_shuttle.py 머리를 고쳐 다시 만든다
 stops_sha256_16: befb9fddffe112ad  # stops_v3.yaml
 vehicle:  # Autoware 1.9.0 이미지 autoware_sample_vehicle_description vehicle_info.param.yaml(sha256 7f3d7661c23a9768)
@@ -22,7 +22,7 @@ vehicle:  # Autoware 1.9.0 이미지 autoware_sample_vehicle_description vehicle
     x_from_base_link: 1.345  # (앞끝 3.79 + 뒤끝 -1.1) / 2
     y_from_base_link: -0.948  # 오른쪽 옆면 = -(wheel_tread/2 + side_overhang)
     width_assumed: 1.2  # 문 폭 가정. 문 구역 앞뒤 길이에만 쓴다
-  carla_prius_note: 'CARLA 프리우스 4.514 x 2.007, 뒷축->차 중심 1.399m(세션38·41). 문 앞뒤 차 0.054m'
+  carla_prius_note: 'CARLA 프리우스 4.514 x 2.007, 뒷축->차 중심 1.399m(10/08·10/09). 문 앞뒤 차 0.054m'
 params:  # 모두 가정값(실측 아님). 바꾸면 s56_shuttle.py 머리의 같은 이름을 고치고 두 스크립트를 다시 돌린다
   stop_zone_margin_front: 1.0  # I6-2 29쌍 정지 앞뒤 -0.443~-0.469m 의 약 2배
   stop_zone_margin_rear: 1.0
@@ -98,10 +98,10 @@ platforms:
     door_zone_area_m2: 0.0
     door_zone: [[568.96, 561.67], [569.24, 561.53], [569.58, 561.35], [569.16, 561.56]]
     front_corridor: [[572.78, 563.83], [579.94, 560.17], [578.8, 557.94], [571.64, 561.6]]
-    facility: []  # 정류장 시설 없음(세션50 결정)
+    facility: []  # 정류장 시설 없음(10/11 결정)
     check: {"ok": false, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {"1235": 17.727}, "body_out_of_lanelets_m2": 0.0}
     note: '문 구역 자리(차선 가장자리 바깥 1.5m)가 모두 다른 차로 r1369·r1235 위라 문 구역이 없다. 전방 통로도 r1235 와 겹친다. 정차 승강장으로 쓰지 않는다'
-    stoppable: false  # 사용자 결정 1(2026-10-13). stops_v3.yaml 은 I6 표와 맞추려고 그대로 둔다
+    stoppable: false  # 결정 1(2026-10-13). stops_v3.yaml 은 I6 표와 맞추려고 그대로 둔다
     status: '정차 불가: 문 구역 없음(r1369·r1235 위)'
   - id: lib_south_nw
     stop_id: lib_south

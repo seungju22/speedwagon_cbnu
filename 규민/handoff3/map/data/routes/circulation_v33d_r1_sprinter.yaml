@@ -226,7 +226,7 @@ segments:
   length_m: 444.6
 uturn:
 - lanelet: 52803
-  where: 도서관 길 꺾이는 모서리(r1415 -> r1409, 개신문화관 정면, 사용자 11/3 오후)
+  where: 도서관 길 꺾이는 모서리(r1415 -> r1409, 개신문화관 정면, 11/03 오후)
 - lanelet: 52800
   where: 후문 앞 r1251 끝 -> r1384
 cover_route:

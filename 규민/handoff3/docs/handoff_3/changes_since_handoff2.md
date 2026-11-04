@@ -12,7 +12,7 @@
 | perception/gt_objects/gt_objects2.py | ff857bb7c97dd5e3 | af9acbac09a026bf | 새 액터를 틱마다 바로 읽음(처음 낸 시각 1.03 -> 0.10s), 종류별 범위·비 인자 |
 | perception/docs/gt_objects2.md | ece7ead601c9b795 | 2b5a497d72fa1574 | 위 고침, 비 값, ρ 설명 |
 | perception/docs/interface.md | 1c3aa93bcd3abc62 | 8410b19fe2fed36c | 클러스터링 바꿔 끼우기, 시설·건물 점 지움 |
-| integration/docs/howto_campus.md | 1b4d977c3f806fac | 4052574b2bac06a6 | 레이어 v2, clustering, 센서 통일, 비 |
+| integration/docs/howto_campus.md | 7e96b9b650b31849 | 4052574b2bac06a6 | 레이어 v2, clustering, 센서 통일, 비 |
 | map/docs/shuttle_route_file.md | ff3d54edabcc2ec6 | 02d206745872a9ad | 대체 정차점 절 |
 
 ## 지도
@@ -20,7 +20,7 @@
 - v3.2(횡단보도 18·방지턱 24): map/maps/v32a(4719e5e5, 팀 판으로 정함), v32b(485429206e986154, X30·X44 뺌). 바꾸는 법 map/docs/v32_switch_howto.md. 도로·CARLA 월드는 v3.1 과 같음
 - 방지턱 모듈 켜기: integration/docs/tools/load_speed_bump_plugin.sh(SPEED_BUMP=1)
 - 장식 레이어 v2: 건물 2순위 11동(정육면체 164) + OSM 나무 82. map/scripts/place_campus_layers_s66.py, data/buildings_layout_tier2_s66.csv·trees_layout_s66.csv
-- 정류장 대체 정차점 10곳: 승강장 2판 shuttle_platforms_v31_r2.yaml(143e5c72), 노선 3판 pilot_route_r3.yaml(84b53336). 1판·노선 2판은 그대로
+- 정류장 대체 정차점 10곳: 승강장 2판 shuttle_platforms_v31_r2.yaml(8f9995c5), 노선 3판 pilot_route_r3.yaml(b3067b49). 1판·노선 2판은 그대로
 - 지도 재현: OSM 원본부터 v3.1·v3.2 와 레이어 자료까지 다시 만들어 해시를 견주는 s71_reproduce.sh 와 그 입력·스크립트, 문서 map_reproduce.md
 - 라이선스: 맨 위 LICENSE(우리 스크립트·문서 MIT), 파일별 구분과 남의 소프트웨어 고지 NOTICE.md
 - map/scripts/s27_turnfix.py 한 줄(개인 절대 경로를 스크립트 자리 기준으로, 뜻 같음)

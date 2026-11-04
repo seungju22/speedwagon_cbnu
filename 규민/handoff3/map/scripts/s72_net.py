@@ -187,5 +187,5 @@ if __name__ == "__main__":
             ax.text(Q[0] + 12, Q[1] - 4, "유턴 자리(만들어야 함)", fontsize=9, color="#0b5d36", zorder=9)
         ax.text(P[6][0] + 8, P[6][1] + 8, "볼라드", fontsize=9, zorder=9)
     ax.set_title(f"큰 도로 기준 안(주차장 면 안 70% 이하·way 100m 이상·막다른 way 아님): way {len(big_w)}개, road {len(big_r)}개"
-                 + (" / 세션72 보충 S-E 반영" if S72_BAN else ""), fontsize=11)
+                 + (" / 11/02 보충 S-E 반영" if S72_BAN else ""), fontsize=11)
     fig.tight_layout(); fig.savefig(OUT / "figs/big_roads.png", dpi=110); print(OUT / "figs/big_roads.png")

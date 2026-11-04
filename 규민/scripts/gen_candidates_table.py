@@ -55,11 +55,11 @@ def main():
     nb_nodes, nb_ways = load_nearby(OSM_RAW_PATH)
 
     lines = []
-    lines.append("# 도로 후보 목록 (Phase B, 맵세션4)")
+    lines.append("# 도로 후보 목록 (Phase B, 09/18)")
     lines.append("")
     lines.append(f"필터: highway=steps 제외, width<2.5m 제외, 기존19way와 "
                   f"직접 노드공유 안하면 제외, 길이<50m 제외. 임계값 조정 없이 "
-                  f"확정(사용자 승인, 2026-09-18) — 총 {len(candidates)}건.")
+                  f"확정(승인, 2026-09-18) — 총 {len(candidates)}건.")
     lines.append("")
     lines.append("그림: `map/docs/figures/05a~05d_candidates_*.png` "
                   "(번호가 이 표와 동일)")

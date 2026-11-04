@@ -150,7 +150,7 @@ def main():
     ax.set_ylim(y1, y0)
     ax.set_xticks([]), ax.set_yticks([])
     ax.legend(loc="upper left", fontsize=9, framealpha=0.9)
-    ax.set_title("맵세션16 도서관 출입구 재검토 — 북·남(구관), 동(신관) 면별 정차 후보\n"
+    ax.set_title("09/26 도서관 출입구 재검토 — 북·남(구관), 동(신관) 면별 정차 후보\n"
                  "OSM 표준 타일 zoom18, 위=북", fontsize=12)
     ax.text(0.995, 0.003, "© OpenStreetMap contributors", transform=ax.transAxes,
             ha="right", va="bottom", fontsize=8, bbox=dict(fc="white", ec="none", alpha=0.8))

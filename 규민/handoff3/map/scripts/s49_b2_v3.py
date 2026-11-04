@@ -366,7 +366,7 @@ def main():
     print(f"상자 vs 도로(차선+인도)+0.5m 겹침 {len(bad)} {bad}, 상자 vs 도로 자체 겹침 {sum(1 for w, b in allb if b.intersection(cutc).area > 1e-3)}")
 
     # 이름 없는 동 목록(OSM 원래 위경도 면적 중심)
-    lines = ["# 세션49 이름 없는 동 (세션25 1순위 30동 중) — 이름은 사용자가 채운다", "",
+    lines = ["# 10/10 이름 없는 동 (10/04 1순위 30동 중) — 이름은 직접 채운다", "",
              "위경도 = OSM 폴리곤 원래 위경도의 면적 중심(WGS84). CARLA 위경도 아님", ""]
     for r in bl:
         if r["name"]:

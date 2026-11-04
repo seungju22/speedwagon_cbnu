@@ -1,4 +1,4 @@
-# 승강장 파일 2판(2026-10-25): 1판(shuttle_platforms_v31_r1.yaml 075b224c73008c38) 본문 그대로에 승강장마다 alt_stop(대체 정차점)만 더함
+# 승강장 파일 2판(2026-10-25): 1판(shuttle_platforms_v31_r1.yaml af7a6e12669e5640) 본문 그대로에 승강장마다 alt_stop(대체 정차점)만 더함
 # 대체 정차점 만든 것 map/scripts/s70_alt_stops.py -> s70_alt_route_check.py -> s70_write.py. 설명 map/docs/shuttle_route_file.md '대체 정차점'
 # 셔틀 승강장 정보 v3.1 후보(2026-10-12). 만든 스크립트 map/scripts/s56_shuttle.py -> s56_write.py
 # 좌표는 지도 좌표계다(xodr 평면 = Autoware map 좌표, 단위 m, 방향 = x 축에서 반시계 도). CARLA 좌표는 (x, -y, -yaw)
@@ -138,7 +138,7 @@ platforms:
     note: '문 구역 자리(차선 가장자리 바깥 1.5m)가 모두 다른 차로 r1369·r1235 위라 문 구역이 없다. 전방 통로도 r1235 와 겹친다. 정차 승강장으로 쓰지 않는다'
     stoppable: false  # 결정 1(2026-10-13). stops_v3.yaml 은 I6 표와 맞추려고 그대로 둔다
     status: '정차 불가: 문 구역 없음(r1369·r1235 위)'
-    alt_stop: {"status": "없음", "reason": "원래 승강장이 정차 불가(문 구역 없음, 사용자 결정 1). 대체 정차점도 두지 않음"}
+    alt_stop: {"status": "없음", "reason": "원래 승강장이 정차 불가(문 구역 없음, 결정 1). 대체 정차점도 두지 않음"}
   - id: lib_south_nw
     stop_id: lib_south
     name: 도서관 남문

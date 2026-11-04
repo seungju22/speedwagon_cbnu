@@ -43,6 +43,6 @@ for i, s in enumerate(RT["stops"]):
     ax.text(g["x"] + 8, g["y"] + 6, f"{i + 1}. {s['name']}", fontsize=10, color="#0b5d36", zorder=6)
 for (x, y), nm in (((722, 641), "모서리 유턴(가)"), ((970, 280), "후문 앞 유턴"), ((537, 941), "N14 모서리")):
     ax.plot(x, y, "o", ms=22, mfc="none", mec="#1f5fd1", mew=2.2, zorder=7); ax.text(x + 14, y - 12, nm, fontsize=9, color="#1f5fd1", zorder=7)
-ax.set_aspect("equal"); ax.set_title(f"순환 노선 v3.3c(세션75) 약 {RT['length_m']:.0f}m, 정류장 {len(RT['stops'])}곳", fontsize=12)
+ax.set_aspect("equal"); ax.set_title(f"순환 노선 v3.3c(11/03) 약 {RT['length_m']:.0f}m, 정류장 {len(RT['stops'])}곳", fontsize=12)
 ax.set_xlabel("지도 x (m)"); ax.set_ylabel("지도 y (m)")
 OUT.parent.mkdir(parents=True, exist_ok=True); fig.tight_layout(); fig.savefig(OUT); print(OUT)

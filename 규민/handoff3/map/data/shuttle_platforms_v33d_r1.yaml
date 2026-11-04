@@ -1,6 +1,6 @@
 # 승강장 파일 v3.3d 1판(2026-11-04, v3.3c 1판과 값 같고 지도만 v3.3d: 후문 앞 섬 둘레 유턴)
 # 이전 머리말: 승강장 파일 v3.3c 1판(2026-11-03, v3.3b 1판과 값 같고 지도만 v3.3c, 사범대 앞 레인렛 id 만 바뀜)
-# 이전 머리말: 승강장 파일 v3.3b 1판(11/03, v3.3a 1판과 값 같고 지도만 v3.3b, 2026-11-02): 2판(shuttle_platforms_v31_r2.yaml 143e5c7259c7ce2c)에서 개성재(옛 중문)·남문(이쪽)을 고치고 새 승강장 5개를 더함
+# 이전 머리말: 승강장 파일 v3.3b 1판(11/03, v3.3a 1판과 값 같고 지도만 v3.3b, 2026-11-02): 2판(shuttle_platforms_v31_r2.yaml ecb5b9154dbe6928)에서 개성재(옛 중문)·남문(이쪽)을 고치고 새 승강장 5개를 더함
 # 만든 것 map/scripts/s73_platforms.py -> s73_write.py. 지도 v3.3b(map/maps/v33b). 설명 map/docs/v33a_readme.md
 xodr: cbnu_campus_v31_candidate_s54.xodr
 xodr_sha256_16: 214507afc87c2523
@@ -559,7 +559,7 @@ platforms:
   note: '11/02: footway r1235·r1369(OSM 인도)를 차로에서 빼고 다시 셈 -> 문 구역 4.5m2, 정차 가능(하차). 대체 정차점은 2판 값 그대로가 아니므로 다시 셈 필요'
   alt_stop:
     status: 없음
-    reason: 세션73 다시 안 셈
+    reason: 11/02 다시 안 셈
 - id: lib_south_nw
   stop_id: lib_south
   name: 도서관 남문
@@ -799,7 +799,7 @@ platforms:
     crosswalk_v32a: &id009 []
   alt_stop:
     status: 없음
-    reason: 세션73 새 자리, 대체 정차점은 다시 안 셈
+    reason: 11/02 새 자리, 대체 정차점은 다시 안 셈
   note: '11/02: 옛 ''중문'' 자리(r1320·r1191)는 볼라드로 막혀 v3.3a 에서 뺌. 화면 이름 ''개성재'', 내부 ID 는 그대로. middle_gate_s·n 는 같은 자리(대각선 길 r1316 북동행, 게이트 G5 앞 약 33m). 나갈 때는 N14 주차장 길(r1318)로 돌아 대각선 길 남서행으로'
 - id: middle_gate_s
   stop_id: middle_gate
@@ -831,7 +831,7 @@ platforms:
     crosswalk_v32a: *id009
   alt_stop:
     status: 없음
-    reason: 세션73 새 자리, 대체 정차점은 다시 안 셈
+    reason: 11/02 새 자리, 대체 정차점은 다시 안 셈
   note: '11/02: 옛 ''중문'' 자리(r1320·r1191)는 볼라드로 막혀 v3.3a 에서 뺌. 화면 이름 ''개성재'', 내부 ID 는 그대로. middle_gate_s·n 는 같은 자리(대각선 길 r1316 북동행, 게이트 G5 앞 약 33m). 나갈 때는 N14 주차장 길(r1318)로 돌아 대각선 길 남서행으로'
 - id: yangseong_se
   stop_id: yangseong

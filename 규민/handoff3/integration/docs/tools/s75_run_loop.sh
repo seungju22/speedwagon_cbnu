@@ -45,7 +45,7 @@ GX=656.162; GY=684.456; GYAW=-35.52; QZ=-0.304989; QW=0.952356
 [ "$PAIR_GOAL" = 1 ] && eval "$($PY $T/i62_route.py $PAIR)"
 echo "$(date +%T) speed_bump [${SPEED_BUMP:-0}] pair_goal [${PAIR_GOAL:-0}] map [${MAP_PATH:-OpenDriveMap 기본}]" >> $LOG
 echo "$(date +%T) smap ${SMAP:-$SMAP0} gtargs [$GTARGS] pair $PAIR mode $MODE scene $SCENE cam $CAM bag $BAG spawn $SPAWN goal $GX $GY $GYAW rain ${RAIN:-0} (pilot_route_r2 lib_north base_link_goal)" >> $LOG
-[ -n "$LSTATE" ] && echo "$(date +%T) layer_set $($PY -c "import json,sys;d=json.load(open(sys.argv[1]));print(d.get('layer_set','판 없음(세션67 전 상태 파일)'),len(d['actors']))" $LSTATE) ($LSTATE)" >> $LOG
+[ -n "$LSTATE" ] && echo "$(date +%T) layer_set $($PY -c "import json,sys;d=json.load(open(sys.argv[1]));print(d.get('layer_set','판 없음(10/23 전 상태 파일)'),len(d['actors']))" $LSTATE) ($LSTATE)" >> $LOG
 $PY $T/i5_cleanup.py >> $LOG 2>&1
 $PY $T/i5_marker.py place $I/logs/i5_marker_$TAG.json >> $LOG 2>&1
 [ -n "$LSTATE" ] && $PY $T/s4_layers.py mark $LSTATE $I/logs/s4_layers_mark_$TAG.json >> $LOG 2>&1

@@ -1,7 +1,7 @@
 # 순환 노선 v3.3d 1판(2026-11-04). v3.3c 1판에서 후문 안쪽 -> 남문 구간만 바뀜(후문 앞 유턴을 섬 둘레로, 반경 6.9m). 만든 것 map/scripts/s77_write.py
 id: circulation_v33d
 platforms_file: map/data/shuttle_platforms_v33d_r1.yaml
-platforms_sha256_16: 1a700a78befde12b
+platforms_sha256_16: 724b2251a5457c48
 lanelet2: map/maps/v33d/lanelet2_map.osm
 lanelet2_sha256_16: fe9ee6ffc5af6263
 xodr_sha256_16: 214507afc87c2523
@@ -226,7 +226,7 @@ segments:
   length_m: 444.6
 uturn:
 - lanelet: 52803
-  where: 도서관 길 꺾이는 모서리(r1415 -> r1409, 개신문화관 정면, 사용자 11/3 오후)
+  where: 도서관 길 꺾이는 모서리(r1415 -> r1409, 개신문화관 정면, 11/03 오후)
 - lanelet: 52800
   where: 후문 앞 r1251 끝 -> r1384
 cover_route:
