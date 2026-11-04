@@ -1,0 +1,244 @@
+# 순환 노선 v3.3c 1판(2026-11-03). v3.3b 1판에서 map/scripts/s75_write.py 로 고침(유턴 자리 '가', 사범대 앞 뺌)
+id: circulation_v33c
+platforms_file: map/data/shuttle_platforms_v33c_r1.yaml
+platforms_sha256_16: e3a2c76e188969ab
+lanelet2: map/maps/v33c/lanelet2_map.osm
+lanelet2_sha256_16: d2935e5ba33f9513
+xodr_sha256_16: 214507afc87c2523
+note: '순환 노선 후보(맵 몫, 운행 논리는 판단 쪽). 요청이 없으면 via 를 경유점으로 넣고 지나가고, 요청이 있으면 goal 로 섬. 한 바퀴 끝 = 처음 정류장. 북문 다음 도서관 길이 꺾이는 모서리(개신문화관 정면)에서 유턴 레인렛으로 돌아 나옴(11/03 오후: 좌회전하는 척하다 차 없으면 유턴). 사범대 앞은 순환 밖. 개성재 뒤는 N14 주차장 길로 돌아 나옴. 후문 안쪽 다음 후문 앞 유턴 레인렛으로 돌아 나옴(11/03: 공간
+  있음, 맞은편 차가 안 올 때 돌림 = 판단 쪽 몫)'
+stops:
+- platform: main_gate_inner_nw
+  name: 정문 안쪽
+  action: stop_if_requested
+  via:
+    x: 378.166
+    y: 886.798
+    yaw_deg: 144.18
+  goal:
+    x: 379.257
+    y: 886.011
+    z: 0.0
+    yaw_deg: 144.18
+    qz: 0.951546
+    qw: 0.307506
+- platform: yangseong_se
+  name: 양성재(이쪽)
+  action: stop_if_requested
+  via:
+    x: 214.552
+    y: 549.608
+    yaw_deg: -65.75
+  goal:
+    x: 213.999
+    y: 550.838
+    z: 0.0
+    yaw_deg: -65.84
+    qz: -0.54348
+    qw: 0.839422
+- platform: back_gate_inner_se
+  name: 후문 안쪽
+  action: stop_if_requested
+  via:
+    x: 960.124
+    y: 289.041
+    yaw_deg: -37.13
+  goal:
+    x: 959.052
+    y: 289.852
+    z: 0.0
+    yaw_deg: -37.13
+    qz: -0.318379
+    qw: 0.947963
+- platform: lib_south_nw
+  name: 도서관 남문(건너편)
+  action: stop_if_requested
+  via:
+    x: 571.524
+    y: 566.829
+    yaw_deg: 152.91
+  goal:
+    x: 572.721
+    y: 566.217
+    z: 0.0
+    yaw_deg: 152.91
+    qz: 0.972186
+    qw: 0.234212
+- platform: lib_north
+  name: 도서관 북문
+  action: stop_if_requested
+  via:
+    x: 657.257
+    y: 683.675
+    yaw_deg: -35.52
+  goal:
+    x: 656.162
+    y: 684.456
+    z: 0.0
+    yaw_deg: -35.52
+    qz: -0.304989
+    qw: 0.952356
+- platform: middle_gate_s
+  name: 개성재
+  action: stop_if_requested
+  via:
+    x: 587.61
+    y: 915.033
+    yaw_deg: 51.0
+  goal:
+    x: 586.763
+    y: 913.988
+    z: 0.0
+    yaw_deg: 51.0
+    qz: 0.430549
+    qw: 0.902567
+length_m: 3355.0
+segments:
+- frm: main_gate_inner_nw
+  to: yangseong_se
+  roads:
+  - 1272
+  - 1479
+  - 1202
+  - 1465
+  - 1157
+  - 1738
+  - 1156
+  - 1765
+  - 1155
+  - 1772
+  - 1154
+  - 1865
+  - 1153
+  length_m: 395.5
+- frm: yangseong_se
+  to: back_gate_inner_se
+  roads:
+  - 1153
+  - 1812
+  - 1378
+  - 1881
+  - 1363
+  - 1910
+  - 1230
+  - 1496
+  - 1160
+  - 1531
+  - 1159
+  - 2024
+  - 1298
+  - 1436
+  - 1396
+  - 1553
+  - 1397
+  - 1557
+  - 1398
+  - 1835
+  - 1220
+  - 1914
+  - 1219
+  - 1825
+  - 1249
+  - 1619
+  - 1254
+  - 1609
+  - 1253
+  - 1822
+  - 1252
+  - 1860
+  - 1251
+  length_m: 1051.1
+- frm: back_gate_inner_se
+  to: lib_south_nw
+  roads:
+  - 1251
+  - 1384
+  - 1853
+  - 1387
+  - 1815
+  - 1388
+  - 1608
+  - 1389
+  - 1617
+  - 1385
+  - 1823
+  - 1386
+  - 1451
+  - 1405
+  length_m: 493.8
+- frm: lib_south_nw
+  to: lib_north
+  roads:
+  - 1405
+  - 1599
+  - 1406
+  - 1459
+  - 1407
+  - 1732
+  - 1335
+  - 1716
+  - 1333
+  - 1724
+  - 1413
+  - 1663
+  - 1414
+  - 1678
+  - 1415
+  length_m: 486.1
+- frm: lib_north
+  to: middle_gate_s
+  via_uturn: library_corner
+  roads:
+  - 1415
+  - 1409
+  - 1676
+  - 1276
+  - 1661
+  - 1275
+  - 1722
+  - 1274
+  - 1627
+  - 1314
+  - 1655
+  - 1315
+  - 1644
+  - 1316
+  length_m: 484.0
+- frm: middle_gate_s
+  to: main_gate_inner_nw
+  roads:
+  - 1316
+  - 1636
+  - 1318
+  - 1646
+  - 1186
+  - 1649
+  - 1185
+  - 1624
+  - 1273
+  - 1705
+  - 1272
+  length_m: 444.6
+uturn:
+- lanelet: 52803
+  where: 도서관 길 꺾이는 모서리(r1415 -> r1409, 개신문화관 정면, 사용자 11/3 오후)
+- lanelet: 52800
+  where: 후문 앞 r1251 끝 -> r1384
+cover_route:
+  note: 양방향·고리 안 큰 도로를 모두 한 번 지나는 판(경유점 via_r<road>)
+  length_m: 5389.4
+  order:
+  - main_gate_inner_nw
+  - yangseong_se
+  - via_r1300
+  - via_r1164
+  - via_r1306
+  - via_r1357
+  - via_r1382
+  - via_r1219
+  - back_gate_inner_se
+  - lib_south_nw
+  - lib_north
+  - middle_gate_s
+  missed_big_ways:
+  - '442065829'

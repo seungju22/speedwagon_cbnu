@@ -1,0 +1,337 @@
+# 승강장 파일 2판(2026-10-25): 1판(shuttle_platforms_v31_r1.yaml 075b224c73008c38) 본문 그대로에 승강장마다 alt_stop(대체 정차점)만 더함
+# 대체 정차점 만든 것 map/scripts/s70_alt_stops.py -> s70_alt_route_check.py -> s70_write.py. 설명 map/docs/shuttle_route_file.md '대체 정차점'
+# 셔틀 승강장 정보 v3.1 후보(2026-10-12). 만든 스크립트 map/scripts/s56_shuttle.py -> s56_write.py
+# 좌표는 지도 좌표계다(xodr 평면 = Autoware map 좌표, 단위 m, 방향 = x 축에서 반시계 도). CARLA 좌표는 (x, -y, -yaw)
+# 승강장 자리는 stops_v3.yaml 의 platforms 11곳 그대로다(road/s/lane). 이 파일은 그 위에 셔틀용 값을 더한다
+# lanelet_id 는 참고용이다. Lanelet2 지도를 다시 만들면 바뀐다. 위치는 x·y 로 찾는다
+# 설명과 가정값 바꾸는 법: map/docs/shuttle_route_file.md
+xodr: cbnu_campus_v31_candidate_s54.xodr
+xodr_sha256_16: 214507afc87c2523
+lanelet2_sha256_16: 83edb7755588184f  # I6-2 지도(s54 + 보정 목록 1317·1825 뺌). 28a57711(10/12 nB)은 r1318·r1188 만 빠지고 그 둘은 승강장 다각형에서 29.0m 이상 떨어져(중문이 가장 가까움) 11곳 값이 같다
+# 가정값(결정 2, 2026-10-13 그대로 씀): 문 위치(vehicle.door), 문 구역(door_zone_*), 전방 통로 8.0m, 정차 여유 앞뒤 1.0m.
+#   실제 셔틀 치수가 아니다. 정해지면 s56_shuttle.py 머리를 고쳐 다시 만든다
+stops_sha256_16: befb9fddffe112ad  # stops_v3.yaml
+vehicle:  # Autoware 1.9.0 이미지 autoware_sample_vehicle_description vehicle_info.param.yaml(sha256 7f3d7661c23a9768)
+  wheel_base: 2.79
+  front_overhang: 1.0
+  rear_overhang: 1.1
+  wheel_tread: 1.64
+  side_overhang: 0.128
+  length: 4.89
+  width: 1.896
+  base_link: 뒷바퀴 축 가운데
+  door:  # 가정: 문은 오른쪽 옆면, 앞뒤로 차 길이 가운데(EZ10 같은 가운데 문)
+    x_from_base_link: 1.345  # (앞끝 3.79 + 뒤끝 -1.1) / 2
+    y_from_base_link: -0.948  # 오른쪽 옆면 = -(wheel_tread/2 + side_overhang)
+    width_assumed: 1.2  # 문 폭 가정. 문 구역 앞뒤 길이에만 쓴다
+  carla_prius_note: 'CARLA 프리우스 4.514 x 2.007, 뒷축->차 중심 1.399m(10/08·10/09). 문 앞뒤 차 0.054m'
+params:  # 모두 가정값(실측 아님). 바꾸면 s56_shuttle.py 머리의 같은 이름을 고치고 두 스크립트를 다시 돌린다
+  stop_zone_margin_front: 1.0  # I6-2 29쌍 정지 앞뒤 -0.443~-0.469m 의 약 2배
+  stop_zone_margin_rear: 1.0
+  door_zone_along: 3.0  # 문 폭 1.2 + 양옆 0.9
+  door_zone_depth: 1.5  # 차선 가장자리에서 인도 쪽. 정류장 시설·차로·건물은 뺀다
+  corridor_length: 8.0  # 차 앞끝에서. 20km/h(lanelet speed_limit)에서 2.0m/s2 로 서는 거리 7.7m
+  corridor_width: 2.5  # 차 폭 1.896 + 양쪽 약 0.3
+  facility: {"along": 3.598, "depth": 1.884, "gap_from_lane_edge": 0.8}  # place_campus_layers.py, s51 mesh_sizes
+platforms:
+  - id: main_gate_in
+    stop_id: main_gate
+    name: 정문
+    side: 이쪽
+    stops_v3: {"road_id": 1278, "s": 138.0, "lane_id": -1}
+    marker: {"x": 263.483, "y": 965.611, "yaw_deg": -37.83}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 262.9, "y": 964.863, "yaw_deg": -37.87}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 262.42, "y": 966.437, "z": 0.0, "yaw_deg": -37.87, "qz": -0.324461, "qw": 0.945899}
+    base_link_ref: {"road_id": 1278, "s": 136.66, "lanelet_id": [19024]}  # 참고용
+    door_along_error_m: -0.002  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[261.79, 969.05], [267.23, 964.82], [265.19, 962.17], [259.73, 966.4]]
+    door_zone_area_m2: 2.406
+    door_zone: [[261.27, 965.21], [263.64, 963.37], [263.15, 962.73], [260.78, 964.58]]
+    front_corridor: [[266.15, 965.12], [269.72, 962.38], [272.56, 960.25], [271.06, 958.25], [268.21, 960.39], [264.62, 963.15]]
+    facility: [[262.23, 961.06], [259.39, 963.27], [260.54, 964.76], [263.39, 962.55]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 257.441, "y": 969.128, "yaw_deg": -38.7}
+      base_link_goal: {"x": 256.984, "y": 970.709, "z": 0.0, "yaw_deg": -38.7, "qz": -0.331352, "qw": 0.943507}
+      base_link_ref: {"road_id": 1278, "s": 129.77, "lanelet_id": [19024]}  # 참고용
+      stop_zone: [[256.39, 973.33], [259.98, 970.46], [261.79, 969.05], [259.73, 966.4], [257.91, 967.83], [254.3, 970.71]]
+      door_zone: [[255.82, 969.5], [258.19, 967.6], [257.27, 966.42], [254.88, 968.33]]
+      front_corridor: [[260.71, 969.35], [267.06, 964.42], [265.53, 962.44], [259.17, 967.38]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.574, "depth": 1.513, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1278], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "0/0", "orig_to_alt": {"found": false, "n": null, "length_m": null}, "alt_to_orig": {"found": true, "n": 1, "length_m": 154.4}}
+      route_v32a_same: true
+  - id: main_gate_out
+    stop_id: main_gate
+    name: 정문
+    side: 건너편
+    stops_v3: {"road_id": 1150, "s": 15.1, "lane_id": -1}
+    marker: {"x": 265.44, "y": 968.332, "yaw_deg": 142.16}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 266.02, "y": 969.082, "yaw_deg": 142.21}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 266.502, "y": 967.508, "z": 0.0, "yaw_deg": 142.21, "qz": 0.946123, "qw": 0.323806}
+    base_link_ref: {"road_id": 1150, "s": 13.76, "lanelet_id": [2315]}  # 참고용
+    door_along_error_m: 0.002  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[267.14, 964.9], [261.69, 969.12], [263.75, 971.77], [269.18, 967.55]]
+    door_zone_area_m2: 2.395
+    door_zone: [[267.65, 968.74], [265.29, 970.57], [265.78, 971.21], [268.14, 969.37]]
+    front_corridor: [[262.78, 968.82], [260.21, 970.82], [256.47, 973.8], [258.03, 975.76], [261.76, 972.78], [264.31, 970.79]]
+    facility: [[266.69, 972.88], [269.54, 970.67], [268.38, 969.18], [265.54, 971.39]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 271.443, "y": 964.894, "yaw_deg": 143.05}
+      base_link_goal: {"x": 271.948, "y": 963.328, "z": 0.0, "yaw_deg": 143.05, "qz": 0.94846, "qw": 0.316898}
+      base_link_ref: {"road_id": 1150, "s": 6.87, "lanelet_id": [2315]}  # 참고용
+      stop_zone: [[272.62, 960.73], [270.14, 962.59], [267.14, 964.9], [269.18, 967.55], [272.17, 965.26], [274.63, 963.42]]
+      door_zone: [[273.08, 964.58], [270.72, 966.37], [271.63, 967.56], [273.98, 965.78]]
+      front_corridor: [[268.22, 964.6], [261.87, 969.53], [263.4, 971.5], [269.74, 966.58]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.435, "depth": 1.481, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1150], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "5/5", "orig_to_alt": {"found": false, "n": null, "length_m": null}, "alt_to_orig": {"found": true, "n": 1, "length_m": 151.5}}
+      route_v32a_same: true
+  - id: lib_north
+    stop_id: lib_north
+    name: 도서관 북문
+    side: 이쪽
+    stops_v3: {"road_id": 1415, "s": 78.0, "lane_id": -1}
+    marker: {"x": 657.257, "y": 683.675, "yaw_deg": -35.52}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 656.706, "y": 682.903, "yaw_deg": -35.52}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 656.162, "y": 684.456, "z": 0.0, "yaw_deg": -35.52, "qz": -0.304989, "qw": 0.952356}
+    base_link_ref: {"road_id": 1415, "s": 76.66, "lanelet_id": [37801]}  # 참고용
+    door_along_error_m: 0.0  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[655.43, 687.04], [661.03, 683.04], [659.09, 680.31], [653.48, 684.31]]
+    door_zone_area_m2: 2.4
+    door_zone: [[655.06, 683.18], [657.5, 681.44], [657.04, 680.79], [654.6, 682.53]]
+    front_corridor: [[659.94, 683.3], [666.48, 678.62], [665.03, 676.59], [658.49, 681.26]]
+    facility: [[656.19, 679.08], [653.26, 681.17], [654.35, 682.71], [657.28, 680.62]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 11.39  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 647.425, "y": 689.478, "yaw_deg": -35.18}
+      base_link_goal: {"x": 646.872, "y": 691.028, "z": 0.0, "yaw_deg": -35.18, "qz": -0.302194, "qw": 0.953246}
+      base_link_ref: {"road_id": 1415, "s": 65.27, "lanelet_id": [37801]}  # 참고용
+      stop_zone: [[646.12, 693.61], [651.75, 689.64], [649.82, 686.9], [644.19, 690.87]]
+      door_zone: [[645.78, 689.75], [648.23, 688.02], [647.37, 686.79], [644.92, 688.52]]
+      front_corridor: [[650.66, 689.89], [653.93, 687.59], [657.21, 685.24], [655.76, 683.21], [652.47, 685.55], [649.22, 687.85]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 4.48, "door_zone": {"area": 4.5, "depth": 1.5, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1415], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {"횡단보도": 18}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "5/5", "orig_to_alt": {"found": true, "n": 15, "length_m": 1016.5}, "alt_to_orig": {"found": true, "n": 1, "length_m": 221.5}}
+      route_v32a_same: true
+  - id: lib_south_se
+    stop_id: lib_south
+    name: 도서관 남문
+    side: 이쪽
+    stops_v3: {"road_id": 1268, "s": 47.0, "lane_id": -1}
+    marker: {"x": 570.069, "y": 563.81, "yaw_deg": -27.09}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 569.638, "y": 562.966, "yaw_deg": -27.09}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 568.872, "y": 564.423, "z": 0.0, "yaw_deg": -27.09, "qz": -0.234229, "qw": 0.972181}
+    base_link_ref: {"road_id": 1268, "s": 45.66, "lanelet_id": [17835]}  # 참고용
+    door_along_error_m: -0.0  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[567.77, 566.87], [573.9, 563.73], [572.37, 560.75], [566.24, 563.89]]
+    door_zone_area_m2: 0.0
+    door_zone: [[568.96, 561.67], [569.24, 561.53], [569.58, 561.35], [569.16, 561.56]]
+    front_corridor: [[572.78, 563.83], [579.94, 560.17], [578.8, 557.94], [571.64, 561.6]]
+    facility: []  # 정류장 시설 없음(10/11 결정)
+    check: {"ok": false, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {"1235": 17.727}, "body_out_of_lanelets_m2": 0.0}
+    note: '문 구역 자리(차선 가장자리 바깥 1.5m)가 모두 다른 차로 r1369·r1235 위라 문 구역이 없다. 전방 통로도 r1235 와 겹친다. 정차 승강장으로 쓰지 않는다'
+    stoppable: false  # 결정 1(2026-10-13). stops_v3.yaml 은 I6 표와 맞추려고 그대로 둔다
+    status: '정차 불가: 문 구역 없음(r1369·r1235 위)'
+    alt_stop: {"status": "없음", "reason": "원래 승강장이 정차 불가(문 구역 없음, 사용자 결정 1). 대체 정차점도 두지 않음"}
+  - id: lib_south_nw
+    stop_id: lib_south
+    name: 도서관 남문
+    side: 건너편
+    stops_v3: {"road_id": 1405, "s": 83.6, "lane_id": -1}
+    marker: {"x": 571.524, "y": 566.829, "yaw_deg": 152.91}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 571.955, "y": 567.673, "yaw_deg": 152.91}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 572.721, "y": 566.217, "z": 0.0, "yaw_deg": 152.91, "qz": 0.972186, "qw": 0.234212}
+    base_link_ref: {"road_id": 1405, "s": 82.25, "lanelet_id": [36041]}  # 참고용
+    door_along_error_m: 0.0  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[573.83, 563.77], [567.69, 566.91], [569.22, 569.89], [575.35, 566.75]]
+    door_zone_area_m2: 2.4
+    door_zone: [[573.62, 567.64], [570.95, 569.0], [571.32, 569.72], [573.99, 568.35]]
+    front_corridor: [[568.81, 566.81], [561.66, 570.47], [562.79, 572.7], [569.95, 569.04]]
+    facility: [[571.91, 571.53], [575.11, 569.89], [574.25, 568.21], [571.05, 569.85]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 578.089, "y": 564.536, "yaw_deg": 152.91}
+      base_link_goal: {"x": 578.855, "y": 563.079, "z": 0.0, "yaw_deg": 152.91, "qz": 0.972194, "qw": 0.234179}
+      base_link_ref: {"road_id": 1405, "s": 75.36, "lanelet_id": [36041]}  # 참고용
+      stop_zone: [[579.96, 560.63], [573.83, 563.77], [575.35, 566.75], [581.49, 563.61]]
+      door_zone: [[579.76, 564.5], [577.08, 565.87], [577.77, 567.2], [580.44, 565.84]]
+      front_corridor: [[574.95, 563.67], [567.79, 567.34], [568.93, 569.56], [576.09, 565.9]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.5, "depth": 1.5, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1405], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "1/1", "orig_to_alt": {"found": true, "n": 39, "length_m": 1336.1}, "alt_to_orig": {"found": true, "n": 1, "length_m": 130.6}}
+      route_v32a_same: true
+  - id: middle_gate_n
+    stop_id: middle_gate
+    name: 중문
+    side: 이쪽
+    stops_v3: {"road_id": 1191, "s": 31.9, "lane_id": -1}
+    marker: {"x": 622.761, "y": 906.125, "yaw_deg": 92.68}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 623.71, "y": 906.163, "yaw_deg": 92.56}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 622.823, "y": 904.777, "z": 0.0, "yaw_deg": 92.56, "qz": 0.722702, "qw": 0.69116}
+    base_link_ref: {"road_id": 1191, "s": 30.55, "lanelet_id": [7656]}  # 참고용
+    door_along_error_m: -0.006  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[621.24, 902.6], [620.98, 908.45], [620.88, 909.48], [624.2, 909.89], [624.27, 909.28], [624.32, 908.62], [624.58, 902.73]]
+    door_zone_area_m2: 2.405
+    door_zone: [[624.5, 904.7], [624.36, 907.7], [625.16, 907.73], [625.3, 904.73]]
+    front_corridor: [[621.4, 908.47], [621.36, 908.99], [621.24, 910.0], [620.84, 912.72], [620.35, 916.48], [622.83, 916.81], [623.32, 913.05], [623.79, 909.8], [623.9, 908.6]]
+    facility: [[627.03, 908.13], [627.2, 904.53], [625.32, 904.44], [625.15, 908.04]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 623.964, "y": 899.155, "yaw_deg": 89.87}
+      base_link_goal: {"x": 623.013, "y": 897.812, "z": 0.0, "yaw_deg": 89.87, "qz": 0.706291, "qw": 0.707922}
+      base_link_ref: {"road_id": 1191, "s": 23.66, "lanelet_id": [7656]}  # 참고용
+      stop_zone: [[621.29, 895.72], [621.33, 896.82], [621.34, 898.57], [621.3, 900.57], [621.24, 902.6], [624.58, 902.73], [624.65, 900.65], [624.69, 898.59], [624.68, 896.75], [624.64, 895.56]]
+      door_zone: [[624.69, 897.65], [624.65, 900.75], [626.15, 900.79], [626.18, 898.97], [626.19, 897.64]]
+      front_corridor: [[621.7, 901.58], [621.6, 904.08], [621.41, 908.33], [621.37, 908.85], [621.28, 909.65], [623.76, 909.96], [623.86, 909.07], [623.91, 908.43], [624.1, 904.19], [624.2, 901.66]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.69, "depth": 1.56, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1191], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "0/0", "orig_to_alt": {"found": true, "n": 21, "length_m": 544.3}, "alt_to_orig": {"found": true, "n": 1, "length_m": 47.4}}
+      route_v32a_same: true
+  - id: middle_gate_s
+    stop_id: middle_gate
+    name: 중문
+    side: 건너편
+    stops_v3: {"road_id": 1320, "s": 15.0, "lane_id": -1}
+    marker: {"x": 619.435, "y": 906.185, "yaw_deg": -86.89}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 618.494, "y": 906.114, "yaw_deg": -86.47}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 619.358, "y": 907.515, "z": 0.0, "yaw_deg": -86.47, "qz": -0.684987, "qw": 0.728555}
+    base_link_ref: {"road_id": 1320, "s": 13.66, "lanelet_id": [24467]}  # 참고용
+    door_along_error_m: 0.019  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[620.86, 909.71], [620.96, 908.62], [621.06, 907.12], [621.17, 905.12], [621.26, 902.83], [617.92, 902.71], [617.82, 904.96], [617.72, 906.92], [617.62, 908.36], [617.53, 909.37]]
+    door_zone_area_m2: 2.347
+    door_zone: [[617.68, 907.56], [617.84, 904.62], [617.04, 904.58], [616.88, 907.51]]
+    front_corridor: [[620.8, 903.86], [620.88, 901.61], [620.92, 899.37], [620.92, 897.38], [620.88, 895.86], [618.38, 895.97], [618.42, 897.42], [618.42, 899.35], [618.38, 901.54], [618.3, 903.75]]
+    facility: [[615.18, 904.15], [614.98, 907.74], [616.87, 907.85], [617.06, 904.25]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 617.85, "y": 912.765, "yaw_deg": -81.96}
+      base_link_goal: {"x": 618.601, "y": 914.229, "z": 0.0, "yaw_deg": -81.96, "qz": -0.655823, "qw": 0.754915}
+      base_link_ref: {"road_id": 1320, "s": 6.77, "lanelet_id": [24467]}  # 참고용
+      stop_zone: [[619.96, 916.54], [620.53, 912.48], [620.86, 909.71], [617.53, 909.37], [617.21, 912.04], [616.65, 916.06]]
+      door_zone: [[616.92, 914.15], [617.32, 911.22], [615.83, 911.04], [615.44, 913.94]]
+      front_corridor: [[620.33, 910.7], [620.49, 909.21], [620.58, 907.98], [620.74, 905.24], [620.84, 902.71], [618.34, 902.62], [618.24, 905.12], [618.09, 907.82], [618.0, 908.98], [617.84, 910.4]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.406, "depth": 1.471, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1320], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "5/5", "orig_to_alt": {"found": true, "n": 21, "length_m": 522.1}, "alt_to_orig": {"found": true, "n": 1, "length_m": 46.4}}
+      route_v32a_same: true
+  - id: yangseong_se
+    stop_id: yangseong
+    name: 양성재
+    side: 이쪽
+    stops_v3: {"road_id": 1153, "s": 22.0, "lane_id": -1}
+    marker: {"x": 214.552, "y": 549.608, "yaw_deg": -65.75}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 213.685, "y": 549.222, "yaw_deg": -65.84}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 213.999, "y": 550.838, "z": 0.0, "yaw_deg": -65.84, "qz": -0.54348, "qw": 0.839422}
+    base_link_ref: {"road_id": 1153, "s": 20.66, "lanelet_id": [2820]}  # 참고용
+    door_along_error_m: -0.004  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[214.67, 553.44], [217.5, 547.16], [214.45, 545.77], [211.61, 552.08]]
+    door_zone_area_m2: 2.413
+    door_zone: [[212.41, 550.29], [213.64, 547.55], [212.91, 547.22], [211.68, 549.97]]
+    front_corridor: [[216.68, 547.93], [217.73, 545.65], [218.08, 544.96], [218.47, 544.29], [218.92, 543.65], [219.4, 543.04], [221.08, 541.12], [219.21, 539.47], [217.46, 541.46], [216.92, 542.15], [216.35, 542.96], [216.03, 543.52], [215.62, 544.28], [215.35, 544.83], [214.41, 546.9]]
+    facility: [[211.32, 546.18], [209.84, 549.46], [211.56, 550.23], [213.03, 546.95]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 210.655, "y": 556.058, "yaw_deg": -78.44}
+      base_link_goal: {"x": 211.314, "y": 557.566, "z": 0.0, "yaw_deg": -78.44, "qz": -0.6323, "qw": 0.774723}
+      base_link_ref: {"road_id": 1153, "s": 13.77, "lanelet_id": [2820]}  # 참고용
+      stop_zone: [[212.71, 559.98], [212.73, 559.38], [212.78, 558.89], [212.96, 557.9], [213.07, 557.41], [213.14, 557.17], [213.38, 556.46], [213.65, 555.76], [214.67, 553.44], [211.61, 552.08], [210.44, 554.77], [210.13, 555.6], [209.83, 556.56], [209.61, 557.53], [209.47, 558.42], [209.39, 559.17], [209.36, 559.91]]
+      door_zone: [[209.64, 557.42], [209.87, 556.41], [210.12, 555.61], [210.48, 554.65], [210.82, 553.87], [209.44, 553.27], [208.97, 554.4], [208.65, 555.29], [208.42, 556.0], [208.31, 556.44], [208.16, 557.13]]
+      front_corridor: [[213.86, 554.22], [215.49, 550.56], [217.16, 546.88], [214.89, 545.84], [213.21, 549.54], [211.57, 553.21]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 5.862, "depth": 1.811, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1153], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "5/5", "orig_to_alt": {"found": true, "n": 41, "length_m": 1423.8}, "alt_to_orig": {"found": true, "n": 1, "length_m": 54.7}}
+      route_v32a_same: true
+  - id: yangseong_nw
+    stop_id: yangseong
+    name: 양성재
+    side: 건너편
+    stops_v3: {"road_id": 1281, "s": 31.1, "lane_id": -1}
+    marker: {"x": 217.55, "y": 551.11, "yaw_deg": 114.24}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 218.411, "y": 551.503, "yaw_deg": 114.34}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 218.102, "y": 549.887, "z": 0.0, "yaw_deg": 114.34, "qz": 0.840282, "qw": 0.54215}
+    base_link_ref: {"road_id": 1281, "s": 29.76, "lanelet_id": [19529]}  # 참고용
+    door_along_error_m: 0.004  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[217.44, 547.28], [214.61, 553.57], [217.68, 554.93], [220.49, 548.68]]
+    door_zone_area_m2: 2.387
+    door_zone: [[219.69, 550.44], [218.46, 553.16], [219.19, 553.49], [220.42, 550.77]]
+    front_corridor: [[215.43, 552.79], [214.02, 555.98], [213.76, 556.66], [213.53, 557.35], [213.36, 558.04], [213.2, 559.0], [213.15, 559.47], [213.13, 560.23], [215.63, 560.25], [215.65, 559.61], [215.7, 559.15], [215.85, 558.34], [215.97, 557.9], [216.32, 556.95], [217.71, 553.81]]
+    facility: [[220.79, 554.54], [222.26, 551.26], [220.55, 550.49], [219.07, 553.77]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 7.14  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 221.093, "y": 545.718, "yaw_deg": 131.31}
+      base_link_goal: {"x": 221.269, "y": 544.082, "z": 0.0, "yaw_deg": 131.31, "qz": 0.911095, "qw": 0.412195}
+      base_link_ref: {"road_id": 1281, "s": 22.62, "lanelet_id": [19529]}  # 참고용
+      stop_zone: [[221.4, 541.4], [219.69, 543.36], [219.23, 543.95], [218.94, 544.36], [218.55, 545.0], [218.2, 545.66], [217.55, 547.06], [220.59, 548.45], [221.19, 547.17], [221.48, 546.63], [221.71, 546.23], [222.04, 545.79], [222.39, 545.34], [223.91, 543.62]]
+      door_zone: [[222.63, 545.07], [222.31, 545.44], [221.85, 546.04], [221.68, 546.28], [221.34, 546.88], [222.66, 547.58], [222.98, 547.03], [223.41, 546.47], [223.76, 546.06]]
+      front_corridor: [[218.37, 546.29], [216.81, 549.7], [215.06, 553.61], [217.34, 554.63], [219.09, 550.73], [220.64, 547.34]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.25, "door_zone": {"area": 3.077, "depth": 1.09, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1281], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {"문 구역 좁음/인도 밖": 1}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "0/0", "orig_to_alt": {"found": true, "n": 39, "length_m": 1465.5}, "alt_to_orig": {"found": true, "n": 1, "length_m": 51.3}}
+      route_v32a_same: true
+  - id: back_gate_e
+    stop_id: back_gate
+    name: 후문
+    side: 이쪽
+    stops_v3: {"road_id": 1151, "s": 23.1, "lane_id": -1}
+    marker: {"x": 1099.473, "y": 219.708, "yaw_deg": -13.14}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 1099.257, "y": 218.785, "yaw_deg": -13.14}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 1098.163, "y": 220.014, "z": 0.0, "yaw_deg": -13.14, "qz": -0.114399, "qw": 0.993435}
+    base_link_ref: {"road_id": 1151, "s": 21.76, "lanelet_id": [2510]}  # 참고용
+    door_along_error_m: -0.0  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[1096.5, 222.12], [1103.21, 220.56], [1102.45, 217.29], [1095.74, 218.86]]
+    door_zone_area_m2: 2.4
+    door_zone: [[1097.63, 218.42], [1100.55, 217.74], [1100.37, 216.96], [1097.45, 217.64]]
+    front_corridor: [[1102.1, 220.38], [1109.93, 218.55], [1109.36, 216.12], [1101.53, 217.94]]
+    facility: [[1100.23, 215.05], [1096.73, 215.87], [1097.16, 217.71], [1100.66, 216.89]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 1092.547, "y": 220.351, "yaw_deg": -13.14}
+      base_link_goal: {"x": 1091.453, "y": 221.58, "z": 0.0, "yaw_deg": -13.14, "qz": -0.114399, "qw": 0.993435}
+      base_link_ref: {"road_id": 1151, "s": 14.87, "lanelet_id": [2510]}  # 참고용
+      stop_zone: [[1089.79, 223.69], [1096.5, 222.12], [1095.74, 218.86], [1089.03, 220.43]]
+      door_zone: [[1090.92, 219.98], [1093.84, 219.3], [1093.5, 217.84], [1090.58, 218.52]]
+      front_corridor: [[1095.39, 221.94], [1103.22, 220.12], [1102.65, 217.68], [1094.82, 219.51]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.5, "depth": 1.499, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1151], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "5/5", "orig_to_alt": {"found": false, "n": null, "length_m": null}, "alt_to_orig": {"found": true, "n": 1, "length_m": 96.1}}
+      route_v32a_same: true
+  - id: back_gate_w
+    stop_id: back_gate
+    name: 후문
+    side: 건너편
+    stops_v3: {"road_id": 1279, "s": 73.0, "lane_id": -1}
+    marker: {"x": 1100.236, "y": 222.97, "yaw_deg": 166.86}  # 승강장 표지 = stops_v3 자리의 차선 중심
+    door_pose: {"x": 1100.451, "y": 223.893, "yaw_deg": 166.86}  # 정차했을 때 문 가운데 점과 차 방향
+    base_link_goal: {"x": 1101.545, "y": 222.664, "z": 0.0, "yaw_deg": 166.86, "qz": 0.993435, "qw": 0.114399}
+    base_link_ref: {"road_id": 1279, "s": 71.66, "lanelet_id": [19219]}  # 참고용
+    door_along_error_m: -0.0  # 문 점이 표지보다 앞(+)/뒤(-)
+    stop_zone_length_m: 6.89
+    stop_zone: [[1103.21, 220.56], [1096.5, 222.12], [1097.26, 225.38], [1103.97, 223.82]]
+    door_zone_area_m2: 2.4
+    door_zone: [[1102.08, 224.26], [1099.16, 224.94], [1099.34, 225.72], [1102.26, 225.04]]
+    front_corridor: [[1097.61, 222.3], [1089.78, 224.13], [1090.35, 226.56], [1098.18, 224.73]]
+    facility: [[1099.47, 227.62], [1102.98, 226.81], [1102.55, 224.97], [1099.05, 225.79]]
+    check: {"ok": true, "door_zone_on_lanes_m2": 0.0, "door_zone_on_buildings_m2": 0, "corridor_out_of_lane_m2": 0.0, "corridor_on_other_lanes": {}, "body_out_of_lanelets_m2": 0.0}
+    alt_stop:  # 10/25 대체 정차점('정류장 막힘' 장면용). 같은 차로, 승강장 뒤쪽(들어오는 쪽)으로 문 점을 shift_back_m 만큼 옮김
+      shift_back_m: 6.89  # 정차 구역 길이 6.89m 부터 0.25m 씩 늘려 검사를 모두 통과한 가장 가까운 값
+      door_pose: {"x": 1107.161, "y": 222.327, "yaw_deg": 166.86}
+      base_link_goal: {"x": 1108.255, "y": 221.098, "z": 0.0, "yaw_deg": 166.86, "qz": 0.993435, "qw": 0.114399}
+      base_link_ref: {"road_id": 1279, "s": 64.77, "lanelet_id": [19219]}  # 참고용
+      stop_zone: [[1109.92, 218.99], [1103.21, 220.56], [1103.97, 223.82], [1110.68, 222.25]]
+      door_zone: [[1108.79, 222.69], [1105.87, 223.38], [1106.21, 224.84], [1109.13, 224.15]]
+      front_corridor: [[1104.32, 220.73], [1096.49, 222.56], [1097.06, 225.0], [1104.89, 223.17]]  # 앞 8m 는 원래 정차 구역 쪽(막은 물체가 있으면 출발 조건에 걸림)
+      check: {"body_out_of_lanelets_m2": 0.0, "gap_to_original_stop_zone_m": 0.0, "door_zone": {"area": 4.5, "depth": 1.5, "sidewalk_frac": 1.0, "raw_bld_m2": 0, "raw_fac_m2": 0}, "stop_zone_roads": [1279], "junction_roads": [], "crosswalk_v32a": [], "trees_in_door_zone": 0, "skipped_before": {}}
+      route_28a57711: {"incoming_pairs_prefix_ok": "0/0", "orig_to_alt": {"found": false, "n": null, "length_m": null}, "alt_to_orig": {"found": true, "n": 1, "length_m": 96.1}}
+      route_v32a_same: true

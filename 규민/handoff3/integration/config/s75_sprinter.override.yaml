@@ -1,0 +1,10 @@
+# 11/03: s73_starex.override.yaml 사본, vehicle_info 만 스프린터 실측(s75_vehicle_info_sprinter.param.yaml). 기본은 안 씀. s59_aw_up.sh 의 VEH_COMPOSE 로 고름
+#   1) Autoware vehicle_info: sample_vehicle 자리에 스프린터 값 덮어 마운트(빌드 없이, 경로 계획·차체·자차 점 자르기에 들어감)
+#   2) 센서 장착: carla_sensor_kit 의 sensor_kit_calibration.yaml 을 지붕 위 LiDAR 판으로(브리지 센서 소환과 Autoware TF 가 같이 바뀜)
+services:
+  planning-simulator:
+    volumes:
+      # vehicle_model:=sample_vehicle 은 sample_vehicle_description 을 찾음(첫 판은 autoware_sample_vehicle_description 에만 덮어 안 먹었음, 11/02). 둘 다 덮음
+      - ${HOME}/campus_mobility_sim/integration/config/s75_vehicle_info_sprinter.param.yaml:/opt/autoware/sample_vehicle_description/share/sample_vehicle_description/config/vehicle_info.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s75_vehicle_info_sprinter.param.yaml:/opt/autoware/autoware_sample_vehicle_description/share/autoware_sample_vehicle_description/config/vehicle_info.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s73_sensor_kit_calibration_roof.yaml:/opt/autoware/carla_sensor_kit_description/share/carla_sensor_kit_description/config/sensor_kit_calibration.yaml:ro

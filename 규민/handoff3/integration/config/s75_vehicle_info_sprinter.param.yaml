@@ -1,0 +1,17 @@
+# 11/03: CARLA vehicle.mercedes.sprinter 실측 vehicle_info(autoware_sample_vehicle_description 1.9.0 형식, 원본 Apache 2.0). s75_sprinter.override.yaml 이 sample_vehicle 자리에 덮어 마운트
+# 근거: 11/03 CARLA 실측(integration/logs/s74/carla/van.json): 길이 5.915·폭 1.988·높이 2.561, 축거 3.661, 뒷바퀴 윤거 1.676, 원점 -> 뒷축 1.729, 앞·뒤 오버행 1.015/1.239, 바퀴 반지름 0.35
+# 폭 = wheel_tread + left_overhang + right_overhang(Autoware vehicle_info_utils 식) -> 좌우 오버행 (1.988 - 1.676)/2 = 0.156
+# max_steer_angle 0.77 = atan(3.661 / 3.77)(스타렉스 공식 최소회전반경 5.6m 에서 낸 뒷축 반경 3.77m 를 그대로 둠). CARLA 바퀴 물리 최대 70도. 11/03 CARLA 에서 명령 대비 실제 각을 다시 잼
+# 바퀴 폭은 가정(235/65R16)
+/**:
+  ros__parameters:
+    wheel_radius: 0.35
+    wheel_width: 0.235
+    wheel_base: 3.661
+    wheel_tread: 1.676
+    front_overhang: 1.015
+    rear_overhang: 1.239
+    left_overhang: 0.156
+    right_overhang: 0.156
+    vehicle_height: 2.561
+    max_steer_angle: 0.77 # [rad]

@@ -1,0 +1,3008 @@
+{
+"source": "map/docs/logs/campus_layers_dry_s66_all_actors.csv",
+"source_sha256_16": "dfa7c9ed66e53849",
+"frame": "map",
+"note": "정육면체 바닥 정사각형(중심·yaw·한 변). 여유는 노드 --bpad",
+"rects": [
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 545.828,
+"cy": 844.767,
+"yaw_deg": 54.14,
+"side": 4.95
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 548.22,
+"cy": 848.076,
+"yaw_deg": 54.14,
+"side": 4.95
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 550.613,
+"cy": 851.385,
+"yaw_deg": 54.14,
+"side": 4.95
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 553.005,
+"cy": 854.695,
+"yaw_deg": 54.14,
+"side": 4.95
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 532.879,
+"cy": 870.041,
+"yaw_deg": -35.86,
+"side": 4.15
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 535.351,
+"cy": 868.254,
+"yaw_deg": -35.86,
+"side": 4.15
+},
+{
+"layer": "buildings",
+"owner": "way765358663",
+"cx": 537.823,
+"cy": 866.468,
+"yaw_deg": -35.86,
+"side": 4.15
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 547.663,
+"cy": 821.244,
+"yaw_deg": -36.78,
+"side": 13.55
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 558.296,
+"cy": 813.295,
+"yaw_deg": -36.78,
+"side": 13.55
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 568.928,
+"cy": 805.347,
+"yaw_deg": -36.78,
+"side": 13.55
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 579.561,
+"cy": 797.399,
+"yaw_deg": -36.78,
+"side": 13.55
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 590.193,
+"cy": 789.45,
+"yaw_deg": -36.78,
+"side": 13.55
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 587.204,
+"cy": 826.207,
+"yaw_deg": 53.22,
+"side": 16.25
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 588.043,
+"cy": 827.328,
+"yaw_deg": 53.22,
+"side": 16.25
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 574.299,
+"cy": 789.691,
+"yaw_deg": -36.78,
+"side": 7.0
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 578.597,
+"cy": 786.478,
+"yaw_deg": -36.78,
+"side": 7.0
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 582.896,
+"cy": 783.264,
+"yaw_deg": -36.78,
+"side": 7.0
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 587.194,
+"cy": 780.051,
+"yaw_deg": -36.78,
+"side": 7.0
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 538.489,
+"cy": 829.848,
+"yaw_deg": -36.78,
+"side": 10.45
+},
+{
+"layer": "buildings",
+"owner": "경영대학 본관 (N13)",
+"cx": 539.41,
+"cy": 829.159,
+"yaw_deg": -36.78,
+"side": 10.45
+},
+{
+"layer": "buildings",
+"owner": "way471400965",
+"cx": 277.792,
+"cy": 760.7,
+"yaw_deg": -34.89,
+"side": 7.45
+},
+{
+"layer": "buildings",
+"owner": "way471400965",
+"cx": 281.893,
+"cy": 757.84,
+"yaw_deg": -34.89,
+"side": 7.45
+},
+{
+"layer": "buildings",
+"owner": "way471400965",
+"cx": 285.995,
+"cy": 754.98,
+"yaw_deg": -34.89,
+"side": 7.45
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 156.833,
+"cy": 757.697,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 154.313,
+"cy": 754.09,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 165.891,
+"cy": 751.367,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 163.37,
+"cy": 747.76,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 174.948,
+"cy": 745.037,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 172.427,
+"cy": 741.43,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 184.005,
+"cy": 738.706,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 181.484,
+"cy": 735.1,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 193.062,
+"cy": 732.376,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 190.541,
+"cy": 728.77,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 202.119,
+"cy": 726.046,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 199.599,
+"cy": 722.44,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 211.176,
+"cy": 719.716,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 208.656,
+"cy": 716.11,
+"yaw_deg": -34.95,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 223.678,
+"cy": 724.947,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 225.809,
+"cy": 723.457,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 229.392,
+"cy": 733.123,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 231.523,
+"cy": 731.633,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 235.107,
+"cy": 741.299,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 강의동 (S21-4)",
+"cx": 237.238,
+"cy": 739.809,
+"yaw_deg": 55.05,
+"side": 12.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 195.331,
+"cy": 829.684,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 194.537,
+"cy": 828.592,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 206.273,
+"cy": 821.734,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 205.479,
+"cy": 820.642,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 217.215,
+"cy": 813.785,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 216.421,
+"cy": 812.692,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 228.157,
+"cy": 805.835,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 227.363,
+"cy": 804.743,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 239.099,
+"cy": 797.885,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 238.305,
+"cy": 796.793,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 250.041,
+"cy": 789.935,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 249.247,
+"cy": 788.843,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 260.982,
+"cy": 781.985,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 260.189,
+"cy": 780.893,
+"yaw_deg": -36.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 160.791,
+"cy": 781.974,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 161.358,
+"cy": 781.562,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 169.03,
+"cy": 793.313,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 169.596,
+"cy": 792.902,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 177.269,
+"cy": 804.653,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 177.835,
+"cy": 804.242,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 185.508,
+"cy": 815.993,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "농업생명과학대학 실험동 (S21-5)",
+"cx": 186.074,
+"cy": 815.581,
+"yaw_deg": 54.0,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "진리관",
+"cx": 638.746,
+"cy": 925.1,
+"yaw_deg": -55.04,
+"side": 9.35
+},
+{
+"layer": "buildings",
+"owner": "진리관",
+"cx": 643.688,
+"cy": 918.032,
+"yaw_deg": -55.04,
+"side": 9.35
+},
+{
+"layer": "buildings",
+"owner": "진리관",
+"cx": 648.631,
+"cy": 910.963,
+"yaw_deg": -55.04,
+"side": 9.35
+},
+{
+"layer": "buildings",
+"owner": "진리관",
+"cx": 653.573,
+"cy": 903.894,
+"yaw_deg": -55.04,
+"side": 9.35
+},
+{
+"layer": "buildings",
+"owner": "진리관",
+"cx": 658.515,
+"cy": 896.826,
+"yaw_deg": -55.04,
+"side": 9.35
+},
+{
+"layer": "buildings",
+"owner": "지선관 (S17-1)",
+"cx": 174.89,
+"cy": 583.543,
+"yaw_deg": -34.74,
+"side": 13.8
+},
+{
+"layer": "buildings",
+"owner": "지선관 (S17-1)",
+"cx": 183.252,
+"cy": 577.744,
+"yaw_deg": -34.74,
+"side": 13.8
+},
+{
+"layer": "buildings",
+"owner": "지선관 (S17-1)",
+"cx": 191.613,
+"cy": 571.946,
+"yaw_deg": -34.74,
+"side": 13.8
+},
+{
+"layer": "buildings",
+"owner": "지선관 (S17-1)",
+"cx": 158.351,
+"cy": 565.745,
+"yaw_deg": 55.26,
+"side": 13.9
+},
+{
+"layer": "buildings",
+"owner": "지선관 (S17-1)",
+"cx": 164.591,
+"cy": 574.743,
+"yaw_deg": 55.26,
+"side": 13.9
+},
+{
+"layer": "buildings",
+"owner": "미술관 (N16-2)",
+"cx": 601.483,
+"cy": 867.571,
+"yaw_deg": 81.29,
+"side": 15.5
+},
+{
+"layer": "buildings",
+"owner": "미술관 (N16-2)",
+"cx": 603.637,
+"cy": 881.632,
+"yaw_deg": 81.29,
+"side": 15.5
+},
+{
+"layer": "buildings",
+"owner": "미술관 (N16-2)",
+"cx": 605.792,
+"cy": 895.693,
+"yaw_deg": 81.29,
+"side": 15.5
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 530.304,
+"cy": 895.684,
+"yaw_deg": 54.05,
+"side": 28.0
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 531.114,
+"cy": 895.097,
+"yaw_deg": 54.05,
+"side": 28.0
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 542.985,
+"cy": 913.17,
+"yaw_deg": 54.05,
+"side": 28.0
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 543.795,
+"cy": 912.583,
+"yaw_deg": 54.05,
+"side": 28.0
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 565.452,
+"cy": 925.195,
+"yaw_deg": 54.05,
+"side": 18.85
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 567.125,
+"cy": 927.502,
+"yaw_deg": 54.05,
+"side": 18.85
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 515.63,
+"cy": 884.863,
+"yaw_deg": -35.95,
+"side": 7.95
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 520.096,
+"cy": 881.624,
+"yaw_deg": -35.95,
+"side": 7.95
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 524.561,
+"cy": 878.386,
+"yaw_deg": -35.95,
+"side": 7.95
+},
+{
+"layer": "buildings",
+"owner": "인문사회관 (N14)",
+"cx": 529.027,
+"cy": 875.147,
+"yaw_deg": -35.95,
+"side": 7.95
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 139.817,
+"cy": 559.764,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 143.434,
+"cy": 558.136,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 147.051,
+"cy": 556.509,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 150.669,
+"cy": 554.881,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 154.286,
+"cy": 553.253,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 157.903,
+"cy": 551.625,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 161.52,
+"cy": 549.997,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 165.137,
+"cy": 548.369,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 168.755,
+"cy": 546.741,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 172.372,
+"cy": 545.113,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 175.989,
+"cy": 543.485,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 179.606,
+"cy": 541.857,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 183.224,
+"cy": 540.229,
+"yaw_deg": -24.23,
+"side": 4.1
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 184.212,
+"cy": 546.996,
+"yaw_deg": 65.77,
+"side": 9.45
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 184.766,
+"cy": 548.227,
+"yaw_deg": 65.77,
+"side": 9.45
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 145.569,
+"cy": 564.933,
+"yaw_deg": 65.77,
+"side": 6.25
+},
+{
+"layer": "buildings",
+"owner": "way442760317",
+"cx": 146.718,
+"cy": 567.486,
+"yaw_deg": 65.77,
+"side": 6.25
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 617.123,
+"cy": 960.551,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 622.246,
+"cy": 955.855,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 627.37,
+"cy": 951.158,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 621.465,
+"cy": 965.287,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 626.588,
+"cy": 960.591,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 631.711,
+"cy": 955.895,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 625.806,
+"cy": 970.023,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 630.929,
+"cy": 965.327,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 636.053,
+"cy": 960.631,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 630.148,
+"cy": 974.76,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 635.271,
+"cy": 970.063,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 640.394,
+"cy": 965.367,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 634.489,
+"cy": 979.496,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 639.612,
+"cy": 974.8,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "개성재 관리동",
+"cx": 644.736,
+"cy": 970.103,
+"yaw_deg": 47.49,
+"side": 8.0
+},
+{
+"layer": "buildings",
+"owner": "way442760303",
+"cx": 213.079,
+"cy": 679.274,
+"yaw_deg": -36.52,
+"side": 14.85
+},
+{
+"layer": "buildings",
+"owner": "way442760303",
+"cx": 220.472,
+"cy": 673.799,
+"yaw_deg": -36.52,
+"side": 14.85
+},
+{
+"layer": "buildings",
+"owner": "way442760303",
+"cx": 227.866,
+"cy": 668.324,
+"yaw_deg": -36.52,
+"side": 14.85
+},
+{
+"layer": "buildings",
+"owner": "way471400915",
+"cx": 438.998,
+"cy": 574.631,
+"yaw_deg": -15.86,
+"side": 5.85
+},
+{
+"layer": "buildings",
+"owner": "way471400915",
+"cx": 443.423,
+"cy": 573.374,
+"yaw_deg": -15.86,
+"side": 5.85
+},
+{
+"layer": "buildings",
+"owner": "way471400915",
+"cx": 447.848,
+"cy": 572.116,
+"yaw_deg": -15.86,
+"side": 5.85
+},
+{
+"layer": "buildings",
+"owner": "way471400915",
+"cx": 452.273,
+"cy": 570.859,
+"yaw_deg": -15.86,
+"side": 5.85
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 677.305,
+"cy": 968.105,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 683.975,
+"cy": 966.211,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 690.645,
+"cy": 964.317,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 697.315,
+"cy": 962.424,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 703.984,
+"cy": 960.53,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 710.654,
+"cy": 958.637,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "개척관",
+"cx": 717.324,
+"cy": 956.743,
+"yaw_deg": -15.85,
+"side": 8.15
+},
+{
+"layer": "buildings",
+"owner": "계영원",
+"cx": 705.205,
+"cy": 1008.256,
+"yaw_deg": -17.7,
+"side": 19.5
+},
+{
+"layer": "buildings",
+"owner": "계영원",
+"cx": 715.303,
+"cy": 1005.033,
+"yaw_deg": -17.7,
+"side": 19.5
+},
+{
+"layer": "buildings",
+"owner": "계영원",
+"cx": 725.402,
+"cy": 1001.811,
+"yaw_deg": -17.7,
+"side": 19.5
+},
+{
+"layer": "buildings",
+"owner": "공동실험실습관 (N11)",
+"cx": 398.258,
+"cy": 739.699,
+"yaw_deg": -38.53,
+"side": 15.15
+},
+{
+"layer": "buildings",
+"owner": "공동실험실습관 (N11)",
+"cx": 408.232,
+"cy": 731.757,
+"yaw_deg": -38.53,
+"side": 15.15
+},
+{
+"layer": "buildings",
+"owner": "공동실험실습관 (N11)",
+"cx": 418.207,
+"cy": 723.814,
+"yaw_deg": -38.53,
+"side": 15.15
+},
+{
+"layer": "buildings",
+"owner": "공동실험실습관 (N11)",
+"cx": 428.181,
+"cy": 715.872,
+"yaw_deg": -38.53,
+"side": 15.15
+},
+{
+"layer": "buildings",
+"owner": "공동실험실습관 (N11)",
+"cx": 438.155,
+"cy": 707.93,
+"yaw_deg": -38.53,
+"side": 15.15
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 391.151,
+"cy": 817.106,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 388.394,
+"cy": 813.177,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 402.679,
+"cy": 809.016,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 399.922,
+"cy": 805.087,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 414.207,
+"cy": 800.926,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 411.45,
+"cy": 796.997,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 425.735,
+"cy": 792.836,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 422.978,
+"cy": 788.907,
+"yaw_deg": -35.06,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 375.368,
+"cy": 818.683,
+"yaw_deg": -35.06,
+"side": 10.45
+},
+{
+"layer": "buildings",
+"owner": "국제교류원 (N10)",
+"cx": 376.596,
+"cy": 817.821,
+"yaw_deg": -35.06,
+"side": 10.45
+},
+{
+"layer": "buildings",
+"owner": "대학본부 (N10)",
+"cx": 352.283,
+"cy": 780.05,
+"yaw_deg": 54.13,
+"side": 21.15
+},
+{
+"layer": "buildings",
+"owner": "대학본부 (N10)",
+"cx": 360.647,
+"cy": 791.618,
+"yaw_deg": 54.13,
+"side": 21.15
+},
+{
+"layer": "buildings",
+"owner": "대학본부 (N10)",
+"cx": 369.012,
+"cy": 803.186,
+"yaw_deg": 54.13,
+"side": 21.15
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 180.65,
+"cy": 468.523,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 187.59,
+"cy": 478.532,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 194.531,
+"cy": 488.54,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 201.472,
+"cy": 498.549,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 208.413,
+"cy": 508.558,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "명덕관 (S17-2)",
+"cx": 215.354,
+"cy": 518.567,
+"yaw_deg": 55.26,
+"side": 14.25
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 308.609,
+"cy": 1035.152,
+"yaw_deg": -43.85,
+"side": 23.9
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 322.653,
+"cy": 1021.661,
+"yaw_deg": -43.85,
+"side": 23.9
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 336.698,
+"cy": 1008.169,
+"yaw_deg": -43.85,
+"side": 23.9
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 350.742,
+"cy": 994.677,
+"yaw_deg": -43.85,
+"side": 23.9
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 364.787,
+"cy": 981.185,
+"yaw_deg": -43.85,
+"side": 23.9
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 320.767,
+"cy": 1000.176,
+"yaw_deg": -43.85,
+"side": 11.4
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 327.96,
+"cy": 993.265,
+"yaw_deg": -43.85,
+"side": 11.4
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 335.154,
+"cy": 986.355,
+"yaw_deg": -43.85,
+"side": 11.4
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 342.347,
+"cy": 979.444,
+"yaw_deg": -43.85,
+"side": 11.4
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 349.541,
+"cy": 972.534,
+"yaw_deg": -43.85,
+"side": 11.4
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 284.833,
+"cy": 1039.382,
+"yaw_deg": -43.85,
+"side": 17.25
+},
+{
+"layer": "buildings",
+"owner": "법학전문대학원 (N2)",
+"cx": 285.085,
+"cy": 1039.139,
+"yaw_deg": -43.85,
+"side": 17.25
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 633.875,
+"cy": 768.042,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 639.79,
+"cy": 763.432,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 642.096,
+"cy": 778.592,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 648.012,
+"cy": 773.982,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 650.318,
+"cy": 789.142,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 656.234,
+"cy": 784.531,
+"yaw_deg": 52.07,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 637.571,
+"cy": 739.394,
+"yaw_deg": -37.93,
+"side": 15.75
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 646.247,
+"cy": 732.633,
+"yaw_deg": -37.93,
+"side": 15.75
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 654.924,
+"cy": 725.871,
+"yaw_deg": -37.93,
+"side": 15.75
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 663.6,
+"cy": 719.109,
+"yaw_deg": -37.93,
+"side": 15.75
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 629.87,
+"cy": 753.224,
+"yaw_deg": -37.93,
+"side": 13.6
+},
+{
+"layer": "buildings",
+"owner": "사회과학대학 본관 (N15)",
+"cx": 630.501,
+"cy": 752.732,
+"yaw_deg": -37.93,
+"side": 13.6
+},
+{
+"layer": "buildings",
+"owner": "세종국가정책대학원",
+"cx": 681.564,
+"cy": 716.231,
+"yaw_deg": -34.91,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "세종국가정책대학원",
+"cx": 675.011,
+"cy": 706.841,
+"yaw_deg": -34.91,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "세종국가정책대학원",
+"cx": 693.66,
+"cy": 707.79,
+"yaw_deg": -34.91,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "세종국가정책대학원",
+"cx": 687.107,
+"cy": 698.4,
+"yaw_deg": -34.91,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 489.489,
+"cy": 861.257,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 488.787,
+"cy": 860.284,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 501.911,
+"cy": 852.281,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 501.208,
+"cy": 851.309,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 514.333,
+"cy": 843.306,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "씨비엔유 스타",
+"cx": 513.63,
+"cy": 842.333,
+"yaw_deg": -35.85,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "양성재",
+"cx": 164.733,
+"cy": 531.069,
+"yaw_deg": 9.95,
+"side": 12.95
+},
+{
+"layer": "buildings",
+"owner": "양성재",
+"cx": 164.93,
+"cy": 531.103,
+"yaw_deg": 9.95,
+"side": 12.95
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 446.935,
+"cy": 856.335,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 449.807,
+"cy": 854.197,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 452.679,
+"cy": 852.06,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 455.551,
+"cy": 849.922,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 458.422,
+"cy": 847.785,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 461.294,
+"cy": 845.647,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 449.264,
+"cy": 859.463,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 452.135,
+"cy": 857.326,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 455.007,
+"cy": 855.188,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 457.879,
+"cy": 853.051,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 460.751,
+"cy": 850.913,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 463.623,
+"cy": 848.776,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 451.592,
+"cy": 862.592,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 454.464,
+"cy": 860.454,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 457.336,
+"cy": 858.317,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 460.208,
+"cy": 856.179,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 463.08,
+"cy": 854.042,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 465.951,
+"cy": 851.904,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 453.921,
+"cy": 865.721,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 456.793,
+"cy": 863.583,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 459.664,
+"cy": 861.446,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 462.536,
+"cy": 859.308,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 465.408,
+"cy": 857.171,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 468.28,
+"cy": 855.033,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 456.249,
+"cy": 868.849,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 459.121,
+"cy": 866.712,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 461.993,
+"cy": 864.574,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 464.865,
+"cy": 862.437,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 467.737,
+"cy": 860.299,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 470.608,
+"cy": 858.162,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 458.578,
+"cy": 871.978,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 461.45,
+"cy": 869.84,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 464.322,
+"cy": 867.703,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 467.193,
+"cy": 865.565,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 470.065,
+"cy": 863.428,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 472.937,
+"cy": 861.29,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 460.906,
+"cy": 875.106,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 463.778,
+"cy": 872.969,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 466.65,
+"cy": 870.831,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 469.522,
+"cy": 868.694,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 472.394,
+"cy": 866.556,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 475.266,
+"cy": 864.419,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 463.235,
+"cy": 878.235,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 466.107,
+"cy": 876.097,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 468.979,
+"cy": 873.96,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 471.85,
+"cy": 871.822,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 474.722,
+"cy": 869.685,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "이마트24 충북대대학본부점",
+"cx": 477.594,
+"cy": 867.547,
+"yaw_deg": 53.34,
+"side": 4.0
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 510.357,
+"cy": 565.756,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 522.948,
+"cy": 560.232,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 535.539,
+"cy": 554.707,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 548.131,
+"cy": 549.182,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 560.722,
+"cy": 543.658,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 573.313,
+"cy": 538.133,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 585.905,
+"cy": 532.609,
+"yaw_deg": -23.69,
+"side": 14.5
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 593.663,
+"cy": 521.857,
+"yaw_deg": 66.31,
+"side": 9.55
+},
+{
+"layer": "buildings",
+"owner": "자연과학대학 본관 (S1-1)",
+"cx": 595.772,
+"cy": 526.664,
+"yaw_deg": 66.31,
+"side": 9.55
+},
+{
+"layer": "buildings",
+"owner": "정의관",
+"cx": 675.469,
+"cy": 932.845,
+"yaw_deg": -35.59,
+"side": 10.6
+},
+{
+"layer": "buildings",
+"owner": "정의관",
+"cx": 681.467,
+"cy": 928.553,
+"yaw_deg": -35.59,
+"side": 10.6
+},
+{
+"layer": "buildings",
+"owner": "정의관",
+"cx": 687.464,
+"cy": 924.26,
+"yaw_deg": -35.59,
+"side": 10.6
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 598.354,
+"cy": 658.831,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 589.918,
+"cy": 646.853,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 581.482,
+"cy": 634.876,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 609.187,
+"cy": 651.2,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 600.751,
+"cy": 639.223,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 592.314,
+"cy": 627.246,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 620.019,
+"cy": 643.57,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 611.583,
+"cy": 631.593,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 603.147,
+"cy": 619.616,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 630.852,
+"cy": 635.94,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 622.416,
+"cy": 623.963,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 613.979,
+"cy": 611.986,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 641.684,
+"cy": 628.31,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 633.248,
+"cy": 616.333,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 624.812,
+"cy": 604.356,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 652.517,
+"cy": 620.68,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 644.081,
+"cy": 608.703,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "중앙도서관 구관 (N12)",
+"cx": 635.644,
+"cy": 596.726,
+"yaw_deg": -35.16,
+"side": 16.0
+},
+{
+"layer": "buildings",
+"owner": "차고 (S10)",
+"cx": 393.695,
+"cy": 608.732,
+"yaw_deg": 7.65,
+"side": 15.95
+},
+{
+"layer": "buildings",
+"owner": "차고 (S10)",
+"cx": 401.921,
+"cy": 609.837,
+"yaw_deg": 7.65,
+"side": 15.95
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 137.049,
+"cy": 687.555,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 145.622,
+"cy": 681.406,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 154.195,
+"cy": 675.257,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 162.768,
+"cy": 669.109,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 171.34,
+"cy": 662.96,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 179.913,
+"cy": 656.811,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 188.486,
+"cy": 650.662,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 197.059,
+"cy": 644.513,
+"yaw_deg": -35.65,
+"side": 12.2
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 158.915,
+"cy": 660.95,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 164.141,
+"cy": 657.201,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 169.367,
+"cy": 653.453,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 174.593,
+"cy": 649.705,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 179.819,
+"cy": 645.956,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 185.045,
+"cy": 642.208,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 190.271,
+"cy": 638.46,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 195.497,
+"cy": 634.711,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 200.723,
+"cy": 630.963,
+"yaw_deg": -35.65,
+"side": 6.65
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 166.902,
+"cy": 678.819,
+"yaw_deg": 54.35,
+"side": 9.6
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 172.011,
+"cy": 685.942,
+"yaw_deg": 54.35,
+"side": 9.6
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 177.121,
+"cy": 693.066,
+"yaw_deg": 54.35,
+"side": 9.6
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 182.23,
+"cy": 700.19,
+"yaw_deg": 54.35,
+"side": 9.6
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 140.717,
+"cy": 696.4,
+"yaw_deg": -35.65,
+"side": 7.75
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 145.552,
+"cy": 692.932,
+"yaw_deg": -35.65,
+"side": 7.75
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 150.386,
+"cy": 689.465,
+"yaw_deg": -35.65,
+"side": 7.75
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 155.221,
+"cy": 685.997,
+"yaw_deg": -35.65,
+"side": 7.75
+},
+{
+"layer": "buildings",
+"owner": "첨단바이오 연구센터 (S20)",
+"cx": 160.056,
+"cy": 682.529,
+"yaw_deg": -35.65,
+"side": 7.75
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 679.605,
+"cy": 888.188,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 689.851,
+"cy": 886.407,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 700.097,
+"cy": 884.626,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 710.344,
+"cy": 882.845,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 720.59,
+"cy": 881.064,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 730.837,
+"cy": 879.283,
+"yaw_deg": -9.86,
+"side": 10.9
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 719.137,
+"cy": 890.806,
+"yaw_deg": -9.86,
+"side": 9.4
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 726.157,
+"cy": 889.586,
+"yaw_deg": -9.86,
+"side": 9.4
+},
+{
+"layer": "buildings2",
+"owner": "미술과 (N16-3)",
+"cx": 733.177,
+"cy": 888.366,
+"yaw_deg": -9.86,
+"side": 9.4
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 646.972,
+"cy": 577.855,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 651.178,
+"cy": 574.797,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 655.891,
+"cy": 590.122,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 660.097,
+"cy": 587.064,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 664.81,
+"cy": 602.389,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 669.016,
+"cy": 599.331,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 673.729,
+"cy": 614.656,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "중앙도서관 신관 (N12)",
+"cx": 677.935,
+"cy": 611.598,
+"yaw_deg": 53.98,
+"side": 16.0
+},
+{
+"layer": "buildings2",
+"owner": "way470097512",
+"cx": 590.238,
+"cy": 995.969,
+"yaw_deg": -62.9,
+"side": 11.7
+},
+{
+"layer": "buildings2",
+"owner": "way470097512",
+"cx": 590.489,
+"cy": 995.48,
+"yaw_deg": -62.9,
+"side": 11.7
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 419.681,
+"cy": 563.062,
+"yaw_deg": -80.82,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 421.13,
+"cy": 554.095,
+"yaw_deg": -80.82,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 422.579,
+"cy": 545.128,
+"yaw_deg": -80.82,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 424.028,
+"cy": 536.161,
+"yaw_deg": -80.82,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 433.118,
+"cy": 536.008,
+"yaw_deg": 9.18,
+"side": 10.2
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 439.189,
+"cy": 536.989,
+"yaw_deg": 9.18,
+"side": 10.2
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 445.261,
+"cy": 537.971,
+"yaw_deg": 9.18,
+"side": 10.2
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 412.766,
+"cy": 564.173,
+"yaw_deg": -80.82,
+"side": 4.9
+},
+{
+"layer": "buildings2",
+"owner": "충북대학교 박물관 (S9)",
+"cx": 413.516,
+"cy": 559.534,
+"yaw_deg": -80.82,
+"side": 4.9
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 548.73,
+"cy": 482.66,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 549.241,
+"cy": 475.629,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 559.551,
+"cy": 483.448,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 560.063,
+"cy": 476.416,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 570.373,
+"cy": 484.235,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 570.884,
+"cy": 477.203,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 581.194,
+"cy": 485.022,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 581.706,
+"cy": 477.99,
+"yaw_deg": 4.16,
+"side": 12.0
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 568.463,
+"cy": 468.78,
+"yaw_deg": 4.16,
+"side": 5.65
+},
+{
+"layer": "buildings2",
+"owner": "자연대 2호관 (S1-2)",
+"cx": 573.899,
+"cy": 469.175,
+"yaw_deg": 4.16,
+"side": 5.65
+},
+{
+"layer": "buildings2",
+"owner": "신민관 (S17-3)",
+"cx": 134.107,
+"cy": 501.269,
+"yaw_deg": -35.64,
+"side": 14.75
+},
+{
+"layer": "buildings2",
+"owner": "신민관 (S17-3)",
+"cx": 142.627,
+"cy": 495.16,
+"yaw_deg": -35.64,
+"side": 14.75
+},
+{
+"layer": "buildings2",
+"owner": "신민관 (S17-3)",
+"cx": 151.147,
+"cy": 489.052,
+"yaw_deg": -35.64,
+"side": 14.75
+},
+{
+"layer": "buildings2",
+"owner": "신민관 (S17-3)",
+"cx": 159.667,
+"cy": 482.943,
+"yaw_deg": -35.64,
+"side": 14.75
+},
+{
+"layer": "buildings2",
+"owner": "way442760315",
+"cx": 168.192,
+"cy": 473.939,
+"yaw_deg": -32.77,
+"side": 8.9
+},
+{
+"layer": "buildings2",
+"owner": "way442760315",
+"cx": 169.496,
+"cy": 473.1,
+"yaw_deg": -32.77,
+"side": 8.9
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 760.43,
+"cy": 971.008,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 765.46,
+"cy": 965.608,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 770.49,
+"cy": 960.208,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 775.521,
+"cy": 954.808,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 780.551,
+"cy": 949.407,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 785.581,
+"cy": 944.007,
+"yaw_deg": -47.03,
+"side": 8.45
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 764.769,
+"cy": 982.634,
+"yaw_deg": -47.03,
+"side": 13.55
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 765.961,
+"cy": 981.354,
+"yaw_deg": -47.03,
+"side": 13.55
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 791.237,
+"cy": 949.857,
+"yaw_deg": 42.97,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "way471400800",
+"cx": 794.42,
+"cy": 952.822,
+"yaw_deg": 42.97,
+"side": 9.3
+},
+{
+"layer": "buildings2",
+"owner": "인쇄목공실(S13)",
+"cx": 363.772,
+"cy": 585.161,
+"yaw_deg": -76.6,
+"side": 4.0
+},
+{
+"layer": "buildings2",
+"owner": "인쇄목공실(S13)",
+"cx": 360.951,
+"cy": 584.489,
+"yaw_deg": -76.6,
+"side": 4.0
+},
+{
+"layer": "buildings2",
+"owner": "인쇄목공실(S13)",
+"cx": 364.444,
+"cy": 582.34,
+"yaw_deg": -76.6,
+"side": 4.0
+},
+{
+"layer": "buildings2",
+"owner": "인쇄목공실(S13)",
+"cx": 361.623,
+"cy": 581.668,
+"yaw_deg": -76.6,
+"side": 4.0
+},
+{
+"layer": "buildings2",
+"owner": "구학생회관 (S14)",
+"cx": 324.877,
+"cy": 567.195,
+"yaw_deg": 11.69,
+"side": 17.85
+},
+{
+"layer": "buildings2",
+"owner": "구학생회관 (S14)",
+"cx": 335.037,
+"cy": 569.297,
+"yaw_deg": 11.69,
+"side": 17.85
+},
+{
+"layer": "buildings2",
+"owner": "구학생회관 (S14)",
+"cx": 345.196,
+"cy": 571.399,
+"yaw_deg": 11.69,
+"side": 17.85
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 743.097,
+"cy": 771.789,
+"yaw_deg": 35.97,
+"side": 10.95
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 751.899,
+"cy": 778.177,
+"yaw_deg": 35.97,
+"side": 10.95
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 760.7,
+"cy": 784.564,
+"yaw_deg": 35.97,
+"side": 10.95
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 733.246,
+"cy": 759.357,
+"yaw_deg": -54.03,
+"side": 10.5
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 737.372,
+"cy": 753.672,
+"yaw_deg": -54.03,
+"side": 10.5
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 741.498,
+"cy": 747.986,
+"yaw_deg": -54.03,
+"side": 10.5
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 681.108,
+"cy": 825.494,
+"yaw_deg": 35.97,
+"side": 12.4
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 686.247,
+"cy": 829.223,
+"yaw_deg": 35.97,
+"side": 12.4
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 740.692,
+"cy": 801.705,
+"yaw_deg": -54.03,
+"side": 8.7
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 745.479,
+"cy": 795.109,
+"yaw_deg": -54.03,
+"side": 8.7
+},
+{
+"layer": "buildings2",
+"owner": "인문대학 본관 (N16-1)",
+"cx": 750.266,
+"cy": 788.513,
+"yaw_deg": -54.03,
+"side": 8.7
+}
+]
+}

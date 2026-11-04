@@ -1,0 +1,87 @@
+{
+ "removed": {
+  "relation": "52799",
+  "ways": [
+   "52798",
+   "52799"
+  ],
+  "nodes": 64,
+  "where": "북문 길 끝(750, 695), v3.3a·b 유턴"
+ },
+ "split": {
+  "r1415": {
+   "src": "37801",
+   "at": 150,
+   "front": "37801",
+   "back": "52801"
+  },
+  "r1409": {
+   "src": "36955",
+   "at": 78,
+   "front": "52802",
+   "back": "36955"
+  }
+ },
+ "n14": {
+  "lanelet": "24245",
+  "road": 1318,
+  "reverted_s74": true,
+  "sig": 6.0,
+  "d0": 2.5,
+  "w": 20.0,
+  "c0": -4.0,
+  "e": 0.0,
+  "half_width": 1.675,
+  "jog_idx": 79,
+  "jog_xy": [
+   536.6,
+   940.02
+  ],
+  "moved_nodes": 392,
+  "search": "integration/logs/s75/n14_search2.json"
+ },
+ "uturn": {
+  "relation": "52803",
+  "where": "도서관 길 꺾이는 모서리('가')",
+  "start": [
+   715.86,
+   641.85
+  ],
+  "end": [
+   710.11,
+   650.07
+  ],
+  "typ": "RLR",
+  "r": 4.1,
+  "segs_rad": [
+   0.656,
+   4.705,
+   0.907
+  ],
+  "length_m": 25.7,
+  "wl": 3.0,
+  "wr": 3.0,
+  "lane_w": [
+   3.35,
+   3.35
+  ],
+  "nodes": 128,
+  "wheel_worst_out_m": {
+   "prius_sample": 0.25,
+   "sprinter": 0.25
+  },
+  "ext_pts": 8,
+  "centerline_pts": 56,
+  "wpow": 0.4,
+  "length_with_ext_m": 33.7,
+  "steer_need_rad": {
+   "prius_sample": 0.598,
+   "sprinter": 0.729
+  },
+  "from_lanelet": "37801",
+  "to_lanelet": "36955"
+ },
+ "source_sha256": "bf0d421ef989efe8577004ee4c70c1a8d3a53891e1da0305c51467c093d33e55",
+ "out_sha256": "d2935e5ba33f951374abfd008e8fc6e43c0a6a1a2f97636caef8c7fc1c042744",
+ "path_json": "integration/logs/s75/uturn_search_path.json"
+}

@@ -1,0 +1,31 @@
+# 11/04: autoware_carla_interface 1.9.0 config/raw_vehicle_cmd_converter.param.yaml 사본(Apache 2.0)에서 max_throttle 0.4 -> 0.6 만 바꿈(스프린터용)
+#   까닭: 스프린터는 스로틀 0.4 로 4.17m/s 에서 0.45m/s2, 5.56m/s 에서 0.04m/s2 뿐(s76_sprinter_accel_map.csv). 0.6 이면 저속 1.3~1.6m/s2
+#   지도 파일 경로는 그대로(find-pkg-share). s76_sprinter.override.yaml 이 패키지 안 accel_map.csv·brake_map.csv 자리에 스프린터 지도를 덮어 마운트
+/**:
+  ros__parameters:
+    csv_path_accel_map: $(find-pkg-share autoware_carla_interface)/accel_map.csv
+    csv_path_brake_map: $(find-pkg-share autoware_carla_interface)/brake_map.csv
+    csv_path_steer_map: $(find-pkg-share autoware_carla_interface)/steer_map.csv
+    convert_accel_cmd: true
+    convert_brake_cmd: true
+    convert_steer_cmd: false
+    use_steer_ff: true
+    use_steer_fb: true
+    is_debugging: false
+    max_throttle: 0.6
+    max_brake: 0.8
+    max_steer: 1.0
+    min_steer: -1.0
+    steer_pid:
+      kp: 150.0
+      ki: 15.0
+      kd: 0.0
+      max: 8.0
+      min: -8.0
+      max_p: 8.0
+      min_p: -8.0
+      max_i: 8.0
+      min_i: -8.0
+      max_d: 0.0
+      min_d: 0.0
+      invalid_integration_decay: 0.97

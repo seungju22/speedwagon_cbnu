@@ -1,0 +1,7 @@
+# 순환 v3.3d 스프린터 회차 목록(circulation_v33d_r1_sprinter.yaml 목표): 구간 이름, 목표 x y qz qw, 안 쓰는 칸 다섯 개, 예상 초(플래닝 시뮬레이터 스프린터 값, 3구간은 길이 비례 165)
+s1_main_gate_inner_nw_to_yangseong_se 213.943 550.964 -0.543554 0.839374 - - - - - 113
+s2_yangseong_se_to_back_gate_inner_se 958.911 289.959 -0.318379 0.947963 - - - - - 278
+s3_back_gate_inner_se_to_lib_south_nw 572.856 566.148 0.972186 0.23421 - - - - - 165
+s4_lib_south_nw_to_lib_north 656.016 684.56 -0.304989 0.952356 - - - - - 134
+s5_lib_north_to_middle_gate_s 586.007 913.054 0.430549 0.902567 - - - - - 140
+s6_middle_gate_s_to_main_gate_inner_nw 379.399 885.908 0.951546 0.307506 - - - - - 133

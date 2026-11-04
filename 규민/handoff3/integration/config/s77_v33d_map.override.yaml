@@ -1,0 +1,6 @@
+# 11/04: v3.3d(map/maps/v33d 사본, s75 오버레이 사본)를 팀 지도와 다른 경로로 마운트. 런치에는 MAP_PATH=/home/aw/s77_maps/OpenDriveMap
+# 폴더 이름은 OpenDriveMap(브리지가 CARLA 맵 이름으로 씀). xodr·CARLA 월드는 v3.1 그대로
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/integration/maps/s77_v33d/OpenDriveMap:/home/aw/s77_maps/OpenDriveMap:ro

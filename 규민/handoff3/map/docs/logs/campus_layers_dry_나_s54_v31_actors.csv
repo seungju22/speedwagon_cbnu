@@ -1,0 +1,732 @@
+layer,owner,kind,blueprint,mesh_path,scale,x,y,z,yaw
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,545.828,-844.767,2.475,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,545.828,-844.767,6.158,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,545.828,-844.767,9.842,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,545.828,-844.767,13.525,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,548.220,-848.076,2.475,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,548.220,-848.076,6.158,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,548.220,-848.076,9.842,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,548.220,-848.076,13.525,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,550.613,-851.385,2.475,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,550.613,-851.385,6.158,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,550.613,-851.385,9.842,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,550.613,-851.385,13.525,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,553.005,-854.695,2.475,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,553.005,-854.695,6.158,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,553.005,-854.695,9.842,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.95,553.005,-854.695,13.525,-54.14
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,532.879,-870.041,2.075,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,532.879,-870.041,6.025,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,532.879,-870.041,9.975,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,532.879,-870.041,13.925,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,535.351,-868.254,2.075,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,535.351,-868.254,6.025,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,535.351,-868.254,9.975,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,535.351,-868.254,13.925,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,537.823,-866.468,2.075,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,537.823,-866.468,6.025,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,537.823,-866.468,9.975,35.86
+buildings,way765358663,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.15,537.823,-866.468,13.925,35.86
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,547.663,-821.244,6.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,547.663,-821.244,13.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,558.296,-813.295,6.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,558.296,-813.295,13.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,568.928,-805.347,6.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,568.928,-805.347,13.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,579.561,-797.399,6.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,579.561,-797.399,13.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,590.193,-789.450,6.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.55,590.193,-789.450,13.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.25,587.204,-826.207,8.125,-53.22
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.25,587.204,-826.207,11.875,-53.22
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.25,588.043,-827.328,8.125,-53.22
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.25,588.043,-827.328,11.875,-53.22
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,574.299,-789.691,3.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,574.299,-789.691,10.000,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,574.299,-789.691,16.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,578.597,-786.478,3.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,578.597,-786.478,10.000,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,578.597,-786.478,16.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,582.896,-783.264,3.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,582.896,-783.264,10.000,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,582.896,-783.264,16.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,587.194,-780.051,3.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,587.194,-780.051,10.000,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.0,587.194,-780.051,16.500,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,538.489,-829.848,5.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,538.489,-829.848,14.775,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,539.410,-829.159,5.225,36.78
+buildings,경영대학 본관 (N13),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,539.410,-829.159,14.775,36.78
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,277.792,-760.700,3.725,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,277.792,-760.700,8.000,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,277.792,-760.700,12.275,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,281.893,-757.840,3.725,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,281.893,-757.840,8.000,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,281.893,-757.840,12.275,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,285.995,-754.980,3.725,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,285.995,-754.980,8.000,34.89
+buildings,way471400965,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.45,285.995,-754.980,12.275,34.89
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,156.833,-757.697,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,154.313,-754.090,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,165.891,-751.367,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,163.370,-747.760,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,174.948,-745.037,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,172.427,-741.430,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,184.005,-738.706,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,181.484,-735.100,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,193.062,-732.376,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,190.541,-728.770,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,202.119,-726.046,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,199.599,-722.440,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,211.176,-719.716,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,208.656,-716.110,6.000,34.95
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,223.678,-724.947,6.000,-55.05
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,225.809,-723.457,6.000,-55.05
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,229.392,-733.123,6.000,-55.05
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,231.523,-731.633,6.000,-55.05
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,235.107,-741.299,6.000,-55.05
+buildings,농업생명과학대학 강의동 (S21-4),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.0,237.238,-739.809,6.000,-55.05
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,195.331,-829.684,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,194.537,-828.592,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,206.273,-821.734,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,205.479,-820.642,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,217.215,-813.785,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,216.421,-812.692,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,228.157,-805.835,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,227.363,-804.743,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,239.099,-797.885,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,238.305,-796.793,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,250.041,-789.935,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,249.247,-788.843,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,260.982,-781.985,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,260.189,-780.893,8.000,36.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,160.791,-781.974,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,161.358,-781.562,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,169.030,-793.313,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,169.596,-792.902,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,177.269,-804.653,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,177.835,-804.242,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,185.508,-815.993,8.000,-54.00
+buildings,농업생명과학대학 실험동 (S21-5),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,186.074,-815.581,8.000,-54.00
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,638.746,-925.100,4.675,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,638.746,-925.100,10.000,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,638.746,-925.100,15.325,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,643.688,-918.032,4.675,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,643.688,-918.032,10.000,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,643.688,-918.032,15.325,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,648.631,-910.963,4.675,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,648.631,-910.963,10.000,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,648.631,-910.963,15.325,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,653.573,-903.894,4.675,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,653.573,-903.894,10.000,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,653.573,-903.894,15.325,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,658.515,-896.826,4.675,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,658.515,-896.826,10.000,55.04
+buildings,진리관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.35,658.515,-896.826,15.325,55.04
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,174.890,-583.543,6.900,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,174.890,-583.543,19.633,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,174.890,-583.543,32.367,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,174.890,-583.543,45.100,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,183.252,-577.744,6.900,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,183.252,-577.744,19.633,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,183.252,-577.744,32.367,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,183.252,-577.744,45.100,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,191.613,-571.946,6.900,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,191.613,-571.946,19.633,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,191.613,-571.946,32.367,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.8,191.613,-571.946,45.100,34.74
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,158.351,-565.745,6.950,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,158.351,-565.745,19.650,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,158.351,-565.745,32.350,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,158.351,-565.745,45.050,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,164.591,-574.743,6.950,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,164.591,-574.743,19.650,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,164.591,-574.743,32.350,-55.26
+buildings,지선관 (S17-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.9,164.591,-574.743,45.050,-55.26
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,601.483,-867.571,7.750,-81.29
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,601.483,-867.571,12.250,-81.29
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,603.637,-881.632,7.750,-81.29
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,603.637,-881.632,12.250,-81.29
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,605.792,-895.693,7.750,-81.29
+buildings,미술관 (N16-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.5,605.792,-895.693,12.250,-81.29
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,28.0,530.304,-895.684,14.000,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,28.0,531.114,-895.097,14.000,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,28.0,542.985,-913.170,14.000,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,28.0,543.795,-912.583,14.000,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,18.85,565.452,-925.195,9.425,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,18.85,565.452,-925.195,18.575,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,18.85,567.125,-927.502,9.425,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,18.85,567.125,-927.502,18.575,-54.05
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,515.630,-884.863,3.975,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,515.630,-884.863,10.658,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,515.630,-884.863,17.342,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,515.630,-884.863,24.025,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,520.096,-881.624,3.975,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,520.096,-881.624,10.658,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,520.096,-881.624,17.342,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,520.096,-881.624,24.025,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,524.561,-878.386,3.975,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,524.561,-878.386,10.658,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,524.561,-878.386,17.342,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,524.561,-878.386,24.025,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,529.027,-875.147,3.975,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,529.027,-875.147,10.658,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,529.027,-875.147,17.342,35.95
+buildings,인문사회관 (N14),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.95,529.027,-875.147,24.025,35.95
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,139.817,-559.764,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,143.434,-558.136,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,147.051,-556.509,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,150.669,-554.881,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,154.286,-553.253,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,157.903,-551.625,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,161.520,-549.997,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,165.137,-548.369,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,168.755,-546.741,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,172.372,-545.113,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,175.989,-543.485,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,179.606,-541.857,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,2.050,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,6.042,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,10.033,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,14.025,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,18.017,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,22.008,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,26.000,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,29.992,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,33.983,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,37.975,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,41.967,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,45.958,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.1,183.224,-540.229,49.950,24.23
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,4.725,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,13.235,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,21.745,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,30.255,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,38.765,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.212,-546.996,47.275,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,4.725,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,13.235,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,21.745,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,30.255,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,38.765,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.45,184.766,-548.227,47.275,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,3.125,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,8.844,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,14.562,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,20.281,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,26.000,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,31.719,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,37.438,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,43.156,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,145.569,-564.933,48.875,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,3.125,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,8.844,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,14.562,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,20.281,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,26.000,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,31.719,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,37.438,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,43.156,-65.77
+buildings,way442760317,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.25,146.718,-567.486,48.875,-65.77
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,617.123,-960.551,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,622.246,-955.855,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,627.370,-951.158,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,621.465,-965.287,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,626.588,-960.591,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,631.711,-955.895,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,625.806,-970.023,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,630.929,-965.327,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,636.053,-960.631,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,630.148,-974.760,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,635.271,-970.063,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,640.394,-965.367,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,634.489,-979.496,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,639.612,-974.800,4.000,-47.49
+buildings,개성재 관리동,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.0,644.736,-970.103,4.000,-47.49
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,213.079,-679.274,7.425,36.52
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,213.079,-679.274,8.575,36.52
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,220.472,-673.799,7.425,36.52
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,220.472,-673.799,8.575,36.52
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,227.866,-668.324,7.425,36.52
+buildings,way442760303,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.85,227.866,-668.324,8.575,36.52
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,438.998,-574.631,2.925,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,438.998,-574.631,8.000,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,438.998,-574.631,13.075,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,443.423,-573.374,2.925,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,443.423,-573.374,8.000,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,443.423,-573.374,13.075,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,447.848,-572.116,2.925,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,447.848,-572.116,8.000,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,447.848,-572.116,13.075,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,452.273,-570.859,2.925,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,452.273,-570.859,8.000,15.86
+buildings,way471400915,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,5.85,452.273,-570.859,13.075,15.86
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,677.305,-968.105,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,677.305,-968.105,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,677.305,-968.105,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,683.975,-966.211,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,683.975,-966.211,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,683.975,-966.211,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,690.645,-964.317,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,690.645,-964.317,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,690.645,-964.317,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,697.315,-962.424,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,697.315,-962.424,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,697.315,-962.424,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,703.984,-960.530,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,703.984,-960.530,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,703.984,-960.530,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,710.654,-958.637,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,710.654,-958.637,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,710.654,-958.637,15.925,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,717.324,-956.743,4.075,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,717.324,-956.743,10.000,15.85
+buildings,개척관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,8.15,717.324,-956.743,15.925,15.85
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,705.205,-1008.256,9.750,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,705.205,-1008.256,22.000,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,705.205,-1008.256,34.250,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,715.303,-1005.033,9.750,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,715.303,-1005.033,22.000,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,715.303,-1005.033,34.250,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,725.402,-1001.811,9.750,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,725.402,-1001.811,22.000,17.70
+buildings,계영원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,19.5,725.402,-1001.811,34.250,17.70
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,398.258,-739.699,7.575,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,398.258,-739.699,12.425,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,408.232,-731.757,7.575,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,408.232,-731.757,12.425,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,418.207,-723.814,7.575,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,418.207,-723.814,12.425,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,428.181,-715.872,7.575,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,428.181,-715.872,12.425,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,438.155,-707.930,7.575,38.53
+buildings,공동실험실습관 (N11),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.15,438.155,-707.930,12.425,38.53
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,391.151,-817.106,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,388.394,-813.177,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,402.679,-809.016,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,399.922,-805.087,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,414.207,-800.926,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,411.450,-796.997,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,425.735,-792.836,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,422.978,-788.907,8.000,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,375.368,-818.683,5.225,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,375.368,-818.683,10.775,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,376.596,-817.821,5.225,35.06
+buildings,국제교류원 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.45,376.596,-817.821,10.775,35.06
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,352.283,-780.050,10.575,-54.13
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,352.283,-780.050,25.425,-54.13
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,360.647,-791.618,10.575,-54.13
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,360.647,-791.618,25.425,-54.13
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,369.012,-803.186,10.575,-54.13
+buildings,대학본부 (N10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,21.15,369.012,-803.186,25.425,-54.13
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,180.650,-468.523,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,180.650,-468.523,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,180.650,-468.523,32.875,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,187.590,-478.532,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,187.590,-478.532,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,187.590,-478.532,32.875,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,194.531,-488.540,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,194.531,-488.540,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,194.531,-488.540,32.875,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,201.472,-498.549,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,201.472,-498.549,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,201.472,-498.549,32.875,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,208.413,-508.558,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,208.413,-508.558,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,208.413,-508.558,32.875,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,215.354,-518.567,7.125,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,215.354,-518.567,20.000,-55.26
+buildings,명덕관 (S17-2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.25,215.354,-518.567,32.875,-55.26
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,308.609,-1035.152,11.950,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,308.609,-1035.152,20.050,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,322.653,-1021.661,11.950,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,322.653,-1021.661,20.050,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,336.698,-1008.169,11.950,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,336.698,-1008.169,20.050,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,350.742,-994.677,11.950,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,350.742,-994.677,20.050,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,364.787,-981.185,11.950,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,23.9,364.787,-981.185,20.050,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,320.767,-1000.176,5.700,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,320.767,-1000.176,16.000,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,320.767,-1000.176,26.300,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,327.960,-993.265,5.700,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,327.960,-993.265,16.000,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,327.960,-993.265,26.300,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,335.154,-986.355,5.700,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,335.154,-986.355,16.000,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,335.154,-986.355,26.300,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,342.347,-979.444,5.700,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,342.347,-979.444,16.000,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,342.347,-979.444,26.300,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,349.541,-972.534,5.700,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,349.541,-972.534,16.000,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,11.4,349.541,-972.534,26.300,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,17.25,284.833,-1039.382,8.625,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,17.25,284.833,-1039.382,23.375,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,17.25,285.085,-1039.139,8.625,43.85
+buildings,법학전문대학원 (N2),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,17.25,285.085,-1039.139,23.375,43.85
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,633.875,-768.042,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,639.790,-763.432,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,642.096,-778.592,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,648.012,-773.982,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,650.318,-789.142,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,656.234,-784.531,8.000,-52.07
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,637.571,-739.394,7.875,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,637.571,-739.394,8.125,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,646.247,-732.633,7.875,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,646.247,-732.633,8.125,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,654.924,-725.871,7.875,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,654.924,-725.871,8.125,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,663.600,-719.109,7.875,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.75,663.600,-719.109,8.125,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.6,629.870,-753.224,6.800,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.6,629.870,-753.224,9.200,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.6,630.501,-752.732,6.800,37.93
+buildings,사회과학대학 본관 (N15),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,13.6,630.501,-752.732,9.200,37.93
+buildings,세종국가정책대학원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,681.564,-716.231,8.000,34.91
+buildings,세종국가정책대학원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,675.011,-706.841,8.000,34.91
+buildings,세종국가정책대학원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,693.660,-707.790,8.000,34.91
+buildings,세종국가정책대학원,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,687.107,-698.400,8.000,34.91
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,489.489,-861.257,8.000,35.85
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,488.787,-860.284,8.000,35.85
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,501.911,-852.281,8.000,35.85
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,501.208,-851.309,8.000,35.85
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,514.333,-843.306,8.000,35.85
+buildings,씨비엔유 스타,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,513.630,-842.333,8.000,35.85
+buildings,양성재,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.95,164.733,-531.069,6.475,-9.95
+buildings,양성재,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.95,164.733,-531.069,9.525,-9.95
+buildings,양성재,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.95,164.930,-531.103,6.475,-9.95
+buildings,양성재,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.95,164.930,-531.103,9.525,-9.95
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,446.935,-856.335,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,449.807,-854.197,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,452.679,-852.060,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,455.551,-849.922,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,458.422,-847.785,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,461.294,-845.647,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,449.264,-859.463,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,452.135,-857.326,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,455.007,-855.188,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,457.879,-853.051,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,460.751,-850.913,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,463.623,-848.776,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,451.592,-862.592,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,454.464,-860.454,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,457.336,-858.317,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,460.208,-856.179,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,463.080,-854.042,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,465.951,-851.904,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,453.921,-865.721,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,456.793,-863.583,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,459.664,-861.446,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,462.536,-859.308,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,465.408,-857.171,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,468.280,-855.033,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,456.249,-868.849,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,459.121,-866.712,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,461.993,-864.574,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,464.865,-862.437,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,467.737,-860.299,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,470.608,-858.162,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,458.578,-871.978,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,461.450,-869.840,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,464.322,-867.703,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,467.193,-865.565,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,470.065,-863.428,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,472.937,-861.290,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,460.906,-875.106,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,463.778,-872.969,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,466.650,-870.831,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,469.522,-868.694,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,472.394,-866.556,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,475.266,-864.419,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,463.235,-878.235,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,466.107,-876.097,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,468.979,-873.960,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,471.850,-871.822,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,474.722,-869.685,2.000,-53.34
+buildings,이마트24 충북대대학본부점,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,4.0,477.594,-867.547,2.000,-53.34
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,510.357,-565.756,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,510.357,-565.756,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,522.948,-560.232,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,522.948,-560.232,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,535.539,-554.707,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,535.539,-554.707,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,548.131,-549.182,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,548.131,-549.182,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,560.722,-543.658,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,560.722,-543.658,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,573.313,-538.133,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,573.313,-538.133,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,585.905,-532.609,7.250,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,14.5,585.905,-532.609,8.750,23.69
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.55,593.663,-521.857,4.775,-66.31
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.55,593.663,-521.857,11.225,-66.31
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.55,595.772,-526.664,4.775,-66.31
+buildings,자연과학대학 본관 (S1-1),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.55,595.772,-526.664,11.225,-66.31
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,675.469,-932.845,5.300,35.59
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,675.469,-932.845,14.700,35.59
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,681.467,-928.553,5.300,35.59
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,681.467,-928.553,14.700,35.59
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,687.464,-924.260,5.300,35.59
+buildings,정의관,cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,10.6,687.464,-924.260,14.700,35.59
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,598.354,-658.831,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,589.918,-646.853,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,581.482,-634.876,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,609.187,-651.200,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,600.751,-639.223,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,592.314,-627.246,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,620.019,-643.570,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,611.583,-631.593,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,603.147,-619.616,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,630.852,-635.940,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,622.416,-623.963,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,613.979,-611.986,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,641.684,-628.310,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,633.248,-616.333,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,624.812,-604.356,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,652.517,-620.680,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,644.081,-608.703,8.000,35.16
+buildings,중앙도서관 구관 (N12),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,16.0,635.644,-596.726,8.000,35.16
+buildings,차고 (S10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.95,393.695,-608.732,7.975,-7.65
+buildings,차고 (S10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.95,393.695,-608.732,8.025,-7.65
+buildings,차고 (S10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.95,401.921,-609.837,7.975,-7.65
+buildings,차고 (S10),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,15.95,401.921,-609.837,8.025,-7.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,137.049,-687.555,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,137.049,-687.555,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,145.622,-681.406,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,145.622,-681.406,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,154.195,-675.257,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,154.195,-675.257,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,162.768,-669.109,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,162.768,-669.109,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,171.340,-662.960,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,171.340,-662.960,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,179.913,-656.811,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,179.913,-656.811,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,188.486,-650.662,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,188.486,-650.662,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,197.059,-644.513,6.100,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,12.2,197.059,-644.513,17.900,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,158.915,-660.950,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,158.915,-660.950,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,158.915,-660.950,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,158.915,-660.950,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,164.141,-657.201,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,164.141,-657.201,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,164.141,-657.201,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,164.141,-657.201,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,169.367,-653.453,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,169.367,-653.453,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,169.367,-653.453,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,169.367,-653.453,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,174.593,-649.705,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,174.593,-649.705,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,174.593,-649.705,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,174.593,-649.705,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,179.819,-645.956,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,179.819,-645.956,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,179.819,-645.956,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,179.819,-645.956,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,185.045,-642.208,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,185.045,-642.208,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,185.045,-642.208,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,185.045,-642.208,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,190.271,-638.460,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,190.271,-638.460,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,190.271,-638.460,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,190.271,-638.460,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,195.497,-634.711,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,195.497,-634.711,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,195.497,-634.711,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,195.497,-634.711,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,200.723,-630.963,3.325,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,200.723,-630.963,9.108,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,200.723,-630.963,14.892,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,6.65,200.723,-630.963,20.675,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,166.902,-678.819,4.800,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,166.902,-678.819,12.000,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,166.902,-678.819,19.200,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,172.011,-685.942,4.800,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,172.011,-685.942,12.000,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,172.011,-685.942,19.200,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,177.121,-693.066,4.800,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,177.121,-693.066,12.000,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,177.121,-693.066,19.200,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,182.230,-700.190,4.800,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,182.230,-700.190,12.000,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,9.6,182.230,-700.190,19.200,-54.35
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,140.717,-696.400,3.875,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,140.717,-696.400,9.292,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,140.717,-696.400,14.708,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,140.717,-696.400,20.125,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,145.552,-692.932,3.875,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,145.552,-692.932,9.292,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,145.552,-692.932,14.708,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,145.552,-692.932,20.125,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,150.386,-689.465,3.875,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,150.386,-689.465,9.292,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,150.386,-689.465,14.708,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,150.386,-689.465,20.125,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,155.221,-685.997,3.875,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,155.221,-685.997,9.292,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,155.221,-685.997,14.708,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,155.221,-685.997,20.125,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,160.056,-682.529,3.875,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,160.056,-682.529,9.292,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,160.056,-682.529,14.708,35.65
+buildings,첨단바이오 연구센터 (S20),cube,static.prop.mesh,/Game/Carla/Static/Ground/GroundCube.GroundCube,7.75,160.056,-682.529,20.125,35.65
+busstop,정문(이쪽),busstop,static.prop.busstop,,,261.466,-962.629,0.000,217.83
+busstop,정문(건너편),busstop,static.prop.busstop,,,267.458,-971.313,0.000,37.84
+busstop,도서관 북문(이쪽),busstop,static.prop.busstop,,,655.362,-680.614,0.000,215.52
+busstop,도서관 남문(건너편),busstop,static.prop.busstop,,,572.950,-570.134,0.000,27.09
+busstop,중문(이쪽),busstop,static.prop.busstop,,,626.338,-906.528,0.000,87.32
+busstop,중문(건너편),busstop,static.prop.busstop,,,615.861,-905.755,0.000,266.89
+busstop,양성재(이쪽),busstop,static.prop.busstop,,,211.374,-547.919,0.000,245.75
+busstop,양성재(건너편),busstop,static.prop.busstop,,,220.729,-552.799,0.000,65.76
+busstop,후문(이쪽),busstop,static.prop.busstop,,,1098.885,-216.156,0.000,193.14
+busstop,후문(건너편),busstop,static.prop.busstop,,,1100.823,-226.521,0.000,13.14

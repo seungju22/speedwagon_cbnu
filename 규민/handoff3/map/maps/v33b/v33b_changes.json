@@ -1,0 +1,34 @@
+{
+ "n14": {
+  "apex": [
+   537.8,
+   940.7
+  ],
+  "wd": 3.0,
+  "wr": 18.0,
+  "moved": 37,
+  "max_m": 2.987,
+  "parking_ways": [
+   "471401019",
+   "471401020",
+   "471401021"
+  ]
+ },
+ "back_uturn": {
+  "relation": 52800,
+  "from_road": 1251,
+  "to_road": 1384,
+  "r_u": 5.0,
+  "r_out": 5.0,
+  "uw": 4.0,
+  "alpha_deg": 48.13,
+  "lane_w": 3.35,
+  "lat_gap": 3.35,
+  "lon_gap": 0.0,
+  "forward_max": 12.45,
+  "right_max": 3.32,
+  "left_max": 6.67
+ },
+ "source_sha256": "af536a8457c6bea49977aa368c76613d5d5a712ac09afa6fc7f43b7c106da1eb",
+ "out_sha256": "bf0d421ef989efe8577004ee4c70c1a8d3a53891e1da0305c51467c093d33e55"
+}

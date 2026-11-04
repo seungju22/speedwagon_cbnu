@@ -1,0 +1,17 @@
+# 11/04: s75_sprinter.override.yaml(vehicle_info·지붕 LiDAR) + 브리지 가속·제동 지도·변환 설정 + 미러 자르기 상자(스프린터용). 기본은 안 씀
+#   s59_aw_up.sh 의 VEH_COMPOSE 로 고름(빼면 프리우스 설정 그대로). 같이 줄 것: VEHICLE_TYPE=vehicle.mercedes.sprinter SMAP=s74_sensor_mapping_van_pick.yaml
+#   지도: integration/config/s76_sprinter_accel_map.csv·brake_map.csv(CARLA 계단 시험, integration/docs/s76_report.md 1단계)
+#   변환: s76_raw_vehicle_cmd_converter_sprinter.param.yaml(max_throttle 0.6)
+#   미러: s76_mirror_sprinter.param.yaml(x 2.9~3.6, y ±1.4, z 1.1~2.0). carla_sensor_kit 는 vehicle_mirror_param_file 로 <vehicle_model>_description 것을 읽음 -> 셋 다 덮음
+services:
+  planning-simulator:
+    volumes:
+      - ${HOME}/campus_mobility_sim/integration/config/s75_vehicle_info_sprinter.param.yaml:/opt/autoware/sample_vehicle_description/share/sample_vehicle_description/config/vehicle_info.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s75_vehicle_info_sprinter.param.yaml:/opt/autoware/autoware_sample_vehicle_description/share/autoware_sample_vehicle_description/config/vehicle_info.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s73_sensor_kit_calibration_roof.yaml:/opt/autoware/carla_sensor_kit_description/share/carla_sensor_kit_description/config/sensor_kit_calibration.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_sprinter_accel_map.csv:/opt/autoware/autoware_carla_interface/share/autoware_carla_interface/accel_map.csv:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_sprinter_brake_map.csv:/opt/autoware/autoware_carla_interface/share/autoware_carla_interface/brake_map.csv:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_raw_vehicle_cmd_converter_sprinter.param.yaml:/opt/autoware/autoware_carla_interface/share/autoware_carla_interface/config/raw_vehicle_cmd_converter.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_mirror_sprinter.param.yaml:/opt/autoware/sample_vehicle_description/share/sample_vehicle_description/config/mirror.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_mirror_sprinter.param.yaml:/opt/autoware/autoware_sample_vehicle_description/share/autoware_sample_vehicle_description/config/mirror.param.yaml:ro
+      - ${HOME}/campus_mobility_sim/integration/config/s76_mirror_sprinter.param.yaml:/opt/autoware/carla_sensor_kit_launch/share/carla_sensor_kit_launch/config/mirror.param.yaml:ro

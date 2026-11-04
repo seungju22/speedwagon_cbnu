@@ -1,0 +1,1341 @@
+# 승강장 파일 v3.3d 1판 스프린터 판(2026-11-04). 프리우스 판(shuttle_platforms_v33d_r1.yaml)과 표지 점·문 구역 검사 식 같음, 차 치수·문 자리만 스프린터
+# 만든 것 map/scripts/s77_platforms_sprinter.py -> s77_write.py. 표지 점에서 안 되면 같은 길 앞뒤 1m 씩 옮김(marker_shift_m). 대체 정차점(alt_stop)은 없음
+xodr: cbnu_campus_v31_candidate_s54.xodr
+xodr_sha256_16: 214507afc87c2523
+lanelet2_sha256_16: fe9ee6ffc5af6263
+stops_sha256_16: befb9fddffe112ad
+vehicle:
+  name: vehicle.mercedes.sprinter(CARLA 0.9.15)
+  wheel_base: 3.661
+  front_overhang: 1.015
+  rear_overhang: 1.239
+  wheel_tread: 1.676
+  side_overhang: 0.156
+  length: 5.915
+  width: 1.988
+  base_link: 뒷바퀴 축 가운데
+  door:
+    type: 오른쪽 슬라이딩 문
+    x_from_base_link: 1.52
+    y_from_base_link: -0.994
+    width_assumed: 1.3
+    panel_m: 1.55
+    note: 문 가운데 = 뒷축 앞 1.52m. CARLA 옆 사진(문짝 이음매 두 줄)에서 잼
+params:
+  stop_zone_margin_front: 1.0
+  stop_zone_margin_rear: 1.0
+  door_zone_along: 3.0
+  door_zone_depth: 1.5
+  corridor_length: 8.0
+  corridor_width: 2.588
+  facility:
+    along: 3.598
+    depth: 1.884
+    gap_from_lane_edge: 0.8
+platforms:
+- id: main_gate_in
+  stop_id: main_gate
+  name: 정문
+  side: 이쪽
+  stops_v3:
+    road_id: 1278
+    s: 138.0
+    lane_id: -1
+  marker:
+    x: 263.483
+    y: 965.611
+    yaw_deg: -37.83
+  door_pose:
+    x: 262.872
+    y: 964.826
+    yaw_deg: -37.87
+  base_link_goal:
+    x: 262.282
+    y: 966.544
+    z: 0.0
+    yaw_deg: -37.87
+    qz: -0.324489
+    qw: 0.94589
+  base_link_ref:
+    road_id: 1278
+    s: 136.48
+    lanelet_id:
+    - 19024
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 261.54
+    - 969.24
+  - - 267.8
+    - 964.39
+  - - 265.75
+    - 961.74
+  - - 259.49
+    - 966.6
+  door_zone_area_m2: 2.408
+  door_zone:
+  - - 261.27
+    - 965.21
+  - - 263.64
+    - 963.37
+  - - 263.15
+    - 962.73
+  - - 260.78
+    - 964.58
+  front_corridor:
+  - - 266.83
+    - 964.65
+  - - 270.21
+    - 962.07
+  - - 273.15
+    - 959.86
+  - - 271.6
+    - 957.79
+  - - 268.64
+    - 960.0
+  - - 265.25
+    - 962.61
+  facility:
+  - - 262.23
+    - 961.06
+  - - 259.39
+    - 963.27
+  - - 260.54
+    - 964.76
+  - - 263.39
+    - 962.55
+  check:
+    ok: true
+    door_zone_area_m2: 2.408
+    depth_at_door_m: 0.802
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.175
+- id: main_gate_out
+  stop_id: main_gate
+  name: 정문
+  side: 건너편
+  stops_v3:
+    road_id: 1150
+    s: 15.1
+    lane_id: -1
+  marker:
+    x: 265.466
+    y: 968.312
+    yaw_deg: 142.17
+  door_pose:
+    x: 266.073
+    y: 969.098
+    yaw_deg: 142.22
+  base_link_goal:
+    x: 266.666
+    y: 967.381
+    z: 0.0
+    yaw_deg: 142.22
+    qz: 0.946148
+    qw: 0.323735
+  base_link_ref:
+    road_id: 1150
+    s: 13.55
+    lanelet_id:
+    - 2315
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 267.41
+    - 964.69
+  - - 261.16
+    - 969.54
+  - - 263.21
+    - 972.19
+  - - 269.46
+    - 967.34
+  door_zone_area_m2: 2.393
+  door_zone:
+  - - 267.68
+    - 968.72
+  - - 265.31
+    - 970.55
+  - - 265.8
+    - 971.19
+  - - 268.16
+    - 969.35
+  front_corridor:
+  - - 262.12
+    - 969.27
+  - - 260.15
+    - 970.81
+  - - 255.91
+    - 974.19
+  - - 257.53
+    - 976.22
+  - - 261.76
+    - 972.84
+  - - 263.71
+    - 971.32
+  facility:
+  - - 266.69
+    - 972.88
+  - - 269.54
+    - 970.67
+  - - 268.38
+    - 969.18
+  - - 265.54
+    - 971.39
+  check:
+    ok: true
+    door_zone_area_m2: 2.393
+    depth_at_door_m: 0.798
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.207
+- id: lib_north
+  stop_id: lib_north
+  name: 도서관 북문
+  side: 이쪽
+  stops_v3:
+    road_id: 1415
+    s: 78.0
+    lane_id: -1
+  marker:
+    x: 657.253
+    y: 683.677
+    yaw_deg: -35.52
+  door_pose:
+    x: 656.676
+    y: 682.868
+    yaw_deg: -35.52
+  base_link_goal:
+    x: 656.016
+    y: 684.56
+    z: 0.0
+    yaw_deg: -35.52
+    qz: -0.304989
+    qw: 0.952356
+  base_link_ref:
+    road_id: 1415
+    s: 76.48
+    lanelet_id:
+    - 37801
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 655.17
+    - 687.22
+  - - 661.61
+    - 682.63
+  - - 659.66
+    - 679.9
+  - - 653.22
+    - 684.5
+  door_zone_area_m2: 2.396
+  door_zone:
+  - - 655.06
+    - 683.19
+  - - 657.5
+    - 681.44
+  - - 657.04
+    - 680.79
+  - - 654.6
+    - 682.54
+  front_corridor:
+  - - 660.63
+    - 682.85
+  - - 667.09
+    - 678.25
+  - - 665.58
+    - 676.14
+  - - 659.13
+    - 680.75
+  facility:
+  - - 656.19
+    - 679.08
+  - - 653.26
+    - 681.17
+  - - 654.35
+    - 682.71
+  - - 657.28
+    - 680.62
+  check:
+    ok: true
+    door_zone_area_m2: 2.396
+    depth_at_door_m: 0.798
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.179
+- id: lib_south_se
+  stop_id: lib_south
+  name: 도서관 남문
+  side: 이쪽
+  stops_v3:
+    road_id: 1268
+    s: 47.0
+    lane_id: -1
+  marker:
+    x: 570.069
+    y: 563.811
+    yaw_deg: -27.09
+  door_pose:
+    x: 569.616
+    y: 562.926
+    yaw_deg: -27.09
+  base_link_goal:
+    x: 568.716
+    y: 564.503
+    z: 0.0
+    yaw_deg: -27.09
+    qz: -0.234229
+    qw: 0.972181
+  base_link_ref:
+    road_id: 1268
+    s: 45.48
+    lanelet_id:
+    - 17835
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 567.49
+    - 567.01
+  - - 574.53
+    - 563.41
+  - - 573.01
+    - 560.43
+  - - 565.96
+    - 564.03
+  door_zone_area_m2: 4.5
+  door_zone:
+  - - 567.97
+    - 563.0
+  - - 570.64
+    - 561.64
+  - - 569.96
+    - 560.3
+  - - 567.29
+    - 561.67
+  front_corridor:
+  - - 573.53
+    - 563.49
+  - - 580.59
+    - 559.88
+  - - 579.41
+    - 557.58
+  - - 572.36
+    - 561.19
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: '11/02: footway r1235·r1369(OSM 인도)를 차로에서 빼고 다시 셈 -> 문 구역 4.5m2, 정차 가능(하차). 대체 정차점은 2판 값 그대로가 아니므로 다시 셈 필요'
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.175
+- id: lib_south_nw
+  stop_id: lib_south
+  name: 도서관 남문
+  side: 건너편
+  stops_v3:
+    road_id: 1405
+    s: 83.6
+    lane_id: -1
+  marker:
+    x: 571.503
+    y: 566.84
+    yaw_deg: 152.91
+  door_pose:
+    x: 571.956
+    y: 567.725
+    yaw_deg: 152.91
+  base_link_goal:
+    x: 572.856
+    y: 566.148
+    z: 0.0
+    yaw_deg: 152.91
+    qz: 0.972186
+    qw: 0.23421
+  base_link_ref:
+    road_id: 1405
+    s: 82.1
+    lanelet_id:
+    - 36041
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 574.09
+    - 563.64
+  - - 567.04
+    - 567.24
+  - - 568.57
+    - 570.22
+  - - 575.61
+    - 566.62
+  door_zone_area_m2: 2.392
+  door_zone:
+  - - 573.6
+    - 567.65
+  - - 570.93
+    - 569.01
+  - - 571.29
+    - 569.72
+  - - 573.96
+    - 568.36
+  front_corridor:
+  - - 568.04
+    - 567.16
+  - - 560.98
+    - 570.77
+  - - 562.16
+    - 573.07
+  - - 569.22
+    - 569.46
+  facility:
+  - - 571.91
+    - 571.53
+  - - 575.11
+    - 569.89
+  - - 574.25
+    - 568.21
+  - - 571.05
+    - 569.85
+  check:
+    ok: true
+    door_zone_area_m2: 2.392
+    depth_at_door_m: 0.797
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.152
+- id: middle_gate_n
+  stop_id: middle_gate
+  name: 개성재
+  side: 게이트 앞(같은 자리)
+  stops_v3:
+    road_id: 1316
+    s: 70.0
+    lane_id: -1
+  marker:
+    x: 586.964
+    y: 914.236
+    yaw_deg: 51.0
+  door_pose:
+    x: 587.736
+    y: 913.61
+    yaw_deg: 51.0
+  base_link_goal:
+    x: 586.007
+    y: 913.054
+    z: 0.0
+    yaw_deg: 51.0
+    qz: 0.430549
+    qw: 0.902567
+  base_link_ref:
+    road_id: 1316
+    s: 67.45
+    lanelet_id:
+    - 23825
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 583.3
+    - 912.37
+  - - 588.28
+    - 918.52
+  - - 590.88
+    - 916.41
+  - - 585.9
+    - 910.26
+  door_zone_area_m2: 4.5
+  door_zone:
+  - - 587.32
+    - 912.02
+  - - 589.21
+    - 914.35
+  - - 590.38
+    - 913.4
+  - - 588.49
+    - 911.07
+  front_corridor:
+  - - 587.99
+    - 917.56
+  - - 589.4
+    - 919.32
+  - - 590.17
+    - 920.32
+  - - 590.61
+    - 920.93
+  - - 591.05
+    - 921.55
+  - - 591.74
+    - 922.61
+  - - 592.14
+    - 923.26
+  - - 592.61
+    - 924.07
+  - - 594.88
+    - 922.84
+  - - 594.37
+    - 921.93
+  - - 593.93
+    - 921.23
+  - - 593.48
+    - 920.54
+  - - 592.87
+    - 919.65
+  - - 591.77
+    - 918.14
+  - - 590.0
+    - 915.93
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: '11/02: 옛 ''중문'' 자리(r1320·r1191)는 볼라드로 막혀 v3.3a 에서 뺌. 화면 이름 ''개성재'', 내부 ID 는 그대로. middle_gate_s·n 는 같은 자리(대각선 길 r1316 북동행, 게이트 G5 앞 약 33m). 나갈 때는 N14 주차장 길(r1318)로 돌아 대각선 길 남서행으로'
+  marker_shift_m: -1
+  goal_moved_from_prius_m: 1.202
+- id: middle_gate_s
+  stop_id: middle_gate
+  name: 개성재
+  side: 게이트 앞(같은 자리)
+  stops_v3:
+    road_id: 1316
+    s: 70.0
+    lane_id: -1
+  marker:
+    x: 586.964
+    y: 914.236
+    yaw_deg: 51.0
+  door_pose:
+    x: 587.736
+    y: 913.61
+    yaw_deg: 51.0
+  base_link_goal:
+    x: 586.007
+    y: 913.054
+    z: 0.0
+    yaw_deg: 51.0
+    qz: 0.430549
+    qw: 0.902567
+  base_link_ref:
+    road_id: 1316
+    s: 67.45
+    lanelet_id:
+    - 23825
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 583.3
+    - 912.37
+  - - 588.28
+    - 918.52
+  - - 590.88
+    - 916.41
+  - - 585.9
+    - 910.26
+  door_zone_area_m2: 4.5
+  door_zone:
+  - - 587.32
+    - 912.02
+  - - 589.21
+    - 914.35
+  - - 590.38
+    - 913.4
+  - - 588.49
+    - 911.07
+  front_corridor:
+  - - 587.99
+    - 917.56
+  - - 589.4
+    - 919.32
+  - - 590.17
+    - 920.32
+  - - 590.61
+    - 920.93
+  - - 591.05
+    - 921.55
+  - - 591.74
+    - 922.61
+  - - 592.14
+    - 923.26
+  - - 592.61
+    - 924.07
+  - - 594.88
+    - 922.84
+  - - 594.37
+    - 921.93
+  - - 593.93
+    - 921.23
+  - - 593.48
+    - 920.54
+  - - 592.87
+    - 919.65
+  - - 591.77
+    - 918.14
+  - - 590.0
+    - 915.93
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: '11/02: 옛 ''중문'' 자리(r1320·r1191)는 볼라드로 막혀 v3.3a 에서 뺌. 화면 이름 ''개성재'', 내부 ID 는 그대로. middle_gate_s·n 는 같은 자리(대각선 길 r1316 북동행, 게이트 G5 앞 약 33m). 나갈 때는 N14 주차장 길(r1318)로 돌아 대각선 길 남서행으로'
+  marker_shift_m: -1
+  goal_moved_from_prius_m: 1.202
+- id: yangseong_se
+  stop_id: yangseong
+  name: 양성재
+  side: 이쪽
+  stops_v3:
+    road_id: 1153
+    s: 22.0
+    lane_id: -1
+  marker:
+    x: 214.567
+    y: 549.574
+    yaw_deg: -65.74
+  door_pose:
+    x: 213.658
+    y: 549.17
+    yaw_deg: -65.85
+  base_link_goal:
+    x: 213.943
+    y: 550.964
+    z: 0.0
+    yaw_deg: -65.85
+    qz: -0.543554
+    qw: 0.839374
+  base_link_ref:
+    road_id: 1153
+    s: 20.52
+    lanelet_id:
+    - 2820
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 214.56
+    - 553.69
+  - - 216.19
+    - 550.05
+  - - 217.81
+    - 546.48
+  - - 214.77
+    - 545.08
+  - - 213.14
+    - 548.68
+  - - 211.5
+    - 552.33
+  door_zone_area_m2: 2.417
+  door_zone:
+  - - 212.42
+    - 550.26
+  - - 213.66
+    - 547.51
+  - - 212.93
+    - 547.18
+  - - 211.69
+    - 549.93
+  front_corridor:
+  - - 217.08
+    - 547.16
+  - - 217.71
+    - 545.8
+  - - 217.94
+    - 545.33
+  - - 218.43
+    - 544.44
+  - - 218.72
+    - 544.0
+  - - 219.18
+    - 543.38
+  - - 219.5
+    - 542.98
+  - - 221.61
+    - 540.59
+  - - 219.67
+    - 538.88
+  - - 217.52
+    - 541.32
+  - - 217.14
+    - 541.79
+  - - 216.61
+    - 542.5
+  - - 216.21
+    - 543.11
+  - - 215.77
+    - 543.89
+  - - 215.36
+    - 544.71
+  - - 214.73
+    - 546.09
+  facility:
+  - - 211.32
+    - 546.18
+  - - 209.84
+    - 549.46
+  - - 211.56
+    - 550.23
+  - - 213.03
+    - 546.95
+  check:
+    ok: true
+    door_zone_area_m2: 2.417
+    depth_at_door_m: 0.805
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.138
+- id: yangseong_nw
+  stop_id: yangseong
+  name: 양성재
+  side: 건너편
+  stops_v3:
+    road_id: 1281
+    s: 31.1
+    lane_id: -1
+  marker:
+    x: 217.571
+    y: 551.063
+    yaw_deg: 114.25
+  door_pose:
+    x: 218.474
+    y: 551.475
+    yaw_deg: 114.36
+  base_link_goal:
+    x: 218.195
+    y: 549.681
+    z: 0.0
+    yaw_deg: 114.36
+    qz: 0.840363
+    qw: 0.542023
+  base_link_ref:
+    road_id: 1281
+    s: 29.53
+    lanelet_id:
+    - 19529
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 217.6
+    - 546.95
+  - - 215.95
+    - 550.58
+  - - 214.35
+    - 554.17
+  - - 217.41
+    - 555.53
+  - - 219.0
+    - 551.96
+  - - 220.64
+    - 548.35
+  door_zone_area_m2: 2.401
+  door_zone:
+  - - 219.71
+    - 550.39
+  - - 218.49
+    - 553.11
+  - - 219.22
+    - 553.44
+  - - 220.45
+    - 550.72
+  front_corridor:
+  - - 215.07
+    - 553.48
+  - - 213.97
+    - 555.99
+  - - 213.63
+    - 556.9
+  - - 213.42
+    - 557.59
+  - - 213.22
+    - 558.54
+  - - 213.12
+    - 559.25
+  - - 213.09
+    - 559.97
+  - - 213.1
+    - 560.87
+  - - 215.68
+    - 560.74
+  - - 215.68
+    - 560.03
+  - - 215.7
+    - 559.48
+  - - 215.81
+    - 558.76
+  - - 215.96
+    - 558.09
+  - - 216.14
+    - 557.54
+  - - 216.36
+    - 556.98
+  - - 217.44
+    - 554.53
+  facility:
+  - - 220.79
+    - 554.54
+  - - 222.26
+    - 551.26
+  - - 220.55
+    - 550.49
+  - - 219.07
+    - 553.77
+  check:
+    ok: true
+    door_zone_area_m2: 2.401
+    depth_at_door_m: 0.801
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.226
+- id: back_gate_e
+  stop_id: back_gate
+  name: 후문
+  side: 이쪽
+  stops_v3:
+    road_id: 1151
+    s: 23.1
+    lane_id: -1
+  marker:
+    x: 1099.472
+    y: 219.708
+    yaw_deg: -13.14
+  door_pose:
+    x: 1099.246
+    y: 218.74
+    yaw_deg: -13.14
+  base_link_goal:
+    x: 1097.992
+    y: 220.053
+    z: 0.0
+    yaw_deg: -13.14
+    qz: -0.114399
+    qw: 0.993435
+  base_link_ref:
+    road_id: 1151
+    s: 21.58
+    lanelet_id:
+    - 2510
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 1096.19
+    - 222.19
+  - - 1103.9
+    - 220.39
+  - - 1103.14
+    - 217.13
+  - - 1095.43
+    - 218.93
+  door_zone_area_m2: 2.393
+  door_zone:
+  - - 1097.63
+    - 218.42
+  - - 1100.55
+    - 217.74
+  - - 1100.37
+    - 216.96
+  - - 1097.45
+    - 217.64
+  front_corridor:
+  - - 1102.91
+    - 220.23
+  - - 1110.63
+    - 218.43
+  - - 1110.04
+    - 215.91
+  - - 1102.32
+    - 217.71
+  facility:
+  - - 1100.23
+    - 215.05
+  - - 1096.73
+    - 215.87
+  - - 1097.16
+    - 217.71
+  - - 1100.66
+    - 216.89
+  check:
+    ok: true
+    door_zone_area_m2: 2.393
+    depth_at_door_m: 0.798
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.175
+- id: back_gate_w
+  stop_id: back_gate
+  name: 후문
+  side: 건너편
+  stops_v3:
+    road_id: 1279
+    s: 73.0
+    lane_id: -1
+  marker:
+    x: 1100.263
+    y: 222.963
+    yaw_deg: 166.86
+  door_pose:
+    x: 1100.489
+    y: 223.931
+    yaw_deg: 166.86
+  base_link_goal:
+    x: 1101.744
+    y: 222.618
+    z: 0.0
+    yaw_deg: 166.86
+    qz: 0.993435
+    qw: 0.114399
+  base_link_ref:
+    road_id: 1279
+    s: 71.45
+    lanelet_id:
+    - 19219
+  stop_zone_length_m: 7.92
+  stop_zone:
+  - - 1103.54
+    - 220.48
+  - - 1095.84
+    - 222.28
+  - - 1096.6
+    - 225.54
+  - - 1104.3
+    - 223.74
+  door_zone_area_m2: 2.401
+  door_zone:
+  - - 1102.1
+    - 224.25
+  - - 1099.18
+    - 224.94
+  - - 1099.37
+    - 225.72
+  - - 1102.29
+    - 225.03
+  front_corridor:
+  - - 1096.82
+    - 222.44
+  - - 1089.11
+    - 224.24
+  - - 1089.69
+    - 226.76
+  - - 1097.41
+    - 224.96
+  facility:
+  - - 1099.47
+    - 227.62
+  - - 1102.98
+    - 226.81
+  - - 1102.55
+    - 224.97
+  - - 1099.05
+    - 225.79
+  check:
+    ok: true
+    door_zone_area_m2: 2.401
+    depth_at_door_m: 0.801
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.204
+- id: main_gate_inner_se
+  stop_id: main_gate_inner
+  name: 정문 안쪽(순환)
+  side: 동남행
+  stops_v3:
+    road_id: 1410
+    s: 8.0
+    lane_id: -1
+  marker:
+    x: 376.165
+    y: 884.111
+    yaw_deg: -35.82
+  door_pose:
+    x: 375.583
+    y: 883.305
+    yaw_deg: -35.82
+  base_link_goal:
+    x: 374.932
+    y: 885.0
+    z: 0.0
+    yaw_deg: -35.82
+    qz: -0.307506
+    qw: 0.951546
+  base_link_ref:
+    road_id: 1410
+    s: 6.48
+    lanelet_id:
+    - 37078
+  stop_zone:
+  - - 374.1
+    - 887.67
+  - - 380.52
+    - 883.04
+  - - 378.55
+    - 880.32
+  - - 372.14
+    - 884.95
+  door_zone:
+  - - 373.97
+    - 883.63
+  - - 376.4
+    - 881.87
+  - - 375.52
+    - 880.66
+  - - 373.09
+    - 882.41
+  front_corridor:
+  - - 379.54
+    - 883.27
+  - - 385.97
+    - 878.63
+  - - 384.45
+    - 876.53
+  - - 378.03
+    - 881.17
+  door_zone_area_m2: 4.5
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: 11/02 새 승강장(순환용). 원래 정문·후문 승강장은 30쌍 시험용으로 남김
+  stop_zone_length_m: 7.92
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.175
+- id: main_gate_inner_nw
+  stop_id: main_gate_inner
+  name: 정문 안쪽(순환)
+  side: 북서행
+  stops_v3:
+    road_id: 1272
+    s: 52.0
+    lane_id: -1
+  marker:
+    x: 378.166
+    y: 886.798
+    yaw_deg: 144.18
+  door_pose:
+    x: 378.748
+    y: 887.604
+    yaw_deg: 144.18
+  base_link_goal:
+    x: 379.399
+    y: 885.908
+    z: 0.0
+    yaw_deg: 144.18
+    qz: 0.951546
+    qw: 0.307506
+  base_link_ref:
+    road_id: 1272
+    s: 50.48
+    lanelet_id:
+    - 18433
+  stop_zone:
+  - - 380.23
+    - 883.24
+  - - 373.82
+    - 887.87
+  - - 375.78
+    - 890.59
+  - - 382.19
+    - 885.96
+  door_zone:
+  - - 380.36
+    - 887.28
+  - - 377.93
+    - 889.03
+  - - 378.81
+    - 890.25
+  - - 381.24
+    - 888.49
+  front_corridor:
+  - - 374.79
+    - 887.64
+  - - 368.36
+    - 892.28
+  - - 369.88
+    - 894.38
+  - - 376.3
+    - 889.74
+  door_zone_area_m2: 4.5
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: 11/02 새 승강장(순환용). 원래 정문·후문 승강장은 30쌍 시험용으로 남김
+  stop_zone_length_m: 7.92
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.175
+- id: back_gate_inner_se
+  stop_id: back_gate_inner
+  name: 후문 안쪽(순환)
+  side: 동남행
+  stops_v3:
+    road_id: 1251
+    s: 130.0
+    lane_id: -1
+  marker:
+    x: 960.123
+    y: 289.042
+    yaw_deg: -37.13
+  door_pose:
+    x: 959.523
+    y: 288.249
+    yaw_deg: -37.13
+  base_link_goal:
+    x: 958.911
+    y: 289.959
+    z: 0.0
+    yaw_deg: -37.13
+    qz: -0.318379
+    qw: 0.947963
+  base_link_ref:
+    road_id: 1251
+    s: 128.48
+    lanelet_id:
+    - 16330
+  stop_zone:
+  - - 958.14
+    - 292.65
+  - - 964.45
+    - 287.87
+  - - 962.42
+    - 285.2
+  - - 956.11
+    - 289.98
+  door_zone:
+  - - 957.92
+    - 288.61
+  - - 960.31
+    - 286.8
+  - - 959.4
+    - 285.61
+  - - 957.01
+    - 287.42
+  front_corridor:
+  - - 963.48
+    - 288.12
+  - - 966.86
+    - 285.56
+  - - 967.42
+    - 285.1
+  - - 967.94
+    - 284.6
+  - - 968.43
+    - 284.06
+  - - 968.88
+    - 283.49
+  - - 969.24
+    - 282.96
+  - - 967.07
+    - 281.56
+  - - 966.79
+    - 281.96
+  - - 966.45
+    - 282.39
+  - - 966.09
+    - 282.79
+  - - 965.69
+    - 283.17
+  - - 965.28
+    - 283.52
+  - - 961.92
+    - 286.06
+  door_zone_area_m2: 4.5
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.5
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: 11/02 새 승강장(순환용). 원래 정문·후문 승강장은 30쌍 시험용으로 남김
+  stop_zone_length_m: 7.92
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.177
+- id: back_gate_inner_nw
+  stop_id: back_gate_inner
+  name: 후문 안쪽(순환)
+  side: 북서행
+  stops_v3:
+    road_id: 1384
+    s: 8.0
+    lane_id: -1
+  marker:
+    x: 961.628
+    y: 292.104
+    yaw_deg: 142.87
+  door_pose:
+    x: 962.228
+    y: 292.896
+    yaw_deg: 142.87
+  base_link_goal:
+    x: 962.84
+    y: 291.186
+    z: 0.0
+    yaw_deg: 142.87
+    qz: 0.947963
+    qw: 0.318379
+  base_link_ref:
+    road_id: 1384
+    s: 6.48
+    lanelet_id:
+    - 34514
+  stop_zone:
+  - - 963.61
+    - 288.5
+  - - 957.3
+    - 293.28
+  - - 959.33
+    - 295.95
+  - - 965.64
+    - 291.17
+  door_zone:
+  - - 963.83
+    - 292.53
+  - - 961.44
+    - 294.34
+  - - 962.35
+    - 295.54
+  - - 964.74
+    - 293.73
+  front_corridor:
+  - - 958.27
+    - 293.02
+  - - 951.95
+    - 297.8
+  - - 953.51
+    - 299.87
+  - - 959.83
+    - 295.09
+  door_zone_area_m2: 4.5
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.501
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: 11/02 새 승강장(순환용). 원래 정문·후문 승강장은 30쌍 시험용으로 남김
+  stop_zone_length_m: 7.92
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.176
+- id: edu_front
+  stop_id: edu_front
+  name: 사범대 앞(교대)
+  side: 도서관 길 모서리 지나 북동쪽
+  stops_v3:
+    road_id: 1415
+    s: 205.0
+    lane_id: -1
+  marker:
+    x: 746.253
+    y: 681.632
+    yaw_deg: 66.14
+  door_pose:
+    x: 747.162
+    y: 681.23
+    yaw_deg: 66.14
+  base_link_goal:
+    x: 745.638
+    y: 680.242
+    z: 0.0
+    yaw_deg: 66.14
+    qz: 0.545684
+    qw: 0.837991
+  base_link_ref:
+    road_id: 1415
+    s: 203.49
+    lanelet_id:
+    - 52801
+  stop_zone:
+  - - 743.2
+    - 678.87
+  - - 746.4
+    - 686.11
+  - - 749.47
+    - 684.76
+  - - 746.26
+    - 677.52
+  door_zone:
+  - - 747.18
+    - 679.58
+  - - 748.39
+    - 682.33
+  - - 749.76
+    - 681.72
+  - - 748.55
+    - 678.98
+  front_corridor:
+  - - 746.38
+    - 685.11
+  - - 749.58
+    - 692.36
+  - - 751.95
+    - 691.31
+  - - 748.74
+    - 684.06
+  door_zone_area_m2: 4.5
+  facility: []
+  check:
+    ok: true
+    door_zone_area_m2: 4.5
+    depth_at_door_m: 1.499
+    sidewalk_frac: 1.0
+    body_out_of_lanelets_m2: 0.0
+    corridor_out_of_lanelets_m2: 0.0
+    junction_roads: []
+    crosswalk_v32a: []
+  note: '11/02 새 승강장(선택): 교대 학생 하차(11/02). 11/03 에서 유턴이 도서관 길 모서리(가)로 옮겨 순환 밖. 쓰려면 모서리 유턴 앞에서 북동으로 들어갔다 나오는 길이 따로 있어야 함(수요일 재점검)'
+  stop_zone_length_m: 7.92
+  marker_shift_m: 0
+  goal_moved_from_prius_m: 0.163
+lanelet2: map/maps/v33d/lanelet2_map.osm
+vehicle_note: 값은 지금 차(sample_vehicle) 기준. 스타렉스 값 integration/logs/s73/platforms_starex.json(문 위치 DOOR_X 1.502). 기본값은 내일 CARLA 시험 뒤

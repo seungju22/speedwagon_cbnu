@@ -1,0 +1,309 @@
+묶음	원본	저장소	바이트	sha256_16
+동결 지도 v3.1	map/maps/cbnu_campus_frozen_v31.xodr	규민/handoff3/map/maps/cbnu_campus_frozen_v31.xodr	2045474	214507afc87c2523
+동결 지도 v3.1	map/maps/frozen_v31.sha256	규민/handoff3/map/maps/frozen_v31.sha256	1066	a18b07be014535ed
+동결 지도 v3.1	map/maps/NOTICE.md	규민/handoff3/map/maps/NOTICE.md	413	04b5d0a864c3d113
+동결 지도 v3.1	map/data/stops_v3.yaml	규민/handoff3/map/data/stops_v3.yaml	9704	befb9fddffe112ad
+동결 지도 v3.1	map/data/buildings_layout_v3.csv	규민/handoff3/map/data/buildings_layout_v3.csv	19487	ac9bd41d4ef7561f
+동결 지도 v3.1	map/scripts/place_campus_layers.py	규민/handoff3/map/scripts/place_campus_layers.py	41254	8b067484ad98c62c
+동결 지도 v3.1	map/scripts/load_campus_world.py	규민/handoff3/map/scripts/load_campus_world.py	4376	bb92cc0d23b50747
+동결 지도 v3.1	map/docs/logs/campus_layers_dry_나_s54_v31_actors.csv	규민/handoff3/map/docs/logs/campus_layers_dry_나_s54_v31_actors.csv	100445	dcf93ea8e4103baa
+동결 지도 v3.1	map/docs/logs/campus_layers_dry_나_s54_v31.json	규민/handoff3/map/docs/logs/campus_layers_dry_나_s54_v31.json	233009	18287ed60591578d
+동결 지도 v3.1	map/docs/map_frozen_v31.md	규민/handoff3/map/docs/map_frozen_v31.md	12994	da2ca3602e49b31a
+Autoware 지도	autoware_map/cbnu_campus_v31/lanelet2_map.osm	규민/handoff3/autoware_map/cbnu_campus_v31/lanelet2_map.osm	11917366	28a57711094effaf
+Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/handoff3/autoware_map/cbnu_campus_v31/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 재생성(재현용)	map/scripts/s57_make_v31_lanelet2.sh	규민/handoff3/map/scripts/s57_make_v31_lanelet2.sh	1692	c08e808cd67032af
+지도 재생성(재현용)	autoware_map/scripts/l1_build_lanelet2.py	규민/handoff3/autoware_map/scripts/l1_build_lanelet2.py	20815	4bc71808f2ee5980
+지도 재생성(재현용)	autoware_map/scripts/l1_align_sim.py	규민/handoff3/autoware_map/scripts/l1_align_sim.py	3000	9972ec9fb1fbc4cb
+지도 재생성(재현용)	map/scripts/s55_drop_lanelets.py	규민/handoff3/map/scripts/s55_drop_lanelets.py	3798	c289e3d800a93db1
+지도 재생성(재현용)	map/build_v31_s54/s54_chord_list_no1317_1825.json	규민/handoff3/map/build_v31_s54/s54_chord_list_no1317_1825.json	196	d20cafc70b9605fb
+노선 파일	map/build_v31_s54/pairs30.json	규민/handoff3/map/build_v31_s54/pairs30.json	9893	7a21b79a10e4c99c
+노선 파일	map/data/shuttle_platforms_v31_r1.yaml	규민/handoff3/map/data/shuttle_platforms_v31_r1.yaml	17393	075b224c73008c38
+노선 파일	map/data/routes/pilot_route_r1.yaml	규민/handoff3/map/data/routes/pilot_route_r1.yaml	5369	a9ca2108c49a45bc
+노선 파일	map/data/routes/pilot_route_r2.yaml	규민/handoff3/map/data/routes/pilot_route_r2.yaml	5816	06a0cfb159c5c5d9
+노선 파일	map/docs/shuttle_route_file.md	규민/handoff3/map/docs/shuttle_route_file.md	12634	fa6821a02a59c602
+정답 객체 노드	perception/gt_objects/gt_objects2.py	규민/handoff3/perception/gt_objects/gt_objects2.py	19537	ad77639271d47fe5
+정답 객체 노드	perception/gt_objects/carview.py	규민/handoff3/perception/gt_objects/carview.py	4203	f8434cde87f5a6f5
+정답 객체 노드	perception/config/gt_objects.override.yaml	규민/handoff3/perception/config/gt_objects.override.yaml	792	5702afec2fb6f900
+장면 도구·추적 카메라	integration/scenario/chase_cam.py	규민/handoff3/integration/scenario/chase_cam.py	2853	7721171cb4554a4d
+장면 도구·추적 카메라	integration/scenario/dart_out.py	규민/handoff3/integration/scenario/dart_out.py	4986	5ff92ceb62d0bd7c
+장면 도구·추적 카메라	integration/scenario/obstacles.py	규민/handoff3/integration/scenario/obstacles.py	3694	da7385e293827a92
+장면 도구·추적 카메라	integration/scenario/ped_tool.py	규민/handoff3/integration/scenario/ped_tool.py	9275	14e52ef281d3e5c0
+장면 도구·추적 카메라	integration/scenario/door_lib_north.yaml	규민/handoff3/integration/scenario/door_lib_north.yaml	856	ca2760acac97ff44
+오버레이·센서 설정	docker/carla-integration.override.yaml	규민/handoff3/docker/carla-integration.override.yaml	1859	43adc5f0019d4356
+오버레이·센서 설정	docker/planning-simulator.pin.yaml	규민/handoff3/docker/planning-simulator.pin.yaml	264	7e190fdde7ed0127
+오버레이·센서 설정	integration/config/sensor_mapping_nocam.yaml	규민/handoff3/integration/config/sensor_mapping_nocam.yaml	2520	1184f7d75d3f03e8
+오버레이·센서 설정	integration/config/sensor_mapping_light32.yaml	규민/handoff3/integration/config/sensor_mapping_light32.yaml	2534	8eae048970743c6a
+오버레이·센서 설정	integration/config/i3_gt_localization.override.yaml	규민/handoff3/integration/config/i3_gt_localization.override.yaml	1025	2f3a98686d75136b
+오버레이·센서 설정	integration/config/i4_logs.override.yaml	규민/handoff3/integration/config/i4_logs.override.yaml	247	464f84ae98d28196
+오버레이·센서 설정	integration/config/i4_nopcd_map.override.yaml	규민/handoff3/integration/config/i4_nopcd_map.override.yaml	752	b16c94ce9f11c5ec
+오버레이·센서 설정	integration/config/diag_autoware-carla_gt.yaml	규민/handoff3/integration/config/diag_autoware-carla_gt.yaml	7013	b8d709feba77858b
+오버레이·센서 설정	integration/config/diag_autoware-carla_gt_nopcd.yaml	규민/handoff3/integration/config/diag_autoware-carla_gt_nopcd.yaml	7422	39527e29013c5fbd
+실행 스크립트	integration/docs/tools/s59_run.sh	규민/handoff3/integration/docs/tools/s59_run.sh	10601	78deeddad22dd59a
+실행 스크립트	integration/docs/tools/s59_aw_up.sh	규민/handoff3/integration/docs/tools/s59_aw_up.sh	3420	6878293fc12ffdd8
+실행 스크립트	integration/docs/tools/i62_route.py	규민/handoff3/integration/docs/tools/i62_route.py	1238	12acb1bf026e1bca
+실행 스크립트	integration/docs/tools/i5_cleanup.py	규민/handoff3/integration/docs/tools/i5_cleanup.py	1757	3cf64cfbb44700c4
+실행 스크립트	integration/docs/tools/i5_marker.py	규민/handoff3/integration/docs/tools/i5_marker.py	1142	fd198311acd73d3f
+실행 스크립트	integration/docs/tools/s4_track.py	규민/handoff3/integration/docs/tools/s4_track.py	3583	0ac7c5923311443d
+실행 스크립트	integration/docs/tools/s4_layers.py	규민/handoff3/integration/docs/tools/s4_layers.py	1329	2746457959dee5ec
+실행 스크립트	integration/docs/tools/i3_gt_localizer.py	규민/handoff3/integration/docs/tools/i3_gt_localizer.py	9360	1ee6542893e7b3f6
+실행 스크립트	integration/docs/tools/i63_drive.sh	규민/handoff3/integration/docs/tools/i63_drive.sh	2880	552436869eda12f0
+실행 스크립트	integration/docs/tools/i6_stall.sh	규민/handoff3/integration/docs/tools/i6_stall.sh	1466	741cacb7c02f8a53
+실행 스크립트	integration/docs/tools/i2_watch.py	규민/handoff3/integration/docs/tools/i2_watch.py	3080	bdf17af4b0e63213
+실행 스크립트	integration/docs/tools/i4_compare.py	규민/handoff3/integration/docs/tools/i4_compare.py	2817	01995e74d9780828
+실행 스크립트	integration/docs/tools/i63_route_get.py	규민/handoff3/integration/docs/tools/i63_route_get.py	994	7c81e4b23ec55618
+실행 스크립트	integration/docs/tools/i63_routechk.py	규민/handoff3/integration/docs/tools/i63_routechk.py	1053	f785a7cfacd76223
+실행 스크립트	integration/docs/tools/i6_diag.py	규민/handoff3/integration/docs/tools/i6_diag.py	3186	01d3362bf402f5b8
+실행 스크립트	integration/docs/tools/i1_recorder.py	규민/handoff3/integration/docs/tools/i1_recorder.py	786	2c96fcd5516bb3fa
+플래닝 시뮬레이터(CARLA 없이)	integration/docs/tools/s62_ps_goal.sh	규민/handoff3/integration/docs/tools/s62_ps_goal.sh	2985	fe36a858504704b0
+플래닝 시뮬레이터(CARLA 없이)	integration/docs/tools/s62_ps_ped.sh	규민/handoff3/integration/docs/tools/s62_ps_ped.sh	1174	ef30b9736036cf16
+플래닝 시뮬레이터(CARLA 없이)	integration/docs/tools/s62_ps_door.sh	규민/handoff3/integration/docs/tools/s62_ps_door.sh	771	7322bfcb1acb9208
+플래닝 시뮬레이터(CARLA 없이)	docs/handoff_2/planning_sim_dev.md	규민/handoff3/docs/handoff_2/planning_sim_dev.md	6506	508071357f9ab4df
+장식 레이어(선택)	map/scripts/s22_buildings.py	규민/handoff3/map/scripts/s22_buildings.py	9875	2f582a3fa64cc01f
+장식 레이어(선택)	map/tests/test_drive.py	규민/handoff3/map/tests/test_drive.py	108484	b6d07747035508eb
+장식 레이어(선택)	map/docs/logs/s51_bench/mesh_sizes.json	규민/handoff3/map/docs/logs/s51_bench/mesh_sizes.json	2932	35881c268f3e2933
+문서	integration/docs/howto_campus.md	규민/handoff3/integration/docs/howto_campus.md	16885	33128ad19a57d656
+문서	perception/docs/gt_objects2.md	규민/handoff3/perception/docs/gt_objects2.md	7847	0fbacd0fd8f77cfe
+문서	perception/docs/interface.md	규민/handoff3/perception/docs/interface.md	9520	15778549cf2727a2
+문서	perception/docs/perception_demo.md	규민/handoff3/perception/docs/perception_demo.md	6746	34b2d60a931810f0
+문서	integration/scenario/README.md	규민/handoff3/integration/scenario/README.md	3493	724c935463969dff
+문서	map/docs/m20_vehicle_fit.md	규민/handoff3/map/docs/m20_vehicle_fit.md	10360	abc0d6d06c574f5b
+문서	docs/handoff_2/handoff_2_README.md	규민/handoff3/docs/handoff_2/handoff_2_README.md	7284	9493696553b06137
+지도 재현(OSM -> xodr -> Lanelet2)	docs/handoff_3/map_reproduce.md	규민/handoff3/docs/handoff_3/map_reproduce.md	7292	c3e16e6f51e16564
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s71_reproduce.sh	규민/handoff3/map/scripts/s71_reproduce.sh	10112	cfe1d3c897a57a8e
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/download_osm.sh	규민/handoff3/map/scripts/download_osm.sh	2109	1d4a8e2ed425149a
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/compute_bbox.py	규민/handoff3/map/scripts/compute_bbox.py	1714	f69fef25e0e977f1
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/fix_tags.py	규민/handoff3/map/scripts/fix_tags.py	5316	e3029597189994d0
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/classify_internal.py	규민/handoff3/map/scripts/classify_internal.py	8277	cc5846c2fe5bc7be
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/smooth_osm_curves.py	규민/handoff3/map/scripts/smooth_osm_curves.py	16432	70f91e3162f13b26
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/curve_metrics.py	규민/handoff3/map/scripts/curve_metrics.py	7427	f5b0b4dcd0ede23d
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/osm_to_xodr.py	규민/handoff3/map/scripts/osm_to_xodr.py	5703	93032c2c3c49b7f1
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s27_reconvert.py	규민/handoff3/map/scripts/s27_reconvert.py	7474	eff42aae5c5df6b7
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s27_turnfix.py	규민/handoff3/map/scripts/s27_turnfix.py	10539	616d68f0c25fda58
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s42_common.py	규민/handoff3/map/scripts/s42_common.py	14585	67ec970c11444b76
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s43_build_v3.py	규민/handoff3/map/scripts/s43_build_v3.py	14035	6dd0c083c4239e72
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s45_build_v3.py	규민/handoff3/map/scripts/s45_build_v3.py	17407	31cb1770014d0b92
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s46_build_v3.py	규민/handoff3/map/scripts/s46_build_v3.py	12980	4ec07923423743a3
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s53_build_v31.py	규민/handoff3/map/scripts/s53_build_v31.py	29905	0438ad1009e08d0d
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s53_geom.py	규민/handoff3/map/scripts/s53_geom.py	6803	740ad3680b97562f
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s53_check.py	규민/handoff3/map/scripts/s53_check.py	4924	75f83ab6bedad404
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s54_build.py	규민/handoff3/map/scripts/s54_build.py	14783	1e961b4c3dadb2a3
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s48_stops.py	규민/handoff3/map/scripts/s48_stops.py	4795	dfeda45bf931b4cb
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s49_b2_v3.py	규민/handoff3/map/scripts/s49_b2_v3.py	26240	c8063e0f3308324b
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/analyze_geometry.py	규민/handoff3/map/scripts/analyze_geometry.py	14059	e98b2adaeec65bab
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/analyze_wedge_s11.py	규민/handoff3/map/scripts/analyze_wedge_s11.py	18528	6aa3111c11758572
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/geo_calibrate.py	규민/handoff3/map/scripts/geo_calibrate.py	5829	0ba91adbd05ab20e
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s34_curvature.py	규민/handoff3/map/scripts/s34_curvature.py	9282	3f1fc93a5162ebf7
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/raw/cbnu_campus.osm	규민/handoff3/map/data/raw/cbnu_campus.osm	2989043	c383870eb4d1e196
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/processed/cbnu_relation_polygon.json	규민/handoff3/map/data/processed/cbnu_relation_polygon.json	18457	c44ea70a8f36d447
+지도 재현(OSM -> xodr -> Lanelet2)	map/maps/cbnu_internal_only_localtm_tags73_smooth.xodr	규민/handoff3/map/maps/cbnu_internal_only_localtm_tags73_smooth.xodr	2125011	bf835cdfad0cea65
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/processed/cbnu_campus_fixed_tags73.osm	규민/handoff3/map/data/processed/cbnu_campus_fixed_tags73.osm	3023728	dfcc5ff7b1a41532
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/processed/cbnu_internal_boundary_tags73.osm	규민/handoff3/map/data/processed/cbnu_internal_boundary_tags73.osm	221534	ce457630b2de089f
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/processed/cbnu_internal_boundary_tags73_smooth.osm	규민/handoff3/map/data/processed/cbnu_internal_boundary_tags73_smooth.osm	234886	caa2c69b026ccc75
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/stops_v3_draft_s46.yaml	규민/handoff3/map/data/stops_v3_draft_s46.yaml	9669	934387524e0d14d5
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/stops_v2.yaml	규민/handoff3/map/data/stops_v2.yaml	3918	5df141cd0cc28933
+지도 재현(OSM -> xodr -> Lanelet2)	map/docs/logs/s25_buildings.csv	규민/handoff3/map/docs/logs/s25_buildings.csv	40995	2ef84454915f398b
+지도 재현(OSM -> xodr -> Lanelet2)	map/data/processed/s40_b2_cut.csv	규민/handoff3/map/data/processed/s40_b2_cut.csv	2114	b85efea102aec0c0
+지도 재현(OSM -> xodr -> Lanelet2)	map/docs/logs/s42_way_dir.csv	규민/handoff3/map/docs/logs/s42_way_dir.csv	6818	197527d845fd381e
+지도 재현(OSM -> xodr -> Lanelet2)	integration/logs/s71/step2/reproduce.log	규민/handoff3/integration/logs/s71/step2/reproduce.log	3726	efd40e677c111c2b
+지도 v3.2(횡단보도·방지턱)	map/maps/v32a/lanelet2_map.osm	규민/handoff3/map/maps/v32a/lanelet2_map.osm	11995542	4719e5e5a4f4588b
+지도 v3.2(횡단보도·방지턱)	map/maps/v32a/map_projector_info.yaml	규민/handoff3/map/maps/v32a/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.2(횡단보도·방지턱)	map/maps/v32b/lanelet2_map.osm	규민/handoff3/map/maps/v32b/lanelet2_map.osm	11991025	485429206e986154
+지도 v3.2(횡단보도·방지턱)	map/maps/v32b/map_projector_info.yaml	규민/handoff3/map/maps/v32b/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.2(횡단보도·방지턱)	map/maps/v32b/v32b_dropped.txt	규민/handoff3/map/maps/v32b/v32b_dropped.txt	219	17180e7dfb8b6c5d
+지도 v3.2(횡단보도·방지턱)	map/maps/v32_candidate/v32_elements.csv	규민/handoff3/map/maps/v32_candidate/v32_elements.csv	9847	a58de04d04073f8d
+지도 v3.2(횡단보도·방지턱)	map/data/crossings_v3_candidates.csv	규민/handoff3/map/data/crossings_v3_candidates.csv	25060	2596f8a35751855f
+지도 v3.2(횡단보도·방지턱)	map/scripts/s63_v32_candidate.py	규민/handoff3/map/scripts/s63_v32_candidate.py	13202	b71184a421764c31
+지도 v3.2(횡단보도·방지턱)	map/scripts/s66_make_v32ab.py	규민/handoff3/map/scripts/s66_make_v32ab.py	4100	245a76a344962576
+지도 v3.2(횡단보도·방지턱)	map/scripts/s63_route_check.py	규민/handoff3/map/scripts/s63_route_check.py	2597	df55e18002403158
+지도 v3.2(횡단보도·방지턱)	map/scripts/s66_route_check.py	규민/handoff3/map/scripts/s66_route_check.py	2741	b9e75a2cef2affc5
+지도 v3.2(횡단보도·방지턱)	integration/docs/tools/load_speed_bump_plugin.sh	규민/handoff3/integration/docs/tools/load_speed_bump_plugin.sh	2985	a0022bc76a62018a
+지도 v3.2(횡단보도·방지턱)	map/docs/v32_switch_howto.md	규민/handoff3/map/docs/v32_switch_howto.md	3510	f10d14938d2dae01
+지도 v3.2(횡단보도·방지턱)	map/docs/v32_candidate.md	규민/handoff3/map/docs/v32_candidate.md	11664	5a2140820fdec1a4
+장식 레이어 v2(건물 2순위·나무)	map/scripts/place_campus_layers_s66.py	규민/handoff3/map/scripts/place_campus_layers_s66.py	14237	3fe70e4e04036fa7
+장식 레이어 v2(건물 2순위·나무)	map/scripts/s66_b2_tier2.py	규민/handoff3/map/scripts/s66_b2_tier2.py	9913	b25a2a56d82c3e34
+장식 레이어 v2(건물 2순위·나무)	map/scripts/s66_trees.py	규민/handoff3/map/scripts/s66_trees.py	11185	178e73fb6600c7da
+장식 레이어 v2(건물 2순위·나무)	map/data/buildings_layout_tier2_s66.csv	규민/handoff3/map/data/buildings_layout_tier2_s66.csv	7448	4cb019764ada3fe4
+장식 레이어 v2(건물 2순위·나무)	map/data/trees_layout_s66.csv	규민/handoff3/map/data/trees_layout_s66.csv	15737	5830123559afc4fa
+장식 레이어 v2(건물 2순위·나무)	map/docs/campus_layers.md	규민/handoff3/map/docs/campus_layers.md	6389	65b8383abe0d5231
+정류장 대체 정차점	map/data/shuttle_platforms_v31_r2.yaml	규민/handoff3/map/data/shuttle_platforms_v31_r2.yaml	33338	143e5c7259c7ce2c
+정류장 대체 정차점	map/data/routes/pilot_route_r3.yaml	규민/handoff3/map/data/routes/pilot_route_r3.yaml	6467	84b533368d8618df
+정류장 대체 정차점	map/scripts/s56_shuttle.py	규민/handoff3/map/scripts/s56_shuttle.py	20210	2c77892615c571b1
+정류장 대체 정차점	map/scripts/s70_alt_stops.py	규민/handoff3/map/scripts/s70_alt_stops.py	12125	d9f9958bc50ec572
+정류장 대체 정차점	map/scripts/s70_alt_route_check.py	규민/handoff3/map/scripts/s70_alt_route_check.py	5182	b2fd4b680bb10b8f
+정류장 대체 정차점	map/scripts/s70_write.py	규민/handoff3/map/scripts/s70_write.py	4797	3bc5e4477a7d7e1f
+정류장 대체 정차점	map/scripts/s70_alt_figs.py	규민/handoff3/map/scripts/s70_alt_figs.py	5928	45625abbb59c6802
+정류장 대체 정차점	map/docs/logs/s70_alt_stops.json	규민/handoff3/map/docs/logs/s70_alt_stops.json	24279	3157e0ac5ad78551
+정류장 대체 정차점	map/docs/logs/s70_alt_route_check.json	규민/handoff3/map/docs/logs/s70_alt_route_check.json	11463	e8a05eb884f7d8c8
+정류장 대체 정차점	map/docs/figs/s70_alt_stops.png	규민/handoff3/map/docs/figs/s70_alt_stops.png	235128	67f0fb0889077646
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/lanelet2_map.osm	규민/handoff3/map/maps/v33a/lanelet2_map.osm	11078054	af536a8457c6bea4
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/map_projector_info.yaml	규민/handoff3/map/maps/v33a/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/v33a_changes.json	규민/handoff3/map/maps/v33a/v33a_changes.json	5084	20b87313d5c06ad0
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/lanelet2_map.osm	규민/handoff3/map/maps/v33b/lanelet2_map.osm	11093609	bf0d421ef989efe8
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/map_projector_info.yaml	규민/handoff3/map/maps/v33b/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/v33b_changes.json	규민/handoff3/map/maps/v33b/v33b_changes.json	618	e46b4cd8b0129a33
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/data/shuttle_platforms_v33b_r1.yaml	규민/handoff3/map/data/shuttle_platforms_v33b_r1.yaml	33858	4bc24072f7203a63
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/data/routes/circulation_v33b_r1.yaml	규민/handoff3/map/data/routes/circulation_v33b_r1.yaml	4420	81842845bcd9df6f
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/docs/v33b_readme.md	규민/handoff3/map/docs/v33b_readme.md	4876	6f088a1616949f1a
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/docs/figs/v33b_loop.png	규민/handoff3/map/docs/figs/v33b_loop.png	430567	9bcbff3bbc302c42
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/docs/figs/v33b_loop_cover.png	규민/handoff3/map/docs/figs/v33b_loop_cover.png	402064	b8049b5110f06831
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/docs/figs/v33b_gaeseong_check.png	규민/handoff3/map/docs/figs/v33b_gaeseong_check.png	531445	be7c3da9cf2d3a05
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s72_common.py	규민/handoff3/map/scripts/s72_common.py	3098	de707af65bc3ab67
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s72_net.py	규민/handoff3/map/scripts/s72_net.py	12218	c57418d87f153545
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s73_make_v33.py	규민/handoff3/map/scripts/s73_make_v33.py	14086	5db1b6dddb220185
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s74_make_v33b.py	규민/handoff3/map/scripts/s74_make_v33b.py	9120	60d4a74b6aab4940
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s73_check_v33.py	규민/handoff3/map/scripts/s73_check_v33.py	7338	775434f5dd5aa341
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s74_check_v33b.py	규민/handoff3/map/scripts/s74_check_v33b.py	7559	919d20f05ebe65b9
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s73_platforms.py	규민/handoff3/map/scripts/s73_platforms.py	9091	6abc62f4ee95f405
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s73_loop.py	규민/handoff3/map/scripts/s73_loop.py	10847	02d1bbdca4202386
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s74_write.py	규민/handoff3/map/scripts/s74_write.py	7316	692865441f2f45ef
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s73_m20.py	규민/handoff3/map/scripts/s73_m20.py	4994	51fde5a86113b974
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s74_m20.py	규민/handoff3/map/scripts/s74_m20.py	5325	90203901f7a89139
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s59_m20.py	규민/handoff3/map/scripts/s59_m20.py	12120	887dc007b6216a74
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/scripts/s53_footprint.py	규민/handoff3/map/scripts/s53_footprint.py	6147	0d583762962b5bb7
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/config/s73_starex.override.yaml	규민/handoff3/integration/config/s73_starex.override.yaml	1313	612d87b8fa98a16b
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/config/s73_vehicle_info_starex.param.yaml	규민/handoff3/integration/config/s73_vehicle_info_starex.param.yaml	818	0fab439bf85add9d
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/config/s73_sensor_kit_calibration_roof.yaml	규민/handoff3/integration/config/s73_sensor_kit_calibration_roof.yaml	2218	65182ef1169cb197
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/config/s73_sensor_mapping_pps545k_van.yaml	규민/handoff3/integration/config/s73_sensor_mapping_pps545k_van.yaml	3225	1a6921f45fd5ce0e
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/config/s74_v33b_map.override.yaml	규민/handoff3/integration/config/s74_v33b_map.override.yaml	400	382baa5e43f068b8
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/docs/tools/s74_run_loop.sh	규민/handoff3/integration/docs/tools/s74_run_loop.sh	11471	8ef307d3e223a78a
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/docs/tools/s73_ps_goal.sh	규민/handoff3/integration/docs/tools/s73_ps_goal.sh	3202	ef240945663ebeab
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	integration/docs/tools/s74_ps_run.sh	규민/handoff3/integration/docs/tools/s74_ps_run.sh	3210	9b5d9529c55c401d
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	docs/handoff_3/LICENSE-APACHE-2.0.txt	규민/handoff3/docs/handoff_3/LICENSE-APACHE-2.0.txt	11357	c71d239df91726fc
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/maps/v33c/lanelet2_map.osm	규민/handoff3/map/maps/v33c/lanelet2_map.osm	11109831	d2935e5ba33f9513
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/maps/v33c/map_projector_info.yaml	규민/handoff3/map/maps/v33c/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/maps/v33c/v33c_changes.json	규민/handoff3/map/maps/v33c/v33c_changes.json	1504	26b757a338c74f2e
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/data/shuttle_platforms_v33c_r1.yaml	규민/handoff3/map/data/shuttle_platforms_v33c_r1.yaml	34199	e3a2c76e188969ab
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/data/routes/circulation_v33c_r1.yaml	규민/handoff3/map/data/routes/circulation_v33c_r1.yaml	4338	ffea5022255b1941
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/docs/v33c_readme.md	규민/handoff3/map/docs/v33c_readme.md	5893	1bf5b45b398547f3
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/docs/figs/v33c_loop.png	규민/handoff3/map/docs/figs/v33c_loop.png	141165	5396d062748092ae
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/docs/figs/v33c_uturn_lib.png	규민/handoff3/map/docs/figs/v33c_uturn_lib.png	169298	bad68d03cf31170c
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/docs/figs/v33c_n14.png	규민/handoff3/map/docs/figs/v33c_n14.png	240288	680708c87af7ef78
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_uturn_search.py	규민/handoff3/map/scripts/s75_uturn_search.py	7318	30c4d7a6e3acb1c0
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_make_v33c.py	규민/handoff3/map/scripts/s75_make_v33c.py	15063	9df595e34a0ce4da
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_write.py	규민/handoff3/map/scripts/s75_write.py	4893	6f48c72c5e829a01
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_check_v33c.py	규민/handoff3/map/scripts/s75_check_v33c.py	9188	9f102f6e282e1cdb
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_m20.py	규민/handoff3/map/scripts/s75_m20.py	8121	24b716ed065bf2f9
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_uturn_fig.py	규민/handoff3/map/scripts/s75_uturn_fig.py	7506	f56587fdbe2548a6
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_loop_fig.py	규민/handoff3/map/scripts/s75_loop_fig.py	3255	ce01d2a4000f9783
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/config/s75_v33c_map.override.yaml	규민/handoff3/integration/config/s75_v33c_map.override.yaml	425	cc3aabdc1b405543
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/config/s75_sprinter.override.yaml	규민/handoff3/integration/config/s75_sprinter.override.yaml	1349	a7bcb0f2cbc0ba34
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/config/s75_vehicle_info_sprinter.param.yaml	규민/handoff3/integration/config/s75_vehicle_info_sprinter.param.yaml	1100	fec1fa49670a86c2
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/docs/tools/s75_run_loop.sh	규민/handoff3/integration/docs/tools/s75_run_loop.sh	13202	a2c7cf9c2fde3e28
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/docs/tools/s75_offroad_watch.py	규민/handoff3/integration/docs/tools/s75_offroad_watch.py	1724	f87e2671ac60098e
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/docs/tools/s75_track.py	규민/handoff3/integration/docs/tools/s75_track.py	4283	ceab3515c42ac6f6
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/docs/tools/s75_wheel_recheck.py	규민/handoff3/integration/docs/tools/s75_wheel_recheck.py	2950	853d26c8ddc74fd6
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/docs/tools/s75_steer_eval.py	규민/handoff3/integration/docs/tools/s75_steer_eval.py	2561	6c8b0b5d91d8428e
+인지: 클러스터링·시설/건물 점 지움·비	perception/tools/s67_facility_crop.py	규민/handoff3/perception/tools/s67_facility_crop.py	9268	b5cab7054e6085e5
+인지: 클러스터링·시설/건물 점 지움·비	perception/tools/s67_fac_swap.sh	규민/handoff3/perception/tools/s67_fac_swap.sh	4257	e83d37f0737f17cf
+인지: 클러스터링·시설/건물 점 지움·비	perception/config/s67_facility_polygons.json	규민/handoff3/perception/config/s67_facility_polygons.json	1717	c5342cbfcf0d5a2e
+인지: 클러스터링·시설/건물 점 지움·비	perception/config/s69_building_rects.json	규민/handoff3/perception/config/s69_building_rects.json	47913	681d98695e8766be
+인지: 클러스터링·시설/건물 점 지움·비	perception/tools/s69_building_polys.py	규민/handoff3/perception/tools/s69_building_polys.py	2155	39e88e81f6b1067f
+인지: 클러스터링·시설/건물 점 지움·비	integration/config/sensor_mapping_nocam_pps545k.yaml	규민/handoff3/integration/config/sensor_mapping_nocam_pps545k.yaml	2852	8b9a0b57bb287e05
+인지: 클러스터링·시설/건물 점 지움·비	perception/docs/rain_model.md	규민/handoff3/perception/docs/rain_model.md	4347	3841809d41a1712c
+인지: 클러스터링·시설/건물 점 지움·비	perception/tools/s71_rain_sens.py	규민/handoff3/perception/tools/s71_rain_sens.py	1187	c89d33603bdd1eb6
+인지 평가(재현용)	perception/tools/s67_objects_dump.py	규민/handoff3/perception/tools/s67_objects_dump.py	4916	e72713bca58bcae0
+인지 평가(재현용)	perception/tools/s67_false_objects.py	규민/handoff3/perception/tools/s67_false_objects.py	7766	d210ca2534788b1e
+인지 평가(재현용)	perception/tools/s67_door_compare.py	규민/handoff3/perception/tools/s67_door_compare.py	4530	828324108ca448e2
+인지 평가(재현용)	perception/tools/s67_cluster_offline.sh	규민/handoff3/perception/tools/s67_cluster_offline.sh	3592	0560b1087e284ad9
+인지 평가(재현용)	perception/tools/s68_mock/carla.py	규민/handoff3/perception/tools/s68_mock/carla.py	4610	ba74380427070faa
+인지 평가(재현용)	perception/tools/s68_mock/run_mock.sh	규민/handoff3/perception/tools/s68_mock/run_mock.sh	2386	cdde396856edfa18
+인지 평가(재현용)	perception/tools/s68_static_run.sh	규민/handoff3/perception/tools/s68_static_run.sh	5351	6563feb46bf862ba
+인지 평가(재현용)	perception/tools/s68_spawn_lat.py	규민/handoff3/perception/tools/s68_spawn_lat.py	2422	88ca3d22021948c3
+인지 평가(재현용)	perception/tools/s68_spawn_lat_eval.py	규민/handoff3/perception/tools/s68_spawn_lat_eval.py	985	c743d2ddb2e9ac3b
+인지 평가(재현용)	perception/tools/s68_dist_scene.py	규민/handoff3/perception/tools/s68_dist_scene.py	4223	5134c14ba29221cf
+인지 평가(재현용)	perception/tools/s68_bag_points.py	규민/handoff3/perception/tools/s68_bag_points.py	4071	47e6fbb73e659fa6
+인지 평가(재현용)	perception/tools/s68_dist_eval.py	규민/handoff3/perception/tools/s68_dist_eval.py	12937	d926411de0138f13
+인지 평가(재현용)	perception/tools/s69_sweep.launch.py	규민/handoff3/perception/tools/s69_sweep.launch.py	4648	7297e82ad1db3a48
+인지 평가(재현용)	perception/tools/s69_sweep_offline.sh	규민/handoff3/perception/tools/s69_sweep_offline.sh	2298	036640450a6dc459
+인지 평가(재현용)	perception/tools/s69_sweep_dump.py	규민/handoff3/perception/tools/s69_sweep_dump.py	3793	f499db048d2ce4c1
+인지 평가(재현용)	perception/tools/s69_dist_eval.py	규민/handoff3/perception/tools/s69_dist_eval.py	12157	942a8006ba48b587
+인지 평가(재현용)	perception/tools/s69_sweep_table.py	규민/handoff3/perception/tools/s69_sweep_table.py	3043	8eb371df87af4fd8
+인지 평가(재현용)	perception/tools/s69_bld_check.py	규민/handoff3/perception/tools/s69_bld_check.py	2749	488d8392bf3f1cf4
+인지 평가(재현용)	perception/tools/s70_sweep.launch.py	규민/handoff3/perception/tools/s70_sweep.launch.py	5069	4120d464d067f20b
+인지 평가(재현용)	perception/tools/s70_sweep_offline.sh	규민/handoff3/perception/tools/s70_sweep_offline.sh	2459	7a99e66810ac9773
+인지 평가(재현용)	perception/tools/s70_minpts_judge.py	규민/handoff3/perception/tools/s70_minpts_judge.py	4149	eaa4de312c76d825
+인지 평가(재현용)	perception/tools/s70_rain_table.py	규민/handoff3/perception/tools/s70_rain_table.py	4820	aea538f2a7e848b6
+인지 평가(재현용)	map/docs/logs/campus_layers_dry_s66_all_actors.csv	규민/handoff3/map/docs/logs/campus_layers_dry_s66_all_actors.csv	133260	dfa7c9ed66e53849
+실행 보조	integration/docs/tools/s71_keepawake.sh	규민/handoff3/integration/docs/tools/s71_keepawake.sh	2368	e0e2d019c309f93d
+실행 보조	integration/docs/tools/s71_door_timing.py	규민/handoff3/integration/docs/tools/s71_door_timing.py	3134	71909e6b13cae904
+문서(인계 3)	docs/handoff_3/LICENSE	규민/handoff3/LICENSE	1069	e4a6ce9618770206
+문서(인계 3)	docs/handoff_3/README.md	규민/handoff3/docs/handoff_3/README.md	21225	119a10509667a69c
+문서(인계 3)	docs/handoff_3/NOTICE.md	규민/handoff3/docs/handoff_3/NOTICE.md	6886	f0ab95970fabe5f3
+문서(인계 3)	docs/handoff_3/changes_since_handoff2.md	규민/handoff3/docs/handoff_3/changes_since_handoff2.md	4726	be597a870d703698
+문서(인계 3)	docs/handoff_3/make_list.py	규민/handoff3/docs/handoff_3/make_list.py	11588	76effde531e3a38f
+차체 검사 도구	map/build_v31_s54/pairs35.json	규민/handoff3/map/build_v31_s54/pairs35.json	7160	dcc70218dddacff7
+차체 검사 도구	map/docs/logs/s56b_footprint_pairs.json	규민/handoff3/map/docs/logs/s56b_footprint_pairs.json	23484	2b66806d09358338
+차체 검사 도구	map/docs/logs/s56c_footprint_pairs.json	규민/handoff3/map/docs/logs/s56c_footprint_pairs.json	1424	038af7d9708d16d3
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/maps/v33d/lanelet2_map.osm	규민/handoff3/map/maps/v33d/lanelet2_map.osm	11131478	fe9ee6ffc5af6263
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/maps/v33d/map_projector_info.yaml	규민/handoff3/map/maps/v33d/map_projector_info.yaml	22	a6fb6af33e164e61
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/maps/v33d/v33d_changes.json	규민/handoff3/map/maps/v33d/v33d_changes.json	1366	606b750b148a21fe
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/data/shuttle_platforms_v33d_r1.yaml	규민/handoff3/map/data/shuttle_platforms_v33d_r1.yaml	34331	1a700a78befde12b
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/data/shuttle_platforms_v33d_r1_sprinter.yaml	규민/handoff3/map/data/shuttle_platforms_v33d_r1_sprinter.yaml	23804	2800d0c69973434d
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/data/routes/circulation_v33d_r1.yaml	규민/handoff3/map/data/routes/circulation_v33d_r1.yaml	4472	026bf1761df68d50
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/data/routes/circulation_v33d_r1_sprinter.yaml	규민/handoff3/map/data/routes/circulation_v33d_r1_sprinter.yaml	4587	d6e1d48938ae03f3
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/docs/v33d_readme.md	규민/handoff3/map/docs/v33d_readme.md	4784	3e3380da288796a3
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/docs/figs/v33d_back_uturn.png	규민/handoff3/map/docs/figs/v33d_back_uturn.png	131609	806fea938a51f298
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/docs/figs/v33d_sprinter_door.jpg	규민/handoff3/map/docs/figs/v33d_sprinter_door.jpg	333824	325af2b4f18b7090
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/docs/figs/v33d_loop.png	규민/handoff3/map/docs/figs/v33d_loop.png	141522	9186d8e2f69030e3
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_uturn_search.py	규민/handoff3/map/scripts/s77_uturn_search.py	8550	b4a306792c8bb4c6
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_loop_fig.py	규민/handoff3/map/scripts/s77_loop_fig.py	3289	41979ebfedbc4477
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_make_v33d.py	규민/handoff3/map/scripts/s77_make_v33d.py	10996	89b086565dd64c08
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_check_v33d.py	규민/handoff3/map/scripts/s77_check_v33d.py	9961	d9c7fe8cc6e1eee2
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_m20.py	규민/handoff3/map/scripts/s77_m20.py	8368	f28c183596258b2d
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_platforms_sprinter.py	규민/handoff3/map/scripts/s77_platforms_sprinter.py	9133	63ea343951cea63c
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	map/scripts/s77_write.py	규민/handoff3/map/scripts/s77_write.py	5861	1c7a9a8e58737d71
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	integration/config/s77_v33d_map.override.yaml	규민/handoff3/integration/config/s77_v33d_map.override.yaml	425	53017a48c332ee8e
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	integration/config/s77_segments_loop_sprinter.txt	규민/handoff3/integration/config/s77_segments_loop_sprinter.txt	731	e67fc9ae0205e72f
+지도 v3.3d(후문 섬 유턴·스프린터 문, 11/04)	integration/docs/tools/s77_run_loop.sh	규민/handoff3/integration/docs/tools/s77_run_loop.sh	14496	9ac77ba2fc508eae
+스프린터 차량 설정(11/04)	integration/config/s76_sprinter.override.yaml	규민/handoff3/integration/config/s76_sprinter.override.yaml	2558	734caa669ab0bf37
+스프린터 차량 설정(11/04)	integration/config/s76_sprinter_accel_map.csv	규민/handoff3/integration/config/s76_sprinter_accel_map.csv	898	516ab6701597b589
+스프린터 차량 설정(11/04)	integration/config/s76_sprinter_brake_map.csv	규민/handoff3/integration/config/s76_sprinter_brake_map.csv	894	0f354d9e5206d353
+스프린터 차량 설정(11/04)	integration/config/s76_raw_vehicle_cmd_converter_sprinter.param.yaml	규민/handoff3/integration/config/s76_raw_vehicle_cmd_converter_sprinter.param.yaml	1233	8fab4c19b7354597
+스프린터 차량 설정(11/04)	integration/config/s76_mirror_sprinter.param.yaml	규민/handoff3/integration/config/s76_mirror_sprinter.param.yaml	950	d5f480ec71d22662
+스프린터 차량 설정(11/04)	integration/config/s74_sensor_mapping_van_pick.yaml	규민/handoff3/integration/config/s74_sensor_mapping_van_pick.yaml	3225	1a6921f45fd5ce0e
+스프린터 차량 설정(11/04)	integration/docs/tools/s76_pedal_bench.py	규민/handoff3/integration/docs/tools/s76_pedal_bench.py	8042	ca4ef31fd76dbe17
+스프린터 차량 설정(11/04)	integration/docs/tools/s76_make_maps.py	규민/handoff3/integration/docs/tools/s76_make_maps.py	7900	cae08dd318822f48
+스프린터 차량 설정(11/04)	integration/docs/tools/s76_loop_eval.py	규민/handoff3/integration/docs/tools/s76_loop_eval.py	5938	0fad629175179c74
+발표 재료(영상 뺌)	docs/midterm_material/README.md	규민/handoff3/docs/midterm_material/README.md	10881	da441503adefdf64
+발표 재료(영상 뺌)	docs/midterm_material/fig01_v31_map.png	규민/handoff3/docs/midterm_material/fig01_v31_map.png	195861	b245ed054397e904
+발표 재료(영상 뺌)	docs/midterm_material/fig03_routes.png	규민/handoff3/docs/midterm_material/fig03_routes.png	192879	9645a860c97085d1
+발표 재료(영상 뺌)	docs/midterm_material/fig04_m20_fit.png	규민/handoff3/docs/midterm_material/fig04_m20_fit.png	312810	5b3e34a171764a62
+발표 재료(영상 뺌)	docs/midterm_material/fig05_v32_compare.png	규민/handoff3/docs/midterm_material/fig05_v32_compare.png	126643	1d207e2732a495e3
+발표 재료(영상 뺌)	docs/midterm_material/fig06_v32_wait_ped.png	규민/handoff3/docs/midterm_material/fig06_v32_wait_ped.png	79558	d9debb340e5fdd54
+발표 재료(영상 뺌)	docs/midterm_material/fig07_v32_cross4.png	규민/handoff3/docs/midterm_material/fig07_v32_cross4.png	270087	ae64668f0ffa14b2
+발표 재료(영상 뺌)	docs/midterm_material/fig08_layers_onoff.png	규민/handoff3/docs/midterm_material/fig08_layers_onoff.png	1065935	e1b4c13875d16373
+발표 재료(영상 뺌)	docs/midterm_material/fig09_dist_detect.png	규민/handoff3/docs/midterm_material/fig09_dist_detect.png	91349	89bb7071570d1430
+발표 재료(영상 뺌)	docs/midterm_material/fig10_false_objects.png	규민/handoff3/docs/midterm_material/fig10_false_objects.png	60169	ec0b71f27042d651
+발표 재료(영상 뺌)	docs/midterm_material/fig11_dist_error.png	규민/handoff3/docs/midterm_material/fig11_dist_error.png	69773	3bd0256a5cf6e026
+발표 재료(영상 뺌)	docs/midterm_material/fig12_fail_ped10m.png	규민/handoff3/docs/midterm_material/fig12_fail_ped10m.png	111714	6c6b60d7acc19530
+발표 재료(영상 뺌)	docs/midterm_material/fig13_fail_bld2.png	규민/handoff3/docs/midterm_material/fig13_fail_bld2.png	134025	3a37c4704fd5455e
+발표 재료(영상 뺌)	docs/midterm_material/fig14_dist_detect_before_after.png	규민/handoff3/docs/midterm_material/fig14_dist_detect_before_after.png	108639	0a7854d5555f7bbc
+발표 재료(영상 뺌)	docs/midterm_material/fig15_false_before_after.png	규민/handoff3/docs/midterm_material/fig15_false_before_after.png	47661	4db65832808b83a0
+발표 재료(영상 뺌)	docs/midterm_material/fig16_alt_stops.png	규민/handoff3/docs/midterm_material/fig16_alt_stops.png	235128	67f0fb0889077646
+발표 재료(영상 뺌)	docs/midterm_material/fig17_rain_detect.png	규민/handoff3/docs/midterm_material/fig17_rain_detect.png	89495	7f83f1b5e0fc7c20
+발표 재료(영상 뺌)	docs/midterm_material/make_stills.py	규민/handoff3/docs/midterm_material/make_stills.py	3111	a4fedc8b559984ca
+발표 재료(영상 뺌)	docs/midterm_material/tab02_30pairs.md	규민/handoff3/docs/midterm_material/tab02_30pairs.md	2765	dfc6ab17e892eec8
+발표 재료(영상 뺌)	docs/midterm_material/tab04_m20.md	규민/handoff3/docs/midterm_material/tab04_m20.md	3387	1908496a61de0f4a
+발표 재료(영상 뺌)	docs/midterm_material/tab05_scenes.md	규민/handoff3/docs/midterm_material/tab05_scenes.md	3141	ca9da8e5b967104d
+발표 재료(영상 뺌)	docs/midterm_material/tab06_door.md	규민/handoff3/docs/midterm_material/tab06_door.md	1770	6fb219912c79408c
+발표 재료(영상 뺌)	docs/midterm_material/tab07_clustering.md	규민/handoff3/docs/midterm_material/tab07_clustering.md	1708	1dfdacfac3e963a7
+발표 재료(영상 뺌)	docs/midterm_material/tab08_videos.md	규민/handoff3/docs/midterm_material/tab08_videos.md	1399	ecf65a730af99c82
+발표 재료(영상 뺌)	docs/midterm_material/tab09_v32.md	규민/handoff3/docs/midterm_material/tab09_v32.md	3070	9983087bcb4a2e6d
+발표 재료(영상 뺌)	docs/midterm_material/tab10_clustering_online.md	규민/handoff3/docs/midterm_material/tab10_clustering_online.md	2865	6d6b18ecb1da4ea4
+발표 재료(영상 뺌)	docs/midterm_material/tab11_dist_eval.md	규민/handoff3/docs/midterm_material/tab11_dist_eval.md	2846	266949cae17d2fe3
+발표 재료(영상 뺌)	docs/midterm_material/tab12_sweep.md	규민/handoff3/docs/midterm_material/tab12_sweep.md	2469	4495a2d7d56ff65a
+발표 재료(영상 뺌)	docs/midterm_material/tab13_perf.md	규민/handoff3/docs/midterm_material/tab13_perf.md	1463	6fc08cb9d47a9d89
+발표 재료(영상 뺌)	docs/midterm_material/tab14_minpts.md	규민/handoff3/docs/midterm_material/tab14_minpts.md	1425	86964deb0008c354
+발표 재료(영상 뺌)	docs/midterm_material/tab15_sensor_unify.md	규민/handoff3/docs/midterm_material/tab15_sensor_unify.md	1477	d701ce1fe0d5fb15
+발표 재료(영상 뺌)	docs/midterm_material/tab16_rain.md	규민/handoff3/docs/midterm_material/tab16_rain.md	3601	b36fe85dde86d43f
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58a_all_1_처음검출.jpg	규민/handoff3/docs/midterm_material/stills/s58a_all_1_처음검출.jpg	40110	bc73e28658b4975a
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58a_all_2_정지.jpg	규민/handoff3/docs/midterm_material/stills/s58a_all_2_정지.jpg	40219	a5710d314bc56c33
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58a_car_1_처음검출.jpg	규민/handoff3/docs/midterm_material/stills/s58a_car_1_처음검출.jpg	43999	9cebd0c757f2aae4
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58a_car_2_정지.jpg	규민/handoff3/docs/midterm_material/stills/s58a_car_2_정지.jpg	48083	c48306ad0a9faf54
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58b_car_1_처음검출.jpg	규민/handoff3/docs/midterm_material/stills/s58b_car_1_처음검출.jpg	46634	68503032d8da2147
+발표 재료(영상 뺌)	docs/midterm_material/stills/s58b_car_2_정지.jpg	규민/handoff3/docs/midterm_material/stills/s58b_car_2_정지.jpg	45491	fbf38d4d68fe4f73
+발표 재료(영상 뺌)	docs/midterm_material/stills/s59a_car_1_처음검출.jpg	규민/handoff3/docs/midterm_material/stills/s59a_car_1_처음검출.jpg	42597	b8c39486957a4851
+발표 재료(영상 뺌)	docs/midterm_material/stills/s59a_car_2_정지.jpg	규민/handoff3/docs/midterm_material/stills/s59a_car_2_정지.jpg	43504	7188a2c36d00f8e1
+발표 재료(영상 뺌)	docs/midterm_material/stills/s59b_car_1_처음검출.jpg	규민/handoff3/docs/midterm_material/stills/s59b_car_1_처음검출.jpg	47620	f54ddd8ecc82abb8
+발표 재료(영상 뺌)	docs/midterm_material/stills/s59b_car_2_정지.jpg	규민/handoff3/docs/midterm_material/stills/s59b_car_2_정지.jpg	46557	8d9935c88a3f8a12
+발표 재료(영상 뺌)	docs/midterm_material/stills/stills.tsv	규민/handoff3/docs/midterm_material/stills/stills.tsv	379	a46ce849d0d27acd

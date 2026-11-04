@@ -1,0 +1,223 @@
+{
+ "source": "map/build_s57_regen/build",
+ "source_sha256": "83edb7755588184fa5a561fa508746ec166ef5171698b517123eae06e73d2c88",
+ "drop": [
+  {
+   "road": 1320,
+   "way": "442595034",
+   "osm_tag": "service/parking_aisle",
+   "why": "볼라드: 지금 중문 승강장 바로 위(중문 쪽)에 볼라드, 차 못 지나감(사용자 11/2, mid_check.png ✕)",
+   "kind": "다르게"
+  },
+  {
+   "road": 1191,
+   "way": "442595034",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 조각 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 1317,
+   "way": "442595034",
+   "osm_tag": "service/parking_aisle",
+   "why": "개성재 자동문 게이트 G5(관리동 앞 교차로)로 들어가는 조각(사용자 11/2: 게이트 = G5, 셔틀은 개성재 안 안 감)",
+   "kind": "다르게"
+  },
+  {
+   "road": 1190,
+   "way": "442595034",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 조각 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 1360,
+   "way": "446440351",
+   "osm_tag": "service/parking_aisle",
+   "why": "개성재 안쪽 관리동 앞 길, 자동문 게이트 안(밤에 닫힘, 사용자 11/2)",
+   "kind": "다르게"
+  },
+  {
+   "road": 1229,
+   "way": "446440351",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 길 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 1194,
+   "way": "442595037",
+   "osm_tag": "service/parking_aisle",
+   "why": "정의관·미술과 남쪽 동서 길: 개성재 게이트 안(사용자 11/2), 사용자 기억으로 지도처럼 안 이어짐",
+   "kind": "다르게"
+  },
+  {
+   "road": 1323,
+   "way": "442595037",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 길 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 1195,
+   "way": "442595037",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 way 동쪽 조각(동쪽 고리로 이어짐)",
+   "kind": "다르게"
+  },
+  {
+   "road": 1324,
+   "way": "442595037",
+   "osm_tag": "service/parking_aisle",
+   "why": "같은 조각 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 1312,
+   "way": "442595037",
+   "osm_tag": "service/parking_aisle",
+   "why": "동쪽 고리(두 번째 좌회전 뒤 도는 길): 사용자 11/2 '좌회전 두 번으로 돌아 나가지 말고 차만 돌려 내려옴'",
+   "kind": "다르게"
+  },
+  {
+   "road": 1325,
+   "way": "442361829",
+   "osm_tag": "service/parking_aisle",
+   "why": "동쪽 고리 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 3004,
+   "way": "(세션45 연결)",
+   "osm_tag": "-",
+   "why": "세션45 에 이은 북문 고리 연결: 두 번째 좌회전(사용자 11/2 안 씀)",
+   "kind": "다르게"
+  },
+  {
+   "road": 3005,
+   "way": "(세션45 연결)",
+   "osm_tag": "-",
+   "why": "같은 연결 반대 방향",
+   "kind": "다르게"
+  },
+  {
+   "road": 3006,
+   "way": "(세션45 교차로)",
+   "osm_tag": "-",
+   "why": "북문 길 끝 -> 연결 교차로",
+   "kind": "다르게"
+  },
+  {
+   "road": 3007,
+   "way": "(세션45 교차로)",
+   "osm_tag": "-",
+   "why": "연결 -> 북문 길 교차로",
+   "kind": "다르게"
+  },
+  {
+   "road": 3008,
+   "way": "(세션45 교차로)",
+   "osm_tag": "-",
+   "why": "연결 -> 동쪽 고리 교차로",
+   "kind": "다르게"
+  },
+  {
+   "road": 3009,
+   "way": "(세션45 교차로)",
+   "osm_tag": "-",
+   "why": "동쪽 고리 -> 연결 교차로",
+   "kind": "다르게"
+  },
+  {
+   "road": 1235,
+   "way": "468616604",
+   "osm_tag": "footway(lit=yes)",
+   "why": "OSM 인도(footway)가 태그 보정 때 차도로 바뀐 것. 남문(이쪽) 문 구역 자리",
+   "kind": "OSM대로"
+  },
+  {
+   "road": 1369,
+   "way": "468616604",
+   "osm_tag": "footway(lit=yes)",
+   "why": "같은 인도 반대 방향",
+   "kind": "OSM대로"
+  }
+ ],
+ "drop_connectors": [
+  1437,
+  1446,
+  1447,
+  1449,
+  1632,
+  1633,
+  1635,
+  1639,
+  1688,
+  1689,
+  1690,
+  1691,
+  1692,
+  1693,
+  1695,
+  1696,
+  1698,
+  1699,
+  1701,
+  1702,
+  1871,
+  1872,
+  1874,
+  1875,
+  1876,
+  1877,
+  2041,
+  2043,
+  2044,
+  2045,
+  2052,
+  2053,
+  3006,
+  3007,
+  3008,
+  3009
+ ],
+ "drop_isolated": [
+  1196,
+  1197,
+  1198,
+  1326,
+  1327,
+  1328,
+  1681,
+  1682,
+  1684,
+  1685,
+  1686,
+  1687
+ ],
+ "keep_restored": {
+  "1318": "N14 주차장 길(way 442595030) 되살림: 세션55 에서 Lanelet2 에서만 뺐던 것. 사용자 11/2 'N14 를 둘러싼 주차장으로 차 돌림'(10/4 답사: ㄷ자, 양쪽 열림, 양방향)",
+  "1188": "같은 길 반대 방향 되살림"
+ },
+ "uturn": {
+  "uw": 4.0,
+  "r_u": 5.0,
+  "r_out": 5.0,
+  "alpha_deg": 48.13,
+  "lane_w": 3.35,
+  "lat_gap": 3.35,
+  "lon_gap": -0.0,
+  "center_right_max": 3.32,
+  "center_left_max": 6.67,
+  "center_forward_max": 12.45,
+  "need_right_of_r1415_center": 5.0,
+  "need_left_of_r1409_center": 5.0,
+  "relation": 52799,
+  "nodes": 64,
+  "latlon_fit_err": 1.6412853064487476e-11,
+  "last1415": "37801",
+  "first1409": "36955"
+ },
+ "out_sha256": "af536a8457c6bea49977aa368c76613d5d5a712ac09afa6fc7f43b7c106da1eb",
+ "projector_sha256": "a6fb6af33e164e61a075f9a79eeffa5eca3ead4435dc3de49e811525175b8307"
+}

@@ -1,0 +1,255 @@
+# 충북대 캠퍼스 맵 v3 정류장과 차고지 후보다
+# 맵은 maps/cbnu_campus_frozen_v3.xodr 이다(sha256 앞 16자 a17ab012e04c664f)
+# 정류장마다 승강장(platforms)을 둔다. 양방향 길 위 정류장은 건너편에도 승강장이 있다. 도서관 북문은 막다른 끝이라 하나다
+# 건너편 승강장은 같은 자리 옆 15m 안 반대 방향 차로 중 가장 가까운 곳이다. 도서관 남문만 보행로와 겹치는 차로를 피해 같은 길 반대쪽을 골랐다
+# road/s/lane 은 OpenDRIVE 좌표다. lane -1 은 진행 방향 오른쪽 주행 차선이다
+# 위경도는 WGS84 다. xodr 머리말의 투영과 offset 으로 역산했다(s22_buildings.Frame). CARLA GNSS 값과는 다르다
+# direction 은 진행 방위(북 0, 동 90)를 8방위로 적은 것이다
+# stop_zone_length_m 는 아직 정하지 않아 비워 두었다
+# 데이터 출처는 OpenStreetMap 이다. (c) OpenStreetMap contributors, ODbL 1.0
+# 좌표는 OSM 파생 지도와 OSM 노드에서 계산했다
+map_sha256_16: a17ab012e04c664f
+stops:
+  - id: main_gate
+    name: 정문
+    route: all
+    road_id: 1278
+    s: 138.0
+    lane_id: -1
+    carla_xyz: [263.465, -965.625, 0.000]
+    lat: 36.6315515
+    lon: 127.4535089
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "정문 게이트(경비실)를 지나 첫 사거리 전, 들어오는 차로 가운데쯤이다"
+    source: "map/scripts/s43_verify.py, OSM 정문 노드 6394475285 와 사거리 노드 3958352394 사이 들어오는 경로의 가운데"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1278
+        s: 138.0
+        lane_id: -1
+        heading_carla_yaw_deg: 37.8
+        direction: 남동  # 진행 방위각 128도(북 0, 동 90)
+        carla_xyz: [263.483, -965.611, 0.000]
+        lat: 36.6315513
+        lon: 127.4535091
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "정류장 기준 자리다"
+      - side: 건너편
+        road_id: 1150
+        s: 15.1
+        lane_id: -1
+        heading_carla_yaw_deg: -142.2
+        direction: 북서  # 진행 방위각 308도(북 0, 동 90)
+        carla_xyz: [265.440, -968.332, 0.000]
+        lat: 36.6315759
+        lon: 127.4535309
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "게이트로 나가는 쪽 차로다"
+  - id: lib_north
+    name: 도서관 북문
+    route: north
+    road_id: 1415
+    s: 78.0
+    lane_id: -1
+    carla_xyz: [657.257, -683.675, 0.000]
+    lat: 36.6290107
+    lon: 127.4579117
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "도서관 구관 북동쪽 면 앞 도로로, 면 중점에서 46.1m 떨어져 있다"
+    source: "tests/test_drive.py ROUTES_V2['north'] 마지막 road·end_s"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1415
+        s: 78.0
+        lane_id: -1
+        heading_carla_yaw_deg: 35.5
+        direction: 남동  # 진행 방위각 126도(북 0, 동 90)
+        carla_xyz: [657.257, -683.675, 0.000]
+        lat: 36.6290107
+        lon: 127.4579117
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "정류장 기준 자리다"
+  - id: lib_south
+    name: 도서관 남문
+    route: south
+    road_id: 1268
+    s: 47.0
+    lane_id: -1
+    carla_xyz: [570.069, -563.810, 0.000]
+    lat: 36.6279306
+    lon: 127.4569369
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "자연대와 도서관 사이 도로로, 도서관 남서쪽 면 중점에서 약 57.5m 떨어져 있다"
+    source: "tests/test_drive.py ROUTES_V2['south'] 마지막 road·end_s"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1268
+        s: 47.0
+        lane_id: -1
+        heading_carla_yaw_deg: 27.1
+        direction: 남동  # 진행 방위각 117도(북 0, 동 90)
+        carla_xyz: [570.069, -563.810, 0.000]
+        lat: 36.6279306
+        lon: 127.4569369
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "정류장 기준 자리다"
+      - side: 건너편
+        road_id: 1405
+        s: 83.6
+        lane_id: -1
+        heading_carla_yaw_deg: -152.9
+        direction: 북서  # 진행 방위각 297도(북 0, 동 90)
+        carla_xyz: [571.524, -566.829, 0.000]
+        lat: 36.6279578
+        lon: 127.4569532
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "같은 길 반대쪽 차로다. 더 가까운 r1235 는 보행로 way 468616604 와 0.74m 겹쳐 쓰지 않았다"
+  - id: middle_gate
+    name: 중문
+    route: middle
+    road_id: 1191
+    s: 31.9
+    lane_id: -1
+    carla_xyz: [622.761, -906.125, 0.000]
+    lat: 36.6310153
+    lon: 127.4575261
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "중문 길이 갈라지는 교차로 앞 관통 도로다. 예전 막다른 끝 정류장은 previous_end_stop 에 남겼다. OSM 에 문 지물이 없어 문까지 거리는 추정이다"
+    source: "map/scripts/s46_middle_choice.py, s46_stops.py, OSM way 442595034"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1191
+        s: 31.9
+        lane_id: -1
+        heading_carla_yaw_deg: -92.7
+        direction: 북  # 진행 방위각 357도(북 0, 동 90)
+        carla_xyz: [622.761, -906.125, 0.000]
+        lat: 36.6310153
+        lon: 127.4575261
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "중문 길(way 446440351)이 갈라지는 교차로 앞 관통 도로(way 442595034)이고, 미술관(N16-2) 북동쪽 7m 다"
+      - side: 건너편
+        road_id: 1320
+        s: 15.0
+        lane_id: -1
+        heading_carla_yaw_deg: 86.9
+        direction: 남  # 진행 방위각 177도(북 0, 동 90)
+        carla_xyz: [619.435, -906.185, 0.000]
+        lat: 36.6310159
+        lon: 127.4574889
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "같은 길 반대쪽 차로다"
+    previous_end_stop:  # 예전 중문 정류장(막다른 끝 5.7m 앞). test_drive.py middle 노선 종점이고 회귀 비교에 쓴다
+      road_id: 1360
+      s: 70.0
+      lane_id: -1
+      carla_xyz: [666.435, -982.306, 0.000]
+      lat: 36.6317018
+      lon: 127.4580144
+
+  - id: yangseong
+    name: 양성재
+    route: yangseong
+    road_id: 1153
+    s: 22.0
+    lane_id: -1
+    carla_xyz: [214.552, -549.608, 0.000]
+    lat: 36.6278026
+    lon: 127.4529621
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "양성재(서문) 앞 도로로, 건물 외곽선에서 45.7m 떨어져 있다"
+    source: "tests/test_drive.py ROUTES_V2['yangseong'] 마지막 road·end_s"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1153
+        s: 22.0
+        lane_id: -1
+        heading_carla_yaw_deg: 65.7
+        direction: 남동  # 진행 방위각 156도(북 0, 동 90)
+        carla_xyz: [214.552, -549.608, 0.000]
+        lat: 36.6278026
+        lon: 127.4529621
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "정류장 기준 자리다"
+      - side: 건너편
+        road_id: 1281
+        s: 31.1
+        lane_id: -1
+        heading_carla_yaw_deg: -114.2
+        direction: 북서  # 진행 방위각 336도(북 0, 동 90)
+        carla_xyz: [217.550, -551.110, 0.000]
+        lat: 36.6278161
+        lon: 127.4529957
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "같은 길 반대쪽 차로다"
+  - id: back_gate
+    name: 후문
+    route: back
+    road_id: 1151
+    s: 23.1
+    lane_id: -1
+    carla_xyz: [1099.473, -219.708, 0.000]
+    lat: 36.6248296
+    lon: 127.4628555
+    latlon_roundtrip_m: 0.000
+    inside_campus_boundary: true
+    stop_zone_length_m:
+    note: "OSM way 392632034 위 후문B 추정 게이트로, 기준점(36.624844, 127.462860)에서 1.65m 떨어져 있다"
+    source: "tests/test_drive.py ROUTES_V2['back'] 마지막 road·end_s"
+    platforms:  # side 이쪽 = 위 road_id·s 와 같은 자리
+      - side: 이쪽
+        road_id: 1151
+        s: 23.1
+        lane_id: -1
+        heading_carla_yaw_deg: 13.1
+        direction: 동  # 진행 방위각 103도(북 0, 동 90)
+        carla_xyz: [1099.473, -219.708, 0.000]
+        lat: 36.6248296
+        lon: 127.4628555
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "정류장 기준 자리다"
+      - side: 건너편
+        road_id: 1279
+        s: 73.0
+        lane_id: -1
+        heading_carla_yaw_deg: -166.9
+        direction: 서  # 진행 방위각 283도(북 0, 동 90)
+        carla_xyz: [1100.236, -222.970, 0.000]
+        lat: 36.6248590
+        lon: 127.4628640
+        latlon_roundtrip_m: 0.000
+        inside_campus_boundary: true
+        note: "같은 길 반대쪽 차로다"
+depot_candidates:  # 고르지 않음
+  - id: museum_bus_depot
+    name: 박물관 버스 차고지
+    lat: 36.6276833
+    lon: 127.4550105
+    note: "박물관 버스 차고지 주차 통로 고리(OSM way 442595850) 노드 8개의 평균 위치이고, 진입 답사점은 36.627598, 127.454728 이다"
+    source: "OSM way 442595850"
+  - id: n14_parking
+    name: N14 주차장
+    lat:
+    lon:
+    note: "N14 주차장은 건물을 ㄷ자로 감싼 형태로만 기록돼 있어 좌표를 비워 두었다"
+    source: ""

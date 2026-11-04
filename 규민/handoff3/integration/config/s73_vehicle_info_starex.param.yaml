@@ -1,0 +1,15 @@
+# 11/02: 스타렉스 설계 차 vehicle_info(autoware_sample_vehicle_description 1.9.0 형식, 원본 Apache 2.0). s73_starex.override.yaml 이 sample_vehicle 자리에 덮어 마운트
+# 근거: 현대 공식 전장 5,150·전폭 1,920·전고 1,925·축거 3,200·윤거 뒤 1,660mm, 최소회전반경 5.6m(특장 제원표). 앞뒤 오버행 0.877/1.073 은 가정(합 1.95, CARLA sprinter 비율)
+# max_steer_angle = atan(3.2 / 3.77) (뒷축 최소 반경 3.77m = sqrt(5.6^2 - 3.2^2) - 1.66/2). 바퀴 반지름·폭은 가정(215/70R16)
+/**:
+  ros__parameters:
+    wheel_radius: 0.346
+    wheel_width: 0.215
+    wheel_base: 3.2
+    wheel_tread: 1.66
+    front_overhang: 0.877
+    rear_overhang: 1.073
+    left_overhang: 0.13
+    right_overhang: 0.13
+    vehicle_height: 1.925
+    max_steer_angle: 0.704 # [rad]

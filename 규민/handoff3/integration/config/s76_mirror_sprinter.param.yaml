@@ -1,0 +1,13 @@
+# 11/04: 스프린터 사이드미러 자르기 상자(base_link = 뒷축 가운데 땅). sample_vehicle mirror.param.yaml(프리우스, x 1.8~3.2 y ±1.4 z 0.8~1.5) 꼴 그대로
+#   근거: 11/03 s75d_sprinter bag 브리지 LiDAR 원 점(600틱)에서 vehicle_info 자기 상자(x -1.239~4.676, y ±0.994, z 0~2.561) 밖에 남은 자기 점
+#         = x 3.18~3.27, |y| 0.994~1.16, z 1.38~1.70 (틱마다 약 108점, 지붕 LiDAR 가 거울 윗면을 봄)
+#   여유: x 앞뒤 약 0.3m, y 바깥 0.24m, z 아래 0.28m(위에서 안 보이는 거울 아랫부분)·위 0.3m
+#   s76_sprinter.override.yaml 이 sample_vehicle_description·autoware_sample_vehicle_description·carla_sensor_kit_launch 의 mirror.param.yaml 자리에 덮어 마운트
+/**:
+  ros__parameters:
+    min_longitudinal_offset: 2.9
+    max_longitudinal_offset: 3.6
+    min_lateral_offset: -1.4
+    max_lateral_offset: 1.4
+    min_height_offset: 1.1
+    max_height_offset: 2.0

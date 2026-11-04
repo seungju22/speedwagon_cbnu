@@ -1,0 +1,73 @@
+== 0 준비 13:04:12
+입력 map/data/raw/cbnu_campus.osm c383870eb4d1e196
+입력 map/data/processed/cbnu_relation_polygon.json c44ea70a8f36d447
+입력 map/maps/cbnu_internal_only_localtm_tags73_smooth.xodr bf835cdfad0cea65
+입력 map/data/processed/cbnu_campus_fixed_tags73.osm dfcc5ff7b1a41532
+입력 map/data/processed/cbnu_internal_boundary_tags73.osm ce457630b2de089f
+입력 map/data/processed/cbnu_internal_boundary_tags73_smooth.osm caa2c69b026ccc75
+입력 map/build_v31_s54/s54_chord_list_no1317_1825.json d20cafc70b9605fb
+입력 map/data/crossings_v3_candidates.csv 2596f8a35751855f
+입력 map/data/stops_v3_draft_s46.yaml 934387524e0d14d5
+입력 map/docs/logs/s25_buildings.csv 2ef84454915f398b
+입력 map/data/processed/s40_b2_cut.csv b85efea102aec0c0
+입력 map/docs/logs/s42_way_dir.csv 197527d845fd381e
+입력 map/data/stops_v2.yaml 5df141cd0cc28933
+입력 map/tests/test_drive.py b6d07747035508eb
+== 1-0 frozen_v1 기준선(태그 보정 73) 13:04:13
+exit 0
+같음 map/data/processed/cbnu_campus_fixed_r71base.osm dfcc5ff7b1a41532
+같음 map/data/processed/cbnu_internal_boundary_r71base.osm ce457630b2de089f
+같음 map/data/processed/cbnu_internal_boundary_r71base_smooth.osm caa2c69b026ccc75
+같음(시각 뺌) map/maps/cbnu_internal_only_localtm_r71base_smooth.xodr
+같음 map/maps/cbnu_internal_only_localtm_r71base_smooth.xodr bf835cdfad0cea65
+== 1-1 v2 변환(B안 태그 보정 81) 13:04:46
+exit 0
+같음 map/data/processed/cbnu_campus_fixed_tags81_B.osm a60f88de3c9679c8
+같음 map/data/processed/cbnu_internal_boundary_tags81_B.osm a4ed787243952adf
+같음 map/data/processed/cbnu_internal_boundary_tags81_B_smooth.osm f682fd34eb05fa2a
+같음(시각 뺌) map/maps/cbnu_internal_only_localtm_tags81_B_smooth.xodr
+같음 map/maps/cbnu_internal_only_localtm_tags81_B_smooth.xodr d01e5f86767bc9d7
+== 1-2 A안(태그 보정 82, s43 이 정문 출구 형상만 읽음) 13:05:21
+exit 0
+같음(시각 뺌) map/maps/cbnu_internal_only_localtm_tags82_A_smooth.xodr
+같음 map/maps/cbnu_internal_only_localtm_tags82_A_smooth.xodr a0b2d75b8d24d20c
+== 1-3 회차 후처리 -> v2 13:05:55
+exit 0
+같음 map/maps/cbnu_internal_only_localtm_tags81_B_smooth_turnfix.xodr 5240ca8b883e42c0
+== 2 v2 -> v3(s43 -> s45 -> s46) 13:05:55
+exit 0
+같음 map/maps/cbnu_campus_v3_candidate_s43.xodr dae3f058ed86f907
+exit 0
+같음 map/maps/cbnu_campus_v3_candidate_s45.xodr d9b9c504e93e2255
+exit 0
+같음 map/maps/cbnu_campus_v3_candidate_s46.xodr a17ab012e04c664f
+== 3 v3 -> v3.1(s53 -> s54) 13:07:05
+exit 0
+같음 map/maps/cbnu_campus_v31_candidate_s53.xodr b9cc23692441de3a
+exit 0
+같음 map/maps/cbnu_campus_v31_candidate_s54.xodr 214507afc87c2523
+== 4 v3.1 Lanelet2(s57_make_v31_lanelet2.sh) 13:27:37
+exit 0
+같음 map/maps/cbnu_campus_frozen_v31.xodr 214507afc87c2523
+같음 map/build_s57_regen/build/lanelet2_map.osm 83edb7755588184f
+같음 map/build_s57_regen/v31/lanelet2_map.osm 28a57711094effaf
+같음 map/build_s57_regen/v31/map_projector_info.yaml a6fb6af33e164e61
+같음 map/build_s57_regen/v31/lanelet2_map.osm 28a57711094effaf
+같음 map/build_s57_regen/v31/map_projector_info.yaml a6fb6af33e164e61
+== 5 v3.2(s63 -> s66 v32a·v32b) 13:27:38
+exit 0
+같음 map/maps/v32_candidate/lanelet2_map.osm 4719e5e5a4f4588b
+exit 0
+같음 map/maps/v32a/lanelet2_map.osm 4719e5e5a4f4588b
+같음 map/maps/v32b/lanelet2_map.osm 485429206e986154
+같음 map/maps/v32a/map_projector_info.yaml a6fb6af33e164e61
+== 6 정류장·레이어 자료 13:27:41
+exit 0
+같음 map/data/stops_v3.yaml befb9fddffe112ad
+exit 0
+같음 map/data/buildings_layout_v3.csv ac9bd41d4ef7561f
+exit 0
+같음 map/data/buildings_layout_tier2_s66.csv 4cb019764ada3fe4
+exit 0
+같음 map/data/trees_layout_s66.csv 5830123559afc4fa
+== 끝 13:30:26 같음 28 다름 0

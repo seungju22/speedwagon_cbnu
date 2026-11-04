@@ -1,0 +1,80 @@
+{
+ "removed": [
+  {
+   "relation": "52800",
+   "ways": [
+    "52800",
+    "52801"
+   ],
+   "nodes": 64,
+   "where": "후문 앞 열쇠 구멍 유턴(v3.3b, 반경 약 2.9m)"
+  },
+  {
+   "relation": "49898",
+   "ways": [
+    "49889",
+    "49897"
+   ],
+   "nodes": 14,
+   "where": "섬 동쪽 끝 r1953(반경 2.94m)"
+  }
+ ],
+ "split": {
+  "r1391": {
+   "src": "34923",
+   "at": 10,
+   "front": "34923",
+   "back": "52804"
+  },
+  "r1390": {
+   "src": "34884",
+   "at": 14,
+   "front": "52805",
+   "back": "34884"
+  }
+ },
+ "uturn": {
+  "relation": "52806",
+  "where": "후문 앞 섬 둘레",
+  "start": [
+   976.48,
+   271.84
+  ],
+  "end": [
+   975.75,
+   283.97
+  ],
+  "typ": "RLR",
+  "r": 6.9,
+  "segs_rad": [
+   0.335,
+   4.15,
+   0.587
+  ],
+  "length_m": 35.0,
+  "wl": 3.0,
+  "wr": 3.0,
+  "lane_w": [
+   3.35,
+   3.35
+  ],
+  "nodes": 169,
+  "wheel_worst_out_m": {
+   "prius_sample": 0.25,
+   "sprinter": 0.25
+  },
+  "ext_pts": 4,
+  "centerline_pts": 73,
+  "wpow": 0.4,
+  "length_with_ext_m": 39.3,
+  "steer_need_rad": {
+   "prius_sample": 0.384,
+   "sprinter": 0.488
+  },
+  "from_lanelet": "34923",
+  "to_lanelet": "34884"
+ },
+ "source_sha256": "d2935e5ba33f951374abfd008e8fc6e43c0a6a1a2f97636caef8c7fc1c042744",
+ "out_sha256": "fe9ee6ffc5af6263b2a049999a99c7b2502ba484e9dc1d50a08b0de3ce8cdc06",
+ "path_json": "integration/logs/s77/uturn_island_search_path.json"
+}
