@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Phase D(맵세션4, 2026-09-18): 73건 태그보정판
+# Phase D(2026-09-18): 73건 태그보정판
 # (cbnu_internal_only_localtm_tags73.xodr) 오버레이. plot_overlay.py의
 # 사본 — 원본은 19건판(대조군) 재현용으로 그대로 보존, 손대지 않음.
 # 읽기전용(xodr/osm 미수정), 외부 타일 없음.
 #
-# 좌표계 주의(사용자 지시): 73건판은 osm2odr center_map 재중심으로
-# 19건판과 (dx=86.50,dy=70.54) 평행이동돼 있다(맵세션4 확인 기록,
+# 좌표계 주의(정한 것): 73건판은 osm2odr center_map 재중심으로
+# 19건판과 (dx=86.50,dy=70.54) 평행이동돼 있다(09/18 확인 기록,
 # setup_log.md 2026-09-18). 이 스크립트는 수동 오프셋 보정을 쓰지
 # 않는다 — geo_calibrate.fit_similarity가 "이 xodr 파일 자신의
 # junction 위치" <-> "원본 OSM 위경도"를 매번 새로 적합(Umeyama)하므로
@@ -40,7 +40,7 @@ NEW_XODR = BASE_DIR / "maps" / "cbnu_internal_only_localtm_tags73.xodr"
 FIG_DIR = BASE_DIR / "docs" / "figures"
 OUT_PATH = FIG_DIR / "06_overlay_expanded.png"
 
-# 맵세션4 확인(setup_log.md 2026-09-18)에서 다이크스트라로 재계산한
+# 09/18 확인(setup_log.md 2026-09-18)에서 다이크스트라로 재계산한
 # 정문(junction2)->도서관(junction11) 경로, 73건판 road id 15개,
 # 529.86m. 옛 6-road 경로(300/402/319/405/404/299, 539.75m)와
 # 물리적으로 같은 구간이며 신규 junction 5개가 끼어들며 세분화됨
@@ -52,7 +52,7 @@ GATE_JUNCTION_OSM = "2261340221"   # junction2 = 정문
 LIB_JUNCTION_OSM = "4402717742"    # junction11 = 중앙도서관 인근
 MARGIN_M = 250
 
-# 맵세션4 heading_diff 최댓값(76.50°) 지점 — junction26과 별개,
+# 09/18 heading_diff 최댓값(76.50°) 지점 — junction26과 별개,
 # 신규id20(name=4397573144). way442065044(신규54건번호5, 자연대
 # 5호관 인근)와 way392632036(기존16건) 교차. 셔틀경로(위 15road)
 # 위에 없음(최단거리 402.59m) — setup_log.md 확인 기록.
@@ -60,7 +60,7 @@ FLAG_JUNCTION_XY_XODR = (517.53695993, 341.5124049225)
 FLAG_LABEL = "신규 최대방향차 76.50°\n(junction20, 셔틀경로 아님)"
 FLAG_LABEL_OFFSET = (40, -55)
 
-# 주요 건물 라벨(20개 이내). road_candidates.md 등장 순 + 사용자가
+# 주요 건물 라벨(20개 이내). road_candidates.md 등장 순 + 가
 # 언급한 농대권역/S17 기숙사권역을 반드시 포함하도록 큐레이션.
 # 자연대 5호관은 위 FLAG 지점 바로 옆이라 맥락 확인용으로 포함.
 BUILDING_LABELS = [
@@ -119,7 +119,7 @@ def load_osm_ways(path):
 
 
 def old_axis_bounds():
-    # 세션3 04_overlay.png와 정확히 같은 축척·범위를 쓰기 위해
+    # 09/17 04_overlay.png와 정확히 같은 축척·범위를 쓰기 위해
     # 옛(19건판) 도로망 bbox+MARGIN_M을 그대로 재현한다.
     roads, junctions, osm_nodes, R, s, t, ref_lat, ref_lon = fit_transform_for(OLD_XODR)
     all_pts = []

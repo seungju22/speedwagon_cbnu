@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 맵세션41 5: GNSS 기준 실측. 정문·후문 정류장(stops_v2.yaml) 위에 a2 를 세우고(physics 끔) GNSS 센서(노이즈 0 명시)로 위경도를 읽는다
-# 비교: 센서 위경도 vs stops_v2.yaml 위경도(프로젝트 좌표 사슬) / 센서 vs map.transform_to_geolocation(센서 위치) / 세션40 C(offset 718.07m)
+# 10/09 5: GNSS 기준 실측. 정문·후문 정류장(stops_v2.yaml) 위에 a2 를 세우고(physics 끔) GNSS 센서(노이즈 0 명시)로 위경도를 읽는다
+# 비교: 센서 위경도 vs stops_v2.yaml 위경도(프로젝트 좌표 사슬) / 센서 vs map.transform_to_geolocation(센서 위치) / 10/09 C(offset 718.07m)
 # 주행 없음. 끝나면 띄운 액터 전부 지우고 동기 설정 복원
 # 사용: .venv-carla/bin/python map/scripts/s41_gnss.py
 import math

@@ -51,7 +51,7 @@ Osm2Odr 출력 xodr 에는 생성 시각이 두 곳(3행 주석, header 의 date
 
 1. OSM 원본(2026-09-15 받은 것). download_osm.sh 를 지금 돌리면 그 뒤 OSM 편집이 들어가 다른 파일이 나옴. 그래서 받은 파일을 넣음
 2. 캠퍼스 경계 폴리곤(data/processed/cbnu_relation_polygon.json, c44ea70a). Nominatim relation 6705106 을 그때 받은 것
-3. 태그 보정 way 목록(fix_tags.py 73개 + s27_reconvert.py 추가 9개, B안은 정문 출구 481950060 뺌). 길이·노선 기준으로 고르고 정함(09/14~10/07). 스크립트 안 목록
+3. 태그 보정 way 목록(fix_tags.py 73개 + s27_reconvert.py 추가 9개, B안은 정문 출구 481950060 뺌). 길이·노선 기준으로 고르고 정함(09/18~10/07). 스크립트 안 목록
 4. 곡선 평활화 인자(smooth_osm_curves.py 기본값, 09/24)
 5. v2 -> v3 에서 지운 way 7개(s43_build_v3.py DEL_WAYS). 검토 시트(map/docs/s42_review_sheet.csv)에 답한 것. 그 판단에 쓴 way 방향표 s42_way_dir.csv(s42_diag.py 출력)는 그대로 넣음
 6. 북문 고리 길 경로와 끝 간격 14·10m(s45), 꺾임 9곳 목록(s46), 고칠 road 26 목록과 목표 반경 4.0m(s53), r1220·r1825 둘레와 이동 4.0m(s54). 앞 단계 조사 결과를 보고 정해 스크립트에 넣은 값. 이동 4.0m 은 OSM 점에서 벗어나지만 옛 도로 띠 안이라 받음(10/13)

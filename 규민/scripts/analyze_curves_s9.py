@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 맵세션9 Phase A. 읽기전용, CARLA 불필요.
-# A-1: road1247 통과커브(s=80~85) vs 정지커브(s=93~96) 곡률반경 + 세션7 CSV 속도 오버레이
+# 09/22 Phase A. 읽기전용, CARLA 불필요.
+# A-1: road1247 통과커브(s=80~85) vs 정지커브(s=93~96) 곡률반경 + 09/19 CSV 속도 오버레이
 # A-2: 확정경로 15 road 전체 급커브 전수(plain/connector 구분)
 # A-3: road1247의 원본 OSM way 체인, s=93~96 대응 노드의 위경도/꺾임각/간격
 #

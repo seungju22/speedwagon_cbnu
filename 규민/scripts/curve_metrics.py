@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션11 공용 라이브러리 (평활화 단계·검증 공용). CARLA 서버·carla 모듈 불필요, 읽기전용.
+# 09/24 공용 라이브러리 (평활화 단계·검증 공용). CARLA 서버·carla 모듈 불필요, 읽기전용.
 #
 # 지표 (설계: map/docs/map_session11_design_smoothing.md)
 #   해석적 순간 곡률은 변환기(paramPoly3) 접합부 스파이크라 판정에 부적합하다.

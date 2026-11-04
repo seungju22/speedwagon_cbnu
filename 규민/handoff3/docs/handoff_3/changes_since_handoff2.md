@@ -5,15 +5,15 @@
 
 ## 인계 2 안 파일 가운데 바뀐 것 (7개)
 
-| 파일 | 인계 2 sha256 앞 16자 | 지금 | 바뀐 것 |
+| 파일 | 인계 2 sha256 앞 16자(11/04 문구 정리 뒤) | 지금 | 바뀐 것 |
 |---|---|---|---|
-| integration/docs/tools/s59_run.sh | 228f0829e9d2d529 | afe2f5304d5f986e | 인지 모드 clustering, 센서 기본 54.5만, RAIN·SPEED_BUMP·PAIR_GOAL·LSTATE 선택. 인자를 안 주면 차 시점·맑음·북문 목표 |
-| integration/docs/tools/s59_aw_up.sh | 9a87c88542123847 | 95bea817a1ade96a | PERCEPTION=clustering, SPEED_BUMP, MAP_COMPOSE·MAP_PATH 선택 |
-| perception/gt_objects/gt_objects2.py | b0d0c4fe3ab3c809 | af9acbac09a026bf | 새 액터를 틱마다 바로 읽음(처음 낸 시각 1.03 -> 0.10s), 종류별 범위·비 인자 |
-| perception/docs/gt_objects2.md | b67a542d21eda526 | 2b5a497d72fa1574 | 위 고침, 비 값, ρ 설명 |
-| perception/docs/interface.md | ab7813712beec09a | 8410b19fe2fed36c | 클러스터링 바꿔 끼우기, 시설·건물 점 지움 |
-| integration/docs/howto_campus.md | 5530e97e55b54e8f | 4052574b2bac06a6 | 레이어 v2, clustering, 센서 통일, 비 |
-| map/docs/shuttle_route_file.md | 414c679c7e827323 | 02d206745872a9ad | 대체 정차점 절 |
+| integration/docs/tools/s59_run.sh | f1f3b7d1981256ea | afe2f5304d5f986e | 인지 모드 clustering, 센서 기본 54.5만, RAIN·SPEED_BUMP·PAIR_GOAL·LSTATE 선택. 인자를 안 주면 차 시점·맑음·북문 목표 |
+| integration/docs/tools/s59_aw_up.sh | 008f8f453e5ade88 | 95bea817a1ade96a | PERCEPTION=clustering, SPEED_BUMP, MAP_COMPOSE·MAP_PATH 선택 |
+| perception/gt_objects/gt_objects2.py | ff857bb7c97dd5e3 | af9acbac09a026bf | 새 액터를 틱마다 바로 읽음(처음 낸 시각 1.03 -> 0.10s), 종류별 범위·비 인자 |
+| perception/docs/gt_objects2.md | ece7ead601c9b795 | 2b5a497d72fa1574 | 위 고침, 비 값, ρ 설명 |
+| perception/docs/interface.md | 1c3aa93bcd3abc62 | 8410b19fe2fed36c | 클러스터링 바꿔 끼우기, 시설·건물 점 지움 |
+| integration/docs/howto_campus.md | 1b4d977c3f806fac | 4052574b2bac06a6 | 레이어 v2, clustering, 센서 통일, 비 |
+| map/docs/shuttle_route_file.md | ff3d54edabcc2ec6 | 02d206745872a9ad | 대체 정차점 절 |
 
 ## 지도
 

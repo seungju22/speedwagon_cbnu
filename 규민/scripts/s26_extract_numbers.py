@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션26: 발표 자료 5개 파일에서 측정·계산·집계 숫자 추출 (읽기전용).
+# 10/04: 발표 자료 5개 파일에서 측정·계산·집계 숫자 추출 (읽기전용).
 # 제외: 날짜, 세션 번호, road/junction/way/node ID, 좌표, 해시, 버전, 줄 번호, 그림 번호.
 # 출력 CSV: file,line,value,unit,priority,context
 import csv

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션22 Phase 3-2: OSM 건물 폴리곤 -> 중심 위경도 -> CARLA 좌표 (읽기전용, 서버 없음).
+# 10/02 Phase 3-2: OSM 건물 폴리곤 -> 중심 위경도 -> CARLA 좌표 (읽기전용, 서버 없음).
 # 좌표를 하드코딩하지 않는다. 투영 중심(lat_0, lon_0)과 offset 은 대상 xodr 머리말에서 읽는다.
 # 그래서 재변환(center_map 이동량이 바뀜) 뒤에도 --xodr 만 새 파일로 주면 그대로 쓸 수 있다.
 # 좌표 사슬: 위경도 -> 지역 TM(동 x, 북 y) -> xodr = TM + offset -> CARLA = (x, -y)  (s19_scope_common 과 같은 규약)

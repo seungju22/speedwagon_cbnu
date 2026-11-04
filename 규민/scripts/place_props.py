@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션22 Phase 3-3/4: 건물 자리에 소품 배치 / 디버그 표시 / 소품 목록 추출. 설계 map/docs/props_plan.md
+# 10/02 Phase 3-3/4: 건물 자리에 소품 배치 / 디버그 표시 / 소품 목록 추출. 설계 map/docs/props_plan.md
 # xodr 은 건드리지 않는다. 서버에 접속해 실행 중에만 actor 를 만든다(서버 재시작·지도 재생성 때 사라짐).
 # 좌표: s22_buildings.csv 의 위경도 -> 서버가 지금 가진 지도(to_opendrive) 머리말의 투영으로 매번 변환(재변환 후에도 그대로).
 # 기본은 아무것도 하지 않는다. 동작은 인자로만:

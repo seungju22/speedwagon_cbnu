@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션29 Phase 3: crdesigner 변환 결과 평가 (읽기전용). 시험 venv 로 실행(~/lanelet2_trial_venv/bin/python, pyproj 필요)
+# 10/07 Phase 3: crdesigner 변환 결과 평가 (읽기전용). 시험 venv 로 실행(~/lanelet2_trial_venv/bin/python, pyproj 필요)
 # 입력: <작업 디렉터리> 안 s29_<꼬리>.cr.xml / s29_<꼬리>.osm, xodr_lanes.csv(s29_xodr_lanes.py), 회차 목록(s28_turnaround_removed.json)
 # A Lanelet2 OSM 집계: 요소 수, 태그 키, ele, local_x, turn_direction, 규제 요소, 위경도 범위
 # B Lanelet2 연결: 경계 끝 노드 공유로 앞뒤 lanelet 찾기, 앞·뒤 없는 lanelet

@@ -1,5 +1,5 @@
 #!/bin/bash
-# 세션62: 플래닝 시뮬레이터의 가상 문(launch_dummy_doors, 기본 켜짐, 문 4개)에 AD API 로 열기/닫기를 보내고 상태를 본다
+# 10/15: 플래닝 시뮬레이터의 가상 문(launch_dummy_doors, 기본 켜짐, 문 4개)에 AD API 로 열기/닫기를 보내고 상태를 본다
 # 사용: s62_ps_door.sh <open|close> [index]   상태 값: 2 OPENED, 3 CLOSED, 4 OPENING, 5 CLOSING
 C=$([ "$1" = open ] && echo 1 || echo 2); IDX=${2:-0}; CT=${CT:-s62_ps}
 docker exec -u 1000:1000 $CT bash -c "source /opt/autoware/setup.bash

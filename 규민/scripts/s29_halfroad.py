@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션29 Phase 3-4: 반쪽 도로(단방향 2개) 쌍이 Lanelet2 에서 어떻게 표현되는가 (읽기전용, 시험 venv)
+# 10/07 Phase 3-4: 반쪽 도로(단방향 2개) 쌍이 Lanelet2 에서 어떻게 표현되는가 (읽기전용, 시험 venv)
 # 경계 linestring 공유 관계를 센다: 차량 lanelet 의 왼쪽 경계가 다른 차량 lanelet 의 왼쪽 경계와 같은 선(뒤집힘 포함)이면 맞은편 쌍으로 묶인 것
 # 같은 자리(중간점 0.05m 안)에 따로 그려진 왼쪽 경계가 있으면 "쌍이 묶이지 않음"
 # routing graph 의 adjacentLeft / lefts(차선 변경 가능 이웃) 수도 센다

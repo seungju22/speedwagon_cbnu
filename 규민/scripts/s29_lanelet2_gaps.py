@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션29 Phase 3 보조: Lanelet2 routing graph 에서 뒤 lanelet 이 없는 차량 lanelet 의 원인 분류 (읽기전용, 시험 venv)
+# 10/07 Phase 3 보조: Lanelet2 routing graph 에서 뒤 lanelet 이 없는 차량 lanelet 의 원인 분류 (읽기전용, 시험 venv)
 # 끝점(왼·오른 경계 마지막 점) 근처에 다른 lanelet 시작점이 있는데 점 id 가 달라 연결이 안 된 것인지 본다
 # 또 CommonRoad 중간 파일(.cr.xml)에서는 같은 lanelet 이 successor 를 가졌는지 (CR id 는 Lanelet2 id 와 달라 위치로 맞춘다)
 # 사용: python s29_lanelet2_gaps.py <osm>

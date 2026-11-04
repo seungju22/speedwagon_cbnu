@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# 맵세션15 Phase E. static.prop.mesh 소품 시험(나무 먼저, 그다음 건물, 합계 5개).
-# 세션4 조사: Content/ 경로 = /Game/ 경로 1:1, 나무 167종, 건물 SM_House 계열.
+# 09/25 Phase E. static.prop.mesh 소품 시험(나무 먼저, 그다음 건물, 합계 5개).
+# 09/18 조사: Content/ 경로 = /Game/ 경로 1:1, 나무 167종, 건물 SM_House 계열.
 # 확인 항목: 스폰 성공 여부, 단계별 메모리 증가량, scale 속성(블루프린트에 'scale'
-# Float, 기본 1.0 - 세션15 서버 조회) 효과.
+# Float, 기본 1.0 - 09/25 서버 조회) 효과.
 # 배치: road1247(출발 road) 오른쪽 도로변. 위치 = lane -1 중심 + 오른쪽 단위벡터 x 오프셋.
 # 비동기 모드 전제(주행 후 복귀 확인됨). 액터는 스크립트 종료 후에도 남는다 -> --destroy.
 #   python map/tests/test_props_s15.py            소환 + 측정 + spectator 이동

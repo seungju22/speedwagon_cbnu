@@ -2,7 +2,7 @@
 
 셔틀 미션 노드(정류장 도착 -> 문 -> 출발, 경유점, 요청 정차)를 CARLA 없이 만들 때 쓰는 순서임.
 Autoware 1.9.0 의 planning_simulator.launch.xml 을 캠퍼스 v3.1 지도(28a57711)로 띄움. 차는 시뮬레이터 안 가상 차이고, 측위·인지는 정답 값임.
-세션62(2026-10-15)에 README 의 '한 번만 하는 준비'를 마친 임시 HOME 에서 아래 순서를 그대로 돌렸음. CARLA 는 띄우지 않음.
+2026-10-15에 README 의 '한 번만 하는 준비'를 마친 임시 HOME 에서 아래 순서를 그대로 돌렸음. CARLA 는 띄우지 않음.
 
 ## 띄우기
 
@@ -14,7 +14,7 @@ Autoware 1.9.0 의 planning_simulator.launch.xml 을 캠퍼스 v3.1 지도(28a57
       'ros2 launch autoware_launch planning_simulator.launch.xml map_path:=/home/aw/autoware_data/maps/OpenDriveMap vehicle_model:=sample_vehicle sensor_model:=sample_sensor_kit rviz:=false' \
       > ps_launch.log 2>&1 &
 
-- 1분 30초쯤 뒤에 쓸 수 있음. 화면을 보려면 rviz:=false 를 빼고 `xhost +local:` 을 먼저 함(세션62 는 메모리를 아끼려고 껐음)
+- 1분 30초쯤 뒤에 쓸 수 있음. 화면을 보려면 rviz:=false 를 빼고 `xhost +local:` 을 먼저 함(10/15 는 메모리를 아끼려고 껐음)
 - 컨테이너 메모리 2.1~2.8GB, 이 노트북(16GB) 최소 여유 8.6GB. CARLA 를 같이 띄울 때보다 훨씬 가벼움
 - 로그에 나오는 오류 가운데 무시해도 되는 것
   - `pointcloud_map_loader ... PCD load failed`, `map_hash_generator ... pointcloud_map.pcd is neither file nor directory`: 점군 지도가 없어서임. 레인렛 지도는 읽히고 주행에 영향 없었음. placeholder 점군은 필요 없었음
@@ -35,7 +35,7 @@ Autoware 1.9.0 의 planning_simulator.launch.xml 을 캠퍼스 v3.1 지도(28a57
     # 이어서 p_north_yang: 북문 -> 양성재(이쪽). 초기 위치는 안 준다
     TO=500 bash ~/campus_mobility_sim/integration/docs/tools/s62_ps_goal.sh seg2 213.999 550.838 -0.54348 0.839422
 
-세션62 결과(로그 `C/integration/logs/ps_goal_<tag>.log`)
+10/15 결과(로그 `C/integration/logs/ps_goal_<tag>.log`)
 - p_middle_north: 경로 설정 -> 자율 -> 도착 78초, 멈춘 자리와 목표 차이 0.005m
 - p_north_yang 이어 달리기: 도착 약 360초, 목표 차이 0.018m. I6-2 CARLA 주행(81.1초, 356.7초)과 비슷함
 
@@ -67,6 +67,6 @@ Autoware 1.9.0 의 planning_simulator.launch.xml 을 캠퍼스 v3.1 지도(28a57
 
 - 차가 CARLA 차가 아니라 시뮬레이터 안 가상 차(sample_vehicle)임. 승강장 정지 오차, 회전 반경은 CARLA 회차(handoff_2_README)로 다시 봄
 - 장애물은 손으로 놓은 더미뿐임. 장면 도구(ped_tool, obstacles)는 CARLA 용이라 여기서 안 씀
-- 세션62 로그: `C/integration/logs/s62/`(ps_launch.log, monitor.log), 보고서 `integration/docs/s62_report.md`
+- 10/15 로그: `C/integration/logs/s62/`(ps_launch.log, monitor.log), 기록 `integration/docs/s62_report.md`
 
 근거: https://autowarefoundation.github.io/autoware-documentation/main/demos/planning-sim , AD API https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/ad-api/

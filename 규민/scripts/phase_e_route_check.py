@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션7 Phase E: 중문 -> 중앙도서관 종점(road1278 s=100.38) 경로 존재 확인.
+# 09/19 Phase E: 중문 -> 중앙도서관 종점(road1278 s=100.38) 경로 존재 확인.
 # 읽기전용(xodr/osm 미수정), CARLA 불필요. 방향 검사 포함(driving lane 부호 기준).
 # 검증: 같은 그래프로 정문(road1247 s=0) -> 종점이 확정 15road/781.22m 와 일치해야 함.
 import heapq

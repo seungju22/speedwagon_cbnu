@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션11 Phase C: OSM 곡선 평활화 단계 (파이프라인: classify_internal -> 이 단계 -> osm_to_xodr)
+# 09/24 Phase C: OSM 곡선 평활화 단계 (파이프라인: classify_internal -> 이 단계 -> osm_to_xodr)
 # 설계: map/docs/map_session11_design_smoothing.md
 #
 # 목적: 인도 바깥 가장자리 오프셋이 접히는(2m 창 지표 f < 0.30) 커브만 골라, 원인 OSM 노드를
@@ -8,8 +8,8 @@
 #         (1) Osm2Odr 변환(임시)   (2) 2m 창 스캔 -> 문제 구간(f<0.30)
 #         (3) ICP 로 xodr 점 -> OSM 세그먼트/노드 대응   (4) 후보 노드 선정
 #         (5) 필렛 계획(접선 겹침 축소, R_ACC 미달 건너뜀)   (6) 사본 갱신
-#       -> 사본 OSM + 변경/건너뜀 CSV + JSON 보고서
-# 근거·파라미터: 설계문서 B-1~B-3 (사용자 승인 2026-09-24)
+#       -> 사본 OSM + 변경/건너뜀 CSV + JSON 기록
+# 근거·파라미터: 설계문서 B-1~B-3 (2026-09-24)
 #   R_TARGET 11.0 / R_ACC 10.0 / 이탈 상한 2.0m / 고정 노드 여유 2.0m / 호 노드 간격 2.0m
 #   f>=0.30 은 공학적 선택값이며 충돌 방지 충분성은 주행 검증으로만 확인된다.
 # 실행: ~/campus_mobility_sim/.venv-carla/bin/python map/scripts/smooth_osm_curves.py

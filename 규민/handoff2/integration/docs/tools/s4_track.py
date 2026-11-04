@@ -1,6 +1,6 @@
 """S4: i5_track.py 에 네 바퀴 이탈 판정을 더한 판(호스트). 매 틱 위치·속도·sim 시각, 차선 중심 옆 벗어남, 충돌 센서,
 그리고 바퀴 4개 위치가 CARLA 지도상 도로(차도 Driving + 인도 Sidewalk) 위인지.
-지면 판(Plane)을 켜면 차도를 벗어난 차가 떨어지지 않으므로(세션51) 낙하 대신 이 판정으로 이탈을 본다.
+지면 판(Plane)을 켜면 차도를 벗어난 차가 떨어지지 않으므로(10/11) 낙하 대신 이 판정으로 이탈을 본다.
 바퀴 위치 = 처음 한 번 get_physics_control().wheels 위치(월드, cm)를 차 좌표로 바꿔 두고, 매 틱 차 Transform 으로 다시 월드로.
 이탈 = get_waypoint(바퀴, project_to_road=False, lane_type=Driving|Sidewalk) 가 None. offroad(차 중심, 차도만)는 i5_track 과 같은 열
 사용: python s4_track.py <out.csv> <timeout_wall_s>   (SIGINT 로 끝)

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# 맵세션22 Phase 0: 후문 방향 노선 후보 비교 (읽기전용, 서버 없음, xodr/OSM 미수정).
+# 10/02 Phase 0: 후문 방향 노선 후보 비교 (읽기전용, 서버 없음, xodr/OSM 미수정).
 # - frozen_v1 에서 정문(road1247 s=0) -> 후문 최근접 도달점(road1898 s=5.0)
 #   후보 A 남문 경유 / B 양성재 경유 / C 그 밖(k-최단, 북문·중문 회차 경유, 정류장 두 곳 경유)
-# - 0-4 예측: 세션18 시험 재변환 맵(_trial_s18_gates, 채택 안 됨)에서 같은 비교, 종점 = 후문 정차 후보
+# - 0-4 예측: 09/28 시험 재변환 맵(_trial_s18_gates, 채택 안 됨)에서 같은 비교, 종점 = 후문 정차 후보
 # 방향 그래프: lane -1 끝에서 next() 로 도착하는 road (s19_scope_common). 역방향은 구조상 못 들어간다.
 # 교차로 U턴형 커넥터(|회전| >= 135°)는 금지. 북문·중문 막다른 끝 회차 커넥터만 그 후보에서 허용.
 # 실행: .venv-carla/bin/python map/scripts/s22_routes.py > map/docs/logs/s22_routes.log
@@ -16,7 +16,7 @@ from s19_scope import Net  # noqa: E402
 
 K_SHORTEST = 12
 TURN_MIN_DEG = 20.0      # 이 이상 꺾이는 road 를 "회전" 으로 센다
-R9 = 9.0                 # 세션18 잠정 경계(세션21: 통과/실패 경계 아님, 비교용)
+R9 = 9.0                 # 09/28 잠정 경계(10/02: 통과/실패 경계 아님, 비교용)
 
 V1 = {
     "origin": (1247, 0.0),
@@ -115,7 +115,7 @@ class Router:
 
 
 def r2_partial(net, r, s0, s1):
-    """road r 의 [s0,s1] 구간 2m 창 R2 최소(세션11 정의, 0.5m 간격, 구간 양끝 1m 제외)."""
+    """road r 의 [s0,s1] 구간 2m 창 R2 최소(09/24 정의, 0.5m 간격, 구간 양끝 1m 제외)."""
     best, best_s, s = 1e6, None, max(1.0, s0 + 1.0)
     while s <= min(net.lens[r][0], s1) - 1.0:
         a = net.cmap.get_waypoint_xodr(r, -1, s - 1.0)

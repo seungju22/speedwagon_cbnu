@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션38: 후문 회차별 r1391 최대 이탈(소수 3자리, s35_back_metrics.py 와 같은 정의)·속도·조향·목표점 전환, 예측 0.601m 대조(읽기전용)
+# 10/08: 후문 회차별 r1391 최대 이탈(소수 3자리, s35_back_metrics.py 와 같은 정의)·속도·조향·목표점 전환, 예측 0.601m 대조(읽기전용)
 # 사용: s38_back_summary.py <xodr> <test_drive stdout log...>
 import csv
 import io

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# 맵세션27: 옛 xodr road id -> 새 xodr road id 형상 대응표 (읽기전용, 서버 없음).
-# 세션18 D 의 id_map_s18.py 는 scratchpad 에만 있어 사라졌다. 같은 목적으로 다시 만든다.
+# 10/06: 옛 xodr road id -> 새 xodr road id 형상 대응표 (읽기전용, 서버 없음).
+# 09/28 D 의 id_map_s18.py 는 scratchpad 에만 있어 사라졌다. 같은 목적으로 다시 만든다.
 # 비교 기준(같은 road 의 정의): 참조선 시작점(planView 첫 geometry x,y), 시작 방위 hdg, 길이.
-#   비용 = 시작점 거리(m) + 방위 차(rad) + 길이 차(m). 비용 < THRESH 를 "형상 일치" 로 본다(세션18 과 같은 0.05)
-# 검증: frozen_v1 -> 세션18 시험 맵으로 돌려 s18_D_road_id_map.csv 와 같은지 대조(--check-s18)
+#   비용 = 시작점 거리(m) + 방위 차(rad) + 길이 차(m). 비용 < THRESH 를 "형상 일치" 로 본다(09/28 과 같은 0.05)
+# 검증: frozen_v1 -> 09/28 시험 맵으로 돌려 s18_D_road_id_map.csv 와 같은지 대조(--check-s18)
 # 사용: python s27_id_map.py <옛 xodr> <새 xodr> <출력 csv>
 #       python s27_id_map.py --check-s18
 import csv

@@ -1,4 +1,4 @@
-"""정답 객체 2판(P1b, 세션58). P1(gt_objects.py)에 '차 시점' 모드를 더했다. P1 파일은 그대로 둔다.
+"""정답 객체 2판(P1b, 10/14). P1(gt_objects.py)에 '차 시점' 모드를 더했다. P1 파일은 그대로 둔다.
 토픽·형식은 P1 과 같다: /perception/object_recognition/objects (PredictedObjects, frame map). Autoware 는 고치지 않는다.
 
 모드(--mode)
@@ -15,8 +15,8 @@
 LiDAR 자리: 브리지 0.52.0 carla_sensor_kit_description sensor_kit_calibration.yaml velodyne_top_base_link (x 1.035, z 1.840, base_link 기준)
   -> sensor_kit_loader.py 가 축거 2.850/2 를 빼 CARLA 차 원점 기준 (x -0.390, y 0, z 1.840)
 시야: upper_fov 10, lower_fov -30(sensor_mapping_nocam.yaml 과 브리지 기본 sensor_mapping.yaml 이 같다)
-기본 거리(세션59): 기준 센서(브리지 기본 LiDAR 64ch·초당 30만 점·20Hz·100m, 센서 킷 자리, 버림·노이즈 0)로 시맨틱 LiDAR 10점 이상 가장 먼 거리.
-  세션58 값(7.5/20/6.0)은 가벼운 LiDAR(32ch·10만 점) 기준이라 쓰지 않는다. 근거 perception/docs/gt_objects2.md, integration/docs/s59_report.md 2절
+기본 거리(10/14): 기준 센서(브리지 기본 LiDAR 64ch·초당 30만 점·20Hz·100m, 센서 킷 자리, 버림·노이즈 0)로 시맨틱 LiDAR 10점 이상 가장 먼 거리.
+  10/14 값(7.5/20/6.0)은 가벼운 LiDAR(32ch·10만 점) 기준이라 쓰지 않는다. 근거 perception/docs/gt_objects2.md, integration/docs/s59_report.md 2절
 
 cast_ray 는 RPC 라 CARLA 틱 콜백에서 하지 않는다. 일꾼 스레드가 가장 최근 스냅샷으로 보이는지를 계산해 두고, 틱 콜백은 그 결과를 쓴다
 (결과는 한두 틱 늦을 수 있다. 늦음은 로그 열 vis_lag 로 남긴다).
@@ -35,7 +35,7 @@ ap.add_argument("--port", type=int, default=2000)
 ap.add_argument("--role", default="ego_vehicle")
 ap.add_argument("--mode", choices=["car", "all"], default="car")
 ap.add_argument("--range", type=float, default=80.0, help="all 모드 거리")
-ap.add_argument("--ped-range", type=float, default=17.5)  # 세션59 기준 센서 대조: 시맨틱 10점 이상 17.7m(앞, 두 자리). 가벼운 LiDAR 7.5
+ap.add_argument("--ped-range", type=float, default=17.5)  # 10/14 기준 센서 대조: 시맨틱 10점 이상 17.7m(앞, 두 자리). 가벼운 LiDAR 7.5
 ap.add_argument("--veh-range", type=float, default=35.0)  # 같은 대조: 승용차(audi.a2) 35.2m(r1415)·36.7m(r1411). 가벼운 LiDAR 20
 ap.add_argument("--prop-range", type=float, default=12.5)  # 같은 대조: 콘 12.7m(앞, 두 자리). 가벼운 LiDAR 6.0
 ap.add_argument("--range-scale", type=float, default=1.0)

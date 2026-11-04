@@ -1,4 +1,4 @@
-"""세션12 읽기 전용: CARLA 0.9.15 MeshFactory 규칙으로 벽 위치를 재구성하고
+"""09/24 읽기 전용: CARLA 0.9.15 MeshFactory 규칙으로 벽 위치를 재구성하고
 충돌 시점 차량 bbox 와의 거리를 잰다(서버 불필요).
 
 벽 규칙(LibCarla/source/carla/road/MeshFactory.cpp 0.9.15, GenerateWalls):

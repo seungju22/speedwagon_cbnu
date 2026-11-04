@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# 맵세션28 Phase 3: 재변환 A/B 안 비교용 요약 (읽기전용, 서버 없음, xodr 수정 없음).
+# 10/07 Phase 3: 재변환 A/B 안 비교용 요약 (읽기전용, 서버 없음, xodr 수정 없음).
 # 맵 하나당 출력
 #   road 수 / junction 수 (spawn 은 오프라인에서 0 이 나와 서버 로드 값을 쓴다)
 #   정문 junction 2개(j1 name=4748296080, j107 name=4748296088)의 연결로 개수·id·들어오는 road·길이
-#     -> 번호는 재변환 때 바뀐다(세션18 시험 0/95). 그래서 junction name(= OSM 노드 id)으로 찾는다
+#     -> 번호는 재변환 때 바뀐다(09/28 시험 0/95). 그래서 junction name(= OSM 노드 id)으로 찾는다
 #   정의 없는 junction 참조 수(회차 없는 막다른 끝, s27_turnfix scan 과 같은 정의)
 #   (선택) 기존 4개 노선 road 를 id 대응표로 번역한 뒤 lane -1 next() 로 이어지는지
 # 도달 가능 비율·정문 왕복 비율은 s23_connectivity.py 를 따로 돌린다(이 스크립트에 복제하지 않음)

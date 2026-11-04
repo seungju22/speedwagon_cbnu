@@ -1,4 +1,4 @@
-# 세션61(2026-10-15): 가벼운 LiDAR 32ch·초당 10만 점·50m. sensor_mapping_nocam.yaml.bak_s59(I1~세션58 에서 쓰던 것)와 이 줄 말고 같다. 메모리가 빠듯할 때 SMAP=sensor_mapping_light32.yaml 로 고른다
+# 2026-10-15: 가벼운 LiDAR 32ch·초당 10만 점·50m. sensor_mapping_nocam.yaml.bak_s59(I1~10/14 에서 쓰던 것)와 이 줄 말고 같다. 메모리가 빠듯할 때 SMAP=sensor_mapping_light32.yaml 로 고른다
 # I1 (2026-10-10) 카메라 없는 경량 센서 설정
 # 원본: 컨테이너 안 /opt/autoware/autoware_carla_interface/share/
 #   autoware_carla_interface/config/sensor_mapping_light_weight.yaml

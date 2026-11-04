@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션32: 주행 CSV xy 누적 궤적 길이(세션20 "CSV xy 누적" 과 같은 정의). 사용: s32_traj_len.py <drive_log csv>...
+# 10/07: 주행 CSV xy 누적 궤적 길이(10/02 "CSV xy 누적" 과 같은 정의). 사용: s32_traj_len.py <drive_log csv>...
 import csv
 import math
 import sys

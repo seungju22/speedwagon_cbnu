@@ -1,9 +1,9 @@
-"""진단(세션8): 급굴곡 전수 조회 + 세션7 속도-s 대조. 읽기전용.
+"""진단(09/21): 급굴곡 전수 조회 + 09/19 속도-s 대조. 읽기전용.
 
 서버에 878 road 맵이 로드돼 있어야 한다. 액터 생성 없음.
 - generate_waypoints(1.0)로 얻은 (road, lane) 별 waypoint 를 s 순으로 정렬
 - 5m 창에서 yaw 변화 절대값 >= THRESH 인 지점을 급굴곡으로 센다
-- 확정경로 15 road 위 급굴곡과, 세션7 CSV 의 같은 s 구간 속도를 함께 출력
+- 확정경로 15 road 위 급굴곡과, 09/19 CSV 의 같은 s 구간 속도를 함께 출력
 """
 import csv
 from collections import defaultdict

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션4 Phase C-1(2026-09-18)에서 기존 19건 + 신규 54건 =
+# 09/18 Phase C-1(2026-09-18)에서 기존 19건 + 신규 54건 =
 # 총 73건으로 대상을 갱신, highway=unclassified로 고쳐 사본을 만든다.
 # 대상 id·판별기준·근거는 map/docs/osm_survey.md(기존19건),
 # map/docs/road_candidates.md(신규54건) 참고.
@@ -26,12 +26,12 @@ TARGET_WAY_IDS_ROUTE_BASED = [
     "392532207", "481950063", "481950062",
 ]
 # (c) 신규 54건 — Phase B 1차필터(steps 제외/width<2.5m 제외/기존
-#     19way와 직접 노드공유/길이>=50m) 통과 후보 64건 중 사용자가
+#     19way와 직접 노드공유/길이>=50m) 통과 후보 64건 중 가
 #     채택한 54건(제외10건은 map/docs/road_candidates.md 제외사유
 #     참고). 번호-way id 대응은 road_candidates.md 표와 동일
 #     (map/scripts/road_candidates.py get_candidates() 산출물).
-#     맵세션4 검산 기록(setup_log.md 2026-09-18): 지시서 원문의
-#     "52건" 표기는 오기, 실제 54건이 맞음(사용자 확인).
+#     09/18 검산 기록(setup_log.md 2026-09-18): 작업 메모 원문의
+#     "52건" 표기는 오기, 실제 54건이 맞음(현장 확인).
 TARGET_WAY_IDS_NEW_CANDIDATES = [
     "442065041", "442065042", "442065043", "442065044", "442065049",
     "442065057", "442065059", "442065060", "442065062", "442065828",
@@ -53,8 +53,8 @@ TARGET_WAY_IDS = (
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_PATH = BASE_DIR / "data" / "raw" / "cbnu_campus.osm"
-# 맵세션4 파일명: 기존 cbnu_campus_fixed.osm(19건 버전)을 대조군으로
-# 보존하기 위해 별도 이름 사용(사본을 새로 만든다, C-1 지시).
+# 09/18 파일명: 기존 cbnu_campus_fixed.osm(19건 버전)을 대조군으로
+# 보존하기 위해 별도 이름 사용(사본을 새로 만든다, C-1).
 OUTPUT_PATH = BASE_DIR / "data" / "processed" / "cbnu_campus_fixed_tags73.osm"
 LOG_DIR = BASE_DIR / "logs"
 NEW_HIGHWAY_VALUE = "unclassified"

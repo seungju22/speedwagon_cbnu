@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션27: 회차 없는 막다른 끝 탐지·채움 후처리 (설계 s23_deadend_cause.md 4절 + 사용자 수정 지시)
+# 10/06: 회차 없는 막다른 끝 탐지·채움 후처리 (설계 s23_deadend_cause.md 4절 + 수정 요청)
 # 원칙: 막다른 끝 목록·개수를 코드에 넣지 않는다. 입력 xodr 를 읽어 스스로 찾는다
 #      (회차 생성은 망 전체에 따라 달라짐, s23 실험 E0~E2).
 # 모드
@@ -8,7 +8,7 @@
 #   write <입력 xodr> <출력 xodr>  정의 없는 junction 마다 기존 틀 복제 커넥터 road + junction 정의 추가.
 #                                출력은 새 파일만. 입력·frozen_v1 경로로는 쓰지 않는다
 #   verify <출력 xodr>           읽기전용. 추가한 커넥터가 들어가는 반쪽 -> 커넥터 -> 나가는 반쪽 으로 next() 이어지는지
-# 상태: scan 은 세션27 에 frozen_v1 로 검증. write/verify 는 세션27 에 실행하지 않음(새 xodr 생성 금지) = 미검증
+# 상태: scan 은 10/06 에 frozen_v1 로 검증. write/verify 는 10/06 에 실행하지 않음(새 xodr 생성 금지) = 미검증
 import copy
 import math
 import re

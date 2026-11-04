@@ -1,4 +1,4 @@
-# 세션11 Phase B 사전 실험 스크립트 (프로토타입, 정식 도구 아님)
+# 09/24 Phase B 사전 실험 스크립트 (프로토타입, 정식 도구 아님)
 스크래치패드에서 실행하던 것을 유실 방지로 보존. 정식 스크립트는 승인 후 map/scripts/ 에 작성.
 실행 환경: ~/campus_mobility_sim/.venv-carla/bin/python (numpy 필요). 같은 폴더에서 실행.
 탐색 스크립트는 경로가 절대경로(~/campus_mobility_sim/map/...)이고 중간 산출물(pkl/osm/xodr)은

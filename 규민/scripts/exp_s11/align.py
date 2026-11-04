@@ -34,7 +34,7 @@ xroot=ET.parse(XODR).getroot()
 roads=parse_roads(xroot); junctions={}
 from analyze_geometry import parse_junctions
 junctions=parse_junctions(xroot)
-# 초기: 세션9 방식 junction 적합
+# 초기: 09/22 방식 junction 적합
 jxy=G.junction_xodr_locations(roads,junctions)
 src=[];dst=[]
 for jid,j in junctions.items():

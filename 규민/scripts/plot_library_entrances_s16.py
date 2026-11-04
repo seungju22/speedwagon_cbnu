@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# 맵세션16. 도서관 출입구 재검토(사용자: 서쪽 면에는 출입구 없음, 북·남(구관)과
+# 09/26. 도서관 출입구 재검토(현장 확인: 서쪽 면에는 출입구 없음, 북·남(구관)과
 # 동(신관, 제1학생회관 방향)에 있음). 면마다 가장 가까운 xodr 주행 차선 지점을
-# 정차 후보로 뽑고, 정문(세션16 궤적 출발점)에서의 경로 길이를 GlobalRoutePlanner
+# 정차 후보로 뽑고, 정문(09/26 궤적 출발점)에서의 경로 길이를 GlobalRoutePlanner
 # 로 계산한다. 서버 불필요(carla.Map(name, xodr) 클라이언트 지도). 읽기전용.
 # 출력: map/docs/figures/23_library_entrances.png, map/docs/logs/session16_library_entrances.log
 #

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션24: 현장 답사 반영 오프라인 검증 (읽기전용, 서버 없음, xodr/OSM 미수정, 새 xodr 생성 없음).
+# 10/04: 현장 답사 반영 오프라인 검증 (읽기전용, 서버 없음, xodr/OSM 미수정, 새 xodr 생성 없음).
 # 원본 OSM / 변환 입력 OSM / frozen_v1 xodr(carla.Map 오프라인)만 읽는다.
 # 출력: 표준출력(key: value 줄). s24_reconv_list.md, s24_offline_checks.md 의 근거 자료
 # 실행: .venv-carla/bin/python map/scripts/s24_offline_checks.py > map/docs/logs/s24_offline_checks.log
@@ -19,7 +19,7 @@ LOGS = BASE / "docs/logs"
 ROUTES = {"legacy": "drive_plan_dry.csv", "north": "drive_plan_dry_north.csv",
           "south": "drive_plan_dry_south.csv", "middle": "drive_plan_dry_middle.csv",
           "yangseong": "drive_plan_dry_yangseong.csv", "uturn": "drive_plan_dry_uturn.csv"}
-# 세션4 제외 8 + s23 재변환 9 (s23_scope_final.md)
+# 09/18 제외 8 + s23 재변환 9 (s23_scope_final.md)
 EXCL8 = ["481950064", "481950061", "442710666", "442710667", "442595035", "471667693",
          "442595850", "442709215"]
 RECONV9 = ["481945510", "481943505", "481475019", "452870644", "481945509", "481943503",

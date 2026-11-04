@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션11 Phase A. 읽기전용, CARLA 불필요. xodr 는 수정하지 않는다.
+# 09/24 Phase A. 읽기전용, CARLA 불필요. xodr 는 수정하지 않는다.
 # 가설: 인도가 커브 "안쪽"에 오고 반경이 (기준선~인도 바깥 가장자리 거리)보다 작으면
 #       안쪽 오프셋 곡선이 접혀(fold) 인도 메시가 쐐기로 튀어나온다.
 #
@@ -8,7 +8,7 @@
 #   f <= 0 이면 접힘(fold). 안쪽 여부는 kappa*t > 0 (곡률중심과 같은 쪽).
 #   독립 검증: 오프셋 폴리라인을 직접 만들어 기준선 진행과 반대로 가는 구간 검출.
 #
-# analyze_geometry.py 의 세션9 수정판(poly_deriv 3*d*p**2)을 사용한다.
+# analyze_geometry.py 의 09/22 수정판(poly_deriv 3*d*p**2)을 사용한다.
 # 샘플 간격 0.25m(<=0.5m), 각도는 unwrap 처리.
 import csv
 import math
@@ -24,7 +24,7 @@ XODR_PATH = BASE / "maps" / "cbnu_internal_only_localtm_tags73.xodr"
 OUT_MD = BASE / "docs" / "map_session11_wedge_analysis.md"
 OUT_CSV = BASE / "docs" / "logs" / "session11_wedge_scan.csv"
 
-# 세션9 A-2 확정경로 15 road (analyze_curves_s9.py 와 동일)
+# 09/22 A-2 확정경로 15 road (analyze_curves_s9.py 와 동일)
 ROUTE_ROADS = [1247, 1914, 1356, 1917, 1355, 1446, 1172, 1428, 1240,
                1695, 1239, 1426, 1238, 1564, 1278]
 
@@ -124,7 +124,7 @@ def sample_road(road, step=STEP):
         x, y = geom_point(geom, p)
         hdg = geom_heading(geom, p)
         rows.append({"s": s, "x": x, "y": y, "hdg": hdg, "k": kappa_analytic(geom, p)})
-    # heading unwrap + heading-diff 기반 곡률(세션9와 비교용)
+    # heading unwrap + heading-diff 기반 곡률(09/22와 비교용)
     for i in range(1, len(rows)):
         while rows[i]["hdg"] - rows[i - 1]["hdg"] > math.pi:
             rows[i]["hdg"] -= 2 * math.pi
@@ -367,7 +367,7 @@ def main():
     P("- 전체 접힘 구간(238)은 road 단위 집계. 쌍둥이 쌍은 서로 다른 half-road 이므로 "
       "물리적으로는 한 쌍의 반대쪽 인도가 각각 자기 안쪽 커브에서 접히는 것이라 중복 없음")
     P("")
-    # 세션9 급커브 6곳 대조(경로 15 road 위 rate>=6deg/m 구간): 인도 위치 표기
+    # 09/22 급커브 6곳 대조(경로 15 road 위 rate>=6deg/m 구간): 인도 위치 표기
     P("## 세션9 급커브 6곳 대조")
     s9 = [("1247", 79.5, 81.0), ("1247", 93.5, 95.5), ("1356", 11.5, 12.0),
           ("1564", 1.0, 9.0), ("1428", 0.0, 5.0), ("1446", 2.0, 8.5)]

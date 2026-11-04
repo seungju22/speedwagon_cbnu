@@ -1,6 +1,6 @@
 #!/bin/bash
-# 세션59 사본: 로그 logs/s59, 센서 파일 SMAP(s59_aw_up.sh), gt_objects2 추가 인자 GTARGS, LiDAR bag 은 기준 센서 기록용으로 그대로
-# 세션58 한 회차(i63_run.sh 사본에서 바꿈): 정답 객체를 gt_objects2.py(P1b, --mode)로, 장면 스크립트·추적 카메라·LiDAR bag 을 더함,
+# 10/14 사본: 로그 logs/s59, 센서 파일 SMAP(s59_aw_up.sh), gt_objects2 추가 인자 GTARGS, LiDAR bag 은 기준 센서 기록용으로 그대로
+# 10/14 한 회차(i63_run.sh 사본에서 바꿈): 정답 객체를 gt_objects2.py(P1b, --mode)로, 장면 스크립트·추적 카메라·LiDAR bag 을 더함,
 # 목표를 노선 파일 2판 북문 뒷축 목표로(pilot_route_r2 -> shuttle_platforms_v31_r1 lib_north base_link_goal). 프로세스는 PID 로 끈다
 # 사용: s58_run.sh <tag> <쌍> <mode car|all> <scene ped|door|obst|cone|pcar|none> [cam 0|1] [bag 0|1]
 TAG=$1; PAIR=$2; MODE=$3; SCENE=$4; CAM=${5:-0}; BAG=${6:-0}

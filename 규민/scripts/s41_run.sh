@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# 맵세션41: 사용자가 켠 서버에서 (load) load_campus_world.py 기본값 실행 또는 (노선) test_drive.py --route <노선> --xodr 동결본 1회
-# 서버 기동·종료 없음(사용자). 메모리 감시: avail < 1024Mi 즉시 kill(세션32 기준). 주행 전 avail < 2048Mi 또는 swap > 4096Mi 면 주행 안 함
+# 10/09: 켠 서버에서 (load) load_campus_world.py 기본값 실행 또는 (노선) test_drive.py --route <노선> --xodr 동결본 1회
+# 서버 기동·종료 없음. 메모리 감시: avail < 1024Mi 즉시 kill(10/07 기준). 주행 전 avail < 2048Mi 또는 swap > 4096Mi 면 주행 안 함
 # 사용: bash map/scripts/s41_run.sh load | north | south | middle | yangseong
 set -u
 WHAT=$1

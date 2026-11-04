@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션33: 후문 첫 주행 멈춘 지점 주변 연결 상태(읽기전용). 사용: s33_back_stop.py <v2 xodr> <drive_log csv> <south drive_log csv>
+# 10/07: 후문 첫 주행 멈춘 지점 주변 연결 상태(읽기전용). 사용: s33_back_stop.py <v2 xodr> <drive_log csv> <south drive_log csv>
 import csv
 import math
 import sys

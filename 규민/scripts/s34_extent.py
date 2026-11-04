@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션34: 안쪽 가장자리 반경 <= 기준 인 구간의 s 범위·길이(읽기전용). 사용: s34_extent.py <xodr> <임계 m> <road id...>
+# 10/07: 안쪽 가장자리 반경 <= 기준 인 구간의 s 범위·길이(읽기전용). 사용: s34_extent.py <xodr> <임계 m> <road id...>
 # CARLA 메시는 vertex_distance(이 맵 로드 2.0m) 간격으로 만든다. 짧은 구간은 메시에 안 나타날 수 있다(코드 미확인, 추정)
 import sys
 import xml.etree.ElementTree as ET

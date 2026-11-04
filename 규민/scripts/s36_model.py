@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션36 2·3: 현(chord) 이탈 모형(읽기전용). 값은 xodr·코드·주행 CSV 에서 직접 읽는다
+# 10/07 2·3: 현(chord) 이탈 모형(읽기전용). 값은 xodr·코드·주행 CSV 에서 직접 읽는다
 # 겨냥 거리 L = base_min_distance + distance_ratio * v (local_planner.py 87·88·241행: 3.0, 0.5, v=m/s)
 # 예측 이탈 = R (1 - cos(asin(L / 2R)))   (반경 R 원호 위 길이 L 현의 가운데 처짐)
 # 여유 = 반차선폭(xodr width/2) - 차량 반폭(vehicle_bbox extent_y)

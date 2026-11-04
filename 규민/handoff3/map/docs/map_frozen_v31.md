@@ -126,7 +126,7 @@ frozen_v1·v2·v3 와 그 문서는 그대로 둠. v3 결과는 계속 v3 기준
   - v3.1 빌더 출력(83edb775): integration/maps/OpenDriveMap_v31s54_bak_i63/ 두 파일을 복사
   - v3(cbnu_campus_v3): autoware_map/cbnu_campus_v3/{lanelet2_map.osm, map_projector_info.yaml} 를 복사
   - 바꾼 뒤 sha256 으로 확인하고 setup_log 에 적음
-- CLAUDE.md 지도 줄: CLAUDE.md.bak_s57
+- 작업 규칙 파일의 지도 줄: 10/13 백업(.bak_s57)
 - 동결 파일은 지우지 않음. 판을 고르는 것으로 되돌림
 
 ## 로그 해시

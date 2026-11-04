@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션30 Phase 3 보조: CommonRoad 중간(.cr.xml) lanelet 경계와 Lanelet2(.osm) lanelet 경계를 점 단위로 비교 (읽기전용, 시험 venv)
+# 10/07 Phase 3 보조: CommonRoad 중간(.cr.xml) lanelet 경계와 Lanelet2(.osm) lanelet 경계를 점 단위로 비교 (읽기전용, 시험 venv)
 # 왜: 병합 뒤 남은 끊김이 "점 id 문제" 가 아니라 CR -> Lanelet2 단계에서 경계 기하가 바뀐 것인지 가른다
 # 대응: cr2lanelet 은 scenario lanelet 순서대로 relation id 를 늘려 만든다. cr.xml 의 k 번째 lanelet <-> osm relation id 순 k 번째
 #   이 가정은 "경계가 같은 쌍 수" 로 확인한다(가정이 틀리면 거의 0 이 나온다)

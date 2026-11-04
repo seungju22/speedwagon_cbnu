@@ -1,4 +1,4 @@
-"""추적 카메라(세션58): 자차(role ego_vehicle) 뒤에 RGB 카메라를 달아 주행 중에 바로 jpg 로 남긴다.
+"""추적 카메라(10/14): 자차(role ego_vehicle) 뒤에 RGB 카메라를 달아 주행 중에 바로 jpg 로 남긴다.
 CARLA 녹화 재생이 아니라 주행 회차 안에서 찍는다(레이어 732 녹화는 재생 때 자차가 안 생겼다, S4).
 - 카메라: 자차 원점 기준 뒤 --dist, 위 --height, 아래로 --pitch, Rigid 부착. sensor_tick = 1/--fps(시뮬레이터 시간)
 - 끝: 자차가 없어지거나 SIGINT/SIGTERM. 그다음 글자 넣기 integration/docs/tools/s4_label.py, 인코딩 i2_encode.py(컨테이너)

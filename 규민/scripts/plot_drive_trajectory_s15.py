@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# 맵세션15 Phase D. 완주 궤적을 확정 경로 오버레이에 겹친다.
+# 09/25 Phase D. 완주 궤적을 확정 경로 오버레이에 겹친다.
 # 축척·범위·방향은 10_overlay_confirmed.png(plot_confirmed_endpoint.py)와 동일:
 # old_axis_bounds() 범위, figsize (11,13), dpi 150, ENU 위쪽=진북.
-# 변환은 평활화 xodr(세션11 재변환판, road id 동일) 자신의 junction 으로 재적합.
+# 변환은 평활화 xodr(09/24 재변환판, road id 동일) 자신의 junction 으로 재적합.
 # CARLA 좌표 -> xodr 좌표: y 부호 반전. 읽기전용, 새 출력 11_drive_trajectory.png
 import csv
 import sys

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# 맵세션5 Phase A: 06_overlay_expanded.png 육안검증 후속.
+# 09/19 Phase A: 06_overlay_expanded.png 육안검증 후속.
 # plot_overlay_expanded.py 사본+확장 — 원본은 손대지 않고 보존.
-# 수정사항(세션5 지시서 A-1/A-2):
+# 수정사항(09/19 작업 메모 A-1/A-2):
 #  1) 범례 "중앙도서관(junction11)" -> 실제 종점 id(junction51)로 정정
 #  2) 중앙도서관 "건물"(N12 구관, way442066135) 위치에 종점 junction과
 #     구분되는 표식 추가 — 지금까지는 junction 표식만 있어 건물 실제
-#     위치가 안 보였음(세션4 종점오류 발견의 원인)
+#     위치가 안 보였음(09/18 종점오류 발견의 원인)
 #  3) 정문/중문 OSM 지물 표시(동문/남문은 data/raw/cbnu_campus.osm에
 #     해당 태그 자체가 없어 표시 불가 — 아래 GATE_MARKERS 주석 참고)
 #  4) 도서관 종점 3안(A=junction51/B=junction35/C=road1278 76.46m지점)
@@ -50,7 +50,7 @@ FLAG_JUNCTION_XY_XODR = (517.53695993, 341.5124049225)
 FLAG_LABEL = "신규 최대방향차 76.50°\n(junction20, 셔틀경로 아님)"
 FLAG_LABEL_OFFSET = (40, -55)
 
-# 도서관 종점 3안(맵세션4 조사, xodr 좌표). C안은 junction이 아니라
+# 도서관 종점 3안(09/18 조사, xodr 좌표). C안은 junction이 아니라
 # road1278(junction36->35, pred=36/start, succ=35/end) 위의 한 점 —
 # junction36쪽에서 76.46m 지점(setup_log.md 2026-09-18 기록).
 LIB_BUILDING_WAY_ID = "442066135"  # N12 중앙도서관 구관

@@ -16,7 +16,7 @@ BUILDING_RADIUS_M = 60
 
 
 def _is_named_feature(tags):
-    # 버그 수정(맵세션4, 2026-09-18): 기존엔 building+name way만 봐서
+    # 버그 수정(2026-09-18): 기존엔 building+name way만 봐서
     # amenity/leisure를 가진 node(예: 버스정류장, 병원 지물)를 놓쳤다.
     # 번호48 사례 — 55.6m 거리의 amenity=hospital,name=교육인재관 H13
     # (node 11911748888)이 표에서 "-"로 나온 원인. setup_log.md 기록.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션19 Phase 1 공용 도구 (읽기전용, 서버 없음).
+# 09/30 Phase 1 공용 도구 (읽기전용, 서버 없음).
 # - OSM 읽기, TM 투영(osm_to_xodr.py PROJ_STRING 과 같은 중심), xodr 좌표 변환
 # - 오프라인 carla.Map 으로 방향 그래프(lane -1 next()) 구성, 경로 탐색
 # 좌표계: TM(동 x, 북 y) -> xodr = TM + offset(521.51, 493.61) -> CARLA = (x, -y)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# 맵세션19 Phase 1: 재변환 범위 확정용 분석 (읽기전용, 서버 없음, xodr/OSM 미수정).
+# 09/30 Phase 1: 재변환 범위 확정용 분석 (읽기전용, 서버 없음, xodr/OSM 미수정).
 # 1-1 양성재 도달 가능성(frozen_v1), 1-2 회차·루프(방향 그래프, U턴 커넥터 제외 여부),
-# 후문은 현재 맵에서 도달 불가라 세션18 시험 재변환 맵(_trial_s18_gates, 채택 안 된 산출물)으로 조사.
+# 후문은 현재 맵에서 도달 불가라 09/28 시험 재변환 맵(_trial_s18_gates, 채택 안 된 산출물)으로 조사.
 # 방향 그래프: 각 road 의 lane -1 끝에서 next(0.05) 로 도착하는 road (역방향 불가).
 # 실행: .venv-carla/bin/python map/scripts/s19_scope.py > map/docs/logs/s19_scope.log
 import csv
@@ -54,7 +54,7 @@ class Net:
         self.r2 = {}
 
     def radius(self, r):
-        """평균R = 길이/|끝점 회전(rad)|, R2min = 2m 창 곡률 최소 반경(세션11 정의, 0.5m 간격, 양끝 1m 제외)."""
+        """평균R = 길이/|끝점 회전(rad)|, R2min = 2m 창 곡률 최소 반경(09/24 정의, 0.5m 간격, 양끝 1m 제외)."""
         if r in self.r2:
             return self.r2[r]
         L = self.lens[r][0]

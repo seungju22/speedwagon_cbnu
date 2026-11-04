@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션28 Phase 5: 고도 지원 오프라인 확인 (읽기전용, 서버 없음, xodr 수정 없음).
+# 10/07 Phase 5: 고도 지원 오프라인 확인 (읽기전용, 서버 없음, xodr 수정 없음).
 # CARLA 0.9.15 설치 디렉터리의 기본 맵 xodr 과 frozen_v1 에서
 #   road 수 / elevationProfile 요소 유무 / elevation 개수·계수(a,b,c,d) 0 아닌 수·범위
 #   lateralProfile 유무 / superelevation·shape 개수·0 아닌 수

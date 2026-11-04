@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션32 Phase 0-4: 4 노선 출발·종점을 v2 에서 확정 (읽기전용, 서버 없음, test_drive.py 수정 없음)
+# 10/07 Phase 0-4: 4 노선 출발·종점을 v2 에서 확정 (읽기전용, 서버 없음, test_drive.py 수정 없음)
 # 노선 road 는 test_drive.ROUTES(frozen_v1 id)를 id 대응표로 번역. 출발 = 첫 road lane -1 s=0, 종점 = 끝 road end_s.
 # 좌표는 xodr_point_at_s 로 두 맵에서 계산해 거리 비교. next() 체인은 오프라인 carla.Map(lane -1).
 # 커넥터 junction 번호는 junction name 으로 번역. 출발 spawn 은 test_drive 가 좌표(221.40,-1086.84)로 찾음 -> 서버에서만.

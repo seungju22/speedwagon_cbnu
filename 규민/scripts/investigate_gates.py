@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션7 추가 조사: 중문·후문 연결 후보 (읽기전용).
+# 09/19 추가 조사: 중문·후문 연결 후보 (읽기전용).
 # 태그 보정·재변환 없음(재변환하면 road id 전면 재부여 -> test_drive.py 15-road 경로 무효).
 # CARLA 불필요. 산출: docs/gate_candidates.md, docs/figures/12_gate_candidates.png
 #
@@ -50,7 +50,7 @@ NON_VEHICLE = {"footway", "path", "steps", "cycleway", "pedestrian", "bridleway"
 TOL = 15.0     # 878 road 포함 판정 허용 거리(m)
 SAMPLE = 8.0
 # Osm2Odr 기본 변환 대상 highway(추정, 아래 검증 출력으로 확인): service/footway 등은 제외되므로
-# 세션4 fix_tags 가 highway=unclassified 로 바꾼 73건만 변환됐다.
+# 09/18 fix_tags 가 highway=unclassified 로 바꾼 73건만 변환됐다.
 CONV_TYPES = {"motorway", "trunk", "primary", "secondary", "tertiary", "unclassified", "residential",
               "motorway_link", "trunk_link", "primary_link", "secondary_link", "tertiary_link"}
 S4_CANDS = {"392632034": "번호1", "452870644": "번호48"}

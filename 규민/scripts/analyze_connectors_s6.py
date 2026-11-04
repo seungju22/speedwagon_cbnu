@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 세션6 Phase A: 878 road 판(tags73) junction 커넥터 결함 분류. 읽기전용, CARLA 불필요.
+# 09/19 Phase A: 878 road 판(tags73) junction 커넥터 결함 분류. 읽기전용, CARLA 불필요.
 # analyze_geometry.py 의 파서·기하 함수를 재사용한다(원본 무수정).
 # 출력: map/docs/logs/session6_phaseA.txt (상세) + 화면에는 HARD STOP A 요약만
 import math
@@ -16,11 +16,11 @@ MAP_DIR = Path(__file__).resolve().parent.parent
 XODR = MAP_DIR / "maps" / "cbnu_internal_only_localtm_tags73.xodr"
 OUT = MAP_DIR / "docs" / "logs" / "session6_phaseA.txt"
 
-GAP_ANOMALY_M = 0.01        # 세션4 "gap이상" 기준(131건의 정의)
+GAP_ANOMALY_M = 0.01        # 09/18 "gap이상" 기준(131건의 정의)
 SHORT_M = 5.0               # 극단적으로 짧은 road
 BIG_HDIFF_DEG = 10.0        # 큰 방향차 기준(가정, 분포를 함께 출력)
 BIG_TURN_DEG = 45.0         # 커넥터 자체 회전각 기준(가정)
-TEMPLATE_LEN = 9.892401     # 세션2에서 확인된 netconvert 고정 템플릿 길이
+TEMPLATE_LEN = 9.892401     # 09/16에서 확인된 netconvert 고정 템플릿 길이
 
 ROUTE = [1247, 1914, 1356, 1917, 1355, 1446, 1172,
          1428, 1240, 1695, 1239, 1426, 1238, 1278]
@@ -70,7 +70,7 @@ def touch(a, b, roads, junctions):
     return None
 
 
-FAIL_PTS = [(275.33, 957.23), (280.80, 960.21)]   # 세션5 2차 실패(xodr 좌표)
+FAIL_PTS = [(275.33, 957.23), (280.80, 960.21)]   # 09/19 2차 실패(xodr 좌표)
 ROUTE_FIXED = ROUTE[:-1] + [1564, 1278]           # r1564: junction36 커넥터
 ROUTES_CHECK = {
     "S5 출입구1/2 원본(14)": ROUTE,
@@ -82,8 +82,8 @@ ROUTES_CHECK = {
 
 
 def followup(root, roads, junctions, L):
-    """세션6 Phase A 후속: junction 구성, 실패점 주변, 경로 누락/방향 검증.
-    (인라인 실행분을 재현 가능하게 저장. 세션3 스크립트 유실 방지)"""
+    """09/19 Phase A 후속: junction 구성, 실패점 주변, 경로 누락/방향 검증.
+    (인라인 실행분을 재현 가능하게 저장. 09/17 스크립트 유실 방지)"""
     xr = {r.get("id"): r for r in root.iter("road")}
 
     L.append("")
@@ -318,7 +318,7 @@ def main():
              f"{[j['id'] in seen_j for j in j1]}")
     L.append(f"위험구간(정의: 실형상이상 | 짧음+큰방향차 | 짧음&급회전): {risky}")
 
-    # ---- 추가(사용자 요청 1~3 + 경로 접합 확인) ----
+    # ---- 추가(요청 1~3 + 경로 접합 확인) ----
     L.append("")
     L.append("## 추가1 길이 세분(0~12m, 1m 간격 / 4~8m 0.5m 간격)")
     edges = [0, 1, 2, 3, 4, 4.5, 5, 5.5, 6, 7, 8, 10, 12]

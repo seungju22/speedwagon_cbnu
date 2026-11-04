@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션25: 결정용 좌표(도서관 교차로 후보, 정문 평행 way 4개)와 건물 배치 후보 목록 (읽기전용, 서버 없음).
+# 10/04: 결정용 좌표(도서관 교차로 후보, 정문 평행 way 4개)와 건물 배치 후보 목록 (읽기전용, 서버 없음).
 # 원본 OSM 과 frozen_v1 xodr(carla.Map 오프라인)만 읽는다. xodr/OSM 수정 없음, 새 xodr 없음.
 # 좌표 사슬: 위경도 -> 지역 TM(동 x, 북 y) -> xodr = TM + offset(521.51, 493.61) -> CARLA = (x, -y)
 # 출력: 표준출력(로그), map/docs/logs/s25_buildings.csv

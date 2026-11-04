@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 맵세션33: 양성재 정차 재현성 1회차 = 서버 기동 -> 맵 로드 -> 2분 메모리 -> 양성재 주행 -> PID kill -> 서버 로그 집계
+# 10/07: 양성재 정차 재현성 1회차 = 서버 기동 -> 맵 로드 -> 2분 메모리 -> 양성재 주행 -> PID kill -> 서버 로그 집계
 # 사용: bash map/scripts/s33_one_run.sh <v1|v2> <회차 번호> [노선, 기본 yangseong]
-# 서버 플래그는 세션32와 같게 고정(-quality-level=Low -win). kill 은 기록한 Shipping PID 만.
-# 메모리: 측정 시점 무관 avail < 1024Mi 이면 즉시 kill(세션32 추가 기준). 2분 후 avail < 2048Mi 또는 swap > 4096Mi 이면 kill 후 종료 3.
+# 서버 플래그는 10/07와 같게 고정(-quality-level=Low -win). kill 은 기록한 Shipping PID 만.
+# 메모리: 측정 시점 무관 avail < 1024Mi 이면 즉시 kill(10/07 추가 기준). 2분 후 avail < 2048Mi 또는 swap > 4096Mi 이면 kill 후 종료 3.
 set -u
 MAPK=$1; N=$2; ROUTE=${3:-yangseong}
 ROOT=/home/gyumin/campus_mobility_sim
@@ -17,7 +17,7 @@ swapu() { awk '/SwapTotal/{t=$2}/SwapFree/{f=$2}END{print int((t-f)/1024)}' /pro
 ff=$(ps -eo comm | grep -c '^firefox'); cu=$(ps -eo comm | grep -ic carla)
 echo "[$TAG] $(date +%T) 시작 firefox=$ff carla=$cu avail=$(avail)Mi swap=$(swapu)Mi"
 if [ "$ff" -ne 0 ] || [ "$cu" -ne 0 ]; then echo "[$TAG] 전제 불충족, 중단"; exit 2; fi
-# 세션33 추가: GPU 드라이버(TTM) 풀이 재기동마다 쌓여 avail 을 깎는다(drop_caches 로 5.9 -> 11.6GiB 확인). 시작 avail 9GiB 미만이면 중단
+# 10/07 추가: GPU 드라이버(TTM) 풀이 재기동마다 쌓여 avail 을 깎는다(drop_caches 로 5.9 -> 11.6GiB 확인). 시작 avail 9GiB 미만이면 중단
 if [ "$(avail)" -lt 9000 ]; then echo "[$TAG] 시작 avail $(avail)Mi < 9000Mi, 중단(drop_caches 필요)"; exit 5; fi
 
 cd ~/carla/CARLA_0.9.15 || exit 2
@@ -31,7 +31,7 @@ PID=$(pgrep -x CarlaUE4-Linux- | head -1)   # comm 은 15자로 잘림. 실행 �
 echo "[$TAG] nohup sh PID=$SH"
 if ! (echo > /dev/tcp/127.0.0.1/2000) 2>/dev/null; then echo "[$TAG] 포트 2000 5분 내 안 열림"; tail -5 "$SLOG"; [ -n "$PID" ] && kill "$PID"; exit 4; fi
 echo "[$TAG] $(date +%T) 포트 열림 ${i}s, server PID=$PID"
-# 세션33 수정: 포트가 열려도 월드가 아직 준비 안 됐을 수 있다(1회차 실패). get_world() 가 응답할 때까지 폴링(최대 5분)
+# 10/07 수정: 포트가 열려도 월드가 아직 준비 안 됐을 수 있다(1회차 실패). get_world() 가 응답할 때까지 폴링(최대 5분)
 for k in $(seq 1 60); do
   if $PY -c "import carla; c=carla.Client('localhost',2000); c.set_timeout(5.0); c.get_world()" 2>/dev/null; then break; fi
   kill -0 "$PID" 2>/dev/null || { echo "[$TAG] 서버 사라짐"; exit 4; }

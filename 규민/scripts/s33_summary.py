@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션33: 양성재 반복 주행 회차별 필드 집계. 사용: s33_summary.py <test_drive stdout log>...
+# 10/07: 양성재 반복 주행 회차별 필드 집계. 사용: s33_summary.py <test_drive stdout log>...
 # 필드: 완주, 궤적(CSV xy 누적), 원값 시간, 정지 근접 대기 발동(예/아니오), 대기 제외 시간(발동 시 -5.0),
 #       정차 s(완주 판정 순간 CSV 마지막 행), 정차점까지 거리(로그 "종점까지"), 충돌
 import csv

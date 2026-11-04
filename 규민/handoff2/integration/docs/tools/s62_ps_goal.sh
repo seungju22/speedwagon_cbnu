@@ -1,5 +1,5 @@
 #!/bin/bash
-# 세션62: 플래닝 시뮬레이터(컨테이너 s62_ps)에서 AD API 로 한 구간 달리기. 경로 설정 -> 자율 -> 도착(routing state 3) 까지
+# 10/15: 플래닝 시뮬레이터(컨테이너 s62_ps)에서 AD API 로 한 구간 달리기. 경로 설정 -> 자율 -> 도착(routing state 3) 까지
 # 초기 위치를 주면 먼저 /api/localization/initialize 로 차를 그 자리에 둔다(처음 한 번만 준다)
 # 사용: s62_ps_goal.sh <tag> <gx> <gy> <qz> <qw> [ix iy iqz iqw]   값은 노선 파일 2판(pilot_route_r2.yaml) goal
 TAG=$1; GX=$2; GY=$3; QZ=$4; QW=$5; CT=${CT:-s62_ps}; TO=${TO:-300}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션36: 목표점 로그의 "차 -> 목표점" 직선이 r1391 차선에서 지나는 최대 횡 위치(읽기전용)
+# 10/07: 목표점 로그의 "차 -> 목표점" 직선이 r1391 차선에서 지나는 최대 횡 위치(읽기전용)
 # 사용: s36_aim_chord.py <xodr> <target_log csv> <s 하한> <s 상한>
 import csv
 import math

@@ -8,7 +8,7 @@
 동결 지도 v3.1	map/scripts/load_campus_world.py	규민/handoff3/map/scripts/load_campus_world.py	4376	bb92cc0d23b50747
 동결 지도 v3.1	map/docs/logs/campus_layers_dry_나_s54_v31_actors.csv	규민/handoff3/map/docs/logs/campus_layers_dry_나_s54_v31_actors.csv	100445	dcf93ea8e4103baa
 동결 지도 v3.1	map/docs/logs/campus_layers_dry_나_s54_v31.json	규민/handoff3/map/docs/logs/campus_layers_dry_나_s54_v31.json	233009	18287ed60591578d
-동결 지도 v3.1	map/docs/map_frozen_v31.md	규민/handoff3/map/docs/map_frozen_v31.md	12994	da2ca3602e49b31a
+동결 지도 v3.1	map/docs/map_frozen_v31.md	규민/handoff3/map/docs/map_frozen_v31.md	13013	1bace080bfb6bb3c
 Autoware 지도	autoware_map/cbnu_campus_v31/lanelet2_map.osm	규민/handoff3/autoware_map/cbnu_campus_v31/lanelet2_map.osm	11917366	28a57711094effaf
 Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/handoff3/autoware_map/cbnu_campus_v31/map_projector_info.yaml	22	a6fb6af33e164e61
 지도 재생성(재현용)	map/scripts/s57_make_v31_lanelet2.sh	규민/handoff3/map/scripts/s57_make_v31_lanelet2.sh	1692	c08e808cd67032af
@@ -68,15 +68,15 @@ Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/hand
 문서	integration/scenario/README.md	규민/handoff3/integration/scenario/README.md	3493	724c935463969dff
 문서	map/docs/m20_vehicle_fit.md	규민/handoff3/map/docs/m20_vehicle_fit.md	10360	abc0d6d06c574f5b
 문서	docs/handoff_2/handoff_2_README.md	규민/handoff3/docs/handoff_2/handoff_2_README.md	7284	9493696553b06137
-지도 재현(OSM -> xodr -> Lanelet2)	docs/handoff_3/map_reproduce.md	규민/handoff3/docs/handoff_3/map_reproduce.md	7292	c3e16e6f51e16564
+지도 재현(OSM -> xodr -> Lanelet2)	docs/handoff_3/map_reproduce.md	규민/handoff3/docs/handoff_3/map_reproduce.md	7292	0779dcc805b43f98
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s71_reproduce.sh	규민/handoff3/map/scripts/s71_reproduce.sh	10112	cfe1d3c897a57a8e
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/download_osm.sh	규민/handoff3/map/scripts/download_osm.sh	2109	1d4a8e2ed425149a
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/compute_bbox.py	규민/handoff3/map/scripts/compute_bbox.py	1714	f69fef25e0e977f1
-지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/fix_tags.py	규민/handoff3/map/scripts/fix_tags.py	5316	e3029597189994d0
-지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/classify_internal.py	규민/handoff3/map/scripts/classify_internal.py	8277	cc5846c2fe5bc7be
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/fix_tags.py	규민/handoff3/map/scripts/fix_tags.py	5304	94430ca400a5a620
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/classify_internal.py	규민/handoff3/map/scripts/classify_internal.py	8259	9cc521fa10944c14
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/smooth_osm_curves.py	규민/handoff3/map/scripts/smooth_osm_curves.py	16432	70f91e3162f13b26
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/curve_metrics.py	규민/handoff3/map/scripts/curve_metrics.py	7427	f5b0b4dcd0ede23d
-지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/osm_to_xodr.py	규민/handoff3/map/scripts/osm_to_xodr.py	5703	93032c2c3c49b7f1
+지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/osm_to_xodr.py	규민/handoff3/map/scripts/osm_to_xodr.py	5679	81605ffd5803e940
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s27_reconvert.py	규민/handoff3/map/scripts/s27_reconvert.py	7474	eff42aae5c5df6b7
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s27_turnfix.py	규민/handoff3/map/scripts/s27_turnfix.py	10539	616d68f0c25fda58
 지도 재현(OSM -> xodr -> Lanelet2)	map/scripts/s42_common.py	규민/handoff3/map/scripts/s42_common.py	14585	67ec970c11444b76
@@ -137,7 +137,7 @@ Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/hand
 정류장 대체 정차점	map/docs/figs/s70_alt_stops.png	규민/handoff3/map/docs/figs/s70_alt_stops.png	235128	67f0fb0889077646
 지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/lanelet2_map.osm	규민/handoff3/map/maps/v33a/lanelet2_map.osm	11078054	af536a8457c6bea4
 지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/map_projector_info.yaml	규민/handoff3/map/maps/v33a/map_projector_info.yaml	22	a6fb6af33e164e61
-지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/v33a_changes.json	규민/handoff3/map/maps/v33a/v33a_changes.json	5084	20b87313d5c06ad0
+지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33a/v33a_changes.json	규민/handoff3/map/maps/v33a/v33a_changes.json	5020	d0d92123f84386d6
 지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/lanelet2_map.osm	규민/handoff3/map/maps/v33b/lanelet2_map.osm	11093609	bf0d421ef989efe8
 지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/map_projector_info.yaml	규민/handoff3/map/maps/v33b/map_projector_info.yaml	22	a6fb6af33e164e61
 지도 v3.3(개성재·남문·순환·유턴·차량, 11/02~11/03)	map/maps/v33b/v33b_changes.json	규민/handoff3/map/maps/v33b/v33b_changes.json	618	e46b4cd8b0129a33
@@ -183,7 +183,7 @@ Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/hand
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_write.py	규민/handoff3/map/scripts/s75_write.py	4893	6f48c72c5e829a01
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_check_v33c.py	규민/handoff3/map/scripts/s75_check_v33c.py	9188	9f102f6e282e1cdb
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_m20.py	규민/handoff3/map/scripts/s75_m20.py	8121	24b716ed065bf2f9
-지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_uturn_fig.py	규민/handoff3/map/scripts/s75_uturn_fig.py	7506	f56587fdbe2548a6
+지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_uturn_fig.py	규민/handoff3/map/scripts/s75_uturn_fig.py	7496	1b65643b3143adca
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	map/scripts/s75_loop_fig.py	규민/handoff3/map/scripts/s75_loop_fig.py	3255	ce01d2a4000f9783
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/config/s75_v33c_map.override.yaml	규민/handoff3/integration/config/s75_v33c_map.override.yaml	425	cc3aabdc1b405543
 지도 v3.3c(유턴 자리·N14·스프린터, 11/03)	integration/config/s75_sprinter.override.yaml	규민/handoff3/integration/config/s75_sprinter.override.yaml	1349	a7bcb0f2cbc0ba34
@@ -229,7 +229,7 @@ Autoware 지도	autoware_map/cbnu_campus_v31/map_projector_info.yaml	규민/hand
 문서(인계 3)	docs/handoff_3/LICENSE	규민/handoff3/LICENSE	1069	e4a6ce9618770206
 문서(인계 3)	docs/handoff_3/README.md	규민/handoff3/docs/handoff_3/README.md	21225	119a10509667a69c
 문서(인계 3)	docs/handoff_3/NOTICE.md	규민/handoff3/docs/handoff_3/NOTICE.md	6886	f0ab95970fabe5f3
-문서(인계 3)	docs/handoff_3/changes_since_handoff2.md	규민/handoff3/docs/handoff_3/changes_since_handoff2.md	4726	be597a870d703698
+문서(인계 3)	docs/handoff_3/changes_since_handoff2.md	규민/handoff3/docs/handoff_3/changes_since_handoff2.md	4751	72f37d03abba01a8
 문서(인계 3)	docs/handoff_3/make_list.py	규민/handoff3/docs/handoff_3/make_list.py	11588	76effde531e3a38f
 차체 검사 도구	map/build_v31_s54/pairs35.json	규민/handoff3/map/build_v31_s54/pairs35.json	7160	dcc70218dddacff7
 차체 검사 도구	map/docs/logs/s56b_footprint_pairs.json	규민/handoff3/map/docs/logs/s56b_footprint_pairs.json	23484	2b66806d09358338

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션26: 발표 숫자 출처 생성(읽기전용). 노선별 경로 합(설계값) = 앞 road 길이 합 + 종점 s,
+# 10/04: 발표 숫자 출처 생성(읽기전용). 노선별 경로 합(설계값) = 앞 road 길이 합 + 종점 s,
 # 주행 궤적 거리·시간으로 평균 속도. 출력 표준출력 -> map/docs/logs/s26_route_sums.log
 import csv
 import math

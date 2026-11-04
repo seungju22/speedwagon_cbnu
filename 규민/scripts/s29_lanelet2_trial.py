@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# 맵세션29: CommonRoad Scenario Designer(crdesigner 0.8.5)로 xodr -> Lanelet2 변환 시험 (서버 없음, 재변환 없음).
+# 10/07: CommonRoad Scenario Designer(crdesigner 0.8.5)로 xodr -> Lanelet2 변환 시험 (서버 없음, 재변환 없음).
 # 반드시 시험 전용 venv 로 실행: ~/lanelet2_trial_venv/bin/python (프로젝트 .venv-carla 아님)
 # 입력은 frozen_v1 의 복사본(작업 디렉터리 안). 원본은 해시만 읽는다
 # 흐름: xodr --(odr2cr: parse_opendrive -> Network -> CommonRoad Scenario)--> --(CR2LaneletConverter)--> Lanelet2 OSM
 #   공개 함수 opendrive_to_lanelet() 과 같은 두 단계를 나눠 불러 단계별 시간·경고 수를 잰다
-#   CLI(crdesigner 명령)는 typer 0.9.4 + click 8.5 조합에서 시작 시 TypeError 로 죽는다(세션29 실측). 그래서 파이썬 API 를 쓴다
+#   CLI(crdesigner 명령)는 typer 0.9.4 + click 8.5 조합에서 시작 시 TypeError 로 죽는다(10/07 실측). 그래서 파이썬 API 를 쓴다
 # 사용: python s29_lanelet2_trial.py <작업 디렉터리> <입력 xodr 복사본> <꼬리> [--autoware] [--local]
 import argparse
 import hashlib

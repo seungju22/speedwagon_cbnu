@@ -1,7 +1,7 @@
-"""차 시점 판정(P1b, 세션58). gt_objects2.py 와 대조 도구(perception/tools/p1b_lidar_bench.py)가 같이 쓴다.
+"""차 시점 판정(P1b, 10/14). gt_objects2.py 와 대조 도구(perception/tools/p1b_lidar_bench.py)가 같이 쓴다.
 보이는가 = 거리 안 + 표본점 중 LiDAR 상하 시야 안이고 cast_ray 가 안 막힌 것이 하나 이상.
 막힘으로 안 치는 것: 그 물체 자기 상자(0.2m 키움) 안, 라벨 NONE 이고 어느 보행자든 그 보행자의 보이지 않는 상자
-  (보행자 좌표 x -2.34~+2.78, y ±0.85) 안인 점. 이 상자가 cast_ray 에 걸린다(세션58 실측. 일반 LiDAR 점은 보행자 몸에 맞는다).
+  (보행자 좌표 x -2.34~+2.78, y ±0.85) 안인 점. 이 상자가 cast_ray 에 걸린다(10/14 실측. 일반 LiDAR 점은 보행자 몸에 맞는다).
   레이어 건물 상자도 라벨 NONE 이라 NONE 을 통째로 뺄 수는 없다. 그래서 보행자 상자 안 건물 벽은 가림으로 못 본다(한계), 자차 상자(0.1m 키움) 안, 지면(라벨 또는 z < 0.15m)
 """
 import math
@@ -11,7 +11,7 @@ GROUND_TAGS = {carla.CityObjectLabel.Ground, carla.CityObjectLabel.Roads, carla.
                carla.CityObjectLabel.RoadLines, carla.CityObjectLabel.Terrain}
 # 브리지 0.52.0: velodyne_top_base_link (x 1.035, z 1.840, base_link) - 축거 2.850/2 -> CARLA 차 원점 기준
 LIDAR_CAR = (-0.390, 0.0, 1.840)
-# 보행자 둘레 보이지 않는 상자(cast_ray 라벨 NONE). 세션58 실측: 보행자 좌표 x -2.34~+2.78, y ±0.85, 청사진 4종·방향 무관.
+# 보행자 둘레 보이지 않는 상자(cast_ray 라벨 NONE). 10/14 실측: 보행자 좌표 x -2.34~+2.78, y ±0.85, 청사진 4종·방향 무관.
 # 일반·시맨틱 LiDAR 점은 이 상자가 아니라 보행자 몸에 맞는다. 0.1m 여유
 WALKER_SHELL_LOC = carla.Location(0.22, 0.0, 0.0)
 WALKER_SHELL_EXT = carla.Vector3D(2.66, 0.95, 1.2)

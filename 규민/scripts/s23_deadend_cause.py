@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션23 Phase 0 추가: 막다른 끝 회차 커넥터 누락 원인 비교 (읽기전용, 서버 없음, xodr/OSM 미수정).
+# 10/03 Phase 0 추가: 막다른 끝 회차 커넥터 누락 원인 비교 (읽기전용, 서버 없음, xodr/OSM 미수정).
 # 회차를 받은 막다른 끝(정의된 junction, 커넥터 1개, U턴형) vs 못 받은 끝(참조만 있고 정의 없는 junction)
 # 을 변환 입력 OSM(CONV_OSM) 기준 특성으로 나란히 놓는다.
 # 노드 대응: 정의된 junction 은 name = OSM 노드 id. 정의 없는 junction 은 그 junction 을 참조하는

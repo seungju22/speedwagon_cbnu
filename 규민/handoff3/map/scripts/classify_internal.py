@@ -29,7 +29,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 POLY_PATH = BASE_DIR / "data" / "processed" / "cbnu_relation_polygon.json"
-# 09/14 Phase C-1(2026-09-18): fix_tags.py 대상 73건 갱신에 맞춰
+# 09/18 Phase C-1: fix_tags.py 대상 73건 갱신에 맞춰
 # 입출력을 새 파일명으로 전환. 기존 cbnu_campus_fixed.osm(19건판)과
 # cbnu_internal_boundary.osm(485way, 대조군 xodr의 원천)은 손대지
 # 않고 그대로 둔다(사본을 새로 만든다, C-1 결정).
@@ -177,7 +177,7 @@ def main():
              total == EXPECTED_TOTAL)
 
     if not match:
-        print("\n*** 검증 실패: 기록값과 불일치. 사본을 만들지 않고 중단합니다. ***")
+        print("\n*** 검증 실패: 기록값과 불일치. 사본을 만들지 않고 중단함. ***")
         return 1
 
     print("\n검증 통과: 기록값과 완전히 일치.")

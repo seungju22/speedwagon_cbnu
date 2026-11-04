@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# 맵세션27 Phase 2·3 오프라인 확인 (읽기전용, 서버 없음, 맵·OSM 수정 없음).
+# 10/06 Phase 2·3 오프라인 확인 (읽기전용, 서버 없음, 맵·OSM 수정 없음).
 # A 양성재 정차점 방향(주행 CSV 종점 -> 위경도, OSM 양성재 건물 대조)
-# B 양성재 노선과 후문 노선의 겹침(세션18 시험 맵 _trial_s18_gates.xodr 를 읽기만 함, 채택 안 된 산출물)
+# B 양성재 노선과 후문 노선의 겹침(09/28 시험 맵 _trial_s18_gates.xodr 를 읽기만 함, 채택 안 된 산출물)
 # C 후문 게이트 위치(OSM barrier·작은 건물·주차장·고가 확인)
 # D 후문 연결 6 way 개별 확인(태그·좌표·끝 노드 공유·주차장 폴리곤 안 여부)
 # 실행: ~/campus_mobility_sim/.venv-carla/bin/python map/scripts/s27_route_checks.py > map/docs/logs/s27_route_checks.log

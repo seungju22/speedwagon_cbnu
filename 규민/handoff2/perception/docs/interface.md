@@ -41,7 +41,7 @@
 - shape: BOUNDING_BOX, dimensions = bbox extent 의 두 배(x 길이, y 폭, z 높이)
 - 대상: 자차를 뺀 vehicle.* 와 walker.pedestrian.*, 자차 중심에서 80m 안(--range)
 
-## 출력 모드 두 개 (gt_objects2.py, 세션58~59)
+## 출력 모드 두 개 (gt_objects2.py, 10/14)
 
 같은 토픽·형식으로 두 모드를 냄. `--mode all`(다 보기)은 위 P1 과 같이 자차 중심 80m 안 차량·보행자를 모두 냄.
 `--mode car`(차 시점, 기본)는 지붕 LiDAR 자리(차 원점 기준 -0.39, 0, 1.84m)에서 거리·상하 시야(+10~-30도)·가려짐(cast_ray)을

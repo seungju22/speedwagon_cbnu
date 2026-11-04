@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션32 Phase 0-5: 후문 종점 후보가 v2 에서 정문(r1278 lane -1)으로부터 도달 가능한가 (읽기전용, 서버 없음)
+# 10/07 Phase 0-5: 후문 종점 후보가 v2 에서 정문(r1278 lane -1)으로부터 도달 가능한가 (읽기전용, 서버 없음)
 # 후보(좌표 출처): 추정 게이트·고리 접점·경계 횡단점 = s28_gate_route.log / 고리 위 경계 최근접 노드 = s23_scope_final.md
 #   (way452870648 노드 중 경계 횡단점 최근접, 38.2m 로 기록됨 -> 다시 계산해 대조)
 # 도달 = s19_scope_common.successors 그래프(s23_connectivity 와 같은 정의)에서 정문 road 로부터 BFS.

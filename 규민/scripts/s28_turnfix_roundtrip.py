@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션28 Phase 4: s27_turnfix.py write 왕복 검증 (재변환 없음, 서버 없음).
+# 10/07 Phase 4: s27_turnfix.py write 왕복 검증 (재변환 없음, 서버 없음).
 # 1 frozen_v1 을 scratchpad 로 복사(파일명에 _test_). frozen_v1 은 읽기만
 # 2 복사본에서 기존 회차 연결로(틀 24개 = connection 1개 junction 의 paramPoly3·9.89m 커넥터)를 제거
 #    write 는 같은 파일 안의 틀을 복제하므로 24개를 한 번에 다 지우면 틀이 0 이 되어 동작하지 않는다.

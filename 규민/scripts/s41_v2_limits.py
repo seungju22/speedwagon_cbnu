@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션41: README "v2 의 한계" 문장 확인(읽기전용, 서버 없음)
+# 10/09: README "v2 의 한계" 문장 확인(읽기전용, 서버 없음)
 # 1) 캠퍼스 경계(cbnu_relation_polygon.json)를 지나는 주행 차선: 들어오는 쪽 / 나가는 쪽, 가장 가까운 게이트(정문·후문 정류장)
 #    lane -1 은 road s 증가 방향으로 달린다(모든 road 가 반쪽 도로). road 시작·끝이 경계 안/밖으로 갈리면 그 방향
 # 2) 정류장 6지점 30쌍 도달 가능 여부: carla.Map(동결본) topology 로 (road, lane) 그래프. 같은 road 면 s 순서까지 본다

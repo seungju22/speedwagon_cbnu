@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-# 맵세션40 A(B2): 세션25 1순위 30동 건물 초안 — OSM 폴리곤에서 도로 전체 폭 + 0.5m 와 겹친 부분을 깎는다(읽기전용, 서버 없음, 판정 없음)
-# 대상: logs/s25_buildings.csv tier=1 (30동, 전부 way). 세션22 이름 목록 아님
+# 10/09 A(B2): 10/04 1순위 30동 건물 초안 — OSM 폴리곤에서 도로 전체 폭 + 0.5m 와 겹친 부분을 깎는다(읽기전용, 서버 없음, 판정 없음)
+# 대상: logs/s25_buildings.csv tier=1 (30동, 전부 way). 10/02 이름 목록 아님
 # 도로 영역: 동결본 xodr 의 모든 road(917)를 s34_curvature.analyze 표본(0.02m)으로 띠 다각형으로 만든다
 #   띠 = t 가 laneOffset(기준선 = 중앙선) 에서 laneOffset - (lane -1 폭 + lane -2 폭) 까지(차선 + 인도. 인도 없는 road 는 차선만)
-#   이 지도는 모든 road 가 반쪽 도로라 왼쪽 차선이 없다(세션40 계수: 차선 구성 (-2,-1,0) 532 / (-1,0) 385)
+#   이 지도는 모든 road 가 반쪽 도로라 왼쪽 차선이 없다(10/09 계수: 차선 구성 (-2,-1,0) 532 / (-1,0) 385)
 #   합집합을 0.5m 넓힌 것이 깎는 영역. 건물 = OSM 폴리곤(Frame 으로 CARLA 좌표) - 깎는 영역
 # 노선 차선 겹침: 5 노선(test_drive.py ROUTES_V2) road 의 lane -1 띠(0.5m 넓히지 않음)와 원래 폴리곤이 겹치는가
 # 출력: data/processed/s40_b2_cut.csv, docs/figures/s40_b2_cut_grid.png(30칸, 전후), logs 는 stdout

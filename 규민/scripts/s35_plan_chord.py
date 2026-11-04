@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션35: 계획점(dry-plan) 사이 직선(현)이 r1391 차선에서 어디를 지나는가(읽기전용)
+# 10/07: 계획점(dry-plan) 사이 직선(현)이 r1391 차선에서 어디를 지나는가(읽기전용)
 # 각 현을 0.1m 로 나눠 r1391 기준선에 투영한 횡 위치 t(왼쪽 +). 차선 중심 t=-1.675, 왼쪽 끝 t=0
 # 사용: s35_plan_chord.py <xodr> <dry-plan csv> <road id>
 import csv

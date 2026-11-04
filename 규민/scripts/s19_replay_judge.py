@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# 세션19 Phase 4 검증(서버 없음): test_drive.py 의 record 판정 함수(plan_track, road_radius)와
+# 09/30 Phase 4 검증(서버 없음): test_drive.py 의 record 판정 함수(plan_track, road_radius)와
 # 같은 조건식으로 과거 주행 CSV 를 다시 판정한다. 충돌은 collision CSV 첫 frame 으로 대조.
-# 메시 밖은 CSV mesh_out 열 사용(세션14 이후 로그만).
+# 메시 밖은 CSV mesh_out 열 사용(09/24 이후 로그만).
 import csv, importlib.util, sys
 from pathlib import Path
 import carla

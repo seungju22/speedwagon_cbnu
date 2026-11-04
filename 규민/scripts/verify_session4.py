@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 맵세션4 Phase C-5 검증. analyze_geometry.py의 파싱/분석 함수를
-# import해 재사용(요청대로 "세션2 분석 스크립트 재사용"). 대조군
+# 09/18 Phase C-5 검증. analyze_geometry.py의 파싱/분석 함수를
+# import해 재사용(요청대로 "09/16 분석 스크립트 재사용"). 대조군
 # cbnu_internal_only_localtm.xodr(19건판)과 신규
 # cbnu_internal_only_localtm_tags73.xodr(73건판)을 둘 다 읽어
 # 비교만 한다. 두 xodr 모두 읽기전용, 이 스크립트는 문서만 생성.
@@ -54,7 +54,7 @@ def name_to_jid(junctions):
 
 def build_road_graph(roads):
     # "road pred/succ elementType=road 링크만 union, junction
-    # 슈퍼노드로 뭉개지 않음" — 세션3 Phase C 노선충분성 판단과
+    # 슈퍼노드로 뭉개지 않음" — 09/17 Phase C 노선충분성 판단과
     # 동일 방식(setup_log.md 125행). connecting road(junction!=-1)의
     # pred/succ는 항상 elementType=road로 실제 도로를 직접 가리키므로
     # 이것만 모아도 base road<->connecting road<->base road 경로가
@@ -82,7 +82,7 @@ def roads_touching_junction(roads, jid):
 def dijkstra_shortest(adj, roads, starts, goals):
     # 거리가중 최단경로(hop수 최소가 아니라 실제 길이 최소).
     # "최단경로"라는 용어와 일치시키기 위해 BFS(홉수)에서 전환
-    # (맵세션4 Phase C-5 재조사, 2026-09-18 — 아래 3번 항목 참고).
+    # (09/18 Phase C-5 재조사, 2026-09-18 — 아래 3번 항목 참고).
     import heapq
     dist = {s: roads[s]["length"] for s in starts}
     prev = {s: None for s in starts}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션38 2부(B1): 건물·나무·정류장·덩어리 소품 소환 시험 + 셔틀 후보 차량 제원. 결정은 사용자, 여기서는 측정만
+# 10/08 2부(B1): 건물·나무·정류장·덩어리 소품 소환 시험 + 셔틀 후보 차량 제원. 결정은 따로 하고 여기서는 측정만
 # 전제: 서버가 v2 캠퍼스(5240ca8b883e42c0)를 이미 불러온 상태. 월드 재로딩 안 함(띄운 액터가 사라진다)
 # 순서: 월드 확인 -> 남은 차량 정리 -> bbox 탐색(먼 곳 소환 후 지움) -> 소환 전 스크린샷·FPS·메모리(렌더 켬/끔) -> 장면 소환(겹침 검사 먼저)
 #       -> 소환 후 스크린샷·FPS·메모리 -> 장면 지움 -> LiDAR(소품 하나씩 같은 자리, 10m·20m) -> 차량 제원 -> 전부 destroy·설정 복원
@@ -25,7 +25,7 @@ LOGS = ROOT / "docs" / "logs"
 FIGS = ROOT / "docs" / "figures"
 ROAD, LANE = 1392, -1
 HALF_LANE = 3.35 / 2
-EDGE_GAP = 5.0                      # 차도 가장자리에서 띄울 거리(지시문)
+EDGE_GAP = 5.0                      # 차도 가장자리에서 띄울 거리(작업 메모)
 PLACE_GAP = 5.4                     # 실제 배치 여유(검사 5.0 + 0.4)
 ROW_GAP = 6.0                       # 소품 사이 길이 방향 간격
 DT = 0.05
@@ -33,7 +33,7 @@ FPS_TICKS = 100
 MIN_AVAIL_MI = 2048
 BLD = "/Game/Carla/Static/Building/{0}.{1}"
 TREE = "/Game/Carla/Static/Vegetation/Trees/{0}.{0}"
-# (이름, 종류, 블루프린트, mesh_path, scale) 세션4·15 목록. 덩어리는 Content 에서 찾은 GroundCube(정육면체 이름)
+# (이름, 종류, 블루프린트, mesh_path, scale) 09/18·09/25 목록. 덩어리는 Content 에서 찾은 GroundCube(정육면체 이름)
 PROPS = [
     ("House01_x1", "building", "static.prop.mesh", BLD.format("SM_House01", "SM_House01"), 1.0),
     ("House01_x2", "building", "static.prop.mesh", BLD.format("SM_House01", "SM_House01"), 2.0),
@@ -46,7 +46,7 @@ PROPS = [
     ("GroundCube", "block", "static.prop.mesh", "/Game/Carla/Static/Ground/GroundCube.GroundCube", 1.0),
 ]
 VEHICLES = ["vehicle.mitsubishi.fusorosa", "vehicle.mercedes.sprinter", "vehicle.toyota.prius", "vehicle.audi.a2"]
-# 브리지 sensor_mapping.yaml 을 이 PC 에서 못 찾음 -> 지시문 기본값
+# 브리지 sensor_mapping.yaml 을 이 PC 에서 못 찾음 -> 작업 메모 기본값
 LIDAR = dict(channels="64", points_per_second="300000", rotation_frequency="20", range="100")
 LIDAR_Z = 2.0                       # 차량 원점 위 2.0m(가정, 브리지 값 미확인)
 OUT = {}
@@ -92,7 +92,7 @@ def lane_point(cmap, s):
         wp.transform.get_right_vector()
 
 
-# bbox 는 축·크기를 믿지 않는다(세션15 House02 0.33m, 세션38 House01 x 축 0.71m 인데 화면상 집 한 채).
+# bbox 는 축·크기를 믿지 않는다(09/25 House02 0.33m, 10/08 House01 x 축 0.71m 인데 화면상 집 한 채).
 # 발자국 = 정사각형, 반폭 h = max(bbox x, bbox y, 종류별 최소). 축이 틀려도 안전한 쪽
 MIN_HALF = {"building": 8.0, "tree": 3.0, "busstop": 1.5, "block": 1.0}
 NEAR_OFF = HALF_LANE + PLACE_GAP    # 차선 중심에서 앞면까지(= 차도 가장자리 + 5.4m)
@@ -192,7 +192,7 @@ def screenshot(world, tf, name):
 
 
 def probe(world, bp, kind):
-    """먼 곳(r1392 오른쪽 80m)에 띄워 bbox 를 읽고 지운다. static.prop.mesh 는 set_transform 으로 안 움직여서(세션38 2차 시도)
+    """먼 곳(r1392 오른쪽 80m)에 띄워 bbox 를 읽고 지운다. static.prop.mesh 는 set_transform 으로 안 움직여서(10/08 2차 시도)
     최종 자리에는 다시 소환한다."""
     c, yaw, f, rv = lane_point(world.get_map(), SOLO_S)
     a = world.spawn_actor(bp, carla.Transform(carla.Location(c.x + rv.x * 80, c.y + rv.y * 80, c.z), carla.Rotation(yaw=yaw)))

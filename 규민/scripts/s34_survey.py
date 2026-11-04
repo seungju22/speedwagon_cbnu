@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션34 3~5: r1391 영향 범위·우회 경로·새 road 전수(읽기전용, 서버 없음)
+# 10/07 3~5: r1391 영향 범위·우회 경로·새 road 전수(읽기전용, 서버 없음)
 # 새 road = v2 road 중 대응표(s28_road_id_map_B.csv) new_id 에 없는 것(재변환으로 생김) + 회차 후처리 추가분(r2054~r2066)
 # 형상이 바뀐 road(대응 비용 >= 0.05)도 따로 센다. 곡률 값은 s34_curvature_all_*.csv
 import csv

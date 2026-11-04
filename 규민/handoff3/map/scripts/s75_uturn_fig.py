@@ -101,7 +101,7 @@ for mk in a.mark:   # "이름:x:y"
     nm, mx, my = mk.split(":"); ax.scatter([float(mx)], [float(my)], s=500, facecolors="none", edgecolors="#e00000", lw=3, zorder=6)
     ax.text(float(mx) + 6, float(my) + 6, nm, color="#e00000", fontsize=16, weight="bold", zorder=7)
 ax.set_xlim(x0 - 2, x1); ax.set_ylim(y0, y1 + 2); ax.set_aspect("equal")
-ax.set_title(a.title or "북문 길 끝 유턴 자리: 실제 포장이 어디까지? (칸 이름으로 골라 주세요, 5m 칸)", fontsize=11)
+ax.set_title(a.title or "북문 길 끝 유턴 자리: 실제 포장이 어디까지? (칸 이름으로 고름, 5m 칸)", fontsize=11)
 ax.legend(loc="lower left", fontsize=8, framealpha=0.9)
 ax.set_xlabel("지도 x (m)"); ax.set_ylabel("지도 y (m), 위 = 북")
 Path(a.out).parent.mkdir(parents=True, exist_ok=True); fig.tight_layout(); fig.savefig(a.out)

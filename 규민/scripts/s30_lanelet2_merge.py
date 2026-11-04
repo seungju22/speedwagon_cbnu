@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션30: Lanelet2 점 병합 후처리 시험 (오프라인, 서버·재변환 없음). 시험 venv 로 실행(~/lanelet2_trial_venv/bin/python)
+# 10/07: Lanelet2 점 병합 후처리 시험 (오프라인, 서버·재변환 없음). 시험 venv 로 실행(~/lanelet2_trial_venv/bin/python)
 # 입력: s29_lanelet2_trial.py 변환 결과(.osm, 읽기만 함), xodr 복사본(링크·junction 읽기만), xodr_lanes.csv(s29_xodr_lanes.py)
 # 출력: <작업 디렉터리>/s30_merged_<mode>_<tol>.osm (새 파일. 입력 osm 은 덮어쓰지 않는다)
 # 병합: 허용오차 tol 안의 점을 대표점 하나로 바꾼다(way 의 nd 참조만 바꿈, 대표점 좌표 그대로)
@@ -31,7 +31,7 @@ GEO = f"+proj=tmerc +lat_0={LAT0} +lon_0={LON0} +ellps=WGS84"   # frozen_v1 head
 OFF_X, OFF_Y = 521.51, 493.61       # xodr = TM + 오프셋 (s19_scope_common)
 GATE = (36.631961, 127.453056)       # 정문 r1247 lane -1 중간(s29_lanelet2_load.py 와 같은 시작점)
 MATCH_TOL = 0.5                      # xodr 차선 표본 -> lanelet 중심선 대응 허용치(s29 와 같음)
-# 주행 검증 끝난 4개 노선(tests/test_drive.py ROUTES, 세션20). 모두 lane -1
+# 주행 검증 끝난 4개 노선(tests/test_drive.py ROUTES, 10/02). 모두 lane -1
 ROUTES = {
     "북문": [1247, 1914, 1356, 1917, 1355, 1447, 1373, 1673, 1374, 1591, 1375, 1689, 1376, 1625, 1377, 1640, 1378],
     "남문": [1247, 1914, 1356, 1917, 1355, 1446, 1172, 1428, 1240, 1695, 1239, 1426, 1238, 1563, 1237],

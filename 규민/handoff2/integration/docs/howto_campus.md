@@ -14,18 +14,18 @@
 - 원본은 `C/autoware_map/cbnu_campus_v3/` 임. 고친 뒤에는 `bash C/autoware_map/scripts/sync_map_folder.sh` 로 복사함.
 - 들어 있는 것: lanelet2_map.osm, map_projector_info.yaml(`projector_type: Local`). 점군 지도는 없음.
 
-## 시뮬레이터 LiDAR (2026-10-14 세션59 바꿈)
+## 시뮬레이터 LiDAR (2026-10-14 바꿈)
 
 - 센서 파일 `C/integration/config/sensor_mapping_nocam.yaml`(컨테이너는 `~/autoware_data/maps/i1_config/` 사본, sha256 b7189e92)의 LiDAR 를
   브리지 기본(1.9.0 이미지 sensor_mapping.yaml)과 같게 바꿨음: 64채널, 초당 30만 점, 범위 100m, 회전 20Hz, 상하 +10~-30도, 장착은 센서 킷 그대로. 카메라는 계속 뺌.
-- 이전 값(I1 부터 세션58 까지)은 32채널, 초당 10만 점, 50m 였음(.bak_s59, 0f85dcb0). 세션59 부터 '가벼운 LiDAR' 라고 부름.
-- 바꾼 근거(세션59 성능 시험 s59p_ref, p_middle_north, 레이어 732 켬): 실시간 0.998배(같음), 주행 중 최소 avail 2,445MiB(세션58 2,771~2,865),
-  컨테이너 CPU 평균 190.7%(세션58 181~183%), 컨테이너 메모리 2.86~2.95GiB(세션58 2.36~2.51), 도착 81.0s·정지 앞뒤 -0.440m(I6-2 81.1s·-0.439m).
+- 이전 값(I1 부터 10/14 까지)은 32채널, 초당 10만 점, 50m 였음(.bak_s59, 0f85dcb0). 10/14 부터 '가벼운 LiDAR' 라고 부름.
+- 바꾼 근거(10/14 성능 시험 s59p_ref, p_middle_north, 레이어 732 켬): 실시간 0.998배(같음), 주행 중 최소 avail 2,445MiB(10/14 2,771~2,865),
+  컨테이너 CPU 평균 190.7%(10/14 181~183%), 컨테이너 메모리 2.86~2.95GiB(10/14 2.36~2.51), 도착 81.0s·정지 앞뒤 -0.440m(I6-2 81.1s·-0.439m).
   규칙(실시간 0.99배 이상, 최소 avail 2GiB 이상)을 넘었음. 여유가 0.4GiB 쯤 줄었으니 카메라·bag 을 같이 돌리면 감시 로그를 봄.
 - 브리지는 range·rotation·channels·fov·pps 만 넣음(carla_wrapper.py 249~256행). 그래서 무작위 버림(CARLA 기본 0.45)은 그대로임.
   버림 0 의 기준 점군이 필요하면 브리지 밖에서 따로 달아 씀(perception/tools/s59_lidar_bench.py 참고).
 - 되돌리려면 두 곳 모두 .bak_s59 를 sensor_mapping_nocam.yaml 로 복사함.
-- 이 설정으로 백로그 S1 을 닫았음(2026-10-15 세션60). 끝 기준을 15km/h 정지 거리 12.9m 안 보행자 10점 이상으로 바꿨음. 근거·한계는 perception/docs/gt_objects2.md '백로그 S1 닫음'.
+- 이 설정으로 백로그 S1 을 닫았음(2026-10-15). 끝 기준을 15km/h 정지 거리 12.9m 안 보행자 10점 이상으로 바꿨음. 근거·한계는 perception/docs/gt_objects2.md '백로그 S1 닫음'.
 
 ## 좌표
 
@@ -87,14 +87,14 @@ i5_run.sh 가 하는 일
 4. 끝: `place_campus_layers.py --remove --state C/integration/logs/s4_layers_state.json`, 그다음 CARLA 를 내림
 
 이탈 판정
-- 지면 판이 차를 받쳐서 차도를 벗어나도 떨어지지 않음(세션51). 낙하로는 이탈을 못 봄
+- 지면 판이 차를 받쳐서 차도를 벗어나도 떨어지지 않음(10/11). 낙하로는 이탈을 못 봄
 - s4_track.py: 매 틱 바퀴 4개 위치(처음 한 번 physics_control 의 바퀴 위치를 차 좌표로 바꿔 둠)에서
   map.get_waypoint(위치, project_to_road=False, lane_type=Driving|Sidewalk) 가 None 이면 그 바퀴는 도로 밖
 - 열: wheels_off(도로 밖 바퀴 수), wheels_off_ids. 한 바퀴라도 밖인 틱 수 = 이탈 틱. offroad 열(차 중심, 차도만)은 i5 와 같음
 - 레이어 끈 옛 회차(I5)는 s4_summary.py --wheels '<s4_track 로그의 wheels_local>' 로 오프라인 재계산
 
 녹화 규칙(S4 회차부터. 그 전 녹화는 건드리지 않음)
-- 레이어 나를 켜면 녹화가 분당 24.7MB(세션51)라 녹화는 켜되 오래 두지 않음
+- 레이어 나를 켜면 녹화가 분당 24.7MB(10/11)라 녹화는 켜되 오래 두지 않음
 - 성공 회차: s4_summary.py 로 지표를 뽑은 뒤 recordings/i5_<tag>.log 를 지움
 - 실패 회차: 녹화를 남김(원인 재생용)
 - 영상용 회차: mp4 를 만든 뒤 .log 를 지움

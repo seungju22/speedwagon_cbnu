@@ -1,8 +1,8 @@
-"""3-다 정차 차량·콘(세션58): 차로에 일부 걸친 세운 차 1대와 장애물 표시(role_name obstacle)를 단 콘 1개를 둔다.
+"""3-다 정차 차량·콘(10/14): 차로에 일부 걸친 세운 차 1대와 장애물 표시(role_name obstacle)를 단 콘 1개를 둔다.
 - 차(vehicle.audi.a2): road lane -1 의 --car-s, 차선 중심 오른쪽 --car-lat(기본 1.875 = 차로 안으로 0.7m 걸침, 차선 폭 3.35, 차 폭 1.79)
 - 콘(static.prop.trafficcone01, role obstacle): --cone-s, 오른쪽 --cone-lat(기본 0.9 = 차로 오른쪽 절반)
 - 자차가 지나가거나 멈춘 동안 0.05s 마다 자차 위치·속도·차선 중심 옆 벗어남(lat)을 남긴다. 끝은 SIGINT 또는 --timeout
-- 세션59: --no-car(콘만, 다1), --no-cone(걸친 차만, 다2)
+- 10/14: --no-car(콘만, 다1), --no-cone(걸친 차만, 다2)
 사용: python obstacles.py <out.csv> [--road 1415] [--car-s 55] [--cone-s 30] [--no-car | --no-cone]
 """
 import argparse, math, signal, time, carla

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션34: 후문 주행 CSV 를 r1391 기준선(xodr 직접 계산)에 투영해 횡 위치 t 와 조향·자세를 s 별로 본다(읽기전용)
+# 10/07: 후문 주행 CSV 를 r1391 기준선(xodr 직접 계산)에 투영해 횡 위치 t 와 조향·자세를 s 별로 본다(읽기전용)
 # t 는 OpenDRIVE 좌표(왼쪽 +). lane -1 = t in [-3.35, 0]. CARLA y = -xodr y
 # 사용: python3 s34_track_vs_geom.py <xodr> <drive_log csv> <road id> [road id ...]
 import csv

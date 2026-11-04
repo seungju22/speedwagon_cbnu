@@ -1,6 +1,6 @@
 # 정답 객체 2판 gt_objects2.py (차 시점 노드) 사용법
 
-2026-10-14 세션59 기준. 노드 `C/perception/gt_objects/gt_objects2.py`, 판정 `C/perception/gt_objects/carview.py`. `C` = `~/campus_mobility_sim`.
+2026-10-14 기준. 노드 `C/perception/gt_objects/gt_objects2.py`, 판정 `C/perception/gt_objects/carview.py`. `C` = `~/campus_mobility_sim`.
 P1(gt_objects.py)과 토픽·형식이 같음: `/perception/object_recognition/objects`(PredictedObjects, frame map). 필드는 interface.md.
 
 ## 모드
@@ -23,7 +23,7 @@ P1(gt_objects.py)과 토픽·형식이 같음: `/perception/object_recognition/o
   why = pub(냄) / range(거리 밖) / fov(시야 밖) / occluded(가려짐) / novis(아직 판정 전) / miss(버림)
 - `--check N`: ROS 없이 N 틱 판정만 찍음(호스트 `.venv-carla` 에서도 됨)
 
-## 기본 거리의 근거 (세션59)
+## 기본 거리의 근거 (10/14)
 - 기준 센서: 브리지 기본 LiDAR(1.9.0 이미지 sensor_mapping.yaml) 64채널, 초당 30만 점, 회전 20Hz, 범위 100m, 상하 +10/-30도,
   센서 킷 자리. 무작위 버림 0, 노이즈 0(백로그 S1 기준 조건)
 - 잰 방법: `C/perception/tools/s59_lidar_bench.py --lidar ref`. 곧은 길(r1411 s40, r1415 s80)에 차를 세우고 물체를 하나씩 앞·옆에 둠.
@@ -33,11 +33,11 @@ P1(gt_objects.py)과 토픽·형식이 같음: `/perception/object_recognition/o
 - 가까운 쪽: 차 옆 0.3~3m(문 구역 자리) 보행자 298~78점, 콘 28~150점, 앞 범퍼 0.5m 보행자 104점. 10점 못 미치는 거리가 없어 가까운 쪽 한계는 두지 않음
 - 보수적임: 한 바퀴 1만 5천 점이라 실제 센서(VLP-16 10Hz 약 3만, OS1-64 1024x10 약 6.5만)보다 성김. 클러스터링은 0.3m 복셀 뒤
   10점이라 실제로는 더 가까워야 잡힐 수 있음
-- 세션58 값(보행자 7.5, 차량 20, 소품 6.0m)은 '가벼운 LiDAR'(32채널·초당 10만 점, I1 부터 쓰던 파일) 기준임. 발표 근거로 쓰지 않음.
+- 10/14 값(보행자 7.5, 차량 20, 소품 6.0m)은 '가벼운 LiDAR'(32채널·초당 10만 점, I1 부터 쓰던 파일) 기준임. 발표 근거로 쓰지 않음.
   같은 방법 대조표는 `C/integration/docs/s58_report.md` 3-0
-- 시뮬레이터 LiDAR(브리지)도 세션59 부터 64채널·30만 점임(howto_campus.md). 다만 브리지는 버림 0.45 를 못 바꿈
+- 시뮬레이터 LiDAR(브리지)도 10/14 부터 64채널·30만 점임(howto_campus.md). 다만 브리지는 버림 0.45 를 못 바꿈
 
-## 백로그 S1 닫음 (2026-10-15 세션60, 사용자 결정)
+## 백로그 S1 닫음 (2026-10-15, 결정)
 - 센서 설정은 위 기준 센서(64채널·초당 30만 점·20Hz·100m·센서 킷 자리)로 정함. 시뮬레이터 LiDAR(브리지)도 같은 값임
 - 원래 끝 기준 '20m 보행자 10점 이상'은 못 맞췄음. 기준 센서로 보행자 10점 이상은 17.7m 까지임(20.7m 8점)
 - 끝 기준을 바꿨음: 운행 속도 15km/h 에서 반응 1초 + 일반 감속 1.0m/s2 로 서는 거리 안의 보행자에 10점 이상
@@ -56,7 +56,7 @@ P1(gt_objects.py)과 토픽·형식이 같음: `/perception/object_recognition/o
 - 한 번에: `C/integration/docs/tools/s59_run.sh <tag> <쌍> <car|all> <장면> [cam] [bag]` (GTARGS 환경 변수로 인자 더함)
 - 손으로(컨테이너 안, empty_objects_publisher 를 끈 뒤):
   `python3 -u /home/aw/gt_perception/gt_objects/gt_objects2.py --mode car --log /home/aw/gt_logs/<tag>.csv`
-- 노드는 30초마다 `stat tick_ms / vis_ms` 중앙값·95%·최대를 찍음. 세션59 차 시점 틱 중앙값 0.37ms
+- 노드는 30초마다 `stat tick_ms / vis_ms` 중앙값·95%·최대를 찍음. 10/14 차 시점 틱 중앙값 0.37ms
 
 ## 한계
 - 판정은 표본점 10개 중 하나라도 보이면 보임으로 침. 부분 가림에 너그러움(점 수는 세지 않음)

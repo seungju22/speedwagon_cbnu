@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션35: 후문 주행 1회의 r1391 지표(읽기전용). 사용: s35_back_metrics.py <xodr> <test_drive stdout log>
+# 10/07: 후문 주행 1회의 r1391 지표(읽기전용). 사용: s35_back_metrics.py <xodr> <test_drive stdout log>
 # 완주, 충돌(road, s: 충돌 CSV 위치를 주행 CSV 최근접 행으로), r1391 통과(r1391 뒤 r1952 행 존재),
 # r1391 구간 차선 중심(t=-1.675, xodr width 3.35 의 절반) 대비 횡 이탈 최대와 그 지점 조향
 import csv

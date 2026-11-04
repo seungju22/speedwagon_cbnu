@@ -104,6 +104,6 @@ LiDAR 설정(시뮬레이터 LiDAR, 앞에 SMAP= 를 붙임)
 
 ## 넣지 않은 것
 
-CARLA 에셋, Autoware 이미지, 가상환경, 주행 bag·프레임·영상, 세션 보고서, 실험·요약 스크립트. 작업 폴더 백업에만 있음.
+CARLA 에셋, Autoware 이미지, 가상환경, 주행 bag·프레임·영상, 작업 기록, 실험·요약 스크립트. 작업 폴더 백업에만 있음.
 
 지도 데이터 © OpenStreetMap contributors, ODbL 1.0. `map/maps/NOTICE.md` 를 봄.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# 세션59 사본: 센서 파일을 SMAP 환경 변수로 고른다(기본 sensor_mapping_nocam.yaml, 기준 센서 sensor_mapping_ref.yaml)
+# 10/14 사본: 센서 파일을 SMAP 환경 변수로 고른다(기본 sensor_mapping_nocam.yaml, 기준 센서 sensor_mapping_ref.yaml)
 # I5: 캠퍼스 v3 지도(~/autoware_data/maps/OpenDriveMap)로 Autoware(브리지 포함) 기동.
 # 설정은 I4·P1 과 같다: 카메라 뺀 센서 파일, localization:=false + 정답 측위 오버레이, use_pointcloud_map:=false + 진단 그래프 점군 검사 제외,
 # 정답 객체(use_empty_dynamic_object_publisher:=true, 클러스터링 끔). 사용: i5_aw_up.sh <tag> <max_real_delta> <spawn x,y,z,roll,pitch,yaw>

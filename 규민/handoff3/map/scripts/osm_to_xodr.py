@@ -30,14 +30,14 @@ def capture_stderr(result_box):
             result_box.append(tmp.read().decode(errors="replace"))
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-# 09/14 Phase C-1/C-4(2026-09-18): 태그보정 73건판 파이프라인.
+# 09/18 Phase C-1/C-4: 태그보정 73건판 파이프라인.
 # 기존 cbnu_internal_only_localtm.xodr(19건판, road134/junction25)은
 # 대조군으로 보존 — 덮어쓰지 않고 새 파일명으로 출력(C-4).
 INPUT_PATH = BASE_DIR / "data" / "processed" / "cbnu_internal_boundary_tags73.osm"
 OUTPUT_PATH = BASE_DIR / "maps" / "cbnu_internal_only_localtm_tags73.xodr"
 LOG_DIR = BASE_DIR / "logs"
 
-# 09/13 Phase B에서 채택(2026-09-17). 기존 geoReference가
+# 09/17 Phase B에서 채택. 기존 geoReference가
 # "+proj=tmerc"뿐이라 PROJ 기본값(lon_0=0, 그리니치)으로 투영돼
 # 한국(동경127.45도)에서 스케일 왜곡(비율 약1.30배, 실측 map_session03_report.md
 # B절 참고)이 발생했던 문제의 수정. 캠퍼스 자체를 중앙자오선으로 삼아

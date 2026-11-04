@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 맵세션9 Phase A 추가진단. 읽기전용, CARLA 불필요.
-# 세션7 CSV(drive_log_20260919_231354.csv)로 물리접촉 vs TM제동 가설 1차 스크리닝.
+# 09/22 Phase A 추가진단. 읽기전용, CARLA 불필요.
+# 09/19 CSV(drive_log_20260919_231354.csv)로 물리접촉 vs TM제동 가설 1차 스크리닝.
 # 1. z 변화(연석을 탔다면 상승)
 # 2. 차선(lane -1) 중심선 대비 차량 횡방향 편차(xodr 기하로 중심선 계산)
 # 3. 제어값(throttle/brake/steer) 기록 여부
@@ -23,7 +23,7 @@ OUT_PATH = BASE / "docs" / "map_session09_curb_analysis.md"
 
 LANE1_T = -1.675       # lane -1 중심 (reference line 기준 t, 폭 3.35 절반)
 SIDEWALK_INNER_T = -3.35  # lane -1/-2 경계(인도 안쪽 경계)
-VEHICLE_HALF_WIDTH = 0.85  # audi.a2 약 1.7m 폭의 절반(추정치, 근거: 사용자 제공)
+VEHICLE_HALF_WIDTH = 0.85  # audi.a2 약 1.7m 폭의 절반(추정치, 근거: 직접 준 값)
 
 
 def road_point_and_heading(road, s):

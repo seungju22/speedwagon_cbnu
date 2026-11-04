@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션11 Phase C-3: 평활화 후 재변환 검증. 읽기전용(입력 파일 미수정), CARLA 서버 불필요.
+# 09/24 Phase C-3: 평활화 후 재변환 검증. 읽기전용(입력 파일 미수정), CARLA 서버 불필요.
 # 목적: 원본 xodr(대조군)과 평활화 xodr 를 같은 방법으로 재측정해 비교한다.
 # 검증 항목
 #   V1 위상: road/junction 수, junction 이름 집합, 길이 0.2m plain road 수

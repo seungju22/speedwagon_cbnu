@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# 맵세션40 3번(M5): 정류장 6지점·차고지 후보 2곳을 기존 노선 정의에서 모아 map/data/stops_v2.yaml 로 쓴다(읽기전용 입력, 서버 없음)
+# 10/09 3번(M5): 정류장 6지점·차고지 후보 2곳을 기존 노선 정의에서 모아 map/data/stops_v2.yaml 로 쓴다(읽기전용 입력, 서버 없음)
 # 새로 정하지 않는다
 #   정류장 = test_drive.py ROUTES_V2 의 출발점(정문, 실제 주행 로그 spawn road1278 lane-1 s=0.00)과 각 노선 종점(마지막 road, end_s, lane -1)
 #   위경도 = s22_buildings.Frame(xodr 머리말 투영 + offset) 정변환을 뉴턴법으로 역산. 왕복 차를 같이 적는다
-#   (carla.Map.transform_to_geolocation 은 쓰지 않는다: 세션40 시험에서 약 716m 어긋남 = xodr offset 미반영으로 보임 [추정])
+#   (carla.Map.transform_to_geolocation 은 쓰지 않는다: 10/09 시험에서 약 716m 어긋남 = xodr offset 미반영으로 보임 [추정])
 #   캠퍼스 경계 = data/processed/cbnu_relation_polygon.json(OSM relation 6705106, classify_internal.py 와 같은 판정)
 #   차고지 = 기록에 있는 것만. 박물관 버스 차고지: way 442595850(logs/s24_reconv_list.md 49~52행) 노드 평균 + E-j4 답사점
 #            N14 주차장: 좌표 기록 없음 -> 빈 값
-# 정차 구역 길이는 빈 값(지시문)
+# 정차 구역 길이는 빈 값(작업 메모)
 # 사용: .venv-carla/bin/python map/scripts/s40_stops.py
 import hashlib
 import json
@@ -35,7 +35,7 @@ START = (1278, -1, 0.0)             # logs/s38_v2_back_run1.log "spawn: ... road
 STOPS = [("main_gate", "정문", "start", None), ("lib_north", "도서관 북문", "north", None),
          ("lib_south", "도서관 남문", "south", None), ("middle_gate", "중문", "middle", None),
          ("yangseong", "양성재", "yangseong", None), ("back_gate", "후문", "back", None)]
-# 2026-10-09: note 는 정류장 위치를 한 줄 평서문으로 적는다(보고서 이름 뺌). 예전 문구는 test_drive.py ROUTES_V2 의 stop
+# 2026-10-09: note 는 정류장 위치를 한 줄 평서문으로 적는다(기록 이름 뺌). 예전 문구는 test_drive.py ROUTES_V2 의 stop
 NOTES = {
     "main_gate": "정문 바로 밖 공도 교차점으로, 모든 노선이 여기서 출발한다",
     "lib_north": "도서관 구관 북동쪽 면 앞 도로로, 면 중점에서 46.1m 떨어져 있다",

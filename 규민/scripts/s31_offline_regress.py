@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션31: reconversion_plan.md 3-1 "오프라인 사전 회귀" (읽기전용, 서버 없음, test_drive.py 수정 없음)
+# 10/07: reconversion_plan.md 3-1 "오프라인 사전 회귀" (읽기전용, 서버 없음, test_drive.py 수정 없음)
 # 1 경로 합: 기존 dry-plan CSV 의 road 순서를 id 대응표로 번역 -> 새 맵 길이로 (앞 road 길이 합 + 종점 s). 기준 s26_route_sums.log, 허용 0.1m
 # 2 dry-plan 대조: 기존 drive_plan_dry_<노선>.csv 각 표본 (road, s) 를 번역해 새 맵에서 같은 s 위치를 test_drive.xodr_point_at_s 로 계산.
 #   기존 (x, y) 와 거리. 허용 0.01m. test_drive.py 는 import 만(함수 재사용), 파일은 쓰지 않는다

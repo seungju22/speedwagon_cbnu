@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션28 Phase 1·2 오프라인 확인 (읽기전용, 서버 없음, 맵·OSM 수정 없음).
+# 10/07 Phase 1·2 오프라인 확인 (읽기전용, 서버 없음, 맵·OSM 수정 없음).
 # Phase 1: OSM 에서 "후문" 으로 볼 수 있는 지점 전부 찾기
 #   (가) 이름에 '후문' 이 들어간 요소 (나) entrance·gate·barrier 노드
 #   (다) 차량 도로가 캠퍼스 폴리곤 경계를 넘는 점(차량 출입구 후보) -> 50m 안 묶음
@@ -19,7 +19,7 @@ from s27_route_checks import load_raw, inv_tm, seg_dist, poly_tm, dist_to_line, 
 POLY = BASE / "data/processed/cbnu_relation_polygon.json"
 CONV = BASE / "data/processed/cbnu_internal_boundary_tags73_smooth.osm"
 OVERPASS = "293211019"
-GATE_EST = (36.624844, 127.462860)      # 세션27 추정 게이트(s27_route_checks.md 2-2, 미확인)
+GATE_EST = (36.624844, 127.462860)      # 10/06 추정 게이트(s27_route_checks.md 2-2, 미확인)
 LOOP_JOIN = "4496854212"                 # 고리 접점(392632034 끝)
 STOP_NAMES = ("충북대학교후문",)
 BACK6 = ["481945510", "481943505", "481475019", "452870644", "481945509", "481943503"]

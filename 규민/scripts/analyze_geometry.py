@@ -72,7 +72,7 @@ def poly_eval(coeffs, suffix, p):
 
 
 def poly_deriv(coeffs, suffix, p):
-    # 세션9 수정: 3차항 미분은 3*d*p**2 (p**2 누락 버그, p=0/1 끝점에서는
+    # 09/22 수정: 3차항 미분은 3*d*p**2 (p**2 누락 버그, p=0/1 끝점에서는
     # 우연히 정답과 같아 이전 세션의 junction 끝점 heading_diff 분석은 영향
     # 없었으나 곡선 내부 p 값에서는 값이 크게 틀렸다)
     _, b, c, d = (coeffs[k + suffix] for k in ("a", "b", "c", "d"))

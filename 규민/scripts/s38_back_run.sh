@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 맵세션38: 사용자가 켠 서버에서 후문(back) 1회 = (첫 회만) v2 로드 -> 2분 메모리 -> 주행 -> 주행 후 메모리
-# s33_one_run.sh 에서 서버 기동·종료를 뺀 것. 서버 종료는 사용자가 한다
+# 10/08: 켠 서버에서 후문(back) 1회 = (첫 회만) v2 로드 -> 2분 메모리 -> 주행 -> 주행 후 메모리
+# s33_one_run.sh 에서 서버 기동·종료를 뺀 것. 서버 종료는 한다
 # 사용: bash map/scripts/s38_back_run.sh <회차 번호> [load]
-# 메모리: avail < 1024Mi 이면 즉시 kill(세션32 기준). 2분 후 avail < 2048Mi 또는 swap > 4096Mi 이면 주행 안 함, 종료 3
+# 메모리: avail < 1024Mi 이면 즉시 kill(10/07 기준). 2분 후 avail < 2048Mi 또는 swap > 4096Mi 이면 주행 안 함, 종료 3
 set -u
 N=$1; LOAD=${2:-}
 ROOT=/home/gyumin/campus_mobility_sim

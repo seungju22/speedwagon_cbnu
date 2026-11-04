@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-# 맵세션27 작성: 10/9 재변환 래퍼. 세션18 D 의 trial_convert_s18.py(scratchpad, 소멸)와 같은 방식을 프로젝트 안에 남긴다.
+# 10/06 작성: 10/9 재변환 래퍼. 09/28 D 의 trial_convert_s18.py(scratchpad, 소멸)와 같은 방식을 프로젝트 안에 남긴다.
 # 왜 래퍼인가: fix_tags.py / classify_internal.py 는 출력 경로가 코드에 고정돼 그대로 실행하면 tags73 OSM 을 덮어쓰고,
 #   fix_tags.write_log 는 map/logs/fixed_way_ids.txt 를 덮어쓴다(s18_D_reconvert.md). 그래서 함수만 import 해 새 경로로 쓴다.
 #   smooth_osm_curves.py 는 --log-prefix 를 안 주면 session11_smoothing_*.csv 를 덮어쓴다 -> 반드시 새 접두어.
-# 세션28: 392632034 추가(9개), --variant A|B 추가. 세션27 check 로그(s27_reconvert_check.log)는 8개 시절 값
+# 10/07: 392632034 추가(9개), --variant A|B 추가. 10/06 check 로그(s27_reconvert_check.log)는 8개 시절 값
 # 모드
 #   check            읽기전용. 입력 해시, 추가 way 존재·태그, 기존 73 과 중복, 분류(메모리 안) 결과, 출력 파일 미존재 확인.
-#                    세션27 에 실행한 것은 이 모드뿐
+#                    10/06 에 실행한 것은 이 모드뿐
 #   run --tag T      실제 재변환(새 OSM 3개 + 새 xodr 1개). --base 면 추가 way 없이 73건으로(재현성 기준선)
-#                    세션27 에서는 실행 금지(지시문). 10/9 부터
-# 흐름: raw OSM -> 태그 보정(73 + 추가) -> 폴리곤 분류(internal+boundary) -> 곡선 평활화(세션11 기본 인자) -> Osm2Odr
+#                    10/06 에서는 실행 금지(작업 메모). 10/9 부터
+# 흐름: raw OSM -> 태그 보정(73 + 추가) -> 폴리곤 분류(internal+boundary) -> 곡선 평활화(09/24 기본 인자) -> Osm2Odr
 import argparse
 import hashlib
 import subprocess
@@ -25,18 +25,18 @@ PY = BASE.parent / ".venv-carla/bin/python"
 RAW = BASE / "data/raw/cbnu_campus.osm"
 POLY = BASE / "data/processed/cbnu_relation_polygon.json"
 FROZEN = BASE / "maps/cbnu_internal_only_localtm_tags73_smooth.xodr"
-# 세션18 D 에서 기록한 값(s18_D_reconvert.md 안전 확인) + frozen_v1
+# 09/28 D 에서 기록한 값(s18_D_reconvert.md 안전 확인) + frozen_v1
 EXPECT = {RAW: "c383870eb4d1e196", FROZEN: "bf835cdfad0cea65",
           BASE / "data/processed/cbnu_campus_fixed_tags73.osm": "dfcc5ff7b1a41532",
           BASE / "data/processed/cbnu_internal_boundary_tags73.osm": "ce457630b2de089f",
           BASE / "data/processed/cbnu_internal_boundary_tags73_smooth.osm": "caa2c69b026ccc75"}
-# 세션27 확정 재변환 대상(map/docs/logs/s24_reconv_list.md "2026-10-06 갱신" 절). 바꾸면 그 절도 고친다
+# 10/06 확정 재변환 대상(map/docs/logs/s24_reconv_list.md "2026-10-06 갱신" 절). 바꾸면 그 절도 고친다
 ADD_WAYS = ["481950060",                                   # 정문 출구
             "442595850",                                   # 박물관 서쪽 차고지 고리(A7)
             "481945510", "481943505", "481475019",          # 후문 연결 6
             "452870644", "481945509", "481943503",
-            "392632034"]                                   # 세션28 추가: 후문B 게이트 진입로(s28_gate_review.md)
-# 세션28 A/B 비교(reconversion_plan.md 7절): A안 = ADD_WAYS 전부, B안 = 정문 출구만 제외
+            "392632034"]                                   # 10/07 추가: 후문B 게이트 진입로(s28_gate_review.md)
+# 10/07 A/B 비교(reconversion_plan.md 7절): A안 = ADD_WAYS 전부, B안 = 정문 출구만 제외
 VARIANT_EXCLUDE = {"A": [], "B": ["481950060"]}
 EXPECT_CLASS = (447, 38, 664)   # 태그 보정은 분류를 안 바꾼다(highway 태그 있는 way 집합 불변, s18 확인)
 

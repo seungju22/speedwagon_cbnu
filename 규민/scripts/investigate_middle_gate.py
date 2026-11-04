@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션7 추가 조사 2: (1) 후문B 확정 표(번호1 밖 구간 분석), (2) 중문 직전 도로망 끝점(dead end) 5개.
+# 09/19 추가 조사 2: (1) 후문B 확정 표(번호1 밖 구간 분석), (2) 중문 직전 도로망 끝점(dead end) 5개.
 # 읽기전용. 태그 보정·재변환 없음. CARLA 불필요.
 # 산출: docs/humun_b_confirmed.md, docs/middle_gate_deadends.md, docs/figures/13_middle_gate_deadends.png
 import heapq

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션29: frozen_v1 복사본의 차선 중심 표본을 CSV 로 (lanelet 대응용, 읽기전용). .venv-carla 로 실행(carla 오프라인 Map)
+# 10/07: frozen_v1 복사본의 차선 중심 표본을 CSV 로 (lanelet 대응용, 읽기전용). .venv-carla 로 실행(carla 오프라인 Map)
 # 열: road, junction, lane(-1 주행, -2 인도), length, 표본 s=시작·중간·끝의 xodr 좌표(x, y = CARLA (x, -y))
 # 사용: python s29_xodr_lanes.py <xodr 복사본> <출력 csv>
 import csv

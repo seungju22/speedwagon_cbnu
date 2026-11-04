@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션16. 완주 경로를 실제 지도(OSM 표준 타일) 위에 그리고, 원본 OSM 도로망의
+# 09/26. 완주 경로를 실제 지도(OSM 표준 타일) 위에 그리고, 원본 OSM 도로망의
 # 정문->종점 최단 경로와 비교한다. 읽기전용(xodr/osm/로그 미수정).
 # 출력: map/docs/figures/22_route_realmap.png, map/docs/logs/session16_route_realmap.log
 #
@@ -39,7 +39,7 @@ TILE_DIR = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("/tmp/osm_tiles")
 
 LAT0, LON0 = 36.627298, 127.456394        # xodr geoReference +lat_0 +lon_0
 OFF_X, OFF_Y = 521.51, 493.61             # xodr header <offset> (xodr = TM + offset)
-LIB_WAY = "442066135"                     # 도서관 건물 way (세션5)
+LIB_WAY = "442066135"                     # 도서관 건물 way (09/19)
 ZOOM = 17
 UA = "campus_mobility_sim-study/1.0"
 NOT_CAR = {"footway", "path", "steps", "cycleway", "corridor", "construction",

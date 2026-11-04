@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션29 Phase 3 보조: 공식 Lanelet2 파이썬 라이브러리(lanelet2 1.2.3, PyPI)로 변환 결과를 읽어 본다 (읽기전용)
+# 10/07 Phase 3 보조: 공식 Lanelet2 파이썬 라이브러리(lanelet2 1.2.3, PyPI)로 변환 결과를 읽어 본다 (읽기전용)
 # Autoware 검증기(autoware_lanelet2_map_validator)는 호스트에 없다. 이것은 그 대신이 아니라 "Lanelet2 로 읽히는가" 만 본다
 # 시험 venv 로 실행: ~/lanelet2_trial_venv/bin/python
 # 1 load 오류 수 2 lanelet 수 3 차량 교통 규칙(germany vehicle) 기준 routing graph, checkValidity

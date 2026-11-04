@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션31 Phase 3: 정문 j107 커넥터(frozen_v1 r1917) 재변환 전후 비교 (읽기전용, carla 오프라인 Map, 서버 없음)
+# 10/07 Phase 3: 정문 j107 커넥터(frozen_v1 r1917) 재변환 전후 비교 (읽기전용, carla 오프라인 Map, 서버 없음)
 # 새 맵에서는 id 가 바뀌므로 좌표로 찾는다: frozen_v1 r1917 lane -1 의 s=중간 점에서 가장 가까운 driving waypoint 의 road
 # 출력: 길이, junction, laneOffset, 차선 구성, pred/succ, 앞 road 끝 -> 이 road 시작 거리·방위 차, 이 road 끝 -> 뒤 road 시작
 # 사용: .venv-carla/bin/python s31_r1917_probe.py <frozen_v1 xodr> <새 xodr> [<새 xodr> ...]

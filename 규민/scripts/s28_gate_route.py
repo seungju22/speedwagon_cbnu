@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 맵세션28 Phase 2-라. 392632034 를 넣으면 후문 노선이 어떻게 달라지는가 (읽기전용, 서버 없음)
-# 세션18 시험 맵(_trial_s18_gates.xodr, 채택 안 된 산출물, 입력에 392632034 포함)을 읽기만 한다.
+# 10/07 Phase 2-라. 392632034 를 넣으면 후문 노선이 어떻게 달라지는가 (읽기전용, 서버 없음)
+# 09/28 시험 맵(_trial_s18_gates.xodr, 채택 안 된 산출물, 입력에 392632034 포함)을 읽기만 한다.
 # 대상점 3개(고리 접점 / 추정 게이트 / 경계 횡단점)까지 정문 r1247(시험 번호)에서 최단 경로,
 # 각 대상점 road 에서 정문으로 돌아오는 경로 존재 여부.
 # 실행: ~/campus_mobility_sim/.venv-carla/bin/python map/scripts/s28_gate_route.py > map/docs/logs/s28_gate_route.log

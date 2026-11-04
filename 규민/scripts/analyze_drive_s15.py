@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 맵세션15 Phase D. 완주 궤적(drive_log_*.csv) 분석. 읽기전용(xodr/로그 미수정),
+# 09/25 Phase D. 완주 궤적(drive_log_*.csv) 분석. 읽기전용(xodr/로그 미수정),
 # 출력: map/docs/logs/session15_drive_analysis.log, session15_section_deviation.csv
 #
 # 계획 차선 기준 이탈량(전 구간, 사후 계산):
@@ -7,7 +7,7 @@
 #   lat_m     = 그 표본 기준 부호 있는 횡거리(+=오른쪽). test_drive.sharp_offset 과 같은 방식
 #   excess_m  = bbox 바닥 4꼭짓점(x,y,yaw,extent 로 복원) |횡거리| - 차선폭/2 최댓값
 #               (각 꼭짓점도 가장 가까운 계획 표본 기준). + = 차선 밖으로 나간 거리
-# 투영 road(get_waypoint)는 junction 커넥터 겹침(세션15 r1428/r1434) 때문에 쓰지 않는다.
+# 투영 road(get_waypoint)는 junction 커넥터 겹침(09/25 r1428/r1434) 때문에 쓰지 않는다.
 import csv
 import math
 import sys

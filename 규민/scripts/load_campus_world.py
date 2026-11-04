@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-# 맵세션40: 충북대 캠퍼스 월드 로더(인계 1). 서버가 켜져 있어야 한다(cd ~/carla/CARLA_0.9.15 && ./CarlaUE4.sh -quality-level=Low -win)
-# 생성 인자 출처: tests/test_load_map_878.py (사용자 결정, 세션40). 그 파일이 쓰는 값 = CARLA 기본값 + --wall-height 0
-#   세션38 로드 로그(map/docs/logs/s38_v2_back_run1_load.log "적용 OpendriveGenerationParameters")와 7개 모두 같음을 확인(세션40)
+# 10/09: 충북대 캠퍼스 월드 로더(인계 1). 서버가 켜져 있어야 한다(cd ~/carla/CARLA_0.9.15 && ./CarlaUE4.sh -quality-level=Low -win)
+# 생성 인자 출처: tests/test_load_map_878.py (결정, 10/09). 그 파일이 쓰는 값 = CARLA 기본값 + --wall-height 0
+#   10/08 로드 로그(map/docs/logs/s38_v2_back_run1_load.log "적용 OpendriveGenerationParameters")와 7개 모두 같음을 확인(10/09)
 #   기본값으로 쓰던 것도 여기서는 전부 값을 적는다. CARLA 버전이 바뀌어 기본값이 달라져도 이 로더 결과는 같게
 # wall_height 0.0 인 이유: 이 지도는 양방향 도로를 단방향 반쪽 도로 둘로 나눈 구조라 바깥 가장자리가 중앙선이다.
 #   기본 1m 벽이면 중앙선 위에 벽이 선다(map_frozen_v1.md "로드 파라미터")
@@ -19,7 +19,7 @@ MAPS_DIR = Path(__file__).resolve().parent.parent / "maps"
 DEFAULT_XODR = MAPS_DIR / "cbnu_campus_frozen_v2.xodr"
 FROZEN_V2_SHA16 = "5240ca8b883e42c0"      # map_frozen_v2.md
 TIMEOUT = 30.0                             # test_load_map_878.py 와 같음
-GEN_PARAMS = dict(                         # 세션38 로드 로그 적용값과 같음(세션40 대조)
+GEN_PARAMS = dict(                         # 10/08 로드 로그 적용값과 같음(10/09 대조)
     vertex_distance=2.0,
     max_road_length=50.0,
     wall_height=0.0,

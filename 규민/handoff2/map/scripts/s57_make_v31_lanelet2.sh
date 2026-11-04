@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 맵세션57: v3.1 Autoware 지도(28a57711)를 동결 xodr 에서 다시 만들고 해시를 맞춰 본다
+# 10/13: v3.1 Autoware 지도(28a57711)를 동결 xodr 에서 다시 만들고 해시를 맞춰 본다
 # 1) l1_build_lanelet2.py: 동결 xodr + 보정 목록 14개 -> 빌더 출력(83edb775 이어야 함)
 # 2) s55_drop_lanelets.py: 빌더 출력에서 r1318·r1188 레인렛만 지움 -> 28a57711 이어야 함
-# 빌더에 제외 규칙을 넣지 않는 까닭: 빌더 안에서 빼면 끝점 공유 평균을 다시 해 이웃 레인렛 끝점이 바뀐다(맵세션55)
+# 빌더에 제외 규칙을 넣지 않는 까닭: 빌더 안에서 빼면 끝점 공유 평균을 다시 해 이웃 레인렛 끝점이 바뀐다(10/12)
 # 사용: bash map/scripts/s57_make_v31_lanelet2.sh [출력 폴더, 기본 map/build_s57_regen]  (이미 있으면 멈춤)
 set -euo pipefail
 cd "$(dirname "$0")/../.."
